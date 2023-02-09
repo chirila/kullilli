@@ -1,0 +1,50 @@
+{
+    "file_names":[
+        "./data/urn-n-minang-kky.eaf"
+    ],
+    "language_fonts":[
+        {
+            "lang":"urn",
+            "font":"Charis SIL",
+            "vernacular":"true"
+        },
+        {
+            "lang":"en",
+            "font":"Times New Roman"
+        },
+        {
+            "lang":"pmy",
+            "font":"Times New Roman"
+        },
+        {
+            "lang":"nl",
+            "font":"Charis SIL"
+        }
+    ],
+    "languages":{
+        "main_language":"urn",
+        "child_language":"",
+        "flex_language":"en"
+    },
+    "valid_characters": {
+        "main_language":"[a-zA-Z_]",
+        "child_language":"a"
+    },
+    "exclude_tier_id":[
+        "interlinear-title-en"
+    ],
+    "exclude_tier_type":[
+        ""
+    ],
+    "exclude_tier_constraint":[
+        ""
+    ],
+    "translation_tiers":{
+        "A_Translation-gls-pmy":"pmy",
+        "A_Translation-gls-en":"en",
+        "A_Translation-gls-nl":"nl"
+    },
+    "target_utterance_tier_type":[
+        ""
+    ]
+}

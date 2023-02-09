@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document version="2">
+  <interlinear-text guid="4f6d77da-3044-4a5f-ac0a-9a38d421f128">
+    <item type="title" lang="en">Breen Sentences</item>
+    <item type="source" lang="en">Breen Fildnotews, Jimmy Galton</item>
+    <paragraphs>
+      <paragraph guid="63d8383c-53c2-4530-8ef5-5b736473510e">
+        <phrases>
+          <phrase guid="cafb770b-0c44-46af-83c3-e3a3d99c1390">
+            <item type="segnum" lang="en">1</item>
+            <words>
+              <word guid="94a731e3-7515-41c8-bf4d-65b5b2d6489b">
+                <item type="txt" lang="gll-Latn">barrkulu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">barkulu</item>
+                    <item type="cf" lang="gll-Latn">barrkulu</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">two</item>
+                    <item type="msa" lang="en">num</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">two</item>
+                <item type="pos" lang="en">num</item>
+              </word>
+              <word guid="c71f7c63-27a5-416c-bff6-ec46f18ba3cc">
+                <item type="txt" lang="gll-Latn">walyubala</item>
+              </word>
+            </words>
+            <item type="gls" lang="en"></item>
+            <item type="note" lang="en">not at all sure about the walyu- transcription, looks like walyuvEla</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="975a3242-e5fe-43eb-8ad7-7b7e82bb4fd0">
+        <phrases>
+          <phrase guid="65e063ca-0c8b-485e-bbca-4255d8b03d38">
+            <item type="segnum" lang="en">2</item>
+            <words>
+              <word guid="c765a6b8-2eba-4920-803f-afb8f43e07a4">
+                <item type="txt" lang="gll-Latn">murrumurrugala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">murrumurru</item>
+                    <item type="cf" lang="gll-Latn">murrumurru</item>
+                    <item type="gls" lang="en">black</item>
+                    <item type="msa" lang="en">adj</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="6402dc35-8bd3-4e99-a90f-1f97ec90ad64">
+                <item type="txt" lang="gll-Latn">nyinalinga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nyina</item>
+                    <item type="cf" lang="gll-Latn">nyina</item>
+                    <item type="gls" lang="en">sit</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-li</item>
+                    <item type="cf" lang="gll-Latn">-li</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">potential?</item>
+                    <item type="msa" lang="en">Attaches to any category</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">men sitting down over there</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="7be24b15-1395-4b60-8089-3a0236f75231">
+        <phrases>
+          <phrase guid="df14c45a-6280-4bc3-a001-fb36e3aea04f">
+            <item type="segnum" lang="en">3</item>
+            <words>
+              <word guid="c31c2567-05c8-4fa1-ade2-0552294f464b">
+                <item type="txt" lang="gll-Latn">yarna</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yarna</item>
+                    <item type="cf" lang="gll-Latn">yarna</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">rain</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">rain</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="4f22a849-a23f-4619-80eb-04627ee9b65f">
+                <item type="txt" lang="gll-Latn">wayalingu</item>
+              </word>
+            </words>
+            <item type="gls" lang="en"></item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9ef5f328-7990-4a3a-899c-13aa8c8d9896">
+        <phrases>
+          <phrase guid="0a9bbdc5-17ec-4038-9ba7-750fe998eaf1">
+            <item type="segnum" lang="en">4</item>
+            <words>
+              <word guid="1171b302-e826-43c6-98ea-c53794919108">
+                <item type="txt" lang="gll-Latn">ganyi</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ganyi</item>
+                    <item type="cf" lang="gll-Latn">ganyi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">sweat</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">sweat</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en"></item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="ea8e265c-c681-4d24-9a23-4cbe24f6caf1">
+        <phrases>
+          <phrase guid="c286a544-0203-40b5-a6b0-dd20f5d39983">
+            <item type="segnum" lang="en">5</item>
+            <words>
+              <word guid="238c2c9f-9ac6-4557-86b3-18d7df57b3d9">
+                <item type="txt" lang="gll-Latn">dhaka</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhaka</item>
+                    <item type="cf" lang="gll-Latn">dhaka</item>
+                    <item type="gls" lang="en">ground</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">ground</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="9558e13e-46a1-4e7b-985e-ca5f8fcbdbaa">
+                <item type="txt" lang="gll-Latn">wet</item>
+              </word>
+              <word guid="6ec4cc0d-9285-49d3-bbe2-cea602d0f2d3">
+                <item type="txt" lang="gll-Latn">dhugarna</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhugarna</item>
+                    <item type="cf" lang="gll-Latn">dhugarna</item>
+                    <item type="gls" lang="en">wetfellow</item>
+                    <item type="msa" lang="en">&lt;Not Sure&gt;</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">wetfellow</item>
+              </word>
+            </words>
+            <item type="gls" lang="en"></item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="1f329b3a-b7ab-4d49-84f4-1daf5d3016b7">
+        <phrases>
+          <phrase guid="a47b0391-ea73-4d43-b7d4-407ad2c0fbdb">
+            <item type="segnum" lang="en">6</item>
+            <words>
+              <word guid="bcd3dca2-a7f2-46ab-b5df-4e6a54351e32">
+                <item type="txt" lang="gll-Latn">nilaya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nilaya</item>
+                    <item type="cf" lang="gll-Latn">nilaya</item>
+                    <item type="gls" lang="en">yesterday</item>
+                    <item type="msa" lang="en">adv</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">yesterday</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word>
+                <item type="punct" lang="gll-Latn">,</item>
+              </word>
+              <word guid="f43d4742-e19d-41a0-bbcb-3f222c9d244e">
+                <item type="txt" lang="gll-Latn">nilaya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nilaya</item>
+                    <item type="cf" lang="gll-Latn">nilaya</item>
+                    <item type="gls" lang="en">yesterday</item>
+                    <item type="msa" lang="en">adv</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">yesterday</item>
+                <item type="pos" lang="en">adv</item>
+              </word>
+              <word guid="c31c2567-05c8-4fa1-ade2-0552294f464b">
+                <item type="txt" lang="gll-Latn">yarna</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yarna</item>
+                    <item type="cf" lang="gll-Latn">yarna</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">rain</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">rain</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="6a5303e7-2e70-4be2-8b3a-3689b6270742">
+                <item type="txt" lang="gll-Latn">walyaani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walya</item>
+                    <item type="cf" lang="gll-Latn">walya</item>
+                    <item type="gls" lang="en">no</item>
+                    <item type="msa" lang="en">excl</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ani</item>
+                    <item type="cf" lang="gll-Latn">-ani</item>
+                    <item type="gls" lang="en">nominative</item>
+                    <item type="msa" lang="en">n:(Case)</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">It was raining yesterday</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="gll-Latn" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+</document>

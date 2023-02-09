@@ -1,0 +1,2659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document version="2">
+  <interlinear-text guid="9b60078c-d2cf-47d6-93e1-1f90e594baa9">
+    <item type="title" lang="en">Animal trouble in the camp</item>
+    <item type="source" lang="en">S092-S128</item>
+    <item type="comment" lang="en">A pre-packaged narrative from the sentence list.</item>
+    <paragraphs>
+      <paragraph guid="3b225cfb-05bf-42e4-ba82-2664dfb4a9a0">
+        <phrases>
+          <phrase guid="f561a9c6-7d6e-41a8-8d7b-a42e4d04f2aa">
+            <item type="segnum" lang="en">1</item>
+            <words>
+              <word guid="11e65c30-3450-46d4-bc5e-8dbabae24d0f">
+                <item type="txt" lang="gll-Latn">gawa</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawa</item>
+                    <item type="cf" lang="gll-Latn">gawa</item>
+                    <item type="gls" lang="en">come</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">come</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="f78c75a6-5d1d-47e2-a5c3-26e6940ada10">
+                <item type="txt" lang="gll-Latn">ngali</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngali</item>
+                    <item type="cf" lang="gll-Latn">ngali</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1dl.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1dl</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="ba04c1e9-257a-40b3-bf9e-0a8822e97aef">
+                <item type="txt" lang="gll-Latn">gulharra</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gulha</item>
+                    <item type="cf" lang="gll-Latn">gulha</item>
+                    <item type="gls" lang="en">sit</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-rra</item>
+                    <item type="cf" lang="gll-Latn">-rra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">imperative</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">sit</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="0b664ffc-17e5-4897-9988-d1f4f3b0d35a">
+                <item type="txt" lang="gll-Latn">walbirilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walbiri</item>
+                    <item type="cf" lang="gll-Latn">walbiri</item>
+                    <item type="gls" lang="en">shade</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">Come on, the two of us sit in the shade.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="5a39a9cc-b5b2-4646-afbd-62b743ad5b03">
+        <phrases>
+          <phrase guid="71a7bcc5-87de-47bd-b84d-f533c3853e72">
+            <item type="segnum" lang="en">2</item>
+            <words>
+              <word guid="8417fa6a-582f-4ce1-8a0c-dc7992da5824">
+                <item type="txt" lang="gll-Latn">mirla</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">mirla</item>
+                    <item type="cf" lang="gll-Latn">mirla</item>
+                    <item type="gls" lang="en">sun</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">sun</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="0c0f39e9-612f-45b5-bf64-b9f37ca65926">
+                <item type="txt" lang="gll-Latn">gandragala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gandra</item>
+                    <item type="cf" lang="gll-Latn">gandra</item>
+                    <item type="gls" lang="en">shine</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">shine</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">The sun is shining hot.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="1de3a95b-9091-4330-bca4-494a6424ecf8">
+        <phrases>
+          <phrase guid="822c9319-c0f6-401a-b41d-4a302bec4591">
+            <item type="segnum" lang="en">3</item>
+            <words>
+              <word guid="db284a1f-6430-45a2-9fc6-58068f60b08d">
+                <item type="txt" lang="gll-Latn">waranga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wara</item>
+                    <item type="cf" lang="gll-Latn">wara</item>
+                    <item type="gls" lang="en">who</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">who</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="f250f0e3-ec7f-4689-affc-ceb3db5423ab">
+                <item type="txt" lang="gll-Latn">nhani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhani</item>
+                    <item type="cf" lang="gll-Latn">nhani</item>
+                    <item type="gls" lang="en">3sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.nom</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="3c1492ac-9905-43f9-baf8-e2849f6d1964">
+                <item type="txt" lang="gll-Latn">dhithiani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ani</item>
+                    <item type="cf" lang="gll-Latn">-ani</item>
+                    <item type="gls" lang="en">nominative</item>
+                    <item type="msa" lang="en">n:(Case)</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dhithi-ani</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="6b5e9e7c-1d45-4013-af01-cae814a96b3e">
+                <item type="txt" lang="gll-Latn">guthidhikadhikagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">guthi</item>
+                    <item type="cf" lang="gll-Latn">guthi</item>
+                    <item type="gls" lang="en">run</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">run</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Whose is this dog running around?</item>
+            <item type="note" lang="en">Not sure these glosses are right - doesn't make a lot of sense? (changed waranga to dative).</item>
+            <item type="note" lang="en">serial example or affix?</item>
+            <item type="note" lang="en">dhithiani shows that ani can go on vowel-final stems without hiatus resolution.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="860067e7-c597-441f-9b47-e24b4072283c">
+        <phrases>
+          <phrase guid="0fc1f4a3-bd69-4ca3-84a7-19f421f55e3b">
+            <item type="segnum" lang="en">4</item>
+            <words>
+              <word guid="e92ba591-15a1-4f53-b4bc-2ef7658322ed">
+                <item type="txt" lang="gll-Latn">ngarnidyanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngarnidya</item>
+                    <item type="cf" lang="gll-Latn">ngarnidya</item>
+                    <item type="gls" lang="en">father</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dative</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">father</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="11b7d491-a198-432c-8f58-70e6d66d3b5e">
+                <item type="txt" lang="gll-Latn">nhaniguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhani</item>
+                    <item type="cf" lang="gll-Latn">nhani</item>
+                    <item type="gls" lang="en">3sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="f518a8fe-3caa-49ce-ab21-72647e702b56">
+                <item type="txt" lang="gll-Latn">dhithiani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ani</item>
+                    <item type="cf" lang="gll-Latn">-ani</item>
+                    <item type="gls" lang="en">nominative</item>
+                    <item type="msa" lang="en">n:(Case)</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="b63781f6-40d1-4345-8d77-b70223bfb2d6">
+                <item type="txt" lang="gll-Latn">guthidhikadhikagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">guthi</item>
+                    <item type="cf" lang="gll-Latn">guthi</item>
+                    <item type="gls" lang="en">run</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">run</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">My father's dog is running around.</item>
+            <item type="note" lang="en">good example of serial verbs?</item>
+            <item type="note" lang="en">changed -nga1 'past' to -nga2 'dative'</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="b6457e53-a223-4094-90bd-5cbcfebc2e89">
+        <phrases>
+          <phrase guid="babccce7-1851-4817-a69c-64c5fcdb6298">
+            <item type="segnum" lang="en">5</item>
+            <words>
+              <word guid="32c35316-7c51-499c-9179-ff6b5e78aac2">
+                <item type="txt" lang="gll-Latn">yambadhika</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yamba</item>
+                    <item type="cf" lang="gll-Latn">yamba</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">chase</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-dhika</item>
+                    <item type="cf" lang="gll-Latn">-dhika</item>
+                    <item type="gls" lang="en">imp</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">chase</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="d813b047-bbdd-47c8-b85d-03d88459fde1">
+                <item type="txt" lang="gll-Latn">dhithianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Chase that dog away.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="8c36a5f0-3536-4b4a-98a3-f52720971cc7">
+        <phrases>
+          <phrase guid="108635e6-7fa5-4ccd-a58b-8f78227ae28b">
+            <item type="segnum" lang="en">6</item>
+            <words>
+              <word guid="d7ada6d8-d37f-4a5f-8c03-27575840e4a4">
+                <item type="txt" lang="gll-Latn">dratyalanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dratya</item>
+                    <item type="cf" lang="gll-Latn">dratya</item>
+                    <item type="gls" lang="en">bite</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-langa</item>
+                    <item type="cf" lang="gll-Latn">-langa</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">possibility</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">bite</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="dcf351d5-8dda-49e6-9c91-0345369f423d">
+                <item type="txt" lang="gll-Latn">nhandruguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhandru</item>
+                    <item type="cf" lang="gll-Latn">nhandru</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">3sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="4bff3084-0d77-47c7-9ed1-edddc7bc68d8">
+                <item type="txt" lang="gll-Latn">waliwanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">waliwa</item>
+                    <item type="cf" lang="gll-Latn">wariwa</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">child</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">child</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎It could bite that kid.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="a37991f1-f6ac-4b01-b107-049c15ad092c">
+        <phrases>
+          <phrase guid="d172b118-5d35-41ec-a307-298079025299">
+            <item type="segnum" lang="en">7</item>
+            <words>
+              <word guid="96939aa4-446b-40e9-9bc2-770df0aa5e5e">
+                <item type="txt" lang="gll-Latn">manhdhawari</item>
+              </word>
+              <word guid="768e937a-b700-4323-a398-a191bc7d3a05">
+                <item type="txt" lang="gll-Latn">yandraanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yandra</item>
+                    <item type="cf" lang="gll-Latn">yandra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">rock</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word>
+                <item type="punct" lang="gll-Latn">/</item>
+              </word>
+              <word guid="3cef93af-ad6e-402a-9ef8-d8808f303e0f">
+                <item type="txt" lang="gll-Latn">bandidhikara</item>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="f254ff4b-6c46-4b75-82fb-a616c95fc8a4">
+                <item type="txt" lang="gll-Latn">dhithianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Pick up a stone, hit him away, that dog.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9c07c393-f65c-4c2b-9471-8bd4ab34096f">
+        <phrases>
+          <phrase guid="6e6fded6-40b9-4f88-917c-a719dfb23e3c">
+            <item type="segnum" lang="en">8</item>
+            <words>
+              <word guid="327bab5a-ea8a-4153-8f3c-423e79004681">
+                <item type="txt" lang="gll-Latn">gawalyalu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawalya</item>
+                    <item type="cf" lang="gll-Latn">gawalya</item>
+                    <item type="gls" lang="en">uncle</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lu</item>
+                    <item type="cf" lang="gll-Latn">-lu</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">uncle</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="b22548b0-cfb8-4404-9014-8f34927f7d2c">
+                <item type="txt" lang="gll-Latn">marnngagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">marnnga</item>
+                    <item type="cf" lang="gll-Latn">marnnga</item>
+                    <item type="gls" lang="en">make</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">make</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="e186802c-4e20-459c-b633-cd6e3bb0ba07">
+                <item type="txt" lang="gll-Latn">bakaranyi</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">bakaranyi</item>
+                    <item type="cf" lang="gll-Latn">bakaranyi</item>
+                    <item type="gls" lang="en">boomerang</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">boomerang</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Uncle is making a boomerang.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="bf2b681d-8165-4c6f-9212-6c61ac4b776e">
+        <phrases>
+          <phrase guid="9b8ffbe5-375d-4aef-98ee-37887d44db47">
+            <item type="segnum" lang="en">9</item>
+            <words>
+              <word guid="327bab5a-ea8a-4153-8f3c-423e79004681">
+                <item type="txt" lang="gll-Latn">gawalyalu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawalya</item>
+                    <item type="cf" lang="gll-Latn">gawalya</item>
+                    <item type="gls" lang="en">uncle</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lu</item>
+                    <item type="cf" lang="gll-Latn">-lu</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">uncle</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="ff74dbe4-14f3-4b7c-bacd-8bacadba0b86">
+                <item type="txt" lang="gll-Latn">marnngagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">marnnga</item>
+                    <item type="cf" lang="gll-Latn">marnnga</item>
+                    <item type="gls" lang="en">make</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">make</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="e186802c-4e20-459c-b633-cd6e3bb0ba07">
+                <item type="txt" lang="gll-Latn">bakaranyi</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">bakaranyi</item>
+                    <item type="cf" lang="gll-Latn">bakaranyi</item>
+                    <item type="gls" lang="en">boomerang</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">boomerang</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">My uncle is making a boomerang.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="6c4f6c70-34be-4a1b-8a2c-d4da0ee0fc32">
+        <phrases>
+          <phrase guid="ab551854-041e-4e38-b329-d5452b05f080">
+            <item type="segnum" lang="en">10</item>
+            <words>
+              <word guid="327bab5a-ea8a-4153-8f3c-423e79004681">
+                <item type="txt" lang="gll-Latn">gawalyalu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawalya</item>
+                    <item type="cf" lang="gll-Latn">gawalya</item>
+                    <item type="gls" lang="en">uncle</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lu</item>
+                    <item type="cf" lang="gll-Latn">-lu</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">uncle</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="b22548b0-cfb8-4404-9014-8f34927f7d2c">
+                <item type="txt" lang="gll-Latn">marnngagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">marnnga</item>
+                    <item type="cf" lang="gll-Latn">marnnga</item>
+                    <item type="gls" lang="en">make</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">make</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="1af9c8d4-e6b5-4b22-87c6-82fb8aba1374">
+                <item type="txt" lang="gll-Latn">bakaranyiani</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Uncle is making it for me. OR Uncle is making the boomerang. It is for me. OR Uncle is making (it). The boomerang is for me.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9a7c64ec-e550-4db6-94b9-546bd9d97476">
+        <phrases>
+          <phrase guid="8e12549f-77ba-4d55-bcf8-de1dd68d6d19">
+            <item type="segnum" lang="en">11</item>
+            <words>
+              <word guid="5f5e0b91-8320-4d23-b95c-53f664a2db28">
+                <item type="txt" lang="gll-Latn">walya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walya</item>
+                    <item type="cf" lang="gll-Latn">walya</item>
+                    <item type="gls" lang="en">not</item>
+                    <item type="msa" lang="en">part</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">not</item>
+                <item type="pos" lang="en">part</item>
+              </word>
+              <word guid="11b7d491-a198-432c-8f58-70e6d66d3b5e">
+                <item type="txt" lang="gll-Latn">nhaniguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhani</item>
+                    <item type="cf" lang="gll-Latn">nhani</item>
+                    <item type="gls" lang="en">3sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="753a7e56-a1c6-40aa-9dce-48a6f4abe30b">
+                <item type="txt" lang="gll-Latn">ingka</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ingka</item>
+                    <item type="cf" lang="gll-Latn">ingka</item>
+                    <item type="gls" lang="en">2sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">2sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="1af9c8d4-e6b5-4b22-87c6-82fb8aba1374">
+                <item type="txt" lang="gll-Latn">bakaranyiani</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">This is not your boomerang.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="c9206823-a474-4533-9d30-349d42484368">
+        <phrases>
+          <phrase guid="94554376-9ea5-4515-a116-894939b6a71b">
+            <item type="segnum" lang="en">12</item>
+            <words>
+              <word guid="7dacaf2a-bdfa-4f4e-a1b2-42765f5f8e65">
+                <item type="txt" lang="gll-Latn">nganyta</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganyta</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="dbbb1683-3766-4eec-9ae0-2813ff3b587c">
+                <item type="txt" lang="gll-Latn">ngarnidanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngarnida</item>
+                    <item type="cf" lang="gll-Latn">ngarnidya</item>
+                    <item type="variantTypes" lang="en">+variant of</item>
+                    <item type="gls" lang="en">father</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dative</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">father</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="11b7d491-a198-432c-8f58-70e6d66d3b5e">
+                <item type="txt" lang="gll-Latn">nhaniguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhani</item>
+                    <item type="cf" lang="gll-Latn">nhani</item>
+                    <item type="gls" lang="en">3sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="1af9c8d4-e6b5-4b22-87c6-82fb8aba1374">
+                <item type="txt" lang="gll-Latn">bakaranyiani</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎That boomerang is my father's.</item>
+            <item type="note" lang="en">Possible that nganyta is spelling/hearing mistake for nganytya</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="e1d7e557-d40a-4b86-b476-ecac42006834">
+        <phrases>
+          <phrase guid="a0e2a802-1f7a-43bd-807f-76096870b792">
+            <item type="segnum" lang="en">13</item>
+            <words>
+              <word guid="db284a1f-6430-45a2-9fc6-58068f60b08d">
+                <item type="txt" lang="gll-Latn">waranga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wara</item>
+                    <item type="cf" lang="gll-Latn">wara</item>
+                    <item type="gls" lang="en">who</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">who</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="11b7d491-a198-432c-8f58-70e6d66d3b5e">
+                <item type="txt" lang="gll-Latn">nhaniguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhani</item>
+                    <item type="cf" lang="gll-Latn">nhani</item>
+                    <item type="gls" lang="en">3sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="c92cc056-6fea-47b9-8626-85d9495ac85f">
+                <item type="txt" lang="gll-Latn">yangguani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yanggu</item>
+                    <item type="cf" lang="gll-Latn">yanggu</item>
+                    <item type="gls" lang="en">spear</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ani</item>
+                    <item type="cf" lang="gll-Latn">-ani</item>
+                    <item type="gls" lang="en">nominative</item>
+                    <item type="msa" lang="en">n:(Case)</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">spear</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="8edf17c2-9acc-449b-b7d7-5aafb6489bb9">
+                <item type="txt" lang="gll-Latn">gulalanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gula</item>
+                    <item type="cf" lang="gll-Latn">gula</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">grass</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-langa</item>
+                    <item type="cf" lang="gll-Latn">-langa</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">grass</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="08e2fdf7-a34a-4664-9fb4-be7126b506f4">
+                <item type="txt" lang="gll-Latn">wagagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">waga</item>
+                    <item type="cf" lang="gll-Latn">waga</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">lay</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">lay</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Whose is that spear lying in the grass there?</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="3981b53c-5e7c-434b-9256-9c00925b04c9">
+        <phrases>
+          <phrase guid="25468f7a-c2bc-4978-bd73-47eea37a8a3a">
+            <item type="segnum" lang="en">14</item>
+            <words>
+              <word guid="3aaca852-8517-4b5e-9117-cf66bfd5d1c2">
+                <item type="txt" lang="gll-Latn">warangaani</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wara</item>
+                    <item type="cf" lang="gll-Latn">wara</item>
+                    <item type="gls" lang="en">who</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dative</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ani</item>
+                    <item type="cf" lang="gll-Latn">-ani</item>
+                    <item type="gls" lang="en">nominative</item>
+                    <item type="msa" lang="en">n:(Case)</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">who</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎Whose is that?</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="c54f7676-4f4f-4ad3-8bc2-9e64732770f8">
+        <phrases>
+          <phrase guid="3ca211fc-fcd5-44d1-8b25-75ccafd9aea2">
+            <item type="segnum" lang="en">15</item>
+            <words>
+              <word guid="96939aa4-446b-40e9-9bc2-770df0aa5e5e">
+                <item type="txt" lang="gll-Latn">manhdhawari</item>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="a3264694-631e-44e2-a835-6bc3d0aeed19">
+                <item type="txt" lang="gll-Latn">yangguanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yanggu</item>
+                    <item type="cf" lang="gll-Latn">yanggu</item>
+                    <item type="gls" lang="en">spear</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">spear</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word>
+                <item type="punct" lang="gll-Latn">/</item>
+              </word>
+              <word guid="7b094b12-7b00-4fef-b79b-dc441aafe895">
+                <item type="txt" lang="gll-Latn">gatyilibalangu</item>
+                <morphemes>
+                  <morph type="phrase" guid="a23b6faa-1052-4f4d-984b-4b338bdaf95f">
+                    <item type="txt" lang="gll-Latn">gatyi</item>
+                    <item type="cf" lang="gll-Latn">gatyina nanaki</item>
+                    <item type="gls" lang="en">break</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-li</item>
+                    <item type="cf" lang="gll-Latn">-li</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">potential?</item>
+                    <item type="msa" lang="en">Attaches to any category</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ba</item>
+                    <item type="cf" lang="gll-Latn">-ba</item>
+                    <item type="gls" lang="en">emph</item>
+                    <item type="msa" lang="en">Attaches to any category</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-langu</item>
+                    <item type="cf" lang="gll-Latn">-langu</item>
+                    <item type="gls" lang="en">Possibility</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">break</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎Pick up that spear. (It) might break.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="83d1682d-b4bd-4240-b569-21a65269c8f5">
+        <phrases>
+          <phrase guid="42924f98-e9b9-40a4-b451-10194838f36a">
+            <item type="segnum" lang="en">16</item>
+            <words>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="353999d3-f65c-4e45-a596-883e0e883147">
+                <item type="txt" lang="gll-Latn">dhinabara</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎Lean it standing up.</item>
+            <item type="note" lang="en">Is -ra here IMP or future?</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="1ccb9685-1f4a-40d0-80ba-4992db0055a6">
+        <phrases>
+          <phrase guid="19c7fd94-3a61-4bf6-8ece-ba5d94a9f72d">
+            <item type="segnum" lang="en">17</item>
+            <words>
+              <word guid="693f65fd-0049-47ca-8799-559c064d0901">
+                <item type="txt" lang="gll-Latn">ga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ga</item>
+                    <item type="cf" lang="gll-Latn">ga</item>
+                    <item type="gls" lang="en">yes</item>
+                    <item type="msa" lang="en">excl</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">yes</item>
+              </word>
+              <word guid="0e68c061-d865-4361-95a4-cd4c1ce7eb09">
+                <item type="txt" lang="gll-Latn">manhdhalha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">manhdha</item>
+                    <item type="cf" lang="gll-Latn">manhdha</item>
+                    <item type="gls" lang="en">grasp</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lha</item>
+                    <item type="cf" lang="gll-Latn">-lha</item>
+                    <item type="gls" lang="en">factual</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">grasp</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Yes, (I) pick that one up.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="3664018f-07d8-4a0c-a11b-633837dd395d">
+        <phrases>
+          <phrase guid="f1f82e2b-2964-4f59-9e65-6da8fbd81365">
+            <item type="segnum" lang="en">18</item>
+            <words>
+              <word guid="e9447a35-4252-4367-bca6-b9ab9ce122c4">
+                <item type="txt" lang="gll-Latn">warlkara</item>
+              </word>
+              <word guid="60bd1007-a64d-4799-8b53-3706a9e56889">
+                <item type="txt" lang="gll-Latn">nhungala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhungala</item>
+                    <item type="cf" lang="gll-Latn">nhungala</item>
+                    <item type="gls" lang="en">3sg.loc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.loc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="0b664ffc-17e5-4897-9988-d1f4f3b0d35a">
+                <item type="txt" lang="gll-Latn">walbirilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walbiri</item>
+                    <item type="cf" lang="gll-Latn">walbiri</item>
+                    <item type="gls" lang="en">shade</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">Put it up there in the shade.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="00fe9658-b8a2-46e8-96c2-f1fba4c904a9">
+        <phrases>
+          <phrase guid="abc38e9e-138b-46cb-8ef0-69ab84e7418d">
+            <item type="segnum" lang="en">19</item>
+            <words>
+              <word guid="9b4727a2-1827-46cd-a927-26774cf95747">
+                <item type="txt" lang="gll-Latn">nhungka</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhungka</item>
+                    <item type="cf" lang="gll-Latn">nhungka</item>
+                    <item type="gls" lang="en">3sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="b7f1e90a-a104-415e-bd26-e9513b9b3351">
+                <item type="txt" lang="gll-Latn">nganidya</item>
+                <morphemes>
+                  <morph>
+                    <item type="txt" lang="gll-Latn">nganidya</item>
+                    <item type="gls" lang="en">father</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">father</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="06188b66-dd25-4c16-bf4f-4fdf9af400e5">
+                <item type="txt" lang="gll-Latn">yanhdhalha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yanhdha</item>
+                    <item type="cf" lang="gll-Latn">yanhdha</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">go</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lha</item>
+                    <item type="cf" lang="gll-Latn">-lha</item>
+                    <item type="gls" lang="en">factual</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">go</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">His father is going away.</item>
+            <item type="note" lang="en">Factive here (perhaps related tot hat -lya form that showed up?)</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="601a8dbf-07f5-47b3-a6ad-513df5245ef9">
+        <phrases>
+          <phrase guid="e17cb224-256e-4b9e-9425-fab176fb1d04">
+            <item type="segnum" lang="en">20</item>
+            <words>
+              <word guid="0e706961-ab8e-4c94-8c05-709f61dc2899">
+                <item type="txt" lang="gll-Latn">waralu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wara</item>
+                    <item type="cf" lang="gll-Latn">wara</item>
+                    <item type="gls" lang="en">who</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lu</item>
+                    <item type="cf" lang="gll-Latn">-lu</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="d3f5094c-e56f-4c51-9174-d5d471f17735">
+                <item type="txt" lang="gll-Latn">manhdhanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">manhdha</item>
+                    <item type="cf" lang="gll-Latn">manhdha</item>
+                    <item type="gls" lang="en">grasp</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">grasp</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="47645c11-a948-4f6a-8ca9-dda63d18a1d1">
+                <item type="txt" lang="gll-Latn">nhangala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhangala</item>
+                    <item type="cf" lang="gll-Latn">nhungala</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">3sg.loc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.loc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="053948ce-9ec9-4074-bc3b-d6468d4d7d41">
+                <item type="txt" lang="gll-Latn">makuranha</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Who picked up my stick here?</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="ec7b5082-b340-473c-9336-1539868a1b67">
+        <phrases>
+          <phrase guid="05546c7c-2782-4b7f-a23c-45b1fbbde546">
+            <item type="segnum" lang="en">21</item>
+            <words>
+              <word guid="f05a0fc9-4b94-48e2-aff5-0ddbe1ec1915">
+                <item type="txt" lang="gll-Latn">barninyi</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">barninyi</item>
+                    <item type="cf" lang="gll-Latn">barninyi</item>
+                    <item type="gls" lang="en">unable</item>
+                    <item type="msa" lang="en">adj</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">unable</item>
+                <item type="pos" lang="en">adj</item>
+              </word>
+              <word guid="eb3df69a-8942-4f6a-87e4-a07bab9bc992">
+                <item type="txt" lang="gll-Latn">nganyi</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganyi</item>
+                    <item type="cf" lang="gll-Latn">nganyi</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.nom</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="372419d5-00c6-4879-9ee8-5de0f40c4aab">
+                <item type="txt" lang="gll-Latn">wankinga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wanki</item>
+                    <item type="cf" lang="gll-Latn">wanki</item>
+                    <item type="gls" lang="en">find</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">find</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="de9ef8a8-abfd-411b-af2c-89d861609950">
+                <item type="txt" lang="gll-Latn">makurangani</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">I couldn't/didn't find my stick.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="89b1de46-3535-46b3-bcf3-9fb73f02ecc2">
+        <phrases>
+          <phrase guid="4d48c20b-cb18-4676-ab19-d19d21e0cfac">
+            <item type="segnum" lang="en">22</item>
+            <words>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="d3f5094c-e56f-4c51-9174-d5d471f17735">
+                <item type="txt" lang="gll-Latn">manhdhanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">manhdha</item>
+                    <item type="cf" lang="gll-Latn">manhdha</item>
+                    <item type="gls" lang="en">grasp</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">grasp</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="f7354d37-8281-4d53-b02b-593ce16827d7">
+                <item type="txt" lang="gll-Latn">winbinga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wirnbi</item>
+                    <item type="cf" lang="gll-Latn">wirnbi</item>
+                    <item type="gls" lang="en">throw back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="f9781573-354b-4b68-9aaa-9cf2f70d712b">
+                <item type="txt" lang="gll-Latn">wiyilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wiyi</item>
+                    <item type="cf" lang="gll-Latn">wiyi</item>
+                    <item type="gls" lang="en">fire</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">I picked it up and threw it in the fire.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="2ec0a0c7-c145-4ad2-bb44-1a5adc0a1dac">
+        <phrases>
+          <phrase guid="c580d799-90ee-47fb-b39e-205106b41ce8">
+            <item type="segnum" lang="en">23</item>
+            <words>
+              <word guid="376f15f6-4470-4d9c-9cce-396caf694bc3">
+                <item type="txt" lang="gll-Latn">mura</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">mura</item>
+                    <item type="cf" lang="gll-Latn">murra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="variantTypes" lang="en">+variant of</item>
+                    <item type="gls" lang="en">go</item>
+                    <item type="msa" lang="en">v.i</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">go</item>
+                <item type="pos" lang="en">v.i</item>
+              </word>
+              <word guid="28ea3b3d-2541-45ba-9e12-7d62bea1fcd8">
+                <item type="txt" lang="gll-Latn">maringa</item>
+              </word>
+              <word guid="61e03f52-4f23-447a-ab86-f687b927b443">
+                <item type="txt" lang="gll-Latn">nhangalaburlu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhangala</item>
+                    <item type="cf" lang="gll-Latn">nhungala</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">3sg.loc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-burlu</item>
+                    <item type="cf" lang="gll-Latn">-burlu</item>
+                    <item type="gls" lang="en">over there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.loc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="f9781573-354b-4b68-9aaa-9cf2f70d712b">
+                <item type="txt" lang="gll-Latn">wiyilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wiyi</item>
+                    <item type="cf" lang="gll-Latn">wiyi</item>
+                    <item type="gls" lang="en">fire</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+            </words>
+            <item type="gls" lang="en">Finished, burnt that one down there in the fire.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="db5c81ac-fbe5-4583-99aa-9f14e9c8a012">
+        <phrases>
+          <phrase guid="8620f670-7ad4-4690-a618-e383aa619c63">
+            <item type="segnum" lang="en">24</item>
+            <words>
+              <word guid="daccac87-1012-4482-8682-4f5b80b0a40e">
+                <item type="txt" lang="gll-Latn">manhdhara</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="753a7e56-a1c6-40aa-9dce-48a6f4abe30b">
+                <item type="txt" lang="gll-Latn">ingka</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ingka</item>
+                    <item type="cf" lang="gll-Latn">ingka</item>
+                    <item type="gls" lang="en">2sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">2sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="86b32fa3-0a3e-4f4a-924b-ff94bc147087">
+                <item type="txt" lang="gll-Latn">makurawatyuanha</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">I'll pick up a stick, that one/for you.</item>
+            <item type="note" lang="en">Check if there's a word boundary missing for makurawatyuanha</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="2036d77d-811c-41df-adce-1b9b7128b8ae">
+        <phrases>
+          <phrase guid="2a5cffd9-88c0-484b-91c7-8412c09462e8">
+            <item type="segnum" lang="en">25</item>
+            <words>
+              <word guid="11e65c30-3450-46d4-bc5e-8dbabae24d0f">
+                <item type="txt" lang="gll-Latn">gawa</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawa</item>
+                    <item type="cf" lang="gll-Latn">gawa</item>
+                    <item type="gls" lang="en">come</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">come</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="a0923f8d-4ace-47a7-b905-788b5b59e088">
+                <item type="txt" lang="gll-Latn">dhithiandru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-andru</item>
+                    <item type="cf" lang="gll-Latn">-andru</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="c4d912af-9463-4d44-be3e-7aed3b07d512">
+                <item type="txt" lang="gll-Latn">inha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">inha</item>
+                    <item type="cf" lang="gll-Latn">inha</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">2sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">2sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="cdc0bba6-93bd-4fb9-82c3-afdce74ff6f7">
+                <item type="txt" lang="gll-Latn">dratyalangu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dratya</item>
+                    <item type="cf" lang="gll-Latn">dratya</item>
+                    <item type="gls" lang="en">bite</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-langu</item>
+                    <item type="cf" lang="gll-Latn">-langu</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">bite</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Come away, the dog could bite you.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="be4fcee3-4ba6-4461-b29d-de923898ea15">
+        <phrases>
+          <phrase guid="321fbac6-f118-443e-889c-a74544d31b44">
+            <item type="segnum" lang="en">26</item>
+            <words>
+              <word guid="6637f0d0-51b3-4494-b306-00c7719258f1">
+                <item type="txt" lang="gll-Latn">nhungalaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhungala</item>
+                    <item type="cf" lang="gll-Latn">nhungala</item>
+                    <item type="gls" lang="en">3sg.loc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="037e572e-9dcb-491b-a16d-f221737389f8">
+                <item type="txt" lang="gll-Latn">birkibirkiwa</item>
+              </word>
+              <word guid="bb93d43f-aecd-426c-a0f6-edaadc45e5d2">
+                <item type="txt" lang="gll-Latn">dhalilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhali</item>
+                    <item type="cf" lang="gll-Latn">dhali</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">good</item>
+                    <item type="msa" lang="en">adj</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="30816ccf-cf21-4050-8691-3f2666764585">
+                <item type="txt" lang="gll-Latn">dhithilunga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-lunga</item>
+                    <item type="cf" lang="gll-Latn">-lunga</item>
+                    <item type="gls" lang="en">locative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">That one down there is playing with the good dog.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="562a291c-ce08-4a78-862e-4c2fda937d85">
+        <phrases>
+          <phrase guid="eccb685b-b472-412d-9734-118aa7a7bab7">
+            <item type="segnum" lang="en">27</item>
+            <words>
+              <word guid="a0923f8d-4ace-47a7-b905-788b5b59e088">
+                <item type="txt" lang="gll-Latn">dhithiandru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-andru</item>
+                    <item type="cf" lang="gll-Latn">-andru</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="cea090e1-4316-48ed-8f45-d4231404106c">
+                <item type="txt" lang="gll-Latn">galkagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">galka</item>
+                    <item type="cf" lang="gll-Latn">galka</item>
+                    <item type="gls" lang="en">strike</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="f8212805-ba1f-4baf-836a-4dff299125a6">
+                <item type="txt" lang="gll-Latn">dhaldranha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhaldra</item>
+                    <item type="cf" lang="gll-Latn">dhaldra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">kangaroo</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">red kangaroo</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">The dog is fighting the kangaroo.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="2f9e7870-b62e-4247-a221-4acf4d6813f7">
+        <phrases>
+          <phrase guid="5013811e-9059-4438-8ff7-ac378577b6a8">
+            <item type="segnum" lang="en">28</item>
+            <words>
+              <word guid="5f5e0b91-8320-4d23-b95c-53f664a2db28">
+                <item type="txt" lang="gll-Latn">walya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walya</item>
+                    <item type="cf" lang="gll-Latn">walya</item>
+                    <item type="gls" lang="en">not</item>
+                    <item type="msa" lang="en">part</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">not</item>
+                <item type="pos" lang="en">part</item>
+              </word>
+              <word guid="65288d28-3226-4a19-a770-c21c9d1b3654">
+                <item type="txt" lang="gll-Latn">wina</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">wina</item>
+                    <item type="cf" lang="gll-Latn">wina</item>
+                    <item type="gls" lang="en">close</item>
+                    <item type="msa" lang="en">adj</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">close</item>
+                <item type="pos" lang="en">adj</item>
+              </word>
+              <word guid="3e7a01d7-9cc0-4f0e-a68b-05f3556ca46c">
+                <item type="txt" lang="gll-Latn">yanhthadhira</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">yanhtha</item>
+                    <item type="cf" lang="gll-Latn">yanhtha</item>
+                    <item type="gls" lang="en">go</item>
+                    <item type="msa" lang="en">v.i</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-dhira</item>
+                    <item type="cf" lang="gll-Latn">-dhira</item>
+                    <item type="gls" lang="en">emphatic</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word>
+                <item type="punct" lang="gll-Latn">/</item>
+              </word>
+              <word guid="5398397f-5155-4fd9-b4e7-907739fd8adb">
+                <item type="txt" lang="gll-Latn">galkalangu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">galka</item>
+                    <item type="cf" lang="gll-Latn">galka</item>
+                    <item type="gls" lang="en">strike</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-langu</item>
+                    <item type="cf" lang="gll-Latn">-langu</item>
+                    <item type="gls" lang="en">Possibility</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">strike</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="c4d912af-9463-4d44-be3e-7aed3b07d512">
+                <item type="txt" lang="gll-Latn">inha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">inha</item>
+                    <item type="cf" lang="gll-Latn">inha</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">2sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">2sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="dcf351d5-8dda-49e6-9c91-0345369f423d">
+                <item type="txt" lang="gll-Latn">nhandruguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhandru</item>
+                    <item type="cf" lang="gll-Latn">nhandru</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">3sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="6609ca4b-0e56-487d-9489-549c2471a90b">
+                <item type="txt" lang="gll-Latn">dhaldraandru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhaldra</item>
+                    <item type="cf" lang="gll-Latn">dhaldra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">kangaroo</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-andru</item>
+                    <item type="cf" lang="gll-Latn">-andru</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">red kangaroo</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Don't go too close, the kangaroo could kill you.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="59d439cb-00e2-4798-b807-7a4510dc6002">
+        <phrases>
+          <phrase guid="d7beda83-586a-4f1b-a4c3-1354d8867182">
+            <item type="segnum" lang="en">29</item>
+            <words>
+              <word guid="b2003643-1856-47b2-a7f8-c02d43934d4f">
+                <item type="txt" lang="gll-Latn">gulhadhikawa</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gulha</item>
+                    <item type="cf" lang="gll-Latn">gulha</item>
+                    <item type="gls" lang="en">sit</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-wa</item>
+                    <item type="cf" lang="gll-Latn">-wa</item>
+                    <item type="gls" lang="en">emphatic</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="af793785-0286-4705-b002-8e0e52d12a9b">
+                <item type="txt" lang="gll-Latn">galkara</item>
+              </word>
+              <word guid="bff7f278-aab4-41a3-927a-baf2f1859001">
+                <item type="txt" lang="gll-Latn">ngalingu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngali</item>
+                    <item type="cf" lang="gll-Latn">ngali</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1dl.nom</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-ngu</item>
+                    <item type="cf" lang="gll-Latn">-ngu</item>
+                    <item type="hn" lang="gll-Latn">3</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">ergative</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">we two (erg)</item>
+              </word>
+              <word guid="f7e514c9-9513-4b92-976a-6f3c8be808c8">
+                <item type="txt" lang="gll-Latn">yangguandru</item>
+                <morphemes>
+                  <morph>
+                    <item type="txt" lang="gll-Latn">yanggu</item>
+                    <item type="gls" lang="en">spear</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-andru</item>
+                    <item type="cf" lang="gll-Latn">-andru</item>
+                    <item type="gls" lang="en">instrumental</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">spear</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Don't go too close, the two of us will kill it with a spear.</item>
+            <item type="note" lang="en">changed gloss from ablative to instrumental.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="dd779605-b635-4ffb-b404-bae86168e3fb">
+        <phrases>
+          <phrase guid="6cfaa57f-7449-4744-a0c4-fa00248534cc">
+            <item type="segnum" lang="en">30</item>
+            <words>
+              <word guid="ae8a80a5-e734-4eee-b7c9-48d7cd2dbe45">
+                <item type="txt" lang="gll-Latn">dhinadhikawa</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhina</item>
+                    <item type="cf" lang="gll-Latn">dhina</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">stand up</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhika</item>
+                    <item type="cf" lang="gll-Latn">dhika</item>
+                    <item type="gls" lang="en">go back</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-wa</item>
+                    <item type="cf" lang="gll-Latn">-wa</item>
+                    <item type="gls" lang="en">emphatic</item>
+                    <item type="msa" lang="en">v:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">stand up</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Stand back.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="a6ffd29e-7f3c-42c4-8262-0b554f50a05f">
+        <phrases>
+          <phrase guid="f23d1c76-000d-43c5-bede-e85568eddc15">
+            <item type="segnum" lang="en">31</item>
+            <words>
+              <word guid="5f5e0b91-8320-4d23-b95c-53f664a2db28">
+                <item type="txt" lang="gll-Latn">walya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walya</item>
+                    <item type="cf" lang="gll-Latn">walya</item>
+                    <item type="gls" lang="en">not</item>
+                    <item type="msa" lang="en">part</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">not</item>
+                <item type="pos" lang="en">part</item>
+              </word>
+              <word guid="da780892-39e4-4a14-a49d-0b23394c1668">
+                <item type="txt" lang="gll-Latn">nyalkanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nyalka</item>
+                    <item type="cf" lang="gll-Latn">nyalka</item>
+                    <item type="gls" lang="en">strike</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">strike</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">I didn't hit it.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="9d8ea6a9-0df3-4508-8e87-e4e6aa6b2e3a">
+        <phrases>
+          <phrase guid="9bb89b91-6be3-4d16-ac52-12217b9ea907">
+            <item type="segnum" lang="en">32</item>
+            <words>
+              <word guid="c40c87de-7879-412f-8a69-8b190f3f1ea8">
+                <item type="txt" lang="gll-Latn">makura</item>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="gll-Latn">‎‎(Give) me a stick.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="af84beab-a459-41c0-bc68-51386d8a55e5">
+        <phrases>
+          <phrase guid="4c0288b0-7793-4708-813f-b35d18702adc">
+            <item type="segnum" lang="en">33</item>
+            <words>
+              <word guid="376f15f6-4470-4d9c-9cce-396caf694bc3">
+                <item type="txt" lang="gll-Latn">mura</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">mura</item>
+                    <item type="cf" lang="gll-Latn">murra</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="variantTypes" lang="en">+variant of</item>
+                    <item type="gls" lang="en">go</item>
+                    <item type="msa" lang="en">v.i</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">go</item>
+                <item type="pos" lang="en">v.i</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="b9c82ae9-d659-4c8d-bd0a-ac5d94f70e04">
+                <item type="txt" lang="gll-Latn">galkanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">galka</item>
+                    <item type="cf" lang="gll-Latn">galka</item>
+                    <item type="gls" lang="en">strike</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-nga</item>
+                    <item type="cf" lang="gll-Latn">-nga</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">past</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Finished/O.K., I killed it.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="e4b13ec3-67b7-44ce-9a8c-15e80daaca4e">
+        <phrases>
+          <phrase guid="d379f7c0-c6eb-439e-96b2-5404f7b0da19">
+            <item type="segnum" lang="en">34</item>
+            <words>
+              <word guid="ac30f6e9-c719-4f6e-8aa7-7d16adee06b3">
+                <item type="txt" lang="gll-Latn">garki</item>
+              </word>
+              <word guid="753a7e56-a1c6-40aa-9dce-48a6f4abe30b">
+                <item type="txt" lang="gll-Latn">ingka</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ingka</item>
+                    <item type="cf" lang="gll-Latn">ingka</item>
+                    <item type="gls" lang="en">2sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">2sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="d813b047-bbdd-47c8-b85d-03d88459fde1">
+                <item type="txt" lang="gll-Latn">dhithianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">dhithi</item>
+                    <item type="cf" lang="gll-Latn">dhithi</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">dog</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Call your dog off.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="b1f18135-dea5-442a-8e57-e56e86ba086f">
+        <phrases>
+          <phrase guid="509622a3-b434-4014-afbd-b9bda1c59b23">
+            <item type="segnum" lang="en">35</item>
+            <words>
+              <word guid="dcf351d5-8dda-49e6-9c91-0345369f423d">
+                <item type="txt" lang="gll-Latn">nhandruguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhandru</item>
+                    <item type="cf" lang="gll-Latn">nhandru</item>
+                    <item type="hn" lang="gll-Latn">2</item>
+                    <item type="gls" lang="en">3sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="f9d7448b-564d-4d4f-989e-8aeb6da63d73">
+                <item type="txt" lang="gll-Latn">irnrdairnrdagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">irnrda</item>
+                    <item type="cf" lang="gll-Latn">irnrda</item>
+                    <item type="gls" lang="en">rip</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">irnrda</item>
+                    <item type="cf" lang="gll-Latn">irnrda</item>
+                    <item type="gls" lang="en">rip</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">rip</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="4e9a3942-b4e2-4fc2-aa73-172993e8ea3f">
+                <item type="txt" lang="gll-Latn">nhanhaguru</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-guru</item>
+                    <item type="cf" lang="gll-Latn">-guru</item>
+                    <item type="gls" lang="en">there</item>
+                    <item type="msa" lang="en">pro:Any</item>
+                  </morph>
+                </morphemes>
+              </word>
+              <word guid="a27a71dc-c1b3-4e9b-8615-77040801cd6d">
+                <item type="txt" lang="gll-Latn">nguthianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nguthi</item>
+                    <item type="cf" lang="gll-Latn">nguthi</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">meat</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">That one is tearing up the meat.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="56dd2490-b06b-4650-a645-ed2c2104ef55">
+        <phrases>
+          <phrase guid="87dfbbad-d429-4348-bfb2-e58355c93c4b">
+            <item type="segnum" lang="en">36</item>
+            <words>
+              <word guid="9402fee2-7fd3-46b5-8cbe-60b5220707f0">
+                <item type="txt" lang="gll-Latn">nalyba</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nalyba</item>
+                    <item type="cf" lang="gll-Latn">nalyba</item>
+                    <item type="gls" lang="en">knife</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">knife</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="e6fb23fe-54fa-4a7f-8c7f-8f6e42a197c6">
+                <item type="txt" lang="gll-Latn">nganha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganha</item>
+                    <item type="cf" lang="gll-Latn">nganha</item>
+                    <item type="gls" lang="en">1sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="0d4ff4a6-bebd-4f04-8ff3-b7086566dad3">
+                <item type="txt" lang="gll-Latn">ngutya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngutya</item>
+                    <item type="cf" lang="gll-Latn">ngutya</item>
+                    <item type="gls" lang="en">give</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">give</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="6b2faef5-b0a8-4fbf-ac9f-4d2ae339a533">
+                <item type="txt" lang="gll-Latn">gakagakara</item>
+              </word>
+              <word guid="a27a71dc-c1b3-4e9b-8615-77040801cd6d">
+                <item type="txt" lang="gll-Latn">nguthianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nguthi</item>
+                    <item type="cf" lang="gll-Latn">nguthi</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">meat</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">Give me a knife to cut up the meat there.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+      <paragraph guid="439b4350-23fe-45fa-8278-5f819e7f9dc0">
+        <phrases>
+          <phrase guid="d04ff82e-7a85-4836-a552-7e0ca3dfef0c">
+            <item type="segnum" lang="en">37</item>
+            <words>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="c1a33d53-ef0d-4958-afed-eecd6928cd44">
+                <item type="txt" lang="gll-Latn">durkaanha</item>
+              </word>
+              <word guid="731dbbc8-2bf5-4ffd-9029-03117022208c">
+                <item type="txt" lang="gll-Latn">waltagala</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">walta</item>
+                    <item type="cf" lang="gll-Latn">walta</item>
+                    <item type="gls" lang="en">take</item>
+                    <item type="msa" lang="en">v</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-gala</item>
+                    <item type="cf" lang="gll-Latn">-gala</item>
+                    <item type="gls" lang="en">present</item>
+                    <item type="msa" lang="en">v:Tense/Aspect</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">take</item>
+                <item type="pos" lang="en">v</item>
+              </word>
+              <word guid="18a737f7-61bf-4304-949f-64b24b9ffec4">
+                <item type="txt" lang="gll-Latn">nganytya</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nganytya</item>
+                    <item type="cf" lang="gll-Latn">nganytya</item>
+                    <item type="gls" lang="en">1sg.dat</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.dat</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="b31b06ce-eb8a-4977-850e-a6e62aae4ee4">
+                <item type="txt" lang="gll-Latn">gawulidyaanga</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">gawulidya</item>
+                    <item type="cf" lang="gll-Latn">gawalya</item>
+                    <item type="variantTypes" lang="en">+sp. var. of</item>
+                    <item type="gls" lang="en">uncle</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anga</item>
+                    <item type="cf" lang="gll-Latn">-anga</item>
+                    <item type="gls" lang="en">dative</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">uncle</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+              <word guid="bad35c17-1ee3-4bd5-b331-f9631d07238a">
+                <item type="txt" lang="gll-Latn">nguraanga</item>
+              </word>
+              <word guid="2e8567d5-f256-4296-b3e9-8fdef5b2c7ac">
+                <item type="txt" lang="gll-Latn">ngutyara</item>
+              </word>
+              <word guid="fbdfa6ef-172b-46f3-929c-82166caccb4b">
+                <item type="txt" lang="gll-Latn">ngathu</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">ngathu</item>
+                    <item type="cf" lang="gll-Latn">ngathu</item>
+                    <item type="hn" lang="gll-Latn">1</item>
+                    <item type="gls" lang="en">1sg.erg</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">1sg.erg</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="2c50a070-35ea-4505-958e-dcbf57b42a63">
+                <item type="txt" lang="gll-Latn">nhanha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nhanha</item>
+                    <item type="cf" lang="gll-Latn">nhanha</item>
+                    <item type="gls" lang="en">3sg.acc</item>
+                    <item type="msa" lang="en">pro</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">3sg.acc</item>
+                <item type="pos" lang="en">pro</item>
+              </word>
+              <word guid="a27a71dc-c1b3-4e9b-8615-77040801cd6d">
+                <item type="txt" lang="gll-Latn">nguthianha</item>
+                <morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">nguthi</item>
+                    <item type="cf" lang="gll-Latn">nguthi</item>
+                    <item type="msa" lang="en">n</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="gll-Latn">-anha</item>
+                    <item type="cf" lang="gll-Latn">-anha</item>
+                    <item type="gls" lang="en">accusative case</item>
+                    <item type="msa" lang="en">n:Any</item>
+                  </morph>
+                </morphemes>
+                <item type="gls" lang="en">meat</item>
+                <item type="pos" lang="en">n</item>
+              </word>
+            </words>
+            <item type="gls" lang="en">I am taking this leg to my uncle's camp to give him the meat.</item>
+          </phrase>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="gll-Latn" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+</document>

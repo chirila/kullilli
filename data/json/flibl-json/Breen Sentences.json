@@ -1,6 +1,9 @@
 {
- "flextext": "../Breen Sentences.flextext",
+ "flextext": "../data/flextext/Breen Sentences.flextext",
+ "title-en": "Breen Sentences",
  "1": {
+  "full_text": "barrkulu walyubala",
+  "translation-en": null,
   "word_list": [
    {
     "word_text": "barrkulu",
@@ -25,13 +28,13 @@
     "gls": ""
    }
   ],
-  "translation": null,
   "notes": [
    "not at all sure about the walyu- transcription, looks like walyuvEla"
-  ],
-  "full_text": "barrkulu walyubala"
+  ]
  },
  "2": {
+  "full_text": "murrumurrugala nyinalinga",
+  "translation-en": "men sitting down over there",
   "word_list": [
    {
     "word_text": "murrumurrugala",
@@ -93,11 +96,11 @@
     "gls": ""
    }
   ],
-  "translation": "men sitting down over there",
-  "notes": [],
-  "full_text": "murrumurrugala nyinalinga"
+  "notes": []
  },
  "3": {
+  "full_text": "yarna wayalingu",
+  "translation-en": null,
   "word_list": [
    {
     "word_text": "yarna",
@@ -122,11 +125,11 @@
     "gls": ""
    }
   ],
-  "translation": null,
-  "notes": [],
-  "full_text": "yarna wayalingu"
+  "notes": []
  },
  "4": {
+  "full_text": "ganyi",
+  "translation-en": null,
   "word_list": [
    {
     "word_text": "ganyi",
@@ -145,11 +148,11 @@
     "gls": "sweat"
    }
   ],
-  "translation": null,
-  "notes": [],
-  "full_text": "ganyi"
+  "notes": []
  },
  "5": {
+  "full_text": "dhaka wet dhugarna",
+  "translation-en": null,
   "word_list": [
    {
     "word_text": "dhaka",
@@ -190,11 +193,11 @@
     "gls": "wetfellow"
    }
   ],
-  "translation": null,
-  "notes": [],
-  "full_text": "dhaka wet dhugarna"
+  "notes": []
  },
  "6": {
+  "full_text": "nilaya, nilaya yarna walyaani",
+  "translation-en": "It was raining yesterday",
   "word_list": [
    {
     "word_text": "nilaya",
@@ -276,8 +279,6 @@
     "gls": ""
    }
   ],
-  "translation": "It was raining yesterday",
-  "notes": [],
-  "full_text": "nilaya, nilaya yarna walyaani"
+  "notes": []
  }
 }

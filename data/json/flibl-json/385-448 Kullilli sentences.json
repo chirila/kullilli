@@ -1,6 +1,9 @@
 {
- "flextext": "../385-448 Kullilli sentences.flextext",
+ "flextext": "../data/flextext/385-448 Kullilli sentences.flextext",
+ "title-en": "385-448 Kullili sentences",
  "1": {
+  "full_text": "murra dhikadhikanga nganyi/ dumpaindrirra inha",
+  "translation-en": "OK, I came back to tell you.",
   "word_list": [
    {
     "word_text": "murra",
@@ -125,11 +128,11 @@
     "gls": "2sg.acc"
    }
   ],
-  "translation": "OK, I came back to tell you.",
-  "notes": [],
-  "full_text": "murra dhikadhikanga nganyi/ dumpaindrirra inha"
+  "notes": []
  },
  "2": {
+  "full_text": "walya yanhthagali ngantya ngarnidyani",
+  "translation-en": "My father didn't go away.",
   "word_list": [
    {
     "word_text": "walya",
@@ -214,11 +217,11 @@
     "gls": ""
    }
   ],
-  "translation": "My father didn't go away.",
-  "notes": [],
-  "full_text": "walya yanhthagali ngantya ngarnidyani"
+  "notes": []
  },
  "3": {
+  "full_text": "yalagubanu ini yanhtha",
+  "translation-en": "Over that way you go.",
   "word_list": [
    {
     "word_text": "yalagubanu",
@@ -287,11 +290,11 @@
     "gls": "go"
    }
   ],
-  "translation": "Over that way you go.",
-  "notes": [],
-  "full_text": "yalagubanu ini yanhtha"
+  "notes": []
  },
  "4": {
+  "full_text": "yundru munamanhdharra nhinha nhangala galyi",
+  "translation-en": "You will meet him over there.",
   "word_list": [
    {
     "word_text": "yundru",
@@ -392,11 +395,11 @@
     "gls": "far"
    }
   ],
-  "translation": "You will meet him over there.",
-  "notes": [],
-  "full_text": "yundru munamanhdharra nhinha nhangala galyi"
+  "notes": []
  },
  "5": {
+  "full_text": "murra bulagurru garnabula bunhthidharrangaba",
+  "translation-en": "OK, two men arrived.",
   "word_list": [
    {
     "word_text": "murra",
@@ -508,11 +511,11 @@
     "gls": "come"
    }
   ],
-  "translation": "OK, two men arrived.",
-  "notes": [],
-  "full_text": "murra bulagurru garnabula bunhthidharrangaba"
+  "notes": []
  },
  "6": {
+  "full_text": "dhunawira gurnrtunu dhanagurru bunhthinarra",
+  "translation-en": "Wait a while, soon they will all come past.",
   "word_list": [
    {
     "word_text": "dhunawira",
@@ -624,11 +627,11 @@
     "gls": "come"
    }
   ],
-  "translation": "Wait a while, soon they will all come past.",
-  "notes": [],
-  "full_text": "dhunawira gurnrtunu dhanagurru bunhthinarra"
+  "notes": []
  },
  "7": {
+  "full_text": "matya dhikamanytyangaba garnabula",
+  "translation-en": "Long ago two people went past.",
   "word_list": [
    {
     "word_text": "matya",
@@ -715,13 +718,13 @@
     "gls": "man"
    }
   ],
-  "translation": "Long ago two people went past.",
   "notes": [
    "example - time"
-  ],
-  "full_text": "matya dhikamanytyangaba garnabula"
+  ]
  },
  "8": {
+  "full_text": "murra bulagurru bunhthinga",
+  "translation-en": "OK, the two of them came here.",
   "word_list": [
    {
     "word_text": "murra",
@@ -790,11 +793,11 @@
     "gls": "bunhthi-nga"
    }
   ],
-  "translation": "OK, the two of them came here.",
-  "notes": [],
-  "full_text": "murra bulagurru bunhthinga"
+  "notes": []
  },
  "9": {
+  "full_text": "niladha gidani buka wagabalagali nhangala",
+  "translation-en": "Yesterday many cattle camped here.",
   "word_list": [
    {
     "word_text": "niladha",
@@ -904,13 +907,13 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "Yesterday many cattle camped here.",
   "notes": [
    "example - time"
-  ],
-  "full_text": "niladha gidani buka wagabalagali nhangala"
+  ]
  },
  "10": {
+  "full_text": "gari nadyagali gulha yundru yalairri garnaani yanhthadhikagali",
+  "translation-en": "Hey when you were looking over there did a man go past?",
   "word_list": [
    {
     "word_text": "gari",
@@ -1070,11 +1073,11 @@
     "gls": ""
    }
   ],
-  "translation": "Hey when you were looking over there did a man go past?",
-  "notes": [],
-  "full_text": "gari nadyagali gulha yundru yalairri garnaani yanhthadhikagali"
+  "notes": []
  },
  "11": {
+  "full_text": "murra warliwa nhaniguru manytyagala",
+  "translation-en": "OK this baby is crawling.",
   "word_list": [
    {
     "word_text": "murra",
@@ -1159,11 +1162,11 @@
     "gls": ""
    }
   ],
-  "translation": "OK this baby is crawling.",
-  "notes": [],
-  "full_text": "murra warliwa nhaniguru manytyagala"
+  "notes": []
  },
  "12": {
+  "full_text": "walya nhangala manyta",
+  "translation-en": "Don't crawl here.",
   "word_list": [
    {
     "word_text": "walya",
@@ -1214,13 +1217,13 @@
     "gls": "move"
    }
   ],
-  "translation": "Don't crawl here.",
   "notes": [
    "example - negative imperative"
-  ],
-  "full_text": "walya nhangala manyta"
+  ]
  },
  "13": {
+  "full_text": "gawa ngathu inha dumparra/ nhanigurru nhungka bagalani",
+  "translation-en": "Come, I will show you his track. (Come I will show you / this is his track.)",
   "word_list": [
    {
     "word_text": "gawa",
@@ -1368,11 +1371,11 @@
     "gls": "track"
    }
   ],
-  "translation": "Come, I will show you his track. (Come I will show you / this is his track.)",
-  "notes": [],
-  "full_text": "gawa ngathu inha dumparra/ nhanigurru nhungka bagalani"
+  "notes": []
  },
  "14": {
+  "full_text": "nadya nhanhaguru/ garnaandru wirlidigala barlkaandru nhanha nanduanha",
+  "translation-en": "Look at that man leading that horse with a string.",
   "word_list": [
    {
     "word_text": "nadya",
@@ -1538,11 +1541,11 @@
     "gls": "horse"
    }
   ],
-  "translation": "Look at that man leading that horse with a string.",
-  "notes": [],
-  "full_text": "nadya nhanhaguru/ garnaandru wirlidigala barlkaandru nhanha nanduanha"
+  "notes": []
  },
  "15": {
+  "full_text": "yundru ngantya wilidhi nanduanha",
+  "translation-en": "You lead my horse.",
   "word_list": [
    {
     "word_text": "yundru",
@@ -1618,13 +1621,13 @@
     "gls": "horse"
    }
   ],
-  "translation": "You lead my horse.",
   "notes": [
    "is this an imperative with an optional subject? appears to have bare verb, but verb isn't sentence-initial"
-  ],
-  "full_text": "yundru ngantya wilidhi nanduanha"
+  ]
  },
  "16": {
+  "full_text": "nunpa nhanhaguru yandraanha",
+  "translation-en": "Push this stone.",
   "word_list": [
    {
     "word_text": "nunpa",
@@ -1693,11 +1696,11 @@
     "gls": ""
    }
   ],
-  "translation": "Push this stone.",
-  "notes": [],
-  "full_text": "nunpa nhanhaguru yandraanha"
+  "notes": []
  },
  "17": {
+  "full_text": "nhaniyi nugaani/ walya barninyi ngathu nunpalangu",
+  "translation-en": "It's (too) big. I can't push (it).",
   "word_list": [
    {
     "word_text": "nhaniyi",
@@ -1829,11 +1832,11 @@
     "gls": ""
    }
   ],
-  "translation": "It's (too) big. I can't push (it).",
-  "notes": [],
-  "full_text": "nhaniyi nugaani/ walya barninyi ngathu nunpalangu"
+  "notes": []
  },
  "18": {
+  "full_text": "wilidhi nhanhaguru nanduanha",
+  "translation-en": "Lead this horse.",
   "word_list": [
    {
     "word_text": "wilidhi",
@@ -1902,11 +1905,11 @@
     "gls": "horse"
    }
   ],
-  "translation": "Lead this horse.",
-  "notes": [],
-  "full_text": "wilidhi nhanhaguru nanduanha"
+  "notes": []
  },
  "19": {
+  "full_text": "walya ngathu nhanha gankurranha wirliwirlidhirra",
+  "translation-en": "I will not pull that hair.",
   "word_list": [
    {
     "word_text": "walya",
@@ -2007,11 +2010,11 @@
     "gls": "drag"
    }
   ],
-  "translation": "I will not pull that hair.",
-  "notes": [],
-  "full_text": "walya ngathu nhanha gankurranha wirliwirlidhirra"
+  "notes": []
  },
  "20": {
+  "full_text": "walya nhanhaguru gankurra wirliwirlidhi",
+  "translation-en": "Don't pull that hair.",
   "word_list": [
    {
     "word_text": "walya",
@@ -2087,11 +2090,11 @@
     "gls": "drag"
    }
   ],
-  "translation": "Don't pull that hair.",
-  "notes": [],
-  "full_text": "walya nhanhaguru gankurra wirliwirlidhi"
+  "notes": []
  },
  "21": {
+  "full_text": "nunpadhikadhika nhanhagurru yandraanha",
+  "translation-en": "Roll that stone.",
   "word_list": [
    {
     "word_text": "nunpadhikadhika",
@@ -2178,11 +2181,11 @@
     "gls": ""
    }
   ],
-  "translation": "Roll that stone.",
-  "notes": [],
-  "full_text": "nunpadhikadhika nhanhagurru yandraanha"
+  "notes": []
  },
  "22": {
+  "full_text": "ga ngathu nunpadhikadhikarra nhanhaguru",
+  "translation-en": "Yes I will roll that one.",
   "word_list": [
    {
     "word_text": "ga",
@@ -2285,11 +2288,11 @@
     "gls": ""
    }
   ],
-  "translation": "Yes I will roll that one.",
-  "notes": [],
-  "full_text": "ga ngathu nunpadhikadhikarra nhanhaguru"
+  "notes": []
  },
  "23": {
+  "full_text": "yandra nhaniguru bulirra ngakalanga",
+  "translation-en": "This stone will fall in the water.",
   "word_list": [
    {
     "word_text": "yandra",
@@ -2383,11 +2386,11 @@
     "gls": ""
    }
   ],
-  "translation": "This stone will fall in the water.",
-  "notes": [],
-  "full_text": "yandra nhaniguru bulirra ngakalanga"
+  "notes": []
  },
  "24": {
+  "full_text": "yandra nhaniguru buliwarrira mirgalalunga ngakaanga",
+  "translation-en": "This stone will fall down along the steep bank into the water.",
   "word_list": [
    {
     "word_text": "yandra",
@@ -2515,11 +2518,11 @@
     "gls": ""
    }
   ],
-  "translation": "This stone will fall down along the steep bank into the water.",
-  "notes": [],
-  "full_text": "yandra nhaniguru buliwarrira mirgalalunga ngakaanga"
+  "notes": []
  },
  "25": {
+  "full_text": "mirgalani nhaniguru gityabarruani",
+  "translation-en": "This bank is steep.",
   "word_list": [
    {
     "word_text": "mirgalani",
@@ -2597,11 +2600,11 @@
     "gls": "deep"
    }
   ],
-  "translation": "This bank is steep.",
-  "notes": [],
-  "full_text": "mirgalani nhaniguru gityabarruani"
+  "notes": []
  },
  "26": {
+  "full_text": "yandra nunpadhikadhikarra ngakalanga",
+  "translation-en": "This stone will roll into the water.",
   "word_list": [
    {
     "word_text": "yandra",
@@ -2688,11 +2691,11 @@
     "gls": ""
    }
   ],
-  "translation": "This stone will roll into the water.",
-  "notes": [],
-  "full_text": "yandra nunpadhikadhikarra ngakalanga"
+  "notes": []
  },
  "27": {
+  "full_text": "manhdharra ngalingu nhanhaguru durrugaraanha",
+  "translation-en": "The two of us will catch this goanna.",
   "word_list": [
    {
     "word_text": "manhdharra",
@@ -2795,11 +2798,11 @@
     "gls": ""
    }
   ],
-  "translation": "The two of us will catch this goanna.",
-  "notes": [],
-  "full_text": "manhdharra ngalingu nhanhaguru durrugaraanha"
+  "notes": []
  },
  "28": {
+  "full_text": "gardra nhanhagurru gulbarranha yanguandru",
+  "translation-en": "Spear this emu with a spear.",
   "word_list": [
    {
     "word_text": "gardra",
@@ -2893,11 +2896,11 @@
     "gls": "spear"
    }
   ],
-  "translation": "Spear this emu with a spear.",
-  "notes": [],
-  "full_text": "gardra nhanhagurru gulbarranha yanguandru"
+  "notes": []
  },
  "29": {
+  "full_text": "ga murra ngathu nhanha gardralha",
+  "translation-en": "Yes, I am already spearing it.",
   "word_list": [
    {
     "word_text": "ga",
@@ -2989,11 +2992,11 @@
     "gls": "spear"
    }
   ],
-  "translation": "Yes, I am already spearing it.",
-  "notes": [],
-  "full_text": "ga murra ngathu nhanha gardralha"
+  "notes": []
  },
  "30": {
+  "full_text": "ga murra ngathu nhanha gadranga",
+  "translation-en": null,
   "word_list": [
    {
     "word_text": "ga",
@@ -3085,11 +3088,11 @@
     "gls": ""
    }
   ],
-  "translation": null,
-  "notes": [],
-  "full_text": "ga murra ngathu nhanha gadranga"
+  "notes": []
  },
  "31": {
+  "full_text": "nunpa nhanhaguru dhithianha",
+  "translation-en": "Kick this dog.",
   "word_list": [
    {
     "word_text": "nunpa",
@@ -3158,11 +3161,11 @@
     "gls": "dog"
    }
   ],
-  "translation": "Kick this dog.",
-  "notes": [],
-  "full_text": "nunpa nhanhaguru dhithianha"
+  "notes": []
  },
  "32": {
+  "full_text": "gudyu ngathu nhanha nunpalangu dratyalangu nganha",
+  "translation-en": "If/when I kick it, (it) may bite me.",
   "word_list": [
    {
     "word_text": "gudyu",
@@ -3279,11 +3282,11 @@
     "gls": "1sg.acc"
    }
   ],
-  "translation": "If/when I kick it, (it) may bite me.",
-  "notes": [],
-  "full_text": "gudyu ngathu nhanha nunpalangu dratyalangu nganha"
+  "notes": []
  },
  "33": {
+  "full_text": "nadyarra gulha ngathu ingka ngarnidyanha/ ngutyarra ngathu nhinha nguthianha",
+  "translation-en": "When I see your father I will give him meat.",
   "word_list": [
    {
     "word_text": "nadyarra",
@@ -3472,11 +3475,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "When I see your father I will give him meat.",
-  "notes": [],
-  "full_text": "nadyarra gulha ngathu ingka ngarnidyanha/ ngutyarra ngathu nhinha nguthianha"
+  "notes": []
  },
  "34": {
+  "full_text": "ini wirlbi",
+  "translation-en": "You, whistle!",
   "word_list": [
    {
     "word_text": "ini",
@@ -3511,11 +3514,11 @@
     "gls": "whistle"
    }
   ],
-  "translation": "You, whistle!",
-  "notes": [],
-  "full_text": "ini wirlbi"
+  "notes": []
  },
  "35": {
+  "full_text": "murra nganyi wirlbirra",
+  "translation-en": "OK, I will whistle.",
   "word_list": [
    {
     "word_text": "murra",
@@ -3575,11 +3578,11 @@
     "gls": "whistle"
    }
   ],
-  "translation": "OK, I will whistle.",
-  "notes": [],
-  "full_text": "murra nganyi wirlbirra"
+  "notes": []
  },
  "36": {
+  "full_text": "murra ngathu wirnbirra",
+  "translation-en": "OK, I will throw it away.",
   "word_list": [
    {
     "word_text": "murra",
@@ -3639,11 +3642,11 @@
     "gls": "throw back"
    }
   ],
-  "translation": "OK, I will throw it away.",
-  "notes": [],
-  "full_text": "murra ngathu wirnbirra"
+  "notes": []
  },
  "37": {
+  "full_text": "walya yanhdha nangala",
+  "translation-en": "Don't talk here.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3694,11 +3697,11 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "Don't talk here.",
-  "notes": [],
-  "full_text": "walya yanhdha nangala"
+  "notes": []
  },
  "38": {
+  "full_text": "walya nhaniguru mulagala",
+  "translation-en": "He doesn't spit here.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3767,11 +3770,11 @@
     "gls": "spit"
    }
   ],
-  "translation": "He doesn't spit here.",
-  "notes": [],
-  "full_text": "walya nhaniguru mulagala"
+  "notes": []
  },
  "39": {
+  "full_text": "warliwa nhaniguru mulagala",
+  "translation-en": "This child is vomiting.",
   "word_list": [
    {
     "word_text": "warliwa",
@@ -3840,11 +3843,11 @@
     "gls": "vomit"
    }
   ],
-  "translation": "This child is vomiting.",
-  "notes": [],
-  "full_text": "warliwa nhaniguru mulagala"
+  "notes": []
  },
  "40": {
+  "full_text": "walya mula",
+  "translation-en": "Don't vomit.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3879,13 +3882,13 @@
     "gls": "vomit"
    }
   ],
-  "translation": "Don't vomit.",
   "notes": [
    "example - simple negative imperative"
-  ],
-  "full_text": "walya mula"
+  ]
  },
  "41": {
+  "full_text": "murra nhaniguru makurrani dundagala malparra",
+  "translation-en": "Already this tree is growing quickly.",
   "word_list": [
    {
     "word_text": "murra",
@@ -3995,11 +3998,11 @@
     "gls": "quickly"
    }
   ],
-  "translation": "Already this tree is growing quickly.",
-  "notes": [],
-  "full_text": "murra nhaniguru makurrani dundagala malparra"
+  "notes": []
  },
  "42": {
+  "full_text": "gunkagunkaminyiiyiga nhaniguru",
+  "translation-en": "This one has a cough.",
   "word_list": [
    {
     "word_text": "gunkagunkaminyiiyiga",
@@ -4079,11 +4082,11 @@
     "gls": ""
    }
   ],
-  "translation": "This one has a cough.",
-  "notes": [],
-  "full_text": "gunkagunkaminyiiyiga nhaniguru"
+  "notes": []
  },
  "43": {
+  "full_text": "walya gunkagunkaminyiiyi",
+  "translation-en": "Don't cough.",
   "word_list": [
    {
     "word_text": "walya",
@@ -4127,13 +4130,13 @@
     "gls": "cough"
    }
   ],
-  "translation": "Don't cough.",
   "notes": [
    "example - simple negative imperative"
-  ],
-  "full_text": "walya gunkagunkaminyiiyi"
+  ]
  },
  "44": {
+  "full_text": "walya nganyi gunkagunkaminyirra",
+  "translation-en": "I won't cough.",
   "word_list": [
    {
     "word_text": "walya",
@@ -4193,11 +4196,11 @@
     "gls": ""
    }
   ],
-  "translation": "I won't cough.",
-  "notes": [],
-  "full_text": "walya nganyi gunkagunkaminyirra"
+  "notes": []
  },
  "45": {
+  "full_text": "dhilaba munkaiyigalanyi",
+  "translation-en": "I  feel cold, shivering.",
   "word_list": [
    {
     "word_text": "dhilaba",
@@ -4259,11 +4262,11 @@
     "gls": "feel sick"
    }
   ],
-  "translation": "I  feel cold, shivering.",
-  "notes": [],
-  "full_text": "dhilaba munkaiyigalanyi"
+  "notes": []
  },
  "46": {
+  "full_text": "minaanga ini dhilaba munkaiyigala ini",
+  "translation-en": "Why are you shivering, cold?",
   "word_list": [
    {
     "word_text": "minaanga",
@@ -4373,13 +4376,13 @@
     "gls": "2sg.nom"
    }
   ],
-  "translation": "Why are you shivering, cold?",
   "notes": [
    "what-from/what-at (maybe also apprehensive use of locative?)"
-  ],
-  "full_text": "minaanga ini dhilaba munkaiyigala ini"
+  ]
  },
  "47": {
+  "full_text": "bakawarri",
+  "translation-en": "Send down.",
   "word_list": [
    {
     "word_text": "bakawarri",
@@ -4407,11 +4410,11 @@
     "gls": "send"
    }
   ],
-  "translation": "Send down.",
-  "notes": [],
-  "full_text": "bakawarri"
+  "notes": []
  },
  "48": {
+  "full_text": "murra nganyi bakawarrira",
+  "translation-en": "OK, I will send down.",
   "word_list": [
    {
     "word_text": "murra",
@@ -4480,11 +4483,11 @@
     "gls": ""
    }
   ],
-  "translation": "OK, I will send down.",
-  "notes": [],
-  "full_text": "murra nganyi bakawarrira"
+  "notes": []
  },
  "49": {
+  "full_text": "dhati nhanha wiyianha",
+  "translation-en": "Chop this firewood.",
   "word_list": [
    {
     "word_text": "dhati",
@@ -4544,11 +4547,11 @@
     "gls": "firewood"
    }
   ],
-  "translation": "Chop this firewood.",
-  "notes": [],
-  "full_text": "dhati nhanha wiyianha"
+  "notes": []
  },
  "50": {
+  "full_text": "dhati nhanha birlkaanha",
+  "translation-en": "Chop this log.",
   "word_list": [
    {
     "word_text": "dhati",
@@ -4608,13 +4611,13 @@
     "gls": "log"
    }
   ],
-  "translation": "Chop this log.",
   "notes": [
    "log looks like it has an accusative case marker on it"
-  ],
-  "full_text": "dhati nhanha birlkaanha"
+  ]
  },
  "51": {
+  "full_text": "walhtha nhanhaguru dharunyanha",
+  "translation-en": "Take this axe.",
   "word_list": [
    {
     "word_text": "walhtha",
@@ -4683,11 +4686,11 @@
     "gls": "axe"
    }
   ],
-  "translation": "Take this axe.",
-  "notes": [],
-  "full_text": "walhtha nhanhaguru dharunyanha"
+  "notes": []
  },
  "52": {
+  "full_text": "wiyianha yundru dhatirra",
+  "translation-en": "You will chop firewood.",
   "word_list": [
    {
     "word_text": "wiyianha",
@@ -4756,13 +4759,13 @@
     "gls": "chop-fut"
    }
   ],
-  "translation": "You will chop firewood.",
   "notes": [
    "-ra (or --ra?) for future or imperative"
-  ],
-  "full_text": "wiyianha yundru dhatirra"
+  ]
  },
  "53": {
+  "full_text": "guka ngantya munkaiyigala",
+  "translation-en": "My head is hurting.",
   "word_list": [
    {
     "word_text": "guka",
@@ -4831,11 +4834,11 @@
     "gls": "feel sick"
    }
   ],
-  "translation": "My head is hurting.",
-  "notes": [],
-  "full_text": "guka ngantya munkaiyigala"
+  "notes": []
  },
  "54": {
+  "full_text": "niladha nganyi munkaiyigali",
+  "translation-en": "Yesterday I had pains.",
   "word_list": [
    {
     "word_text": "niladha",
@@ -4904,11 +4907,11 @@
     "gls": "make"
    }
   ],
-  "translation": "Yesterday I had pains.",
-  "notes": [],
-  "full_text": "niladha nganyi munkaiyigali"
+  "notes": []
  },
  "55": {
+  "full_text": "yanhtharra bari nganyi gubianga",
+  "translation-en": "I will go to the doctor I think.",
   "word_list": [
    {
     "word_text": "yanhtharra",
@@ -4993,11 +4996,11 @@
     "gls": ""
    }
   ],
-  "translation": "I will go to the doctor I think.",
-  "notes": [],
-  "full_text": "yanhtharra bari nganyi gubianga"
+  "notes": []
  },
  "56": {
+  "full_text": "yanhtharra bari ini gubianga",
+  "translation-en": "You will go to the doctor, I think.",
   "word_list": [
    {
     "word_text": "yanhtharra",
@@ -5082,11 +5085,11 @@
     "gls": ""
    }
   ],
-  "translation": "You will go to the doctor, I think.",
-  "notes": [],
-  "full_text": "yanhtharra bari ini gubianga"
+  "notes": []
  },
  "57": {
+  "full_text": "munkaiyigala nganyi gukaani/ nadyarra bari yundru nganha",
+  "translation-en": "I am having pains in the head. I think you will see me.",
   "word_list": [
    {
     "word_text": "munkaiyigala",
@@ -5243,13 +5246,13 @@
     "gls": "1sg.acc"
    }
   ],
-  "translation": "I am having pains in the head. I think you will see me.",
   "notes": [
    "variable word order with 53"
-  ],
-  "full_text": "munkaiyigala nganyi gukaani/ nadyarra bari yundru nganha"
+  ]
  },
  "58": {
+  "full_text": "ilirri balhtigala nganyi",
+  "translation-en": "My tears are running.",
   "word_list": [
    {
     "word_text": "ilirri",
@@ -5309,11 +5312,11 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "My tears are running.",
-  "notes": [],
-  "full_text": "ilirri balhtigala nganyi"
+  "notes": []
  },
  "59": {
+  "full_text": "wikarla munkaiyirra bari nganyi",
+  "translation-en": "Tomorrow I think I'll have pains.",
   "word_list": [
    {
     "word_text": "wikarla",
@@ -5398,11 +5401,11 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "Tomorrow I think I'll have pains.",
-  "notes": [],
-  "full_text": "wikarla munkaiyirra bari nganyi"
+  "notes": []
  },
  "60": {
+  "full_text": "wikarla guka nganytya murrtarra",
+  "translation-en": "Tomorrow my head will hurt.",
   "word_list": [
    {
     "word_text": "wikarla",
@@ -5478,11 +5481,11 @@
     "gls": ""
    }
   ],
-  "translation": "Tomorrow my head will hurt.",
-  "notes": [],
-  "full_text": "wikarla guka nganytya murrtarra"
+  "notes": []
  },
  "61": {
+  "full_text": "mutudha ini",
+  "translation-en": "Are you alone?",
   "word_list": [
    {
     "word_text": "mutudha",
@@ -5517,13 +5520,13 @@
     "gls": "2sg.nom"
    }
   ],
-  "translation": "Are you alone?",
   "notes": [
    "example - y/n question"
-  ],
-  "full_text": "mutudha ini"
+  ]
  },
  "62": {
+  "full_text": "ga mutudha nganyi",
+  "translation-en": "Yes I am alone.",
   "word_list": [
    {
     "word_text": "ga",
@@ -5574,13 +5577,13 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "Yes I am alone.",
   "notes": [
    "example - response to y/n question"
-  ],
-  "full_text": "ga mutudha nganyi"
+  ]
  },
  "63": {
+  "full_text": "miriani nhanigurru garnaani",
+  "translation-en": "This man is cheeky.",
   "word_list": [
    {
     "word_text": "miriani",
@@ -5658,11 +5661,11 @@
     "gls": "garna-ani"
    }
   ],
-  "translation": "This man is cheeky.",
-  "notes": [],
-  "full_text": "miriani nhanigurru garnaani"
+  "notes": []
  },
  "64": {
+  "full_text": "dhurrabila nhaniyi burnguani",
+  "translation-en": "This gum tree is tall.",
   "word_list": [
    {
     "word_text": "dhurrabila",
@@ -5731,8 +5734,6 @@
     "gls": "gum tree"
    }
   ],
-  "translation": "This gum tree is tall.",
-  "notes": [],
-  "full_text": "dhurrabila nhaniyi burnguani"
+  "notes": []
  }
 }

@@ -1,6 +1,9 @@
 {
- "flextext": "../129-192 Kullilli sentences.flextext",
+ "flextext": "../data/flextext/129-192 Kullilli sentences.flextext",
+ "title-en": "129-192 Kullilli sentences",
  "1": {
+  "full_text": "ngalaanga bulaguru garnabula yanhthagala",
+  "translation-en": "Where are the two men going?",
   "word_list": [
    {
     "word_text": "ngalaanga",
@@ -103,11 +106,11 @@
     "gls": ""
    }
   ],
-  "translation": "Where are the two men going?",
-  "notes": [],
-  "full_text": "ngalaanga bulaguru garnabula yanhthagala"
+  "notes": []
  },
  "2": {
+  "full_text": "nguthianga bulaguru yanhthagala",
+  "translation-en": "The two of them are going for meat.",
   "word_list": [
    {
     "word_text": "nguthianga",
@@ -185,13 +188,13 @@
     "gls": ""
    }
   ],
-  "translation": "The two of them are going for meat.",
   "notes": [
    "Note initial focus?"
-  ],
-  "full_text": "nguthianga bulaguru yanhthagala"
+  ]
  },
  "3": {
+  "full_text": "ngalaanga ini yanhthagala",
+  "translation-en": "Where are you going?",
   "word_list": [
    {
     "word_text": "ngalaanga",
@@ -260,14 +263,14 @@
     "gls": ""
    }
   ],
-  "translation": "Where are you going?",
   "notes": [
    "example - wh- question",
    "Note verb final."
-  ],
-  "full_text": "ngalaanga ini yanhthagala"
+  ]
  },
  "4": {
+  "full_text": "ngakaanga yanhthagala manhdhakarra ngathu",
+  "translation-en": "I'm going to get water.",
   "word_list": [
    {
     "word_text": "ngakaanga",
@@ -370,13 +373,13 @@
     "gls": "1sg.erg"
    }
   ],
-  "translation": "I'm going to get water.",
   "notes": [
    "Note order -possibly focus first, then pronoun either side of the verb (keep the verbs together? or post-verbal topic?"
-  ],
-  "full_text": "ngakaanga yanhthagala manhdhakarra ngathu"
+  ]
  },
  "5": {
+  "full_text": "ngalaandru ini",
+  "translation-en": "Where are you from?",
   "word_list": [
    {
     "word_text": "ngalaandru",
@@ -420,14 +423,14 @@
     "gls": "2sg.nom"
    }
   ],
-  "translation": "Where are you from?",
   "notes": [
    "example - wh- question & basic introduction?",
    "Note no copula"
-  ],
-  "full_text": "ngalaandru ini"
+  ]
  },
  "6": {
+  "full_text": "ngakanugaandru",
+  "translation-en": "(I'm) from the big water.",
   "word_list": [
    {
     "word_text": "ngakanugaandru",
@@ -464,13 +467,13 @@
     "gls": ""
    }
   ],
-  "translation": "(I'm) from the big water.",
   "notes": [
    "example - response to basic introduction question"
-  ],
-  "full_text": "ngakanugaandru"
+  ]
  },
  "7": {
+  "full_text": "mithi baduani ini/ bakarranyi marnngarra yundru",
+  "translation-en": "You have the ability to make a boomerang.",
   "word_list": [
    {
     "word_text": "mithi",
@@ -593,13 +596,13 @@
     "gls": "2sg.erg"
    }
   ],
-  "translation": "You have the ability to make a boomerang.",
   "notes": [
    "Another example where the focus is first, then the verb, then the pronoun (maybe the focus is \"make a boomerang\"?)"
-  ],
-  "full_text": "mithi baduani ini/ bakarranyi marnngarra yundru"
+  ]
  },
  "8": {
+  "full_text": "walya mithimunhdhaani",
+  "translation-en": "No, (I) can't make it. (lit. \"It (is) make-less.\")",
   "word_list": [
    {
     "word_text": "walya",
@@ -652,13 +655,13 @@
     "gls": "make (?)"
    }
   ],
-  "translation": "No, (I) can't make it. (lit. \"It (is) make-less.\")",
   "notes": [
    "Nice! Nominative on a nominalized verb"
-  ],
-  "full_text": "walya mithimunhdhaani"
+  ]
  },
  "9": {
+  "full_text": "gunkarra yundru nganytya gakudyanha",
+  "translation-en": "You(,) ask my brother.",
   "word_list": [
    {
     "word_text": "gunkarra",
@@ -743,13 +746,13 @@
     "gls": "brother"
    }
   ],
-  "translation": "You(,) ask my brother.",
   "notes": [
    "Imperative verb going first. Not sure if all examples like that - check."
-  ],
-  "full_text": "gunkarra yundru nganytya gakudyanha"
+  ]
  },
  "10": {
+  "full_text": "murra nganytya gakudya marnngarra ingka bakarranyi",
+  "translation-en": "OK, my uncle will make you a boomerang.",
   "word_list": [
    {
     "word_text": "murra",
@@ -857,13 +860,13 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "OK, my uncle will make you a boomerang.",
   "notes": [
    "mura - better translation might be OK or \"well\" rather than \"finished\" based on examples like this."
-  ],
-  "full_text": "murra nganytya gakudya marnngarra ingka bakarranyi"
+  ]
  },
  "11": {
+  "full_text": "walya barnini munkagali ngathu bakarranyi",
+  "translation-en": "I am not able to make a boomerang.",
   "word_list": [
    {
     "word_text": "walya",
@@ -955,13 +958,13 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "I am not able to make a boomerang.",
   "notes": [
    "Maybe literal trans is \"no, I'm unable to make\""
-  ],
-  "full_text": "walya barnini munkagali ngathu bakarranyi"
+  ]
  },
  "12": {
+  "full_text": "warlu warlu galkagala nandru dhithiandru",
+  "translation-en": "That dog is continuously barking.",
   "word_list": [
    {
     "word_text": "warlu warlu",
@@ -1046,13 +1049,13 @@
     "gls": "dog"
    }
   ],
-  "translation": "That dog is continuously barking.",
   "notes": [
    "bark-strike  examples of compound?"
-  ],
-  "full_text": "warlu warlu galkagala nandru dhithiandru"
+  ]
  },
  "13": {
+  "full_text": "ngakalunga dhanaguru warliwani wintagala",
+  "translation-en": "The kids are all swimming in the water.",
   "word_list": [
    {
     "word_text": "ngakalunga",
@@ -1155,11 +1158,11 @@
     "gls": "swim"
    }
   ],
-  "translation": "The kids are all swimming in the water.",
-  "notes": [],
-  "full_text": "ngakalunga dhanaguru warliwani wintagala"
+  "notes": []
  },
  "14": {
+  "full_text": "yawurra balhthiiyigala nganyi",
+  "translation-en": "I feel hot.",
   "word_list": [
    {
     "word_text": "yawurra",
@@ -1228,13 +1231,13 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "I feel hot.",
   "notes": [
    "example - feeling/condition (with reflexive)"
-  ],
-  "full_text": "yawurra balhthiiyigala nganyi"
+  ]
  },
  "15": {
+  "full_text": "wagalha bari nganyi nhangalayi walbirilunga",
+  "translation-en": "I think I'll lie down here in the shade.",
   "word_list": [
    {
     "word_text": "wagalha",
@@ -1344,11 +1347,11 @@
     "gls": ""
    }
   ],
-  "translation": "I think I'll lie down here in the shade.",
-  "notes": [],
-  "full_text": "wagalha bari nganyi nhangalayi walbirilunga"
+  "notes": []
  },
  "16": {
+  "full_text": "nhungalagarri",
+  "translation-en": "Over there.",
   "word_list": [
    {
     "word_text": "nhungalagarri",
@@ -1376,13 +1379,13 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "Over there.",
   "notes": [
    "example - location/direction"
-  ],
-  "full_text": "nhungalagarri"
+  ]
  },
  "17": {
+  "full_text": "nhungala",
+  "translation-en": "Here.",
   "word_list": [
    {
     "word_text": "nhungala",
@@ -1401,13 +1404,13 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "Here.",
   "notes": [
    "example - location/direction"
-  ],
-  "full_text": "nhungala"
+  ]
  },
  "18": {
+  "full_text": "garnawatyu nhanigurru wagagala walbirilunga",
+  "translation-en": "A man (that one) is lying in the shade.",
   "word_list": [
    {
     "word_text": "garnawatyu",
@@ -1510,11 +1513,11 @@
     "gls": ""
    }
   ],
-  "translation": "A man (that one) is lying in the shade.",
-  "notes": [],
-  "full_text": "garnawatyu nhanigurru wagagala walbirilunga"
+  "notes": []
  },
  "19": {
+  "full_text": "dunagulha nganyi wagarra bari",
+  "translation-en": "(It's?) late, I will lie down, I think.",
   "word_list": [
    {
     "word_text": "dunagulha",
@@ -1599,11 +1602,11 @@
     "gls": "think"
    }
   ],
-  "translation": "(It's?) late, I will lie down, I think.",
-  "notes": [],
-  "full_text": "dunagulha nganyi wagarra bari"
+  "notes": []
  },
  "20": {
+  "full_text": "dhilaba dratyaiyigala nganyi",
+  "translation-en": "I feel cold.",
   "word_list": [
    {
     "word_text": "dhilaba",
@@ -1672,13 +1675,13 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "I feel cold.",
   "notes": [
    "example - feeling/condition (with reflexive)"
-  ],
-  "full_text": "dhilaba dratyaiyigala nganyi"
+  ]
  },
  "21": {
+  "full_text": "wina ngali barnrdirra winawarra ngali gulharra wiyilya",
+  "translation-en": "We will sit down close to the fire. [We will move close to sit close to the fire.]",
   "word_list": [
    {
     "word_text": "wina",
@@ -1829,13 +1832,13 @@
     "gls": "fire"
    }
   ],
-  "translation": "We will sit down close to the fire. [We will move close to sit close to the fire.]",
   "notes": [
    "-lya here is probably just -la?"
-  ],
-  "full_text": "wina ngali barnrdirra winawarra ngali gulharra wiyilya"
+  ]
  },
  "22": {
+  "full_text": "dhilagala nhaniguru dhila bari/ gurru nhanha ngalingu gulparra",
+  "translation-en": "This cold wind is blowing, the two of us will build a windbreak.",
   "word_list": [
    {
     "word_text": "dhilagala",
@@ -2008,11 +2011,11 @@
     "gls": "kindle"
    }
   ],
-  "translation": "This cold wind is blowing, the two of us will build a windbreak.",
-  "notes": [],
-  "full_text": "dhilagala nhaniguru dhila bari/ gurru nhanha ngalingu gulparra"
+  "notes": []
  },
  "23": {
+  "full_text": "wiyinha bari ngalingu gulparra",
+  "translation-en": "I think we will light a fire.",
   "word_list": [
    {
     "word_text": "wiyinha",
@@ -2106,11 +2109,11 @@
     "gls": "kindle"
    }
   ],
-  "translation": "I think we will light a fire.",
-  "notes": [],
-  "full_text": "wiyinha bari ngalingu gulparra"
+  "notes": []
  },
  "24": {
+  "full_text": "gangurigala nhaniguru warliwani",
+  "translation-en": "That child is crying.",
   "word_list": [
    {
     "word_text": "gangurigala",
@@ -2188,11 +2191,11 @@
     "gls": "child"
    }
   ],
-  "translation": "That child is crying.",
-  "notes": [],
-  "full_text": "gangurigala nhaniguru warliwani"
+  "notes": []
  },
  "25": {
+  "full_text": "minanga nhaniguru warliwani gangurrigala",
+  "translation-en": "Why is that child crying?",
   "word_list": [
    {
     "word_text": "minanga",
@@ -2295,11 +2298,11 @@
     "gls": "cry"
    }
   ],
-  "translation": "Why is that child crying?",
-  "notes": [],
-  "full_text": "minanga nhaniguru warliwani gangurrigala"
+  "notes": []
  },
  "26": {
+  "full_text": "guthinga nhaniguru warliwani",
+  "translation-en": "That child ran.",
   "word_list": [
    {
     "word_text": "guthinga",
@@ -2377,13 +2380,13 @@
     "gls": "child"
    }
   ],
-  "translation": "That child ran.",
   "notes": [
    "Check on -gali vs -nga for past tense."
-  ],
-  "full_text": "guthinga nhaniguru warliwani"
+  ]
  },
  "27": {
+  "full_text": "burlinga nhaniguru/ watyana nhaniguru murrtaiyiwanga",
+  "translation-en": "He fell down and hurt his leg.",
   "word_list": [
    {
     "word_text": "burlinga",
@@ -2535,14 +2538,14 @@
     "gls": ""
    }
   ],
-  "translation": "He fell down and hurt his leg.",
   "notes": [
    "Note relative order of -wa and past tense marker.",
    "sure that the -na here is really accusative and shouldn't be a nominative instead?"
-  ],
-  "full_text": "burlinga nhaniguru/ watyana nhaniguru murrtaiyiwanga"
+  ]
  },
  "28": {
+  "full_text": "mirlaani maltya galgurrigala/ ngalingu ngurra galirra nhungala",
+  "translation-en": "The sun is going down - late. The two of us make camp over here.",
   "word_list": [
    {
     "word_text": "mirlaani",
@@ -2699,13 +2702,13 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "The sun is going down - late. The two of us make camp over here.",
   "notes": [
    "maltya late adverb or adjective? any additional examples?"
-  ],
-  "full_text": "mirlaani maltya galgurrigala/ ngalingu ngurra galirra nhungala"
+  ]
  },
  "29": {
+  "full_text": "nhungalaguru bari ngalingu ngurra galirra burngalunga",
+  "translation-en": "I think the two of us will make camp over there at the gum tree.",
   "word_list": [
    {
     "word_text": "nhungalaguru",
@@ -2840,14 +2843,14 @@
     "gls": ""
    }
   ],
-  "translation": "I think the two of us will make camp over there at the gum tree.",
   "notes": [
    "-guru should have a suffix marker I think",
    "note ergative on ngali"
-  ],
-  "full_text": "nhungalaguru bari ngalingu ngurra galirra burngalunga"
+  ]
  },
  "30": {
+  "full_text": "ngali bari wagarra nhungala",
+  "translation-en": "I think the two of us will sleep here.",
   "word_list": [
    {
     "word_text": "ngali",
@@ -2923,13 +2926,13 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "I think the two of us will sleep here.",
   "notes": [
    "bari wagara - check this?"
-  ],
-  "full_text": "ngali bari wagarra nhungala"
+  ]
  },
  "31": {
+  "full_text": "wikarla mirla warlpalha ngali yanhthabarra ngali yanhthabarra",
+  "translation-en": "Tomorrow when the sun comes up the two of us will go on.",
   "word_list": [
    {
     "word_text": "wikarla",
@@ -3089,14 +3092,14 @@
     "gls": ""
    }
   ],
-  "translation": "Tomorrow when the sun comes up the two of us will go on.",
   "notes": [
    "ba as \"away\" vs ba as emphatic?",
    "several other instances of ba + -ra (future) are glossed as EMPH, not 'away'"
-  ],
-  "full_text": "wikarla mirla warlpalha ngali yanhthabarra ngali yanhthabarra"
+  ]
  },
  "32": {
+  "full_text": "wikarla ngali gampa yanhthabarra",
+  "translation-en": "Tomorrow the two of us will go a long way.",
   "word_list": [
    {
     "word_text": "wikarla",
@@ -3181,11 +3184,11 @@
     "gls": ""
    }
   ],
-  "translation": "Tomorrow the two of us will go a long way.",
-  "notes": [],
-  "full_text": "wikarla ngali gampa yanhthabarra"
+  "notes": []
  },
  "33": {
+  "full_text": "gulharra ini nganytya ngurralanga",
+  "translation-en": "Sit down in my camp.",
   "word_list": [
    {
     "word_text": "gulharra",
@@ -3270,11 +3273,11 @@
     "gls": ""
    }
   ],
-  "translation": "Sit down in my camp.",
-  "notes": [],
-  "full_text": "gulharra ini nganytya ngurralanga"
+  "notes": []
  },
  "34": {
+  "full_text": "wikarlawatyu gulha ini yanhthabarra",
+  "translation-en": "The day after tomorrow stay - (then?) you will go away.",
   "word_list": [
    {
     "word_text": "wikarlawatyu",
@@ -3368,11 +3371,11 @@
     "gls": ""
    }
   ],
-  "translation": "The day after tomorrow stay - (then?) you will go away.",
-  "notes": [],
-  "full_text": "wikarlawatyu gulha ini yanhthabarra"
+  "notes": []
  },
  "35": {
+  "full_text": "gala nganyta nhanigurru nguthiani",
+  "translation-en": "Hey, this is my meat here.",
   "word_list": [
    {
     "word_text": "gala",
@@ -3457,11 +3460,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "Hey, this is my meat here.",
-  "notes": [],
-  "full_text": "gala nganyta nhanigurru nguthiani"
+  "notes": []
  },
  "36": {
+  "full_text": "walya ingka nhaniguru nguthiani/ ngutyadhikarra nganha",
+  "translation-en": "This is not your meat, give it back to me.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3602,11 +3605,11 @@
     "gls": "1sg.acc"
    }
   ],
-  "translation": "This is not your meat, give it back to me.",
-  "notes": [],
-  "full_text": "walya ingka nhaniguru nguthiani/ ngutyadhikarra nganha"
+  "notes": []
  },
  "37": {
+  "full_text": "murra ngathu inha ngutyadhikarra/ ingka nguthiani",
+  "translation-en": "OK, I will give you back your meat. [Finished, I will give it back to you / It is your meat.]",
   "word_list": [
    {
     "word_text": "murra",
@@ -3738,11 +3741,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "OK, I will give you back your meat. [Finished, I will give it back to you / It is your meat.]",
-  "notes": [],
-  "full_text": "murra ngathu inha ngutyadhikarra/ ingka nguthiani"
+  "notes": []
  },
  "38": {
+  "full_text": "nganytyawarra ngathu ngalkanga nhanha nguthianha",
+  "translation-en": "I thought this meat here was mine.",
   "word_list": [
    {
     "word_text": "nganytyawarra",
@@ -3852,11 +3855,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "I thought this meat here was mine.",
-  "notes": [],
-  "full_text": "nganytyawarra ngathu ngalkanga nhanha nguthianha"
+  "notes": []
  },
  "39": {
+  "full_text": "walya nhanhaguru makurra manhdha garnawatyunga",
+  "translation-en": "Don't pick up this man's stick. (It is) this man's.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3966,13 +3969,13 @@
     "gls": "man"
    }
   ],
-  "translation": "Don't pick up this man's stick. (It is) this man's.",
   "notes": [
    "changed -nga1 'past' to -nga2 'dative'"
-  ],
-  "full_text": "walya nhanhaguru makurra manhdha garnawatyunga"
+  ]
  },
  "40": {
+  "full_text": "makurra nhani nganytya ngarnidyanga nhani",
+  "translation-en": "This is my father's stick.",
   "word_list": [
    {
     "word_text": "makurra",
@@ -4064,13 +4067,13 @@
     "gls": "3sg.nom"
    }
   ],
-  "translation": "This is my father's stick.",
   "notes": [
    "changed -nga1 'past' to -nga2 'dative'"
-  ],
-  "full_text": "makurra nhani nganytya ngarnidyanga nhani"
+  ]
  },
  "41": {
+  "full_text": "yandraanha nhanhayi warlpabarra ngathu",
+  "translation-en": "I lift this stone.",
   "word_list": [
    {
     "word_text": "yandraanha",
@@ -4173,13 +4176,13 @@
     "gls": "1sg.erg"
    }
   ],
-  "translation": "I lift this stone.",
   "notes": [
    "tense - future?"
-  ],
-  "full_text": "yandraanha nhanhayi warlpabarra ngathu"
+  ]
  },
  "42": {
+  "full_text": "walya girniani nhani",
+  "translation-en": "This is not heavy.",
   "word_list": [
    {
     "word_text": "walya",
@@ -4239,13 +4242,13 @@
     "gls": "3sg.nom"
    }
   ],
-  "translation": "This is not heavy.",
   "notes": [
    "example - negation"
-  ],
-  "full_text": "walya girniani nhani"
+  ]
  },
  "43": {
+  "full_text": "barninyi ngathu warlpabalangu nhanha yandraanha",
+  "translation-en": "I am not able to lift up this stone.",
   "word_list": [
    {
     "word_text": "barninyi",
@@ -4355,11 +4358,11 @@
     "gls": ""
    }
   ],
-  "translation": "I am not able to lift up this stone.",
-  "notes": [],
-  "full_text": "barninyi ngathu warlpabalangu nhanha yandraanha"
+  "notes": []
  },
  "44": {
+  "full_text": "ngathu warlpabagala nhanha",
+  "translation-en": "I am lifting this one.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -4428,11 +4431,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "I am lifting this one.",
-  "notes": [],
-  "full_text": "ngathu warlpabagala nhanha"
+  "notes": []
  },
  "45": {
+  "full_text": "gala yundru warlpabarra nhanha bilkaanha",
+  "translation-en": "Will you lift this log?",
   "word_list": [
    {
     "word_text": "gala",
@@ -4542,11 +4545,11 @@
     "gls": "log"
    }
   ],
-  "translation": "Will you lift this log?",
-  "notes": [],
-  "full_text": "gala yundru warlpabarra nhanha bilkaanha"
+  "notes": []
  },
  "46": {
+  "full_text": "ga ngathu nhanhaguru warlpabarra bilkaanha ingka",
+  "translation-en": "Yes, I will lift this log for you.",
   "word_list": [
    {
     "word_text": "ga",
@@ -4681,11 +4684,11 @@
     "gls": "2sg.dat"
    }
   ],
-  "translation": "Yes, I will lift this log for you.",
-  "notes": [],
-  "full_text": "ga ngathu nhanhaguru warlpabarra bilkaanha ingka"
+  "notes": []
  },
  "47": {
+  "full_text": "gawa ngali barnrdirra gakalawatyuangani",
+  "translation-en": "Come, the two of us will cross to the other side.",
   "word_list": [
    {
     "word_text": "gawa",
@@ -4779,11 +4782,11 @@
     "gls": "to the other side"
    }
   ],
-  "translation": "Come, the two of us will cross to the other side.",
-  "notes": [],
-  "full_text": "gawa ngali barnrdirra gakalawatyuangani"
+  "notes": []
  },
  "48": {
+  "full_text": "walya barnrdilangu ngakani nhaniguru/ gityabarruani",
+  "translation-en": "This water is not crossable. It is deep. [Cannot cross the water, deep.]",
   "word_list": [
    {
     "word_text": "walya",
@@ -4908,11 +4911,11 @@
     "gls": "deep"
    }
   ],
-  "translation": "This water is not crossable. It is deep. [Cannot cross the water, deep.]",
-  "notes": [],
-  "full_text": "walya barnrdilangu ngakani nhaniguru/ gityabarruani"
+  "notes": []
  },
  "49": {
+  "full_text": "nhungka ngarnidya bunhthigala",
+  "translation-en": "His father is coming.",
   "word_list": [
    {
     "word_text": "nhungka",
@@ -4972,11 +4975,11 @@
     "gls": ""
    }
   ],
-  "translation": "His father is coming.",
-  "notes": [],
-  "full_text": "nhungka ngarnidya bunhthigala"
+  "notes": []
  },
  "50": {
+  "full_text": "dhuna-bari ngali wirarra burlilha nhanigurru ngakaani",
+  "translation-en": "The two of us will wait until the water falls. [The two of us will wait, the water will fall.]",
   "word_list": [
    {
     "word_text": "dhuna-bari",
@@ -5101,11 +5104,11 @@
     "gls": ""
    }
   ],
-  "translation": "The two of us will wait until the water falls. [The two of us will wait, the water will fall.]",
-  "notes": [],
-  "full_text": "dhuna-bari ngali wirarra burlilha nhanigurru ngakaani"
+  "notes": []
  },
  "51": {
+  "full_text": "nganytya dhithi dhaliani",
+  "translation-en": "My dog is good.",
   "word_list": [
    {
     "word_text": "nganytya",
@@ -5165,13 +5168,13 @@
     "gls": "good"
    }
   ],
-  "translation": "My dog is good.",
   "notes": [
    "example - another one with no copula"
-  ],
-  "full_text": "nganytya dhithi dhaliani"
+  ]
  },
  "52": {
+  "full_text": "nganyi yanhthabarra",
+  "translation-en": "I'm going away.",
   "word_list": [
    {
     "word_text": "nganyi",
@@ -5224,13 +5227,13 @@
     "gls": ""
    }
   ],
-  "translation": "I'm going away.",
   "notes": [
    "example - response to 'where' question"
-  ],
-  "full_text": "nganyi yanhthabarra"
+  ]
  },
  "53": {
+  "full_text": "ngalaanga ini yanhthagala",
+  "translation-en": "Where are you going?",
   "word_list": [
    {
     "word_text": "ngalaanga",
@@ -5299,13 +5302,13 @@
     "gls": ""
    }
   ],
-  "translation": "Where are you going?",
   "notes": [
    "example - wh- question"
-  ],
-  "full_text": "ngalaanga ini yanhthagala"
+  ]
  },
  "54": {
+  "full_text": "gampa nganyi yanhthagala",
+  "translation-en": "I'm going far away.",
   "word_list": [
    {
     "word_text": "gampa",
@@ -5365,13 +5368,13 @@
     "gls": ""
    }
   ],
-  "translation": "I'm going far away.",
   "notes": [
    "example - response to 'where' question"
-  ],
-  "full_text": "gampa nganyi yanhthagala"
+  ]
  },
  "55": {
+  "full_text": "wanhdhugutu ini dhikarra",
+  "translation-en": "When will you return?",
   "word_list": [
    {
     "word_text": "wanhdhugutu",
@@ -5440,11 +5443,11 @@
     "gls": ""
    }
   ],
-  "translation": "When will you return?",
-  "notes": [],
-  "full_text": "wanhdhugutu ini dhikarra"
+  "notes": []
  },
  "56": {
+  "full_text": "wikarlawatyu nganyi dhikarra",
+  "translation-en": "I will return the day after tomorrow.",
   "word_list": [
    {
     "word_text": "wikarlawatyu",
@@ -5513,13 +5516,13 @@
     "gls": ""
    }
   ],
-  "translation": "I will return the day after tomorrow.",
   "notes": [
    "example - time"
-  ],
-  "full_text": "wikarlawatyu nganyi dhikarra"
+  ]
  },
  "57": {
+  "full_text": "wanhdhugutu yula dhikarra",
+  "translation-en": "When will the two of you return?",
   "word_list": [
    {
     "word_text": "wanhdhugutu",
@@ -5588,11 +5591,11 @@
     "gls": ""
    }
   ],
-  "translation": "When will the two of you return?",
-  "notes": [],
-  "full_text": "wanhdhugutu yula dhikarra"
+  "notes": []
  },
  "58": {
+  "full_text": "wikarlawatyu ngali dhikarra",
+  "translation-en": "The two of us will return the day after tomorrow.",
   "word_list": [
    {
     "word_text": "wikarlawatyu",
@@ -5661,11 +5664,11 @@
     "gls": ""
    }
   ],
-  "translation": "The two of us will return the day after tomorrow.",
-  "notes": [],
-  "full_text": "wikarlawatyu ngali dhikarra"
+  "notes": []
  },
  "59": {
+  "full_text": "wikarlawatyu dhikarra",
+  "translation-en": "He will return the day after tomorrow.",
   "word_list": [
    {
     "word_text": "wikarlawatyu",
@@ -5718,11 +5721,11 @@
     "gls": ""
    }
   ],
-  "translation": "He will return the day after tomorrow.",
-  "notes": [],
-  "full_text": "wikarlawatyu dhikarra"
+  "notes": []
  },
  "60": {
+  "full_text": "gawa ngali yanhtharra",
+  "translation-en": "Come, the two of us will go.",
   "word_list": [
    {
     "word_text": "gawa",
@@ -5782,11 +5785,11 @@
     "gls": "go"
    }
   ],
-  "translation": "Come, the two of us will go.",
-  "notes": [],
-  "full_text": "gawa ngali yanhtharra"
+  "notes": []
  },
  "61": {
+  "full_text": "nhadya nhanhaguru/ murnaani yandralunga",
+  "translation-en": "Look at the snake on the stone. [Look at it / The snake is on the stone.]",
   "word_list": [
    {
     "word_text": "nhadya",
@@ -5886,11 +5889,11 @@
     "gls": ""
    }
   ],
-  "translation": "Look at the snake on the stone. [Look at it / The snake is on the stone.]",
-  "notes": [],
-  "full_text": "nhadya nhanhaguru/ murnaani yandralunga"
+  "notes": []
  },
  "62": {
+  "full_text": "ngalaani murnaani/ walya ngathu nhadyagala",
+  "translation-en": "Where is the snake? I don't see (it).",
   "word_list": [
    {
     "word_text": "ngalaani",
@@ -6006,13 +6009,13 @@
     "gls": ""
    }
   ],
-  "translation": "Where is the snake? I don't see (it).",
   "notes": [
    "example - wh- question"
-  ],
-  "full_text": "ngalaani murnaani/ walya ngathu nhadyagala"
+  ]
  },
  "63": {
+  "full_text": "nhaniguru yandralunga burngu wina",
+  "translation-en": "That one on the stone by the gum tree.",
   "word_list": [
    {
     "word_text": "nhaniguru",
@@ -6097,11 +6100,11 @@
     "gls": "close"
    }
   ],
-  "translation": "That one on the stone by the gum tree.",
-  "notes": [],
-  "full_text": "nhaniguru yandralunga burngu wina"
+  "notes": []
  },
  "64": {
+  "full_text": "ga murra ngathu nhadyagala nhanhagurru murnaanha",
+  "translation-en": "Yes, OK, I see the snake.",
   "word_list": [
    {
     "word_text": "ga",
@@ -6227,8 +6230,6 @@
     "gls": ""
    }
   ],
-  "translation": "Yes, OK, I see the snake.",
-  "notes": [],
-  "full_text": "ga murra ngathu nhadyagala nhanhagurru murnaanha"
+  "notes": []
  }
 }

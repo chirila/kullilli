@@ -1,6 +1,9 @@
 {
- "flextext": "../065-128 Kullilli sentences.flextext",
+ "flextext": "../data/flextext/065-128 Kullilli sentences.flextext",
+ "title-en": "065-128 Kullili sentences",
  "1": {
+  "full_text": "galkanga ngathu gulbarranha wikala watyu",
+  "translation-en": "I killed an emu the day before yesterday.",
   "word_list": [
    {
     "word_text": "galkanga",
@@ -101,11 +104,11 @@
     "gls": "one"
    }
   ],
-  "translation": "I killed an emu the day before yesterday.",
-  "notes": [],
-  "full_text": "galkanga ngathu gulbarranha wikala watyu"
+  "notes": []
  },
  "2": {
+  "full_text": "galkanga ngathu wartu gulbarranha",
+  "translation-en": "I killed an emu long ago.",
   "word_list": [
    {
     "word_text": "galkanga",
@@ -190,11 +193,11 @@
     "gls": "emu"
    }
   ],
-  "translation": "I killed an emu long ago.",
-  "notes": [],
-  "full_text": "galkanga ngathu wartu gulbarranha"
+  "notes": []
  },
  "3": {
+  "full_text": "wanhdhu ngathu galkagala gulbarranha",
+  "translation-en": "Often I used to kill emus.",
   "word_list": [
    {
     "word_text": "wanhdhu",
@@ -279,11 +282,11 @@
     "gls": "emu"
    }
   ],
-  "translation": "Often I used to kill emus.",
-  "notes": [],
-  "full_text": "wanhdhu ngathu galkagala gulbarranha"
+  "notes": []
  },
  "4": {
+  "full_text": "walya wanhdhu ngathu dhalhthagala nguthianha",
+  "translation-en": "I used to eat meat not often.",
   "word_list": [
    {
     "word_text": "walya",
@@ -384,11 +387,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "I used to eat meat not often.",
-  "notes": [],
-  "full_text": "walya wanhdhu ngathu dhalhthagala nguthianha"
+  "notes": []
  },
  "5": {
+  "full_text": "yundru wandru wanhdhu dhalhthagala nguthianha",
+  "translation-en": "You often (habitually) eat (much) meat.",
   "word_list": [
    {
     "word_text": "yundru",
@@ -489,11 +492,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "You often (habitually) eat (much) meat.",
-  "notes": [],
-  "full_text": "yundru wandru wanhdhu dhalhthagala nguthianha"
+  "notes": []
  },
  "6": {
+  "full_text": "nhanha nguthianha yundru dhalhtha",
+  "translation-en": "Eat that meat.",
   "word_list": [
    {
     "word_text": "nhanha",
@@ -569,15 +572,15 @@
     "gls": "eat"
    }
   ],
-  "translation": "Eat that meat.",
   "notes": [
    "example - imperative (zero)",
    "subject pronoun present with IMP, but unlike other sentences such as 'Eat food here', it comes before the verb",
    "note object also comes before both subject and verb"
-  ],
-  "full_text": "nhanha nguthianha yundru dhalhtha"
+  ]
  },
  "7": {
+  "full_text": "ngathu yulanha ngutyagala",
+  "translation-en": "I give it to you.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -646,11 +649,11 @@
     "gls": "give"
    }
   ],
-  "translation": "I give it to you.",
-  "notes": [],
-  "full_text": "ngathu yulanha ngutyagala"
+  "notes": []
  },
  "8": {
+  "full_text": "ngathu nguthianha yurranha ngutyagala/ yurrangu dhalhtharra",
+  "translation-en": "I give meat to you to eat.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -800,11 +803,11 @@
     "gls": "eat"
    }
   ],
-  "translation": "I give meat to you to eat.",
-  "notes": [],
-  "full_text": "ngathu nguthianha yurranha ngutyagala/ yurrangu dhalhtharra"
+  "notes": []
  },
  "9": {
+  "full_text": "murra ngathu mulpanga",
+  "translation-en": "O.K., I am finished.",
   "word_list": [
    {
     "word_text": "murra",
@@ -864,11 +867,11 @@
     "gls": "finish"
    }
   ],
-  "translation": "O.K., I am finished.",
-  "notes": [],
-  "full_text": "murra ngathu mulpanga"
+  "notes": []
  },
  "10": {
+  "full_text": "yulangu nguthi nuga nganha ngutyarra",
+  "translation-en": "The two of you will give me much meat.",
   "word_list": [
    {
     "word_text": "yulangu",
@@ -969,11 +972,11 @@
     "gls": "give"
    }
   ],
-  "translation": "The two of you will give me much meat.",
-  "notes": [],
-  "full_text": "yulangu nguthi nuga nganha ngutyarra"
+  "notes": []
  },
  "11": {
+  "full_text": "nguthimunhdhu nganyi",
+  "translation-en": "I am without meat.",
   "word_list": [
    {
     "word_text": "nguthimunhdhu",
@@ -1017,13 +1020,13 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "I am without meat.",
   "notes": [
    "example - privative suffix"
-  ],
-  "full_text": "nguthimunhdhu nganyi"
+  ]
  },
  "12": {
+  "full_text": "nhani dhithiani dhali",
+  "translation-en": "This dog is good.",
   "word_list": [
    {
     "word_text": "nhani",
@@ -1083,13 +1086,13 @@
     "gls": "good"
    }
   ],
-  "translation": "This dog is good.",
   "notes": [
    "lit 'fat' - healthy?"
-  ],
-  "full_text": "nhani dhithiani dhali"
+  ]
  },
  "13": {
+  "full_text": "dhithi nhanigurru dhali",
+  "translation-en": "This dog is good.",
   "word_list": [
    {
     "word_text": "dhithi",
@@ -1149,13 +1152,13 @@
     "gls": "good"
    }
   ],
-  "translation": "This dog is good.",
   "notes": [
    "alternative word order (dog this good) for previous sentence (this dog good)"
-  ],
-  "full_text": "dhithi nhanigurru dhali"
+  ]
  },
  "14": {
+  "full_text": "nhanigarri dhithiani gampa dhaliani",
+  "translation-en": "That dog (far away) is good.",
   "word_list": [
    {
     "word_text": "nhanigarri",
@@ -1249,14 +1252,14 @@
     "gls": "good"
    }
   ],
-  "translation": "That dog (far away) is good.",
   "notes": [
    "example of deixis",
    "Good example of nominative cases too"
-  ],
-  "full_text": "nhanigarri dhithiani gampa dhaliani"
+  ]
  },
  "15": {
+  "full_text": "barrkulu dhithibula",
+  "translation-en": "Two dogs.",
   "word_list": [
    {
     "word_text": "barrkulu",
@@ -1300,14 +1303,14 @@
     "gls": "dog"
    }
   ],
-  "translation": "Two dogs.",
   "notes": [
    "order of the numeral",
    "numeral plus the dual suffix"
-  ],
-  "full_text": "barrkulu dhithibula"
+  ]
  },
  "16": {
+  "full_text": "garnabula bulagurru yanhdhadhikagala",
+  "translation-en": "Two men are coming together.",
   "word_list": [
    {
     "word_text": "garnabula",
@@ -1394,14 +1397,14 @@
     "gls": "go"
    }
   ],
-  "translation": "Two men are coming together.",
   "notes": [
    "number agreement within the noun phrase",
    "gloss for dhika is 'go back' but translation is 'coming together' - deixis?"
-  ],
-  "full_text": "garnabula bulagurru yanhdhadhikagala"
+  ]
  },
  "17": {
+  "full_text": "bulaba gurri",
+  "translation-en": "The two of them (are coming) this way.",
   "word_list": [
    {
     "word_text": "bulaba",
@@ -1445,11 +1448,11 @@
     "gls": null
    }
   ],
-  "translation": "The two of them (are coming) this way.",
-  "notes": [],
-  "full_text": "bulaba gurri"
+  "notes": []
  },
  "18": {
+  "full_text": "wandru yanhdhadhikagala",
+  "translation-en": "A mob is coming.",
   "word_list": [
    {
     "word_text": "wandru",
@@ -1502,13 +1505,13 @@
     "gls": "go"
    }
   ],
-  "translation": "A mob is coming.",
   "notes": [
    "implies that the gloss of -dhika isn't right?"
-  ],
-  "full_text": "wandru yanhdhadhikagala"
+  ]
  },
  "19": {
+  "full_text": "wandru dhanaguru galkanyalagala",
+  "translation-en": "Many people are hitting each other.",
   "word_list": [
    {
     "word_text": "wandru",
@@ -1586,11 +1589,11 @@
     "gls": "strike"
    }
   ],
-  "translation": "Many people are hitting each other.",
-  "notes": [],
-  "full_text": "wandru dhanaguru galkanyalagala"
+  "notes": []
  },
  "20": {
+  "full_text": "minaangaani",
+  "translation-en": "What for?",
   "word_list": [
    {
     "word_text": "minaangaani",
@@ -1627,13 +1630,13 @@
     "gls": "what"
    }
   ],
-  "translation": "What for?",
   "notes": [
    "example - wh- question"
-  ],
-  "full_text": "minaangaani"
+  ]
  },
  "21": {
+  "full_text": "garnawatyuandru mamagali nuba-lanyi nhanhaguru",
+  "translation-en": "A man there stole another man's wife.",
   "word_list": [
    {
     "word_text": "garnawatyuandru",
@@ -1745,11 +1748,11 @@
     "gls": ""
    }
   ],
-  "translation": "A man there stole another man's wife.",
-  "notes": [],
-  "full_text": "garnawatyuandru mamagali nuba-lanyi nhanhaguru"
+  "notes": []
  },
  "22": {
+  "full_text": "galkaiyigali nhaniguru daranyaandru",
+  "translation-en": "He hit himself with a stone axe.",
   "word_list": [
    {
     "word_text": "galkaiyigali",
@@ -1836,11 +1839,11 @@
     "gls": "axe"
    }
   ],
-  "translation": "He hit himself with a stone axe.",
-  "notes": [],
-  "full_text": "galkaiyigali nhaniguru daranyaandru"
+  "notes": []
  },
  "23": {
+  "full_text": "galkaiyigali nganyi",
+  "translation-en": "I hit myself.",
   "word_list": [
    {
     "word_text": "galkaiyigali",
@@ -1893,13 +1896,13 @@
     "gls": "1sg.nom"
    }
   ],
-  "translation": "I hit myself.",
   "notes": [
    "example - simple sentence for reflexive pronoun"
-  ],
-  "full_text": "galkaiyigali nganyi"
+  ]
  },
  "24": {
+  "full_text": "nadyanga ngathu marradharraanha nhungalagarri",
+  "translation-en": "I saw a possum up there.",
   "word_list": [
    {
     "word_text": "nadyanga",
@@ -1993,11 +1996,11 @@
     "gls": "3sg.loc"
    }
   ],
-  "translation": "I saw a possum up there.",
-  "notes": [],
-  "full_text": "nadyanga ngathu marradharraanha nhungalagarri"
+  "notes": []
  },
  "25": {
+  "full_text": "ngathu ngadyagala inha",
+  "translation-en": "I see you.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -2057,13 +2060,13 @@
     "gls": "2sg.acc"
    }
   ],
-  "translation": "I see you.",
   "notes": [
    "example - simple sentence for pronouns"
-  ],
-  "full_text": "ngathu ngadyagala inha"
+  ]
  },
  "26": {
+  "full_text": "ngathu ngadyagala nhinha",
+  "translation-en": "I see him.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -2123,13 +2126,13 @@
     "gls": "that?"
    }
   ],
-  "translation": "I see him.",
   "notes": [
    "example - simple sentence for pronouns"
-  ],
-  "full_text": "ngathu ngadyagala nhinha"
+  ]
  },
  "27": {
+  "full_text": "walya ngathu inha nadyagala/ yurru walbirrianha",
+  "translation-en": "I don't see you - only your shadow.",
   "word_list": [
    {
     "word_text": "walya",
@@ -2252,13 +2255,13 @@
     "gls": "shadow"
    }
   ],
-  "translation": "I don't see you - only your shadow.",
   "notes": [
    "example - first part could be a simple example for negation"
-  ],
-  "full_text": "walya ngathu inha nadyagala/ yurru walbirrianha"
+  ]
  },
  "28": {
+  "full_text": "gawa ngali gulharra walbirrilunga",
+  "translation-en": "Come on, the two of us sit in the shade.",
   "word_list": [
    {
     "word_text": "gawa",
@@ -2343,11 +2346,11 @@
     "gls": ""
    }
   ],
-  "translation": "Come on, the two of us sit in the shade.",
-  "notes": [],
-  "full_text": "gawa ngali gulharra walbirrilunga"
+  "notes": []
  },
  "29": {
+  "full_text": "mirla gandragala",
+  "translation-en": "The sun is shining hot.",
   "word_list": [
    {
     "word_text": "mirla",
@@ -2391,11 +2394,11 @@
     "gls": "shine"
    }
   ],
-  "translation": "The sun is shining hot.",
-  "notes": [],
-  "full_text": "mirla gandragala"
+  "notes": []
  },
  "30": {
+  "full_text": "waranga nhani dhithiani guthidhikadhikagala",
+  "translation-en": "Whose is this dog running around?",
   "word_list": [
    {
     "word_text": "waranga",
@@ -2507,13 +2510,13 @@
     "gls": "run around"
    }
   ],
-  "translation": "Whose is this dog running around?",
   "notes": [
    "changed -nga1 'past' to -nga2 'dative'"
-  ],
-  "full_text": "waranga nhani dhithiani guthidhikadhikagala"
+  ]
  },
  "31": {
+  "full_text": "ngarnidyanga nganytya nhaniguru dhithiani guthidhikadhikagala",
+  "translation-en": "My father's dog is running around.",
   "word_list": [
    {
     "word_text": "ngarnidyanga",
@@ -2650,13 +2653,13 @@
     "gls": "run"
    }
   ],
-  "translation": "My father's dog is running around.",
   "notes": [
    "changed -nga1 'past' to -nga2 'dative'"
-  ],
-  "full_text": "ngarnidyanga nganytya nhaniguru dhithiani guthidhikadhikagala"
+  ]
  },
  "32": {
+  "full_text": "yambadhika nhanhaguru dhithianha",
+  "translation-en": "Chase that dog away.",
   "word_list": [
    {
     "word_text": "yambadhika",
@@ -2734,14 +2737,14 @@
     "gls": "dog"
    }
   ],
-  "translation": "Chase that dog away.",
   "notes": [
    "Difference between zero inflection for imperative and -dhika?",
    "re: above note, it seems that -dhika always adds the meaning of 'back/away' when used with zero imperatives. It's glossed as 'go back' in other places as a verb"
-  ],
-  "full_text": "yambadhika nhanhaguru dhithianha"
+  ]
  },
  "33": {
+  "full_text": "dratyalanga nhandruguru waliwanha",
+  "translation-en": "It could bite that kid.",
   "word_list": [
    {
     "word_text": "dratyalanga",
@@ -2819,11 +2822,11 @@
     "gls": "child"
    }
   ],
-  "translation": "It could bite that kid.",
-  "notes": [],
-  "full_text": "dratyalanga nhandruguru waliwanha"
+  "notes": []
  },
  "34": {
+  "full_text": "manhdhawarri yandraanha nhanhaguru/ barnrdidhikarra nhanhaguru dhithianha",
+  "translation-en": "Pick up a stone, hit him away, that dog.",
   "word_list": [
    {
     "word_text": "manhdhawarri",
@@ -2991,11 +2994,11 @@
     "gls": "dog"
    }
   ],
-  "translation": "Pick up a stone, hit him away, that dog.",
-  "notes": [],
-  "full_text": "manhdhawarri yandraanha nhanhaguru/ barnrdidhikarra nhanhaguru dhithianha"
+  "notes": []
  },
  "35": {
+  "full_text": "gawalyalu marnngagala bakarranyi",
+  "translation-en": "Uncle is making a boomerang.",
   "word_list": [
    {
     "word_text": "gawalyalu",
@@ -3064,11 +3067,11 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "Uncle is making a boomerang.",
-  "notes": [],
-  "full_text": "gawalyalu marnngagala bakarranyi"
+  "notes": []
  },
  "36": {
+  "full_text": "gawalyalu nganytya marnngagala bakarranyi",
+  "translation-en": "My uncle is making a boomerang.",
   "word_list": [
    {
     "word_text": "gawalyalu",
@@ -3153,11 +3156,11 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "My uncle is making a boomerang.",
-  "notes": [],
-  "full_text": "gawalyalu nganytya marnngagala bakarranyi"
+  "notes": []
  },
  "37": {
+  "full_text": "gawalyalu marnngagala nganytya bakarranyiani",
+  "translation-en": "Uncle is making it for me. OR Uncle is making the boomerang. It is for me. OR Uncle is making (it). The boomerang is for me.",
   "word_list": [
    {
     "word_text": "gawalyalu",
@@ -3251,11 +3254,11 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "Uncle is making it for me. OR Uncle is making the boomerang. It is for me. OR Uncle is making (it). The boomerang is for me.",
-  "notes": [],
-  "full_text": "gawalyalu marnngagala nganytya bakarranyiani"
+  "notes": []
  },
  "38": {
+  "full_text": "walya nhaniguru ingka bakarranyiani",
+  "translation-en": "This is not your boomerang.",
   "word_list": [
    {
     "word_text": "walya",
@@ -3340,11 +3343,11 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "This is not your boomerang.",
-  "notes": [],
-  "full_text": "walya nhaniguru ingka bakarranyiani"
+  "notes": []
  },
  "39": {
+  "full_text": "nganyta ngarnidanga nhaniguru bakarranyiani",
+  "translation-en": "That boomerang is my father's.",
   "word_list": [
    {
     "word_text": "nganyta",
@@ -3438,13 +3441,13 @@
     "gls": "boomerang"
    }
   ],
-  "translation": "That boomerang is my father's.",
   "notes": [
    "Typo for nganytya?"
-  ],
-  "full_text": "nganyta ngarnidanga nhaniguru bakarranyiani"
+  ]
  },
  "40": {
+  "full_text": "waranga nhanigurru yangguani gulalanga wagagala",
+  "translation-en": "Whose is that spear lying in the grass there?",
   "word_list": [
    {
     "word_text": "waranga",
@@ -3572,13 +3575,13 @@
     "gls": "lay"
    }
   ],
-  "translation": "Whose is that spear lying in the grass there?",
   "notes": [
    "possession for -nga"
-  ],
-  "full_text": "waranga nhanigurru yangguani gulalanga wagagala"
+  ]
  },
  "41": {
+  "full_text": "warangaani",
+  "translation-en": "Whose is that?",
   "word_list": [
    {
     "word_text": "warangaani",
@@ -3615,13 +3618,13 @@
     "gls": "who"
    }
   ],
-  "translation": "Whose is that?",
   "notes": [
    "is this really nominative? Looks like a pronoun here."
-  ],
-  "full_text": "warangaani"
+  ]
  },
  "42": {
+  "full_text": "manhdhawarri nhanhaguru yangguanha/ gatyilibalangu",
+  "translation-en": "Pick up that spear. (It) might break.",
   "word_list": [
    {
     "word_text": "manhdhawarri",
@@ -3748,11 +3751,11 @@
     "gls": "break"
    }
   ],
-  "translation": "Pick up that spear. (It) might break.",
-  "notes": [],
-  "full_text": "manhdhawarri nhanhaguru yangguanha/ gatyilibalangu"
+  "notes": []
  },
  "43": {
+  "full_text": "nhanhaguru dhinabarra",
+  "translation-en": "Lean it standing up.",
   "word_list": [
    {
     "word_text": "nhanhaguru",
@@ -3814,13 +3817,13 @@
     "gls": "stand up"
    }
   ],
-  "translation": "Lean it standing up.",
   "notes": [
    "IMP -rra here is not attaching to a verb -- yes it is, dhina(ba) is a verb meaning 'stand'"
-  ],
-  "full_text": "nhanhaguru dhinabarra"
+  ]
  },
  "44": {
+  "full_text": "ga manhdhalha ngathu nhanha",
+  "translation-en": "Yes, (I) pick that one up.",
   "word_list": [
    {
     "word_text": "ga",
@@ -3896,11 +3899,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "Yes, (I) pick that one up.",
-  "notes": [],
-  "full_text": "ga manhdhalha ngathu nhanha"
+  "notes": []
  },
  "45": {
+  "full_text": "warlkarra nhungala walbirilunga",
+  "translation-en": "Put it up there in the shade.",
   "word_list": [
    {
     "word_text": "warlkarra",
@@ -3969,11 +3972,11 @@
     "gls": ""
    }
   ],
-  "translation": "Put it up there in the shade.",
-  "notes": [],
-  "full_text": "warlkarra nhungala walbirilunga"
+  "notes": []
  },
  "46": {
+  "full_text": "nhungka ngarnidya yanhdhalha",
+  "translation-en": "His father is going away.",
   "word_list": [
    {
     "word_text": "nhungka",
@@ -4033,11 +4036,11 @@
     "gls": "go"
    }
   ],
-  "translation": "His father is going away.",
-  "notes": [],
-  "full_text": "nhungka ngarnidya yanhdhalha"
+  "notes": []
  },
  "47": {
+  "full_text": "waralu nganytya manhdhanga nhangala makurranha",
+  "translation-en": "Who picked up my stick here?",
   "word_list": [
    {
     "word_text": "waralu",
@@ -4147,11 +4150,11 @@
     "gls": ""
    }
   ],
-  "translation": "Who picked up my stick here?",
-  "notes": [],
-  "full_text": "waralu nganytya manhdhanga nhangala makurranha"
+  "notes": []
  },
  "48": {
+  "full_text": "barninyi nganyi wankinga nganytya makurrangani",
+  "translation-en": "I couldn't/didn't find my stick.",
   "word_list": [
    {
     "word_text": "barninyi",
@@ -4252,11 +4255,11 @@
     "gls": "stick"
    }
   ],
-  "translation": "I couldn't/didn't find my stick.",
-  "notes": [],
-  "full_text": "barninyi nganyi wankinga nganytya makurrangani"
+  "notes": []
  },
  "49": {
+  "full_text": "ngathu manhdhanga winbinga ngathu wiyilunga",
+  "translation-en": "I picked it up and threw it in the fire.",
   "word_list": [
    {
     "word_text": "ngathu",
@@ -4366,11 +4369,11 @@
     "gls": ""
    }
   ],
-  "translation": "I picked it up and threw it in the fire.",
-  "notes": [],
-  "full_text": "ngathu manhdhanga winbinga ngathu wiyilunga"
+  "notes": []
  },
  "50": {
+  "full_text": "murra marringa nhangalaburlu wiyilunga",
+  "translation-en": "Finished, burnt that one down there in the fire.",
   "word_list": [
    {
     "word_text": "murra",
@@ -4464,11 +4467,11 @@
     "gls": ""
    }
   ],
-  "translation": "Finished, burnt that one down there in the fire.",
-  "notes": [],
-  "full_text": "murra marringa nhangalaburlu wiyilunga"
+  "notes": []
  },
  "51": {
+  "full_text": "manhdharra ngathu ingka makurrawatyuanha",
+  "translation-en": "I'll pick up a stick, that one/for you.",
   "word_list": [
    {
     "word_text": "manhdharra",
@@ -4562,11 +4565,11 @@
     "gls": ""
    }
   ],
-  "translation": "I'll pick up a stick, that one/for you.",
-  "notes": [],
-  "full_text": "manhdharra ngathu ingka makurrawatyuanha"
+  "notes": []
  },
  "52": {
+  "full_text": "gawa dhithiandru inha dratyalangu",
+  "translation-en": "Come away, the dog could bite you.",
   "word_list": [
    {
     "word_text": "gawa",
@@ -4651,11 +4654,11 @@
     "gls": "bite"
    }
   ],
-  "translation": "Come away, the dog could bite you.",
-  "notes": [],
-  "full_text": "gawa dhithiandru inha dratyalangu"
+  "notes": []
  },
  "53": {
+  "full_text": "nhungalaguru birrkibirrkiwa dhalilunga dhithilunga",
+  "translation-en": "That one down there is playing with the good dog.",
   "word_list": [
    {
     "word_text": "nhungalaguru",
@@ -4767,11 +4770,11 @@
     "gls": "dog"
    }
   ],
-  "translation": "That one down there is playing with the good dog.",
-  "notes": [],
-  "full_text": "nhungalaguru birrkibirrkiwa dhalilunga dhithilunga"
+  "notes": []
  },
  "54": {
+  "full_text": "dhithiandru galkagala nhanhaguru dhaldranha",
+  "translation-en": "The dog is fighting the kangaroo.",
   "word_list": [
    {
     "word_text": "dhithiandru",
@@ -4874,11 +4877,11 @@
     "gls": "red kangaroo"
    }
   ],
-  "translation": "The dog is fighting the kangaroo.",
-  "notes": [],
-  "full_text": "dhithiandru galkagala nhanhaguru dhaldranha"
+  "notes": []
  },
  "55": {
+  "full_text": "walya wina yanhthadhira/ galkalangu inha nhandruguru dhaldraandru",
+  "translation-en": "Don't go too close, the kangaroo could kill you.",
   "word_list": [
    {
     "word_text": "walya",
@@ -5035,11 +5038,11 @@
     "gls": "red kangaroo"
    }
   ],
-  "translation": "Don't go too close, the kangaroo could kill you.",
-  "notes": [],
-  "full_text": "walya wina yanhthadhira/ galkalangu inha nhandruguru dhaldraandru"
+  "notes": []
  },
  "56": {
+  "full_text": "gulhadhikawa galkarra ngalingu yangguandru",
+  "translation-en": "Don't go too close, the two of us will kill it with a spear.",
   "word_list": [
    {
     "word_text": "gulhadhikawa",
@@ -5151,14 +5154,14 @@
     "gls": ""
    }
   ],
-  "translation": "Don't go too close, the two of us will kill it with a spear.",
   "notes": [
    "Note ergative on ngali",
    "**think about parse of gulhadhikawa"
-  ],
-  "full_text": "gulhadhikawa galkarra ngalingu yangguandru"
+  ]
  },
  "57": {
+  "full_text": "dhinadhikawa",
+  "translation-en": "Stand back.",
   "word_list": [
    {
     "word_text": "dhinadhikawa",
@@ -5195,14 +5198,14 @@
     "gls": "stand back"
    }
   ],
-  "translation": "Stand back.",
   "notes": [
    "not sure if this is 'foot' here or -dhika derives a verb.",
    null
-  ],
-  "full_text": "dhinadhikawa"
+  ]
  },
  "58": {
+  "full_text": "walya nyalkanga ngathu nhanha",
+  "translation-en": "I didn't hit it.",
   "word_list": [
    {
     "word_text": "walya",
@@ -5278,11 +5281,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "I didn't hit it.",
-  "notes": [],
-  "full_text": "walya nyalkanga ngathu nhanha"
+  "notes": []
  },
  "59": {
+  "full_text": "makurra nhanha",
+  "translation-en": "(Give) me a stick.",
   "word_list": [
    {
     "word_text": "makurra",
@@ -5317,11 +5320,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "(Give) me a stick.",
-  "notes": [],
-  "full_text": "makurra nhanha"
+  "notes": []
  },
  "60": {
+  "full_text": "murra ngathu galkanga nhanha",
+  "translation-en": "Finished/O.K., I killed it.",
   "word_list": [
    {
     "word_text": "murra",
@@ -5397,11 +5400,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "Finished/O.K., I killed it.",
-  "notes": [],
-  "full_text": "murra ngathu galkanga nhanha"
+  "notes": []
  },
  "61": {
+  "full_text": "garrki ingka dhithianha",
+  "translation-en": "Call your dog off.",
   "word_list": [
    {
     "word_text": "garrki",
@@ -5461,11 +5464,11 @@
     "gls": "dog"
    }
   ],
-  "translation": "Call your dog off.",
-  "notes": [],
-  "full_text": "garrki ingka dhithianha"
+  "notes": []
  },
  "62": {
+  "full_text": "nhandruguru irnrdairnrdagala nhanhaguru nguthianha",
+  "translation-en": "That one is tearing up the meat.",
   "word_list": [
    {
     "word_text": "nhandruguru",
@@ -5577,11 +5580,11 @@
     "gls": "meat"
    }
   ],
-  "translation": "That one is tearing up the meat.",
-  "notes": [],
-  "full_text": "nhandruguru irnrdairnrdagala nhanhaguru nguthianha"
+  "notes": []
  },
  "63": {
+  "full_text": "nalyba nganha ngutya gakagakarra nguthianha nhanha",
+  "translation-en": "Give me a knife to cut up the meat there.",
   "word_list": [
    {
     "word_text": "nalyba",
@@ -5707,11 +5710,11 @@
     "gls": "3sg.acc"
    }
   ],
-  "translation": "Give me a knife to cut up the meat there.",
-  "notes": [],
-  "full_text": "nalyba nganha ngutya gakagakarra nguthianha nhanha"
+  "notes": []
  },
  "64": {
+  "full_text": "nhanha ngathu durrkaanha waltagala nganytya gawulidyaanga ngurraanga ngutyarra ngathu nhanha nguthianha",
+  "translation-en": "I am taking this leg to my uncle's camp to give him the meat.",
   "word_list": [
    {
     "word_text": "nhanha",
@@ -5944,8 +5947,6 @@
     "gls": "meat"
    }
   ],
-  "translation": "I am taking this leg to my uncle's camp to give him the meat.",
-  "notes": [],
-  "full_text": "nhanha ngathu durrkaanha waltagala nganytya gawulidyaanga ngurraanga ngutyarra ngathu nhanha nguthianha"
+  "notes": []
  }
 }

@@ -7,29 +7,23 @@ import os
 # define the morph information types
 morph_keys = ["txt", "cf", "gls", "msa", "variantTypes", "hn", "glsAppend"]
 
-# create list of texts by finding all the items in a specified directory with the extension .flextext
-texts = []
+# put in the directory where your flextexts are located
+# make sure it ends with a /
 flextext_dir = "data/flextext/"
 # if your flextexts have an extension like "xml" or something else, change this
 flextext_extension = "flextext"
-# for root, dirs, files in walk(flextext_dir, topdown=False):
-#     print(files)
-#     for name in files:
-#         texts.append(name)
+# put in the directory where you would like your JSON files to go (it doesn't have to exist yet)
+# make sure it ends with a /
+json_dir = "data/json/"
+# create list of texts by finding all the items in a specified directory with the specified extension 
 texts = [file for file in os.listdir(flextext_dir) if not os.path.isdir(file) and file.endswith(flextext_extension)]
-# texts = [file for file in [files for root, dir, files in walk(flextext_dir, topdown=False)]]
-# texts = [file for file in [files for root, dirs, files in walk(flextext_dir, topdown=False)] if file.endswith(flextext_extension)]
-print(texts)
-exit()
-
-# texts = [text for text in texts if text.endswith(flextext_extension)]
-
-json_dir = "data/json"
+# make the directory where the new JSON files will live (and if it already exists, that's fine)
 try:
-    mkdir(json_dir)
+    os.mkdir(json_dir)
 except:
     pass
 
+# make each JSON file
 for text in texts:
     # open the flextext
     ft = ET.parse(flextext_dir+text).getroot()
@@ -94,9 +88,9 @@ for text in texts:
                 try:
                     morph_dict["morph_type"] = morph.attrib["type"]
                 except:
-                    # if you want all of the slots to appear, even if empty
-                    morph_dict["morph_type"] = ""
-                    # if you want to exclude the slots if empty
+                    # if you want this to appear, even if empty
+                    # morph_dict["morph_type"] = ""
+                    # if you want to exclude it if empty
                     pass
 
                 morph_list.append(morph_dict)
@@ -124,19 +118,25 @@ for text in texts:
             for lang_translation in phrase.findall(".//item[@type='gls']"):
                 segdict["translation-{}".format(lang_translation.attrib["lang"])] = lang_translation.text
         except:
-            segdict["translation"] = ""
-
+            # if you want an empty translation to appear when there is no translation
+            # segdict["translation"] = ""
+            # if you don't want the translation field to appear when there is no translation
+            pass
+        
         # add the word list to the segdict
         segdict["word_list"] = word_list
 
-        # put notes into the segdict
-        notes = []
+        # add notes to segdict
         try:
+            notes = []
             for note in phrase.findall(".//item[@type='note']"):
                 notes.append(note.text)
+            segdict["notes"] = notes
         except:
+            # if you want an empty note to appear when there are no notes
+            # segdict["notes"] = [""]
+            # if you don't want the notes field to appear when there are no notes
             pass
-        segdict["notes"] = notes
         
         # add the segdict to the main dict
         new_json[segnum] = segdict

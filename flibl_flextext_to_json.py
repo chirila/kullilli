@@ -1,28 +1,38 @@
 from xml.etree import ElementTree as ET
 import json
+import os
 
 # this is flibl for a no-bells-nor-whistles flextext: no time alignment, no speaker specification. all it does is make the fibl interchange json with glosses
 
 # define the morph information types
-morph_keys = ["txt", "cf", "gls", "msa", "variantTypes", "hn", "glsAppend", "morph_type"]
+morph_keys = ["txt", "cf", "gls", "msa", "variantTypes", "hn", "glsAppend"]
 
-# list of texts (can be just one!)
-texts = [
-    "data/flextext/001-064 Kullilli sentences.flextext",
-    "data/flextext/065-128 Kullilli sentences.flextext",
-    "data/flextext/129-192 Kullilli sentences.flextext",
-    "data/flextext/193-256 Kullilli sentences.flextext",
-    "data/flextext/257-320 Kullilli sentences.flextext",
-    "data/flextext/321-384 Kullilli sentences.flextext",
-    "data/flextext/385-448 Kullilli sentences.flextext",
-    "data/flextext/449-514 Kullilli sentences.flextext",
-    "data/flextext/Animal trouble in the camp.flextext",
-    "data/flextext/Breen Sentences.flextext"
-    ]
+# create list of texts by finding all the items in a specified directory with the extension .flextext
+texts = []
+flextext_dir = "data/flextext/"
+# if your flextexts have an extension like "xml" or something else, change this
+flextext_extension = "flextext"
+# for root, dirs, files in walk(flextext_dir, topdown=False):
+#     print(files)
+#     for name in files:
+#         texts.append(name)
+texts = [file for file in os.listdir(flextext_dir) if not os.path.isdir(file) and file.endswith(flextext_extension)]
+# texts = [file for file in [files for root, dir, files in walk(flextext_dir, topdown=False)]]
+# texts = [file for file in [files for root, dirs, files in walk(flextext_dir, topdown=False)] if file.endswith(flextext_extension)]
+print(texts)
+exit()
+
+# texts = [text for text in texts if text.endswith(flextext_extension)]
+
+json_dir = "data/json"
+try:
+    mkdir(json_dir)
+except:
+    pass
 
 for text in texts:
     # open the flextext
-    ft = ET.parse(text).getroot()
+    ft = ET.parse(flextext_dir+text).getroot()
     # start creating what will become the JSON
     new_json = {
         "flextext":text
@@ -36,12 +46,19 @@ for text in texts:
         new_json["title"] = ""
 
     for phrase in ft.findall(".//phrase"):
-        segnum = phrase.find("./item[@type='segnum']").text
+        try:
+            segnum = phrase.find("./item[@type='segnum']").text
+        except:
+            pass
         segdict = {}
         full_text = ""
         word_list = []
         # add the words into the segdict
-        for word in phrase.findall(".//word"):
+        try:
+            words = phrase.findall(".//word")
+        except:
+            words = []
+        for word in words:
             # add this word's text to the segdict
             # if the item in word is punctuation or at the front of the phrase, don't add an extra space
             if not full_text or word[0].attrib["type"] == "punct":
@@ -54,16 +71,34 @@ for text in texts:
             word_breakdown = ""
             # add morphs the word
             morph_list = []
-            for morph in word.findall(".//morph"):
+            try:
+                morphs = word.findall(".//morph")
+            except:
+                morphs = []
+            for morph in morphs:
                 # if you want the breakdown at the word level
-                word_breakdown += morph.find("./item[@type='txt']").text
+                try:
+                    word_breakdown += morph.find("./item[@type='txt']").text
+                except:
+                    pass
                 # make the dict with all the morph information
                 morph_dict = {}
                 for morph_info in morph_keys:
                     try:
                         morph_dict["morph-{}".format(morph_info)] = morph.find("./item[@type='{}']".format(morph_info)).text
                     except:
-                        morph_dict["morph-{}".format(morph_info)] = ""
+                        # if you want all of the slots to appear, even if empty
+                        # morph_dict["morph-{}".format(morph_info)] = ""
+                        # if you want to exclude the slots if empty
+                        pass
+                try:
+                    morph_dict["morph_type"] = morph.attrib["type"]
+                except:
+                    # if you want all of the slots to appear, even if empty
+                    morph_dict["morph_type"] = ""
+                    # if you want to exclude the slots if empty
+                    pass
+
                 morph_list.append(morph_dict)
             word_dict["word_breakdown"] = word_breakdown
 
@@ -107,5 +142,4 @@ for text in texts:
         new_json[segnum] = segdict
 
     # create the json
-    # json.dump(new_json, open("./data/json/flibl-json/" + text[16:-8] + "json", mode="w", encoding="utf8"), indent=1)
-    json.dump(new_json, open("./data/json/flibl-json/" + text[14:-10] + "_with_breakdown.json", mode="w", encoding="utf8"), indent=1)
+    json.dump(new_json, open(json_dir + text[:-1*len(flextext_extension)] + "json", mode="w", encoding="utf8"), indent=1)

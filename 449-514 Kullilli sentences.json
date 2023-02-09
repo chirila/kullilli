@@ -1,0 +1,6366 @@
+{
+ "flextext": "../449-514 Kullilli sentences.flextext",
+ "1": {
+  "word_list": [
+   {
+    "word_text": "nguthiani",
+    "morphs": [
+     {
+      "morph-txt": "nguthi",
+      "morph-cf": "nguthi",
+      "morph-gls": "",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "meat"
+   },
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "gindaani",
+    "morphs": [
+     {
+      "morph-txt": "ginda",
+      "morph-cf": "ginda",
+      "morph-gls": "raw",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "raw"
+   }
+  ],
+  "translation": "This meat is raw.",
+  "notes": [
+   "Good examples of nominatives in this sentence. Nominatives on both subject and predicate"
+  ],
+  "full_text": "nguthiani nhaniguru gindaani"
+ },
+ "2": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nhaniyi",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-yi",
+      "morph-cf": "-yi",
+      "morph-gls": "here",
+      "morph-msa": "Pronoun",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nguthiani",
+    "morphs": [
+     {
+      "morph-txt": "nguthi",
+      "morph-cf": "nguthi",
+      "morph-gls": "",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "meat"
+   },
+   {
+    "word_text": "marrpaiyinga",
+    "morphs": [
+     {
+      "morph-txt": "marrpa",
+      "morph-cf": "marrpa",
+      "morph-gls": "cook",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "OK, this meat is/was cooked.",
+  "notes": [
+   "-iyi as stative/resultative, also not true reflexive. Add to examples under reflexives"
+  ],
+  "full_text": "murra nhaniyi nguthiani marrpaiyinga"
+ },
+ "3": {
+  "word_list": [
+   {
+    "word_text": "gawa",
+    "morphs": [
+     {
+      "morph-txt": "gawa",
+      "morph-cf": "gawa",
+      "morph-gls": "come",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "come"
+   },
+   {
+    "word_text": "nganala",
+    "morphs": [
+     {
+      "morph-txt": "nganala",
+      "morph-cf": "nganhala",
+      "morph-gls": "1sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.loc"
+   }
+  ],
+  "translation": "Come to me.",
+  "notes": [
+   "locative on 1st person pronoun - not on the nominative stem? Also null imperative"
+  ],
+  "full_text": "gawa nganala"
+ },
+ "4": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "yanhtharra",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "go"
+   },
+   {
+    "word_text": "ingala",
+    "morphs": [
+     {
+      "morph-txt": "ingala",
+      "morph-cf": "ingala",
+      "morph-gls": "2sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.loc"
+   }
+  ],
+  "translation": "Yes I will go to you.",
+  "notes": [
+   "locative on second person; good future example too. Locative as goal of motion (not allative)"
+  ],
+  "full_text": "ga nganyi yanhtharra ingala"
+ },
+ "5": {
+  "word_list": [
+   {
+    "word_text": "yanhthaba",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "ba",
+      "morph-cf": "ba",
+      "morph-gls": "away",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganurra",
+    "morphs": [
+     {
+      "morph-txt": "nganura",
+      "morph-cf": "nganura",
+      "morph-gls": "3sg.abl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.abl"
+   }
+  ],
+  "translation": "Go away from me.",
+  "notes": [],
+  "full_text": "yanhthaba nganurra"
+ },
+ "6": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "yanhthalhaba",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lha",
+      "morph-cf": "-lha",
+      "morph-gls": "factual",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ba",
+      "morph-cf": "-ba",
+      "morph-gls": "emph",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "ingurra",
+    "morphs": [
+     {
+      "morph-txt": "ingurra",
+      "morph-cf": "ingurra",
+      "morph-gls": "2sg.abl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.abl"
+   }
+  ],
+  "translation": "Yes I will go away from you.",
+  "notes": [
+   "good example of the \"factual\" suffix, translated as a future but maybe more definite? note that -ba is on a verb here, can it go on other word classes?"
+  ],
+  "full_text": "ga yanhthalhaba ingurra"
+ },
+ "7": {
+  "word_list": [
+   {
+    "word_text": "niladha",
+    "morphs": [
+     {
+      "morph-txt": "niladha",
+      "morph-cf": "niladha",
+      "morph-gls": "yesterday",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "yesterday"
+   },
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   },
+   {
+    "word_text": "dhithiani",
+    "morphs": [
+     {
+      "morph-txt": "dhithi",
+      "morph-cf": "dhithi",
+      "morph-gls": "dog",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "dog"
+   },
+   {
+    "word_text": "ngawulanga",
+    "morphs": [
+     {
+      "morph-txt": "ngawu",
+      "morph-cf": "ngawu",
+      "morph-gls": "night",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-langa",
+      "morph-cf": "-langa",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "night"
+   },
+   {
+    "word_text": "ngandrangala",
+    "morphs": [
+     {
+      "morph-txt": "ngandrangala",
+      "morph-cf": "ngandrangala",
+      "morph-gls": "1pl.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1pl.loc"
+   },
+   {
+    "word_text": "yanhthadhikagali",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "dhika",
+      "morph-cf": "dhika",
+      "morph-gls": "go back",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Yesterday those dogs came up to us at night.",
+  "notes": [
+   "-guru on a nominative. what other cases can it go on? does it only go on pronouns or can it go on other items too?"
+  ],
+  "full_text": "niladha nhaniguru buka dhithiani ngawulanga ngandrangala yanhthadhikagali"
+ },
+ "8": {
+  "word_list": [
+   {
+    "word_text": "dhithiani",
+    "morphs": [
+     {
+      "morph-txt": "dhithi",
+      "morph-cf": "dhithi",
+      "morph-gls": "dog",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "dog"
+   },
+   {
+    "word_text": "wandruani",
+    "morphs": [
+     {
+      "morph-txt": "wandru",
+      "morph-cf": "wandru",
+      "morph-gls": "lot",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "lot"
+   },
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   },
+   {
+    "word_text": "yanhthadhikagalarri",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "dhika",
+      "morph-cf": "dhika",
+      "morph-gls": "go back",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rri",
+      "morph-cf": "-rri",
+      "morph-gls": "irrealis",
+      "morph-msa": "Verb",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "All those dogs are coming up together.",
+  "notes": [],
+  "full_text": "dhithiani wandruani nhaniguru buka yanhthadhikagalarri"
+ },
+ "9": {
+  "word_list": [
+   {
+    "word_text": "dhilaba",
+    "morphs": [
+     {
+      "morph-txt": "dhilaba",
+      "morph-cf": "dhilaba",
+      "morph-gls": "cold",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "cold"
+   },
+   {
+    "word_text": "dratyaiyigala",
+    "morphs": [
+     {
+      "morph-txt": "dratya",
+      "morph-cf": "dratya",
+      "morph-gls": "bite",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "wiyianha",
+    "morphs": [
+     {
+      "morph-txt": "wiyi",
+      "morph-cf": "wiyi",
+      "morph-gls": "firewood",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "firewood"
+   },
+   {
+    "word_text": "galgarra",
+    "morphs": [
+     {
+      "morph-txt": "galga",
+      "morph-cf": "galga",
+      "morph-gls": "ignite",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "imperative",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "light"
+   },
+   {
+    "word_text": "malparra",
+    "morphs": [
+     {
+      "morph-txt": "malparra",
+      "morph-cf": "malparra",
+      "morph-gls": "quickly",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "quickly"
+   }
+  ],
+  "translation": "(I) feel cold. Light the fire quick.",
+  "notes": [],
+  "full_text": "dhilaba dratyaiyigala/ wiyianha galgarra malparra"
+ },
+ "10": {
+  "word_list": [
+   {
+    "word_text": "gulhabarri",
+    "morphs": [
+     {
+      "morph-txt": "gulha",
+      "morph-cf": "gulha",
+      "morph-gls": "sit",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "barri",
+      "morph-cf": "",
+      "morph-gls": "",
+      "morph-msa": "",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   },
+   {
+    "word_text": "nangala",
+    "morphs": [
+     {
+      "morph-txt": "nangala",
+      "morph-cf": "nangala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.loc"
+   }
+  ],
+  "translation": "Stop here.",
+  "notes": [],
+  "full_text": "gulhabarri ini nangala"
+ },
+ "11": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "gulhalha",
+    "morphs": [
+     {
+      "morph-txt": "gulha",
+      "morph-cf": "gulha",
+      "morph-gls": "sit",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lha",
+      "morph-cf": "-lha",
+      "morph-gls": "factual",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "nangala",
+    "morphs": [
+     {
+      "morph-txt": "nangala",
+      "morph-cf": "nangala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.loc"
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   },
+   {
+    "word_text": "yanhthaba",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "ba",
+      "morph-cf": "ba",
+      "morph-gls": "away",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Yes, I stop here, you go on.",
+  "notes": [],
+  "full_text": "ga gulhalha nganyi nangala/ ini yanhthaba"
+ },
+ "12": {
+  "word_list": [
+   {
+    "word_text": "nalyba",
+    "morphs": [
+     {
+      "morph-txt": "nalyba",
+      "morph-cf": "nalyba",
+      "morph-gls": "knife",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "knife"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "ngandyagala",
+    "morphs": [
+     {
+      "morph-txt": "ngandya",
+      "morph-cf": "nganydya",
+      "morph-gls": "want",
+      "morph-msa": "v",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "want"
+   },
+   {
+    "word_text": "gakarra",
+    "morphs": [
+     {
+      "morph-txt": "gaka",
+      "morph-cf": "gaka",
+      "morph-gls": "cut",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "purpose",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "cut"
+   },
+   {
+    "word_text": "nhanha",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.acc"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "makurranha",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makuru",
+      "morph-gls": "stick",
+      "morph-msa": "n",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "I want/need a knife to cut this stick.",
+  "notes": [],
+  "full_text": "nalyba nganyi ngandyagala gakarra nhanha ngathu makurranha"
+ },
+ "13": {
+  "word_list": [
+   {
+    "word_text": "maraani",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "dhukagala",
+    "morphs": [
+     {
+      "morph-txt": "dhuka",
+      "morph-cf": "dhuka",
+      "morph-gls": "swell",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "swell"
+   }
+  ],
+  "translation": "My hand is swelling up.",
+  "notes": [],
+  "full_text": "maraani nganyi dhukagala"
+ },
+ "14": {
+  "word_list": [
+   {
+    "word_text": "narrkidhikaba",
+    "morphs": [
+     {
+      "morph-txt": "narrki",
+      "morph-cf": "narrki",
+      "morph-gls": "lean",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "dhika",
+      "morph-cf": "dhika",
+      "morph-gls": "go back",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ba",
+      "morph-cf": "-ba",
+      "morph-gls": "emph",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "lean"
+   },
+   {
+    "word_text": "nangalagurru",
+    "morphs": [
+     {
+      "morph-txt": "nangala",
+      "morph-cf": "nangala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "makurralunga",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makurra",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Lean against this tree.",
+  "notes": [],
+  "full_text": "narrkidhikaba nangalagurru makurralunga"
+ },
+ "15": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "narrkidhikarraba",
+    "morphs": [
+     {
+      "morph-txt": "narrki",
+      "morph-cf": "narrki",
+      "morph-gls": "lean",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "dhika",
+      "morph-cf": "dhika",
+      "morph-gls": "go back",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ba",
+      "morph-cf": "-ba",
+      "morph-gls": "emph",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "makurralunga",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makurra",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Yes, I will lean on that tree.",
+  "notes": [],
+  "full_text": "ga/ nganyi narrkidhikarraba makurralunga"
+ },
+ "16": {
+  "word_list": [
+   {
+    "word_text": "narrkidhikaba",
+    "morphs": [
+     {
+      "morph-txt": "narrki",
+      "morph-cf": "narrki",
+      "morph-gls": "lean",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "dhika",
+      "morph-cf": "dhika",
+      "morph-gls": "go back",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ba",
+      "morph-cf": "-ba",
+      "morph-gls": "emph",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "lean"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "nhungalaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhungala",
+      "morph-cf": "nhungala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "makurralunga",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makurra",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nhaniyi",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-yi",
+      "morph-cf": "-yi",
+      "morph-gls": "here",
+      "morph-msa": "Pronoun",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "makurrani",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makurra",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ni",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "tree"
+   },
+   {
+    "word_text": "bulinga",
+    "morphs": [
+     {
+      "morph-txt": "buli",
+      "morph-cf": "buli",
+      "morph-gls": "fall",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "fall"
+   }
+  ],
+  "translation": "I leaned on that tree there, OK that tree fell over.",
+  "notes": [],
+  "full_text": "narrkidhikaba nganyi nhungalaguru makurralunga murra nhaniyi makurrani bulinga"
+ },
+ "17": {
+  "word_list": [
+   {
+    "word_text": "balugali",
+    "morphs": [
+     {
+      "morph-txt": "balu",
+      "morph-cf": "balu",
+      "morph-gls": "die",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganytya",
+    "morphs": [
+     {
+      "morph-txt": "nganytya",
+      "morph-cf": "nganytya",
+      "morph-gls": "1sg.dat",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.dat"
+   },
+   {
+    "word_text": "ngarnidyani",
+    "morphs": [
+     {
+      "morph-txt": "ngarnidya",
+      "morph-cf": "ngarnidya",
+      "morph-gls": "father",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ni",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "My father died.",
+  "notes": [],
+  "full_text": "balugali nganytya ngarnidyani"
+ },
+ "18": {
+  "word_list": [
+   {
+    "word_text": "nanparra",
+    "morphs": [
+     {
+      "morph-txt": "nanpa",
+      "morph-cf": "nanpa",
+      "morph-gls": "bury",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "bury"
+   },
+   {
+    "word_text": "ngandrangu",
+    "morphs": [
+     {
+      "morph-txt": "ngandra",
+      "morph-cf": "ngandra",
+      "morph-gls": "1pl.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ngu",
+      "morph-cf": "-ngu",
+      "morph-gls": "ergative",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "3",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1pl"
+   },
+   {
+    "word_text": "nhinha",
+    "morphs": [
+     {
+      "morph-txt": "nhinha",
+      "morph-cf": "nhinha",
+      "morph-gls": "3sg.masc.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": null
+   }
+  ],
+  "translation": "We will bury him.",
+  "notes": [],
+  "full_text": "nanparra ngandrangu nhinha"
+ },
+ "19": {
+  "word_list": [
+   {
+    "word_text": "nganha",
+    "morphs": [
+     {
+      "morph-txt": "nganha",
+      "morph-cf": "nganha",
+      "morph-gls": "1sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.acc"
+   },
+   {
+    "word_text": "nandruguru",
+    "morphs": [
+     {
+      "morph-txt": "nandru",
+      "morph-cf": "nhandru",
+      "morph-gls": "3sg.instr",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "gadhrranga",
+    "morphs": [
+     {
+      "morph-txt": "gadhra",
+      "morph-cf": "gadra",
+      "morph-gls": "spear",
+      "morph-msa": "v",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "spear"
+   },
+   {
+    "word_text": "badianga",
+    "morphs": [
+     {
+      "morph-txt": "badi",
+      "morph-cf": "badhi",
+      "morph-gls": "cut (on skin)",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anga",
+      "morph-cf": "-anga",
+      "morph-gls": "dative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "cut"
+   }
+  ],
+  "translation": "He stabbed me a cut.",
+  "notes": [],
+  "full_text": "nganha nandruguru gadhrranga badianga"
+ },
+ "20": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nugaani",
+    "morphs": [
+     {
+      "morph-txt": "nuga",
+      "morph-cf": "nuga",
+      "morph-gls": "big",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "big"
+   },
+   {
+    "word_text": "badiani",
+    "morphs": [
+     {
+      "morph-txt": "badi",
+      "morph-cf": "badhi",
+      "morph-gls": "cut (on skin)",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "gubianga",
+    "morphs": [
+     {
+      "morph-txt": "gubi",
+      "morph-cf": "gubi",
+      "morph-gls": "doctor",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anga",
+      "morph-cf": "-anga",
+      "morph-gls": "dative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "bari",
+    "morphs": [
+     {
+      "morph-txt": "bari",
+      "morph-cf": "bari",
+      "morph-gls": "think",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "think"
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   },
+   {
+    "word_text": "yanhtharra",
+    "morphs": [
+     {
+      "morph-txt": "yanhtha",
+      "morph-cf": "yanhtha",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "go"
+   }
+  ],
+  "translation": "OK, this cut is big. I think you should go to the doctor.",
+  "notes": [],
+  "full_text": "murra nhaniguru nugaani badiani/ gubianga bari ini yanhtharra"
+ },
+ "21": {
+  "word_list": [
+   {
+    "word_text": "gubiandru",
+    "morphs": [
+     {
+      "morph-txt": "gubi",
+      "morph-cf": "gubi",
+      "morph-gls": "doctor",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-andru",
+      "morph-cf": "-andru",
+      "morph-gls": "ergative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "doctor"
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhalimunkarra",
+    "morphs": [
+     {
+      "morph-txt": "dhali",
+      "morph-cf": "dhali",
+      "morph-gls": "good",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-munka",
+      "morph-cf": "-munka",
+      "morph-gls": "causative",
+      "morph-msa": "adj:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "good"
+   }
+  ],
+  "translation": "The doctor will heal it.",
+  "notes": [
+   "lit \"good-make\" - so causative on an adjective, not like the -la suffix which was on a verb."
+  ],
+  "full_text": "gubiandru nhanhaguru dhalimunkarra"
+ },
+ "22": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nhaniyi",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-yi",
+      "morph-cf": "-yi",
+      "morph-gls": "here",
+      "morph-msa": "Pronoun",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhaliminhdhagali",
+    "morphs": [
+     {
+      "morph-txt": "dhali",
+      "morph-cf": "dhali",
+      "morph-gls": "good",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-minhdha",
+      "morph-cf": "-minhdha",
+      "morph-gls": "inchoative",
+      "morph-msa": "adj:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "good"
+   },
+   {
+    "word_text": "badiani",
+    "morphs": [
+     {
+      "morph-txt": "badi",
+      "morph-cf": "badhi",
+      "morph-gls": "cut (on skin)",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "OK, this cut is competely healed up.",
+  "notes": [],
+  "full_text": "murra nhaniyi dhaliminhdhagali badiani"
+ },
+ "23": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhaliminhdharra",
+    "morphs": [
+     {
+      "morph-txt": "dhali",
+      "morph-cf": "dhali",
+      "morph-gls": "good",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-minhdha",
+      "morph-cf": "-minhdha",
+      "morph-gls": "inchoative",
+      "morph-msa": "adj:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "badiani",
+    "morphs": [
+     {
+      "morph-txt": "badi",
+      "morph-cf": "badhi",
+      "morph-gls": "cut (on skin)",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "malparra",
+    "morphs": [
+     {
+      "morph-txt": "malparra",
+      "morph-cf": "malparra",
+      "morph-gls": "quickly",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "quickly"
+   }
+  ],
+  "translation": "OK, this cut will heal quickly.",
+  "notes": [],
+  "full_text": "murra nhaniguru dhaliminhdharra badiani malparra"
+ },
+ "24": {
+  "word_list": [
+   {
+    "word_text": "warlparra",
+    "morphs": [
+     {
+      "morph-txt": "warlpa",
+      "morph-cf": "warlpa",
+      "morph-gls": "rise",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "malparra",
+    "morphs": [
+     {
+      "morph-txt": "malparra",
+      "morph-cf": "malparra",
+      "morph-gls": "quickly",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "quickly"
+   }
+  ],
+  "translation": "Get up quick.",
+  "notes": [],
+  "full_text": "warlparra malparra"
+ },
+ "25": {
+  "word_list": [
+   {
+    "word_text": "malparra",
+    "morphs": [
+     {
+      "morph-txt": "malparra",
+      "morph-cf": "malparra",
+      "morph-gls": "quickly",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "quickly"
+   },
+   {
+    "word_text": "warlpa",
+    "morphs": [
+     {
+      "morph-txt": "warlpa",
+      "morph-cf": "warlpa",
+      "morph-gls": "rise",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "rise"
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   }
+  ],
+  "translation": "Get up quick, you.",
+  "notes": [],
+  "full_text": "malparra warlpa ini"
+ },
+ "26": {
+  "word_list": [
+   {
+    "word_text": "walya",
+    "morphs": [
+     {
+      "morph-txt": "walya",
+      "morph-cf": "walya",
+      "morph-gls": "not",
+      "morph-msa": "part",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "part",
+    "gls": null
+   },
+   {
+    "word_text": "manhdha",
+    "morphs": [
+     {
+      "morph-txt": "manhdha",
+      "morph-cf": "manhdha",
+      "morph-gls": "grasp",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "grasp"
+   },
+   {
+    "word_text": "nganytya",
+    "morphs": [
+     {
+      "morph-txt": "nganytya",
+      "morph-cf": "nganytya",
+      "morph-gls": "1sg.dat",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.dat"
+   },
+   {
+    "word_text": "nalybaanha",
+    "morphs": [
+     {
+      "morph-txt": "nalyba",
+      "morph-cf": "nalyba",
+      "morph-gls": "knife",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Don't touch my knife.",
+  "notes": [],
+  "full_text": "walya manhdha nganytya nalybaanha nhanhaguru"
+ },
+ "27": {
+  "word_list": [
+   {
+    "word_text": "ganyiganyirigala",
+    "morphs": [
+     {
+      "morph-txt": "ganyi",
+      "morph-cf": "ganyi",
+      "morph-gls": "today",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "ganyiri",
+      "morph-cf": "ganyiri",
+      "morph-gls": "sweat",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   }
+  ],
+  "translation": "I am sweating.",
+  "notes": [],
+  "full_text": "ganyiganyirigala nganyi"
+ },
+ "28": {
+  "word_list": [
+   {
+    "word_text": "minhaanga",
+    "morphs": [
+     {
+      "morph-txt": "minha",
+      "morph-cf": "mina",
+      "morph-gls": "what",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anga",
+      "morph-cf": "-anga",
+      "morph-gls": "dative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "what"
+   },
+   {
+    "word_text": "ganyiganyirrigala",
+    "morphs": [
+     {
+      "morph-txt": "ganyi",
+      "morph-cf": "ganyi",
+      "morph-gls": "sweat",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "ganyiri",
+      "morph-cf": "ganyiri",
+      "morph-gls": "sweat",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "sweat"
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   }
+  ],
+  "translation": "Why are you sweating?",
+  "notes": [],
+  "full_text": "minhaanga ganyiganyirrigala ini"
+ },
+ "29": {
+  "word_list": [
+   {
+    "word_text": "yawurrandru",
+    "morphs": [
+     {
+      "morph-txt": "yawurra",
+      "morph-cf": "yawurra",
+      "morph-gls": "heat",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ndru",
+      "morph-cf": "-ndru",
+      "morph-gls": "instrumental",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "heat"
+   },
+   {
+    "word_text": "nganha",
+    "morphs": [
+     {
+      "morph-txt": "nganha",
+      "morph-cf": "nganha",
+      "morph-gls": "1sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.acc"
+   },
+   {
+    "word_text": "galkagala",
+    "morphs": [
+     {
+      "morph-txt": "galka",
+      "morph-cf": "galka",
+      "morph-gls": "strike",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Heat is hitting me.",
+  "notes": [],
+  "full_text": "yawurrandru nganha galkagala"
+ },
+ "30": {
+  "word_list": [
+   {
+    "word_text": "gunga",
+    "morphs": [
+     {
+      "morph-txt": "gunga",
+      "morph-cf": "gunga",
+      "morph-gls": "food",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "food"
+   },
+   {
+    "word_text": "ngutya",
+    "morphs": [
+     {
+      "morph-txt": "ngutya",
+      "morph-cf": "ngutya",
+      "morph-gls": "give",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "give"
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nanduana",
+    "morphs": [
+     {
+      "morph-txt": "nandu",
+      "morph-cf": "nandu",
+      "morph-gls": "horse",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ana",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "horse"
+   }
+  ],
+  "translation": "Give that horse food.",
+  "notes": [],
+  "full_text": "gunga ngutya nhanhaguru nanduana"
+ },
+ "31": {
+  "word_list": [
+   {
+    "word_text": "ngunawalhiandru",
+    "morphs": [
+     {
+      "morph-txt": "ngunawalhi",
+      "morph-cf": "ngunawalhi",
+      "morph-gls": "mosquito",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-andru",
+      "morph-cf": "-andru",
+      "morph-gls": "ergative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "mosquito"
+   },
+   {
+    "word_text": "nganha",
+    "morphs": [
+     {
+      "morph-txt": "nganha",
+      "morph-cf": "nganha",
+      "morph-gls": "1sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.acc"
+   },
+   {
+    "word_text": "drabanga",
+    "morphs": [
+     {
+      "morph-txt": "draba",
+      "morph-cf": "draba",
+      "morph-gls": "sting",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "mirrandanyi",
+    "morphs": [
+     {
+      "morph-txt": "mirranda",
+      "morph-cf": "mirranda",
+      "morph-gls": "itch",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyi",
+      "morph-cf": "-nyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "itch"
+   }
+  ],
+  "translation": "A mosquito bit me - I (have an) itch.",
+  "notes": [],
+  "full_text": "ngunawalhiandru nganha drabanga mirrandanyi"
+ },
+ "32": {
+  "word_list": [
+   {
+    "word_text": "maraani",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "birtibirtirigala",
+    "morphs": [
+     {
+      "morph-txt": "birti",
+      "morph-cf": "birti",
+      "morph-gls": "itch",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "birtiri",
+      "morph-cf": "birtiri",
+      "morph-gls": "itch",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "itch"
+   }
+  ],
+  "translation": "My hand is itching.",
+  "notes": [],
+  "full_text": "maraani nganyi birtibirtirigala"
+ },
+ "33": {
+  "word_list": [
+   {
+    "word_text": "walya",
+    "morphs": [
+     {
+      "morph-txt": "walya",
+      "morph-cf": "walya",
+      "morph-gls": "not",
+      "morph-msa": "part",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "part",
+    "gls": null
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "yandraanha",
+    "morphs": [
+     {
+      "morph-txt": "yandra",
+      "morph-cf": "yandra",
+      "morph-gls": "rock",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "ngungka",
+    "morphs": [
+     {
+      "morph-txt": "ngungka",
+      "morph-cf": "ngungka",
+      "morph-gls": "swallow",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "swallow"
+   }
+  ],
+  "translation": "Don't swallow that stone.",
+  "notes": [],
+  "full_text": "walya nhanhaguru yandraanha ngungka"
+ },
+ "34": {
+  "word_list": [
+   {
+    "word_text": "nhaniguru",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhalthaiyigala",
+    "morphs": [
+     {
+      "morph-txt": "dhaltha",
+      "morph-cf": "thalhtha",
+      "morph-gls": "eat",
+      "morph-msa": "v.t",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "He has eaten.",
+  "notes": [],
+  "full_text": "nhaniguru dhalthaiyigala"
+ },
+ "35": {
+  "word_list": [
+   {
+    "word_text": "bungkula",
+    "morphs": [
+     {
+      "morph-txt": "bungkula",
+      "morph-cf": "bunkula",
+      "morph-gls": "knee",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "knee"
+   },
+   {
+    "word_text": "gulawarri",
+    "morphs": [
+     {
+      "morph-txt": "gula",
+      "morph-cf": "gulha",
+      "morph-gls": "sit",
+      "morph-msa": "v",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-warri",
+      "morph-cf": "-warri",
+      "morph-gls": "vertical",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "sit"
+   }
+  ],
+  "translation": "Kneel.",
+  "notes": [],
+  "full_text": "bungkula gulawarri"
+ },
+ "36": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "bungkula",
+    "morphs": [
+     {
+      "morph-txt": "bungkula",
+      "morph-cf": "bunkula",
+      "morph-gls": "knee",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "knee"
+   },
+   {
+    "word_text": "gulawarrira",
+    "morphs": [
+     {
+      "morph-txt": "gula",
+      "morph-cf": "gulha",
+      "morph-gls": "sit",
+      "morph-msa": "v",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-warri",
+      "morph-cf": "-warri",
+      "morph-gls": "vertical",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "sit"
+   }
+  ],
+  "translation": "OK I will kneel.",
+  "notes": [],
+  "full_text": "murra nganyi bungkula gulawarrira"
+ },
+ "37": {
+  "word_list": [
+   {
+    "word_text": "mara",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "mara",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "hand"
+   },
+   {
+    "word_text": "dhapagala",
+    "morphs": [
+     {
+      "morph-txt": "dhapa",
+      "morph-cf": "dhapa",
+      "morph-gls": "lick",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "lick"
+   },
+   {
+    "word_text": "nganha",
+    "morphs": [
+     {
+      "morph-txt": "nganha",
+      "morph-cf": "nganha",
+      "morph-gls": "1sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.acc"
+   },
+   {
+    "word_text": "dhithiandru",
+    "morphs": [
+     {
+      "morph-txt": "dhithi",
+      "morph-cf": "dhithi",
+      "morph-gls": "dog",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-andru",
+      "morph-cf": "-andru",
+      "morph-gls": "ergative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "dog"
+   }
+  ],
+  "translation": "The dog is licking my hand.",
+  "notes": [],
+  "full_text": "mara dhapagala nganha dhithiandru"
+ },
+ "38": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "dhanaguru",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "garnaani",
+    "morphs": [
+     {
+      "morph-txt": "garna",
+      "morph-cf": "garna",
+      "morph-gls": "man",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "garna-ani"
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   },
+   {
+    "word_text": "marrimarrigala",
+    "morphs": [
+     {
+      "morph-txt": "marri",
+      "morph-cf": "marri",
+      "morph-gls": "dance",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "marri",
+      "morph-cf": "marri",
+      "morph-gls": "dance",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "dance"
+   },
+   {
+    "word_text": "marniangani",
+    "morphs": [
+     {
+      "morph-txt": "marni",
+      "morph-cf": "marni",
+      "morph-gls": "ceremonial dance",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-angani",
+      "morph-cf": "-angani",
+      "morph-gls": "dative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "OK, the people are dancing a ceremonial dance all together.",
+  "notes": [],
+  "full_text": "murra dhanaguru garnaani buka marrimarrigala marniangani"
+ },
+ "39": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "dhanaguru",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   },
+   {
+    "word_text": "birrkibalagala",
+    "morphs": [
+     {
+      "morph-txt": "birrki",
+      "morph-cf": "birrki",
+      "morph-gls": "dance",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "bala",
+      "morph-cf": "",
+      "morph-gls": "",
+      "morph-msa": "",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "dance"
+   }
+  ],
+  "translation": "OK they are all dancing a ceremonial dance",
+  "notes": [],
+  "full_text": "murra dhanaguru buka birrkibalagala"
+ },
+ "40": {
+  "word_list": [
+   {
+    "word_text": "nadyaba",
+    "morphs": [
+     {
+      "morph-txt": "nadya",
+      "morph-cf": "nadya",
+      "morph-gls": "see",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "ba",
+      "morph-cf": "ba",
+      "morph-gls": "away",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhanagurunha",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Look at them.",
+  "notes": [],
+  "full_text": "nadyaba dhanagurunha"
+ },
+ "41": {
+  "word_list": [
+   {
+    "word_text": "minha",
+    "morphs": [
+     {
+      "morph-txt": "minha",
+      "morph-cf": "mina",
+      "morph-gls": "what",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "what"
+   },
+   {
+    "word_text": "yarrinyani",
+    "morphs": [
+     {
+      "morph-txt": "yarrinya",
+      "morph-cf": "yarrinya",
+      "morph-gls": "name",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ni",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nhaniyi",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-yi",
+      "morph-cf": "-yi",
+      "morph-gls": "here",
+      "morph-msa": "Pronoun",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "marniani",
+    "morphs": [
+     {
+      "morph-txt": "marni",
+      "morph-cf": "marni",
+      "morph-gls": "ceremonial dance",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "What is the name of this dance?",
+  "notes": [],
+  "full_text": "minha yarrinyani nhaniyi marniani"
+ },
+ "42": {
+  "word_list": [
+   {
+    "word_text": "marni",
+    "morphs": [
+     {
+      "morph-txt": "marni",
+      "morph-cf": "marni",
+      "morph-gls": "fat",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "fat"
+   },
+   {
+    "word_text": "galkagalkarra",
+    "morphs": [
+     {
+      "morph-txt": "galka",
+      "morph-cf": "galka",
+      "morph-gls": "strike",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "galka",
+      "morph-cf": "galka",
+      "morph-gls": "strike",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "sing"
+   },
+   {
+    "word_text": "nhaniyi",
+    "morphs": [
+     {
+      "morph-txt": "nhani",
+      "morph-cf": "nhani",
+      "morph-gls": "3sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-yi",
+      "morph-cf": "-yi",
+      "morph-gls": "here",
+      "morph-msa": "Pronoun",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "garnaani",
+    "morphs": [
+     {
+      "morph-txt": "garna",
+      "morph-cf": "garna",
+      "morph-gls": "man",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "garna-ani"
+   }
+  ],
+  "translation": "This man will sing a ceremonial song.",
+  "notes": [],
+  "full_text": "marni galkagalkarra nhaniyi garnaani"
+ },
+ "43": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "nhanha",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.acc"
+   },
+   {
+    "word_text": "gaymagala",
+    "morphs": [
+     {
+      "morph-txt": "gayma",
+      "morph-cf": "gayma",
+      "morph-gls": "throw out",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Yes, already I am throwing this out.",
+  "notes": [],
+  "full_text": "ga murra ngathu nhanha gaymagala"
+ },
+ "44": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "gaymanga",
+    "morphs": [
+     {
+      "morph-txt": "gayma",
+      "morph-cf": "gayma",
+      "morph-gls": "throw out",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Already I threw (it) out.",
+  "notes": [],
+  "full_text": "murra ngathu gaymanga"
+ },
+ "45": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "bulrragarra",
+    "morphs": [
+     {
+      "morph-txt": "buldraga",
+      "morph-cf": "buldranga",
+      "morph-gls": "pluck",
+      "morph-msa": "v",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "pluck"
+   },
+   {
+    "word_text": "nhanha",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.acc"
+   },
+   {
+    "word_text": "marranganha",
+    "morphs": [
+     {
+      "morph-txt": "marranga",
+      "morph-cf": "marranga",
+      "morph-gls": "duck",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "duck"
+   }
+  ],
+  "translation": "OK I will pluck this duck.",
+  "notes": [],
+  "full_text": "murra ngathu bulrragarra nhanha marranganha"
+ },
+ "46": {
+  "word_list": [
+   {
+    "word_text": "yundru",
+    "morphs": [
+     {
+      "morph-txt": "yundru",
+      "morph-cf": "yundru",
+      "morph-gls": "2sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.erg"
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "bulrraganga",
+    "morphs": [
+     {
+      "morph-txt": "buldraga",
+      "morph-cf": "buldranga",
+      "morph-gls": "pluck",
+      "morph-msa": "v",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "pluck"
+   }
+  ],
+  "translation": "You plucked this.",
+  "notes": [],
+  "full_text": "yundru nhanhaguru bulrraganga"
+ },
+ "47": {
+  "word_list": [
+   {
+    "word_text": "walya",
+    "morphs": [
+     {
+      "morph-txt": "walya",
+      "morph-cf": "walya",
+      "morph-gls": "not",
+      "morph-msa": "part",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "part",
+    "gls": null
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "bulrrangalangu",
+    "morphs": [
+     {
+      "morph-txt": "buldranga",
+      "morph-cf": "buldranga",
+      "morph-gls": "pluck",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-langu",
+      "morph-cf": "-langu",
+      "morph-gls": "Possibility",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "pluck"
+   },
+   {
+    "word_text": "nhanha",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.acc"
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "mara",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "mara",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "hand"
+   },
+   {
+    "word_text": "badhibatu",
+    "morphs": [
+     {
+      "morph-txt": "badhi",
+      "morph-cf": "badhi",
+      "morph-gls": "cut (on skin)",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-batu",
+      "morph-cf": "-batu",
+      "morph-gls": "proprietive",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "cut (on skin)"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   }
+  ],
+  "translation": "No, I can't pluck (it). My hand hurts.",
+  "notes": [],
+  "full_text": "walya ngathu bulrrangalangu nhanha/ mara badhibatu nganyi"
+ },
+ "48": {
+  "word_list": [
+   {
+    "word_text": "minha",
+    "morphs": [
+     {
+      "morph-txt": "minha",
+      "morph-cf": "mina",
+      "morph-gls": "what",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "what"
+   },
+   {
+    "word_text": "munkaiyigali",
+    "morphs": [
+     {
+      "morph-txt": "munka",
+      "morph-cf": "munka",
+      "morph-gls": "make",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "make"
+   },
+   {
+    "word_text": "ini",
+    "morphs": [
+     {
+      "morph-txt": "ini",
+      "morph-cf": "ini",
+      "morph-gls": "2sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.nom"
+   },
+   {
+    "word_text": "maraani",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "What happened/was done to/hurt your hand?",
+  "notes": [],
+  "full_text": "minha munkaiyigali ini maraani"
+ },
+ "49": {
+  "word_list": [
+   {
+    "word_text": "buligali",
+    "morphs": [
+     {
+      "morph-txt": "buli",
+      "morph-cf": "buli",
+      "morph-gls": "fall",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "mara",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "mara",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "hand"
+   },
+   {
+    "word_text": "galkaiyigali",
+    "morphs": [
+     {
+      "morph-txt": "galka",
+      "morph-cf": "galka",
+      "morph-gls": "strike",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "nhungalaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhungala",
+      "morph-cf": "nhungala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "makurralunga",
+    "morphs": [
+     {
+      "morph-txt": "makurra",
+      "morph-cf": "makurra",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "I fell and hit my hand on this stick.",
+  "notes": [],
+  "full_text": "buligali nganyi/ mara galkaiyigali nganyi nhungalaguru makurralunga"
+ },
+ "50": {
+  "word_list": [
+   {
+    "word_text": "barlka",
+    "morphs": [
+     {
+      "morph-txt": "barlka",
+      "morph-cf": "barlka",
+      "morph-gls": "string",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "string"
+   },
+   {
+    "word_text": "nhanhaguru",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "gatyu",
+    "morphs": [
+     {
+      "morph-txt": "gatyu",
+      "morph-cf": "",
+      "morph-gls": "tie",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "tie"
+   }
+  ],
+  "translation": "Tie up this string.",
+  "notes": [],
+  "full_text": "barlka nhanhaguru gatyu"
+ },
+ "51": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "nhanha",
+    "morphs": [
+     {
+      "morph-txt": "nhanha",
+      "morph-cf": "nhanha",
+      "morph-gls": "3sg.acc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.acc"
+   },
+   {
+    "word_text": "gatyurra",
+    "morphs": [
+     {
+      "morph-txt": "gatyu",
+      "morph-cf": "",
+      "morph-gls": "tie",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "OK I will tie this.",
+  "notes": [],
+  "full_text": "murra ngathu nhanha gatyurra"
+ },
+ "52": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "yundru",
+    "morphs": [
+     {
+      "morph-txt": "yundru",
+      "morph-cf": "yundru",
+      "morph-gls": "2pl.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2pl.erg"
+   },
+   {
+    "word_text": "wangu",
+    "morphs": [
+     {
+      "morph-txt": "wangu",
+      "morph-cf": "wangu",
+      "morph-gls": "allotment",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "allotment"
+   },
+   {
+    "word_text": "ngutyarra",
+    "morphs": [
+     {
+      "morph-txt": "ngutya",
+      "morph-cf": "ngudya",
+      "morph-gls": "give",
+      "morph-msa": "v",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "imperative",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "give"
+   }
+  ],
+  "translation": "Ok you all will give a share.",
+  "notes": [],
+  "full_text": "murra yundru wangu ngutyarra"
+ },
+ "53": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "wangu",
+    "morphs": [
+     {
+      "morph-txt": "wangu",
+      "morph-cf": "wangu",
+      "morph-gls": "allotment",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "allotment"
+   },
+   {
+    "word_text": "ngutyarra",
+    "morphs": [
+     {
+      "morph-txt": "ngutya",
+      "morph-cf": "ngudya",
+      "morph-gls": "give",
+      "morph-msa": "v",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "imperative",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "give"
+   },
+   {
+    "word_text": "dhananha",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "OK I will give them a share.",
+  "notes": [],
+  "full_text": "murra ngathu wangu ngutyarra dhananha"
+ },
+ "54": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "dhanaguru",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "garnaani",
+    "morphs": [
+     {
+      "morph-txt": "garna",
+      "morph-cf": "garna",
+      "morph-gls": "man",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "garna-ani"
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   },
+   {
+    "word_text": "mula",
+    "morphs": [
+     {
+      "morph-txt": "mula",
+      "morph-cf": "mula",
+      "morph-gls": "vomit",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "vomit"
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhukandrinyalagala",
+    "morphs": [
+     {
+      "morph-txt": "dhukandri",
+      "morph-cf": "dhukandri",
+      "morph-gls": "fight",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyala",
+      "morph-cf": "-nyara",
+      "morph-gls": "reciprocal",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "fight"
+   }
+  ],
+  "translation": "Already those people are all bad. (They) fight each other.",
+  "notes": [],
+  "full_text": "murra dhanaguru garnaani buka mula/ dhukandrinyalagala"
+ },
+ "55": {
+  "word_list": [
+   {
+    "word_text": "galkanyalarra",
+    "morphs": [
+     {
+      "morph-txt": "galka",
+      "morph-cf": "galka",
+      "morph-gls": "strike",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyala",
+      "morph-cf": "-nyara",
+      "morph-gls": "reciprocal",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhanaguru",
+    "morphs": [
+     {
+      "morph-txt": "dhana",
+      "morph-cf": "dhana",
+      "morph-gls": "3pl",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "buka",
+    "morphs": [
+     {
+      "morph-txt": "buka",
+      "morph-cf": "buka",
+      "morph-gls": "all",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "all"
+   }
+  ],
+  "translation": "They all will fight each other.",
+  "notes": [],
+  "full_text": "galkanyalarra dhanaguru buka"
+ },
+ "56": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "nguthianha",
+    "morphs": [
+     {
+      "morph-txt": "nguthi",
+      "morph-cf": "nguthi",
+      "morph-gls": "meat",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "meat"
+   },
+   {
+    "word_text": "dhalhthagala",
+    "morphs": [
+     {
+      "morph-txt": "dhaltha",
+      "morph-cf": "thalhtha",
+      "morph-gls": "eat",
+      "morph-msa": "v.t",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.t",
+    "gls": "eat"
+   },
+   {
+    "word_text": "muraanha",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "go",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-anha",
+      "morph-cf": "-anha",
+      "morph-gls": "accusative case",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "I eat meat all day.",
+  "notes": [],
+  "full_text": "murra ngathu nguthianha dhalhthagala muraanha"
+ },
+ "57": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngathu",
+    "morphs": [
+     {
+      "morph-txt": "ngathu",
+      "morph-cf": "ngathu",
+      "morph-gls": "1sg.erg",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.erg"
+   },
+   {
+    "word_text": "dhalhthagala",
+    "morphs": [
+     {
+      "morph-txt": "dhaltha",
+      "morph-cf": "thalhtha",
+      "morph-gls": "eat",
+      "morph-msa": "v.t",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.t",
+    "gls": "eat"
+   },
+   {
+    "word_text": "wikarlawatyu",
+    "morphs": [
+     {
+      "morph-txt": "wikarla",
+      "morph-cf": "wikala",
+      "morph-gls": "tomorrow",
+      "morph-msa": "adv",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "watyu",
+      "morph-cf": "watyu",
+      "morph-gls": "one",
+      "morph-msa": "num",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "the day after tomorrow"
+   },
+   {
+    "word_text": "wikarlawatyu",
+    "morphs": [
+     {
+      "morph-txt": "wikarla",
+      "morph-cf": "wikala",
+      "morph-gls": "tomorrow",
+      "morph-msa": "adv",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "watyu",
+      "morph-cf": "watyu",
+      "morph-gls": "one",
+      "morph-msa": "num",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "the day after tomorrow"
+   }
+  ],
+  "translation": "I eat day after day.",
+  "notes": [],
+  "full_text": "murra ngathu dhalhthagala wikarlawatyu wikarlawatyu"
+ },
+ "58": {
+  "word_list": [
+   {
+    "word_text": "mitiani",
+    "morphs": [
+     {
+      "morph-txt": "miti",
+      "morph-cf": "miti",
+      "morph-gls": "dirty",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "dirty"
+   },
+   {
+    "word_text": "ingka",
+    "morphs": [
+     {
+      "morph-txt": "ingka",
+      "morph-cf": "ingka",
+      "morph-gls": "2sg.dat",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2sg.dat"
+   },
+   {
+    "word_text": "maraani",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "yungViyiba",
+    "morphs": [
+     {
+      "morph-txt": "yungV",
+      "morph-cf": "yungV",
+      "morph-gls": "wash",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ba",
+      "morph-cf": "-ba",
+      "morph-gls": "emph",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "wash"
+   },
+   {
+    "word_text": "nhungalagurru",
+    "morphs": [
+     {
+      "morph-txt": "nhungala",
+      "morph-cf": "nhungala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-guru",
+      "morph-cf": "-guru",
+      "morph-gls": "there",
+      "morph-msa": "pro:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "ngakalanga",
+    "morphs": [
+     {
+      "morph-txt": "ngaka",
+      "morph-cf": "ngaka",
+      "morph-gls": "water",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-langa",
+      "morph-cf": "-langa",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Your hand is dirty. Wash in that water.",
+  "notes": [],
+  "full_text": "mitiani ingka maraani/ yungViyiba nhungalagurru ngakalanga"
+ },
+ "59": {
+  "word_list": [
+   {
+    "word_text": "ga",
+    "morphs": [
+     {
+      "morph-txt": "ga",
+      "morph-cf": "ga",
+      "morph-gls": "yes",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "yes"
+   },
+   {
+    "word_text": "yungViyilhanyi",
+    "morphs": [
+     {
+      "morph-txt": "yungV",
+      "morph-cf": "yungV",
+      "morph-gls": "wash",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lha",
+      "morph-cf": "-lha",
+      "morph-gls": "factual",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyi",
+      "morph-cf": "-nyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nhangala",
+    "morphs": [
+     {
+      "morph-txt": "nhangala",
+      "morph-cf": "nhungala",
+      "morph-gls": "3sg.loc",
+      "morph-msa": "pro",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "3sg.loc"
+   },
+   {
+    "word_text": "ngakalunga",
+    "morphs": [
+     {
+      "morph-txt": "ngaka",
+      "morph-cf": "ngaka",
+      "morph-gls": "water",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Yes, I wash in that water.",
+  "notes": [],
+  "full_text": "ga yungViyilhanyi nhangala ngakalunga"
+ },
+ "60": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "marrani",
+    "morphs": [
+     {
+      "morph-txt": "mara",
+      "morph-cf": "",
+      "morph-gls": "hand",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ni",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nganytya",
+    "morphs": [
+     {
+      "morph-txt": "nganytya",
+      "morph-cf": "nganytya",
+      "morph-gls": "1sg.dat",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.dat"
+   },
+   {
+    "word_text": "dhakamunhdhu",
+    "morphs": [
+     {
+      "morph-txt": "dhaka",
+      "morph-cf": "dhaka",
+      "morph-gls": "dirt",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-munhdhu",
+      "morph-cf": "-munhdhu",
+      "morph-gls": "privative",
+      "morph-msa": "n>adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "/",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "nganyi",
+    "morphs": [
+     {
+      "morph-txt": "nganyi",
+      "morph-cf": "nganyi",
+      "morph-gls": "1sg.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1sg.nom"
+   },
+   {
+    "word_text": "yungViyinga",
+    "morphs": [
+     {
+      "morph-txt": "yungV",
+      "morph-cf": "yungV",
+      "morph-gls": "wash",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-iyi",
+      "morph-cf": "-iyi",
+      "morph-gls": "reflexive",
+      "morph-msa": "v:Reflexive",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "Already my hand is clean. OK I washed.",
+  "notes": [],
+  "full_text": "murra marrani nganytya dhakamunhdhu/ murra nganyi yungViyinga"
+ },
+ "61": {
+  "word_list": [
+   {
+    "word_text": "yula",
+    "morphs": [
+     {
+      "morph-txt": "yula",
+      "morph-cf": "yula",
+      "morph-gls": "2dl.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "2dl"
+   },
+   {
+    "word_text": "nadyanyararra",
+    "morphs": [
+     {
+      "morph-txt": "nadya",
+      "morph-cf": "nadya",
+      "morph-gls": "see",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyara",
+      "morph-cf": "-nyara",
+      "morph-gls": "reciprocal",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "The two of you, look at each other.",
+  "notes": [],
+  "full_text": "yula nadyanyararra"
+ },
+ "62": {
+  "word_list": [
+   {
+    "word_text": "ngali",
+    "morphs": [
+     {
+      "morph-txt": "ngali",
+      "morph-cf": "ngali",
+      "morph-gls": "1dl.nom",
+      "morph-msa": "pro",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "pro",
+    "gls": "1dl"
+   },
+   {
+    "word_text": "nadyanyararra",
+    "morphs": [
+     {
+      "morph-txt": "nadya",
+      "morph-cf": "nadya",
+      "morph-gls": "see",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nyara",
+      "morph-cf": "-nyara",
+      "morph-gls": "reciprocal",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "future",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "The two of us will look at each other.",
+  "notes": [],
+  "full_text": "ngali nadyanyararra"
+ },
+ "63": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "ngala",
+    "morphs": [
+     {
+      "morph-txt": "ngala",
+      "morph-cf": "ngala",
+      "morph-gls": "don't",
+      "morph-msa": "part",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "part",
+    "gls": "don't"
+   },
+   {
+    "word_text": "nadyanyaragali",
+    "morphs": [
+     {
+      "morph-txt": "nadya",
+      "morph-cf": "nadya",
+      "morph-gls": "see",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "nyarra",
+      "morph-cf": "",
+      "morph-gls": "reciprocal",
+      "morph-msa": "v:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gali",
+      "morph-cf": "-gali",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nilhada",
+    "morphs": [
+     {
+      "morph-txt": "nilhada",
+      "morph-cf": "niladha",
+      "morph-gls": "yesterday",
+      "morph-msa": "adv",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "yesterday"
+   }
+  ],
+  "translation": "OK, the two of us were looking at each other yesterday.",
+  "notes": [],
+  "full_text": "murra ngala nadyanyaragali nilhada"
+ },
+ "64": {
+  "word_list": [
+   {
+    "word_text": "nuku",
+    "morphs": [
+     {
+      "morph-txt": "nuku",
+      "morph-cf": "nuku",
+      "morph-gls": "tree",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "tree"
+   },
+   {
+    "word_text": "nugalunga",
+    "morphs": [
+     {
+      "morph-txt": "nuga",
+      "morph-cf": "nuga",
+      "morph-gls": "big",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-lunga",
+      "morph-cf": "-lunga",
+      "morph-gls": "locative",
+      "morph-msa": "n:Any",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "At the big tree.",
+  "notes": [],
+  "full_text": "nuku nugalunga"
+ },
+ "65": {
+  "word_list": [
+   {
+    "word_text": "wanhdhawarra",
+    "morphs": [
+     {
+      "morph-txt": "wanhdha",
+      "morph-cf": "wanhdhu",
+      "morph-gls": "much",
+      "morph-msa": "adj",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "warra",
+      "morph-cf": "warra",
+      "morph-gls": "belonging",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adj",
+    "gls": "belonging"
+   },
+   {
+    "word_text": "dhalhdhrraani",
+    "morphs": [
+     {
+      "morph-txt": "dhalhdhra",
+      "morph-cf": "dhaldra",
+      "morph-gls": "kangaroo",
+      "morph-msa": "n",
+      "morph-variantTypes": "+variant of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "kangaroo"
+   }
+  ],
+  "translation": "How many kangaroos are there?",
+  "notes": [],
+  "full_text": "wanhdhawarra dhalhdhrraani"
+ },
+ "66": {
+  "word_list": [
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   },
+   {
+    "word_text": "bunmarra",
+    "morphs": [
+     {
+      "morph-txt": "bunma",
+      "morph-cf": "bunma",
+      "morph-gls": "uncover",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-rra",
+      "morph-cf": "-rra",
+      "morph-gls": "imperative",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "uncover"
+   },
+   {
+    "word_text": "murra",
+    "morphs": [
+     {
+      "morph-txt": "murra",
+      "morph-cf": "murra",
+      "morph-gls": "finished",
+      "morph-msa": "v.i",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v.i",
+    "gls": "finished"
+   }
+  ],
+  "translation": "Take it out, OK.",
+  "notes": [],
+  "full_text": "murra bunmarra murra"
+ }
+}

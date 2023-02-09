@@ -1,0 +1,283 @@
+{
+ "flextext": "../Breen Sentences.flextext",
+ "1": {
+  "word_list": [
+   {
+    "word_text": "barrkulu",
+    "morphs": [
+     {
+      "morph-txt": "barkulu",
+      "morph-cf": "barrkulu",
+      "morph-gls": "two",
+      "morph-msa": "num",
+      "morph-variantTypes": "+sp. var. of",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "num",
+    "gls": "two"
+   },
+   {
+    "word_text": "walyubala",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": null,
+  "notes": [
+   "not at all sure about the walyu- transcription, looks like walyuvEla"
+  ],
+  "full_text": "barrkulu walyubala"
+ },
+ "2": {
+  "word_list": [
+   {
+    "word_text": "murrumurrugala",
+    "morphs": [
+     {
+      "morph-txt": "murrumurru",
+      "morph-cf": "murrumurru",
+      "morph-gls": "black",
+      "morph-msa": "adj",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-gala",
+      "morph-cf": "-gala",
+      "morph-gls": "present",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nyinalinga",
+    "morphs": [
+     {
+      "morph-txt": "nyina",
+      "morph-cf": "nyina",
+      "morph-gls": "sit",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-li",
+      "morph-cf": "-li",
+      "morph-gls": "potential?",
+      "morph-msa": "Attaches to any category",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-nga",
+      "morph-cf": "-nga",
+      "morph-gls": "past",
+      "morph-msa": "v:Tense/Aspect",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "men sitting down over there",
+  "notes": [],
+  "full_text": "murrumurrugala nyinalinga"
+ },
+ "3": {
+  "word_list": [
+   {
+    "word_text": "yarna",
+    "morphs": [
+     {
+      "morph-txt": "yarna",
+      "morph-cf": "yarna",
+      "morph-gls": "rain",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "rain"
+   },
+   {
+    "word_text": "wayalingu",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": null,
+  "notes": [],
+  "full_text": "yarna wayalingu"
+ },
+ "4": {
+  "word_list": [
+   {
+    "word_text": "ganyi",
+    "morphs": [
+     {
+      "morph-txt": "ganyi",
+      "morph-cf": "ganyi",
+      "morph-gls": "sweat",
+      "morph-msa": "v",
+      "morph-variantTypes": "",
+      "morph-hn": "2",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "v",
+    "gls": "sweat"
+   }
+  ],
+  "translation": null,
+  "notes": [],
+  "full_text": "ganyi"
+ },
+ "5": {
+  "word_list": [
+   {
+    "word_text": "dhaka",
+    "morphs": [
+     {
+      "morph-txt": "dhaka",
+      "morph-cf": "dhaka",
+      "morph-gls": "ground",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "ground"
+   },
+   {
+    "word_text": "wet",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "dhugarna",
+    "morphs": [
+     {
+      "morph-txt": "dhugarna",
+      "morph-cf": "dhugarna",
+      "morph-gls": "wetfellow",
+      "morph-msa": "<Not Sure>",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": "wetfellow"
+   }
+  ],
+  "translation": null,
+  "notes": [],
+  "full_text": "dhaka wet dhugarna"
+ },
+ "6": {
+  "word_list": [
+   {
+    "word_text": "nilaya",
+    "morphs": [
+     {
+      "morph-txt": "nilaya",
+      "morph-cf": "nilaya",
+      "morph-gls": "yesterday",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "yesterday"
+   },
+   {
+    "word_text": ",",
+    "morphs": [],
+    "pos": "",
+    "gls": ""
+   },
+   {
+    "word_text": "nilaya",
+    "morphs": [
+     {
+      "morph-txt": "nilaya",
+      "morph-cf": "nilaya",
+      "morph-gls": "yesterday",
+      "morph-msa": "adv",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "adv",
+    "gls": "yesterday"
+   },
+   {
+    "word_text": "yarna",
+    "morphs": [
+     {
+      "morph-txt": "yarna",
+      "morph-cf": "yarna",
+      "morph-gls": "rain",
+      "morph-msa": "n",
+      "morph-variantTypes": "",
+      "morph-hn": "1",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "n",
+    "gls": "rain"
+   },
+   {
+    "word_text": "walyaani",
+    "morphs": [
+     {
+      "morph-txt": "walya",
+      "morph-cf": "walya",
+      "morph-gls": "no",
+      "morph-msa": "excl",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     },
+     {
+      "morph-txt": "-ani",
+      "morph-cf": "-ani",
+      "morph-gls": "nominative",
+      "morph-msa": "n:(Case)",
+      "morph-variantTypes": "",
+      "morph-hn": "",
+      "morph-glsAppendmorph_type": ""
+     }
+    ],
+    "pos": "",
+    "gls": ""
+   }
+  ],
+  "translation": "It was raining yesterday",
+  "notes": [],
+  "full_text": "nilaya, nilaya yarna walyaani"
+ }
+}

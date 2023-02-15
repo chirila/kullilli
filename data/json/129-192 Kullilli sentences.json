@@ -1,16 +1,28 @@
 {
- "flextext": "129-192 Kullilli sentences.flextext",
- "title-en": "129-192 Kullilli sentences",
- "utterances": {
-  "1": {
-   "full_text": "ngalaanga bulaguru garnabula yanhthagala",
-   "translations": {
-    "translation-en": "Where are the two men going?"
+ "metadata": {
+  "filePath": "/Users/patrickhall/Sites/Languages/chirila/kullilli/data/flextext/129-192 Kullilli sentences.flextext",
+  "titles": {
+   "en": "129-192 Kullilli sentences"
+  }
+ },
+ "sentences": [
+  {
+   "metadata": {
+    "segNum": "1",
+    "paragraphNum": 1,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaanga bulaguru garnabula yanhthagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where are the two men going?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaanga",
-     "word_breakdown": "ngala-anga",
+     "form": "ngala-anga",
      "morphs": [
       {
        "morph-txt": "ngala",
@@ -33,7 +45,7 @@
     },
     {
      "word_text": "bulaguru",
-     "word_breakdown": "bula-guru",
+     "form": "bula-guru",
      "morphs": [
       {
        "morph-txt": "bula",
@@ -55,7 +67,7 @@
     },
     {
      "word_text": "garnabula",
-     "word_breakdown": "garnabula",
+     "form": "garnabula",
      "morphs": [
       {
        "morph-txt": "garna",
@@ -77,7 +89,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -100,15 +112,23 @@
    ],
    "notes": []
   },
-  "2": {
-   "full_text": "nguthianga bulaguru yanhthagala",
-   "translations": {
-    "translation-en": "The two of them are going for meat."
+  {
+   "metadata": {
+    "segNum": "2",
+    "paragraphNum": 2,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nguthianga bulaguru yanhthagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The two of them are going for meat."
+    }
+   ],
+   "words": [
     {
      "word_text": "nguthianga",
-     "word_breakdown": "nguthi-anga",
+     "form": "nguthi-anga",
      "morphs": [
       {
        "morph-txt": "nguthi",
@@ -129,7 +149,7 @@
     },
     {
      "word_text": "bulaguru",
-     "word_breakdown": "bula-guru",
+     "form": "bula-guru",
      "morphs": [
       {
        "morph-txt": "bula",
@@ -151,7 +171,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -176,15 +196,23 @@
     "Note initial focus?"
    ]
   },
-  "3": {
-   "full_text": "ngalaanga ini yanhthagala",
-   "translations": {
-    "translation-en": "Where are you going?"
+  {
+   "metadata": {
+    "segNum": "3",
+    "paragraphNum": 3,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaanga ini yanhthagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where are you going?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaanga",
-     "word_breakdown": "ngala-anga",
+     "form": "ngala-anga",
      "morphs": [
       {
        "morph-txt": "ngala",
@@ -207,7 +235,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -222,7 +250,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -248,15 +276,23 @@
     "Note verb final."
    ]
   },
-  "4": {
-   "full_text": "ngakaanga yanhthagala manhdhakarra ngathu",
-   "translations": {
-    "translation-en": "I'm going to get water."
+  {
+   "metadata": {
+    "segNum": "4",
+    "paragraphNum": 4,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngakaanga yanhthagala manhdhakarra ngathu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I'm going to get water."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngakaanga",
-     "word_breakdown": "ngaka-anga",
+     "form": "ngaka-anga",
      "morphs": [
       {
        "morph-txt": "ngaka",
@@ -278,7 +314,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -300,7 +336,7 @@
     },
     {
      "word_text": "manhdhakarra",
-     "word_breakdown": "manhdhaka-rra",
+     "form": "manhdhaka-rra",
      "morphs": [
       {
        "morph-txt": "manhdha",
@@ -326,7 +362,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -345,15 +381,23 @@
     "Note order -possibly focus first, then pronoun either side of the verb (keep the verbs together? or post-verbal topic?"
    ]
   },
-  "5": {
-   "full_text": "ngalaandru ini",
-   "translations": {
-    "translation-en": "Where are you from?"
+  {
+   "metadata": {
+    "segNum": "5",
+    "paragraphNum": 5,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaandru ini",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where are you from?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaandru",
-     "word_breakdown": "ngala-andru",
+     "form": "ngala-andru",
      "morphs": [
       {
        "morph-txt": "ngala",
@@ -376,7 +420,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -395,15 +439,23 @@
     "Note no copula"
    ]
   },
-  "6": {
-   "full_text": "ngakanugaandru",
-   "translations": {
-    "translation-en": "(I'm) from the big water."
+  {
+   "metadata": {
+    "segNum": "6",
+    "paragraphNum": 6,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngakanugaandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "(I'm) from the big water."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngakanugaandru",
-     "word_breakdown": "ngakanuga-andru",
+     "form": "ngakanuga-andru",
      "morphs": [
       {
        "morph-txt": "ngaka",
@@ -435,15 +487,23 @@
     "example - response to basic introduction question"
    ]
   },
-  "7": {
-   "full_text": "mithi baduani ini/ bakarranyi marnngarra yundru",
-   "translations": {
-    "translation-en": "You have the ability to make a boomerang."
+  {
+   "metadata": {
+    "segNum": "7",
+    "paragraphNum": 7,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "mithi baduani ini/ bakarranyi marnngarra yundru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You have the ability to make a boomerang."
+    }
+   ],
+   "words": [
     {
      "word_text": "mithi",
-     "word_breakdown": "mithi",
+     "form": "mithi",
      "morphs": [
       {
        "morph-txt": "mithi",
@@ -458,7 +518,7 @@
     },
     {
      "word_text": "baduani",
-     "word_breakdown": "badu-ani",
+     "form": "badu-ani",
      "morphs": [
       {
        "morph-txt": "badu",
@@ -480,7 +540,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -495,14 +555,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "bakarranyi",
-     "word_breakdown": "bakaranyi",
+     "form": "bakaranyi",
      "morphs": [
       {
        "morph-txt": "bakaranyi",
@@ -517,7 +577,7 @@
     },
     {
      "word_text": "marnngarra",
-     "word_breakdown": "marnnga-rra",
+     "form": "marnnga-rra",
      "morphs": [
       {
        "morph-txt": "marnnga",
@@ -540,7 +600,7 @@
     },
     {
      "word_text": "yundru",
-     "word_breakdown": "yundru",
+     "form": "yundru",
      "morphs": [
       {
        "morph-txt": "yundru",
@@ -559,15 +619,23 @@
     "Another example where the focus is first, then the verb, then the pronoun (maybe the focus is \"make a boomerang\"?)"
    ]
   },
-  "8": {
-   "full_text": "walya mithimunhdhaani",
-   "translations": {
-    "translation-en": "No, (I) can't make it. (lit. \"It (is) make-less.\")"
+  {
+   "metadata": {
+    "segNum": "8",
+    "paragraphNum": 8,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya mithimunhdhaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "No, (I) can't make it. (lit. \"It (is) make-less.\")"
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -582,7 +650,7 @@
     },
     {
      "word_text": "mithimunhdhaani",
-     "word_breakdown": "mithi-munhdha-ani",
+     "form": "mithi-munhdha-ani",
      "morphs": [
       {
        "morph-txt": "mithi",
@@ -615,15 +683,23 @@
     "Nice! Nominative on a nominalized verb"
    ]
   },
-  "9": {
-   "full_text": "gunkarra yundru nganytya gakudyanha",
-   "translations": {
-    "translation-en": "You(,) ask my brother."
+  {
+   "metadata": {
+    "segNum": "9",
+    "paragraphNum": 9,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gunkarra yundru nganytya gakudyanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You(,) ask my brother."
+    }
+   ],
+   "words": [
     {
      "word_text": "gunkarra",
-     "word_breakdown": "gunka-rra",
+     "form": "gunka-rra",
      "morphs": [
       {
        "morph-txt": "gunka",
@@ -648,7 +724,7 @@
     },
     {
      "word_text": "yundru",
-     "word_breakdown": "yundru",
+     "form": "yundru",
      "morphs": [
       {
        "morph-txt": "yundru",
@@ -664,7 +740,7 @@
     },
     {
      "word_text": "nganytya",
-     "word_breakdown": "nganytya",
+     "form": "nganytya",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -679,7 +755,7 @@
     },
     {
      "word_text": "gakudyanha",
-     "word_breakdown": "gakudya-nha",
+     "form": "gakudya-nha",
      "morphs": [
       {
        "morph-txt": "gakudya",
@@ -705,15 +781,23 @@
     "Imperative verb going first. Not sure if all examples like that - check."
    ]
   },
-  "10": {
-   "full_text": "murra nganytya gakudya marnngarra ingka bakarranyi",
-   "translations": {
-    "translation-en": "OK, my uncle will make you a boomerang."
+  {
+   "metadata": {
+    "segNum": "10",
+    "paragraphNum": 10,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murra nganytya gakudya marnngarra ingka bakarranyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "OK, my uncle will make you a boomerang."
+    }
+   ],
+   "words": [
     {
      "word_text": "murra",
-     "word_breakdown": "murra",
+     "form": "murra",
      "morphs": [
       {
        "morph-txt": "murra",
@@ -729,7 +813,7 @@
     },
     {
      "word_text": "nganytya",
-     "word_breakdown": "nganytya",
+     "form": "nganytya",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -744,7 +828,7 @@
     },
     {
      "word_text": "gakudya",
-     "word_breakdown": "gakudya",
+     "form": "gakudya",
      "morphs": [
       {
        "morph-txt": "gakudya",
@@ -759,7 +843,7 @@
     },
     {
      "word_text": "marnngarra",
-     "word_breakdown": "marnnga-rra",
+     "form": "marnnga-rra",
      "morphs": [
       {
        "morph-txt": "marnnga",
@@ -782,7 +866,7 @@
     },
     {
      "word_text": "ingka",
-     "word_breakdown": "ingka",
+     "form": "ingka",
      "morphs": [
       {
        "morph-txt": "ingka",
@@ -797,7 +881,7 @@
     },
     {
      "word_text": "bakarranyi",
-     "word_breakdown": "bakaranyi",
+     "form": "bakaranyi",
      "morphs": [
       {
        "morph-txt": "bakaranyi",
@@ -815,15 +899,23 @@
     "mura - better translation might be OK or \"well\" rather than \"finished\" based on examples like this."
    ]
   },
-  "11": {
-   "full_text": "walya barnini munkagali ngathu bakarranyi",
-   "translations": {
-    "translation-en": "I am not able to make a boomerang."
+  {
+   "metadata": {
+    "segNum": "11",
+    "paragraphNum": 11,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya barnini munkagali ngathu bakarranyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I am not able to make a boomerang."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -838,7 +930,7 @@
     },
     {
      "word_text": "barnini",
-     "word_breakdown": "barnini",
+     "form": "barnini",
      "morphs": [
       {
        "morph-txt": "barnini",
@@ -854,7 +946,7 @@
     },
     {
      "word_text": "munkagali",
-     "word_breakdown": "munka-gali",
+     "form": "munka-gali",
      "morphs": [
       {
        "morph-txt": "munka",
@@ -877,7 +969,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -893,7 +985,7 @@
     },
     {
      "word_text": "bakarranyi",
-     "word_breakdown": "bakaranyi",
+     "form": "bakaranyi",
      "morphs": [
       {
        "morph-txt": "bakaranyi",
@@ -911,15 +1003,23 @@
     "Maybe literal trans is \"no, I'm unable to make\""
    ]
   },
-  "12": {
-   "full_text": "warlu warlu galkagala nandru dhithiandru",
-   "translations": {
-    "translation-en": "That dog is continuously barking."
+  {
+   "metadata": {
+    "segNum": "12",
+    "paragraphNum": 12,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "warlu warlu galkagala nandru dhithiandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That dog is continuously barking."
+    }
+   ],
+   "words": [
     {
      "word_text": "warlu warlu",
-     "word_breakdown": "warlu warlu",
+     "form": "warlu warlu",
      "morphs": [
       {
        "morph-txt": "warlu warlu",
@@ -934,7 +1034,7 @@
     },
     {
      "word_text": "galkagala",
-     "word_breakdown": "galka-gala",
+     "form": "galka-gala",
      "morphs": [
       {
        "morph-txt": "galka",
@@ -956,7 +1056,7 @@
     },
     {
      "word_text": "nandru",
-     "word_breakdown": "nandru",
+     "form": "nandru",
      "morphs": [
       {
        "morph-txt": "nandru",
@@ -973,7 +1073,7 @@
     },
     {
      "word_text": "dhithiandru",
-     "word_breakdown": "dhithi-andru",
+     "form": "dhithi-andru",
      "morphs": [
       {
        "morph-txt": "dhithi",
@@ -999,15 +1099,23 @@
     "bark-strike  examples of compound?"
    ]
   },
-  "13": {
-   "full_text": "ngakalunga dhanaguru warliwani wintagala",
-   "translations": {
-    "translation-en": "The kids are all swimming in the water."
+  {
+   "metadata": {
+    "segNum": "13",
+    "paragraphNum": 13,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngakalunga dhanaguru warliwani wintagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The kids are all swimming in the water."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngakalunga",
-     "word_breakdown": "ngaka-lunga",
+     "form": "ngaka-lunga",
      "morphs": [
       {
        "morph-txt": "ngaka",
@@ -1029,7 +1137,7 @@
     },
     {
      "word_text": "dhanaguru",
-     "word_breakdown": "dhana-guru",
+     "form": "dhana-guru",
      "morphs": [
       {
        "morph-txt": "dhana",
@@ -1051,7 +1159,7 @@
     },
     {
      "word_text": "warliwani",
-     "word_breakdown": "warliwa-ni",
+     "form": "warliwa-ni",
      "morphs": [
       {
        "morph-txt": "warliwa",
@@ -1074,7 +1182,7 @@
     },
     {
      "word_text": "wintagala",
-     "word_breakdown": "winta-gala",
+     "form": "winta-gala",
      "morphs": [
       {
        "morph-txt": "winta",
@@ -1097,15 +1205,23 @@
    ],
    "notes": []
   },
-  "14": {
-   "full_text": "yawurra balhthiiyigala nganyi",
-   "translations": {
-    "translation-en": "I feel hot."
+  {
+   "metadata": {
+    "segNum": "14",
+    "paragraphNum": 14,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yawurra balhthiiyigala nganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I feel hot."
+    }
+   ],
+   "words": [
     {
      "word_text": "yawurra",
-     "word_breakdown": "yawurra",
+     "form": "yawurra",
      "morphs": [
       {
        "morph-txt": "yawurra",
@@ -1120,7 +1236,7 @@
     },
     {
      "word_text": "balhthiiyigala",
-     "word_breakdown": "balhthi-iyi-gala",
+     "form": "balhthi-iyi-gala",
      "morphs": [
       {
        "morph-txt": "balhthi",
@@ -1150,7 +1266,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -1169,15 +1285,23 @@
     "example - feeling/condition (with reflexive)"
    ]
   },
-  "15": {
-   "full_text": "wagalha bari nganyi nhangalayi walbirilunga",
-   "translations": {
-    "translation-en": "I think I'll lie down here in the shade."
+  {
+   "metadata": {
+    "segNum": "15",
+    "paragraphNum": 15,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wagalha bari nganyi nhangalayi walbirilunga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I think I'll lie down here in the shade."
+    }
+   ],
+   "words": [
     {
      "word_text": "wagalha",
-     "word_breakdown": "waga-lha",
+     "form": "waga-lha",
      "morphs": [
       {
        "morph-txt": "waga",
@@ -1200,7 +1324,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -1216,7 +1340,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -1232,7 +1356,7 @@
     },
     {
      "word_text": "nhangalayi",
-     "word_breakdown": "nhangala-yi",
+     "form": "nhangala-yi",
      "morphs": [
       {
        "morph-txt": "nhangala",
@@ -1255,7 +1379,7 @@
     },
     {
      "word_text": "walbirilunga",
-     "word_breakdown": "walbiri-lunga",
+     "form": "walbiri-lunga",
      "morphs": [
       {
        "morph-txt": "walbiri",
@@ -1278,15 +1402,23 @@
    ],
    "notes": []
   },
-  "16": {
-   "full_text": "nhungalagarri",
-   "translations": {
-    "translation-en": "Over there."
+  {
+   "metadata": {
+    "segNum": "16",
+    "paragraphNum": 16,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhungalagarri",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Over there."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhungalagarri",
-     "word_breakdown": "nhungala-garri",
+     "form": "nhungala-garri",
      "morphs": [
       {
        "morph-txt": "nhungala",
@@ -1311,15 +1443,23 @@
     "example - location/direction"
    ]
   },
-  "17": {
-   "full_text": "nhungala",
-   "translations": {
-    "translation-en": "Here."
+  {
+   "metadata": {
+    "segNum": "17",
+    "paragraphNum": 17,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhungala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Here."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhungala",
-     "word_breakdown": "nhungala",
+     "form": "nhungala",
      "morphs": [
       {
        "morph-txt": "nhungala",
@@ -1337,15 +1477,23 @@
     "example - location/direction"
    ]
   },
-  "18": {
-   "full_text": "garnawatyu nhanigurru wagagala walbirilunga",
-   "translations": {
-    "translation-en": "A man (that one) is lying in the shade."
+  {
+   "metadata": {
+    "segNum": "18",
+    "paragraphNum": 18,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "garnawatyu nhanigurru wagagala walbirilunga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "A man (that one) is lying in the shade."
+    }
+   ],
+   "words": [
     {
      "word_text": "garnawatyu",
-     "word_breakdown": "garnawatyu",
+     "form": "garnawatyu",
      "morphs": [
       {
        "morph-txt": "garna",
@@ -1367,7 +1515,7 @@
     },
     {
      "word_text": "nhanigurru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -1389,7 +1537,7 @@
     },
     {
      "word_text": "wagagala",
-     "word_breakdown": "waga-gala",
+     "form": "waga-gala",
      "morphs": [
       {
        "morph-txt": "waga",
@@ -1412,7 +1560,7 @@
     },
     {
      "word_text": "walbirilunga",
-     "word_breakdown": "walbiri-lunga",
+     "form": "walbiri-lunga",
      "morphs": [
       {
        "morph-txt": "walbiri",
@@ -1435,15 +1583,23 @@
    ],
    "notes": []
   },
-  "19": {
-   "full_text": "dunagulha nganyi wagarra bari",
-   "translations": {
-    "translation-en": "(It's?) late, I will lie down, I think."
+  {
+   "metadata": {
+    "segNum": "19",
+    "paragraphNum": 19,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dunagulha nganyi wagarra bari",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "(It's?) late, I will lie down, I think."
+    }
+   ],
+   "words": [
     {
      "word_text": "dunagulha",
-     "word_breakdown": "dunagulha",
+     "form": "dunagulha",
      "morphs": [
       {
        "morph-txt": "duna",
@@ -1465,7 +1621,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -1481,7 +1637,7 @@
     },
     {
      "word_text": "wagarra",
-     "word_breakdown": "waga-rra",
+     "form": "waga-rra",
      "morphs": [
       {
        "morph-txt": "waga",
@@ -1505,7 +1661,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -1522,15 +1678,23 @@
    ],
    "notes": []
   },
-  "20": {
-   "full_text": "dhilaba dratyaiyigala nganyi",
-   "translations": {
-    "translation-en": "I feel cold."
+  {
+   "metadata": {
+    "segNum": "20",
+    "paragraphNum": 20,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhilaba dratyaiyigala nganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I feel cold."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhilaba",
-     "word_breakdown": "dhilaba",
+     "form": "dhilaba",
      "morphs": [
       {
        "morph-txt": "dhilaba",
@@ -1545,7 +1709,7 @@
     },
     {
      "word_text": "dratyaiyigala",
-     "word_breakdown": "dratya-iyi-gala",
+     "form": "dratya-iyi-gala",
      "morphs": [
       {
        "morph-txt": "dratya",
@@ -1574,7 +1738,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -1593,15 +1757,23 @@
     "example - feeling/condition (with reflexive)"
    ]
   },
-  "21": {
-   "full_text": "wina ngali barnrdirra winawarra ngali gulharra wiyilya",
-   "translations": {
-    "translation-en": "We will sit down close to the fire. [We will move close to sit close to the fire.]"
+  {
+   "metadata": {
+    "segNum": "21",
+    "paragraphNum": 21,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wina ngali barnrdirra winawarra ngali gulharra wiyilya",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "We will sit down close to the fire. [We will move close to sit close to the fire.]"
+    }
+   ],
+   "words": [
     {
      "word_text": "wina",
-     "word_breakdown": "wina",
+     "form": "wina",
      "morphs": [
       {
        "morph-txt": "wina",
@@ -1616,7 +1788,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -1632,7 +1804,7 @@
     },
     {
      "word_text": "barnrdirra",
-     "word_breakdown": "barnrdi-rra",
+     "form": "barnrdi-rra",
      "morphs": [
       {
        "morph-txt": "barnrdi",
@@ -1655,7 +1827,7 @@
     },
     {
      "word_text": "winawarra",
-     "word_breakdown": "winawarra",
+     "form": "winawarra",
      "morphs": [
       {
        "morph-txt": "wina",
@@ -1677,7 +1849,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -1693,7 +1865,7 @@
     },
     {
      "word_text": "gulharra",
-     "word_breakdown": "gulha-rra",
+     "form": "gulha-rra",
      "morphs": [
       {
        "morph-txt": "gulha",
@@ -1717,7 +1889,7 @@
     },
     {
      "word_text": "wiyilya",
-     "word_breakdown": "wiyi-lya",
+     "form": "wiyi-lya",
      "morphs": [
       {
        "morph-txt": "wiyi",
@@ -1742,15 +1914,23 @@
     "-lya here is probably just -la?"
    ]
   },
-  "22": {
-   "full_text": "dhilagala nhaniguru dhila bari/ gurru nhanha ngalingu gulparra",
-   "translations": {
-    "translation-en": "This cold wind is blowing, the two of us will build a windbreak."
+  {
+   "metadata": {
+    "segNum": "22",
+    "paragraphNum": 22,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhilagala nhaniguru dhila bari/ gurru nhanha ngalingu gulparra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This cold wind is blowing, the two of us will build a windbreak."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhilagala",
-     "word_breakdown": "dhila-gala",
+     "form": "dhila-gala",
      "morphs": [
       {
        "morph-txt": "dhila",
@@ -1772,7 +1952,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -1794,7 +1974,7 @@
     },
     {
      "word_text": "dhila",
-     "word_breakdown": "dhila",
+     "form": "dhila",
      "morphs": [
       {
        "morph-txt": "dhila",
@@ -1809,7 +1989,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -1825,14 +2005,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "gurru",
-     "word_breakdown": "gurru",
+     "form": "gurru",
      "morphs": [
       {
        "morph-txt": "gurru",
@@ -1847,7 +2027,7 @@
     },
     {
      "word_text": "nhanha",
-     "word_breakdown": "nhanha",
+     "form": "nhanha",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -1862,7 +2042,7 @@
     },
     {
      "word_text": "ngalingu",
-     "word_breakdown": "ngali-ngu",
+     "form": "ngali-ngu",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -1887,7 +2067,7 @@
     },
     {
      "word_text": "gulparra",
-     "word_breakdown": "gulpa-rra",
+     "form": "gulpa-rra",
      "morphs": [
       {
        "morph-txt": "gulpa",
@@ -1912,15 +2092,23 @@
    ],
    "notes": []
   },
-  "23": {
-   "full_text": "wiyinha bari ngalingu gulparra",
-   "translations": {
-    "translation-en": "I think we will light a fire."
+  {
+   "metadata": {
+    "segNum": "23",
+    "paragraphNum": 23,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wiyinha bari ngalingu gulparra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I think we will light a fire."
+    }
+   ],
+   "words": [
     {
      "word_text": "wiyinha",
-     "word_breakdown": "wiyi-nha",
+     "form": "wiyi-nha",
      "morphs": [
       {
        "morph-txt": "wiyi",
@@ -1943,7 +2131,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -1959,7 +2147,7 @@
     },
     {
      "word_text": "ngalingu",
-     "word_breakdown": "ngali-ngu",
+     "form": "ngali-ngu",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -1984,7 +2172,7 @@
     },
     {
      "word_text": "gulparra",
-     "word_breakdown": "gulpa-rra",
+     "form": "gulpa-rra",
      "morphs": [
       {
        "morph-txt": "gulpa",
@@ -2009,15 +2197,23 @@
    ],
    "notes": []
   },
-  "24": {
-   "full_text": "gangurigala nhaniguru warliwani",
-   "translations": {
-    "translation-en": "That child is crying."
+  {
+   "metadata": {
+    "segNum": "24",
+    "paragraphNum": 24,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gangurigala nhaniguru warliwani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That child is crying."
+    }
+   ],
+   "words": [
     {
      "word_text": "gangurigala",
-     "word_breakdown": "gangurri-gala",
+     "form": "gangurri-gala",
      "morphs": [
       {
        "morph-txt": "gangurri",
@@ -2039,7 +2235,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -2061,7 +2257,7 @@
     },
     {
      "word_text": "warliwani",
-     "word_breakdown": "warliwa-ni",
+     "form": "warliwa-ni",
      "morphs": [
       {
        "morph-txt": "warliwa",
@@ -2085,15 +2281,23 @@
    ],
    "notes": []
   },
-  "25": {
-   "full_text": "minanga nhaniguru warliwani gangurrigala",
-   "translations": {
-    "translation-en": "Why is that child crying?"
+  {
+   "metadata": {
+    "segNum": "25",
+    "paragraphNum": 25,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "minanga nhaniguru warliwani gangurrigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Why is that child crying?"
+    }
+   ],
+   "words": [
     {
      "word_text": "minanga",
-     "word_breakdown": "mina-nga",
+     "form": "mina-nga",
      "morphs": [
       {
        "morph-txt": "mina",
@@ -2116,7 +2320,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -2138,7 +2342,7 @@
     },
     {
      "word_text": "warliwani",
-     "word_breakdown": "warliwa-ni",
+     "form": "warliwa-ni",
      "morphs": [
       {
        "morph-txt": "warliwa",
@@ -2161,7 +2365,7 @@
     },
     {
      "word_text": "gangurrigala",
-     "word_breakdown": "gangurri-gala",
+     "form": "gangurri-gala",
      "morphs": [
       {
        "morph-txt": "gangurri",
@@ -2184,15 +2388,23 @@
    ],
    "notes": []
   },
-  "26": {
-   "full_text": "guthinga nhaniguru warliwani",
-   "translations": {
-    "translation-en": "That child ran."
+  {
+   "metadata": {
+    "segNum": "26",
+    "paragraphNum": 26,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "guthinga nhaniguru warliwani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That child ran."
+    }
+   ],
+   "words": [
     {
      "word_text": "guthinga",
-     "word_breakdown": "guthi-nga",
+     "form": "guthi-nga",
      "morphs": [
       {
        "morph-txt": "guthi",
@@ -2215,7 +2427,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -2237,7 +2449,7 @@
     },
     {
      "word_text": "warliwani",
-     "word_breakdown": "warliwa-ni",
+     "form": "warliwa-ni",
      "morphs": [
       {
        "morph-txt": "warliwa",
@@ -2263,15 +2475,23 @@
     "Check on -gali vs -nga for past tense."
    ]
   },
-  "27": {
-   "full_text": "burlinga nhaniguru/ watyana nhaniguru murrtaiyiwanga",
-   "translations": {
-    "translation-en": "He fell down and hurt his leg."
+  {
+   "metadata": {
+    "segNum": "27",
+    "paragraphNum": 27,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "burlinga nhaniguru/ watyana nhaniguru murrtaiyiwanga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "He fell down and hurt his leg."
+    }
+   ],
+   "words": [
     {
      "word_text": "burlinga",
-     "word_breakdown": "burli-nga",
+     "form": "burli-nga",
      "morphs": [
       {
        "morph-txt": "burli",
@@ -2295,7 +2515,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -2317,14 +2537,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "watyana",
-     "word_breakdown": "watya-na",
+     "form": "watya-na",
      "morphs": [
       {
        "morph-txt": "watya",
@@ -2348,7 +2568,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -2370,7 +2590,7 @@
     },
     {
      "word_text": "murrtaiyiwanga",
-     "word_breakdown": "murrta-iyi-wa-nga",
+     "form": "murrta-iyi-wa-nga",
      "morphs": [
       {
        "morph-txt": "murrta",
@@ -2411,15 +2631,23 @@
     "sure that the -na here is really accusative and shouldn't be a nominative instead?"
    ]
   },
-  "28": {
-   "full_text": "mirlaani maltya galgurrigala/ ngalingu ngurra galirra nhungala",
-   "translations": {
-    "translation-en": "The sun is going down - late. The two of us make camp over here."
+  {
+   "metadata": {
+    "segNum": "28",
+    "paragraphNum": 28,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "mirlaani maltya galgurrigala/ ngalingu ngurra galirra nhungala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The sun is going down - late. The two of us make camp over here."
+    }
+   ],
+   "words": [
     {
      "word_text": "mirlaani",
-     "word_breakdown": "mirla-ani",
+     "form": "mirla-ani",
      "morphs": [
       {
        "morph-txt": "mirla",
@@ -2441,7 +2669,7 @@
     },
     {
      "word_text": "maltya",
-     "word_breakdown": "maltya",
+     "form": "maltya",
      "morphs": [
       {
        "morph-txt": "maltya",
@@ -2456,7 +2684,7 @@
     },
     {
      "word_text": "galgurrigala",
-     "word_breakdown": "galguri-gala",
+     "form": "galguri-gala",
      "morphs": [
       {
        "morph-txt": "galguri",
@@ -2478,14 +2706,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "ngalingu",
-     "word_breakdown": "ngali-ngu",
+     "form": "ngali-ngu",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2510,7 +2738,7 @@
     },
     {
      "word_text": "ngurra",
-     "word_breakdown": "ngurra",
+     "form": "ngurra",
      "morphs": [
       {
        "morph-txt": "ngurra",
@@ -2526,7 +2754,7 @@
     },
     {
      "word_text": "galirra",
-     "word_breakdown": "gali-rra",
+     "form": "gali-rra",
      "morphs": [
       {
        "morph-txt": "gali",
@@ -2549,7 +2777,7 @@
     },
     {
      "word_text": "nhungala",
-     "word_breakdown": "nhungala",
+     "form": "nhungala",
      "morphs": [
       {
        "morph-txt": "nhungala",
@@ -2567,15 +2795,23 @@
     "maltya late adverb or adjective? any additional examples?"
    ]
   },
-  "29": {
-   "full_text": "nhungalaguru bari ngalingu ngurra galirra burngalunga",
-   "translations": {
-    "translation-en": "I think the two of us will make camp over there at the gum tree."
+  {
+   "metadata": {
+    "segNum": "29",
+    "paragraphNum": 29,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhungalaguru bari ngalingu ngurra galirra burngalunga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I think the two of us will make camp over there at the gum tree."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhungalaguru",
-     "word_breakdown": "nhungala-guru",
+     "form": "nhungala-guru",
      "morphs": [
       {
        "morph-txt": "nhungala",
@@ -2597,7 +2833,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -2613,7 +2849,7 @@
     },
     {
      "word_text": "ngalingu",
-     "word_breakdown": "ngali-ngu",
+     "form": "ngali-ngu",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2638,7 +2874,7 @@
     },
     {
      "word_text": "ngurra",
-     "word_breakdown": "ngurra",
+     "form": "ngurra",
      "morphs": [
       {
        "morph-txt": "ngurra",
@@ -2654,7 +2890,7 @@
     },
     {
      "word_text": "galirra",
-     "word_breakdown": "gali-rra",
+     "form": "gali-rra",
      "morphs": [
       {
        "morph-txt": "gali",
@@ -2677,7 +2913,7 @@
     },
     {
      "word_text": "burngalunga",
-     "word_breakdown": "burnga-lunga",
+     "form": "burnga-lunga",
      "morphs": [
       {
        "morph-txt": "burnga",
@@ -2703,15 +2939,23 @@
     "note ergative on ngali"
    ]
   },
-  "30": {
-   "full_text": "ngali bari wagarra nhungala",
-   "translations": {
-    "translation-en": "I think the two of us will sleep here."
+  {
+   "metadata": {
+    "segNum": "30",
+    "paragraphNum": 30,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngali bari wagarra nhungala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I think the two of us will sleep here."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2727,7 +2971,7 @@
     },
     {
      "word_text": "bari",
-     "word_breakdown": "bari",
+     "form": "bari",
      "morphs": [
       {
        "morph-txt": "bari",
@@ -2743,7 +2987,7 @@
     },
     {
      "word_text": "wagarra",
-     "word_breakdown": "waga-rra",
+     "form": "waga-rra",
      "morphs": [
       {
        "morph-txt": "waga",
@@ -2767,7 +3011,7 @@
     },
     {
      "word_text": "nhungala",
-     "word_breakdown": "nhungala",
+     "form": "nhungala",
      "morphs": [
       {
        "morph-txt": "nhungala",
@@ -2785,15 +3029,23 @@
     "bari wagara - check this?"
    ]
   },
-  "31": {
-   "full_text": "wikarla mirla warlpalha ngali yanhthabarra ngali yanhthabarra",
-   "translations": {
-    "translation-en": "Tomorrow when the sun comes up the two of us will go on."
+  {
+   "metadata": {
+    "segNum": "31",
+    "paragraphNum": 31,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarla mirla warlpalha ngali yanhthabarra ngali yanhthabarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Tomorrow when the sun comes up the two of us will go on."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarla",
-     "word_breakdown": "wikarla",
+     "form": "wikarla",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -2809,7 +3061,7 @@
     },
     {
      "word_text": "mirla",
-     "word_breakdown": "mirla",
+     "form": "mirla",
      "morphs": [
       {
        "morph-txt": "mirla",
@@ -2824,7 +3076,7 @@
     },
     {
      "word_text": "warlpalha",
-     "word_breakdown": "warlpa-lha",
+     "form": "warlpa-lha",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -2846,7 +3098,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2862,7 +3114,7 @@
     },
     {
      "word_text": "yanhthabarra",
-     "word_breakdown": "yanhtha-ba-rra",
+     "form": "yanhtha-ba-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -2892,7 +3144,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2908,7 +3160,7 @@
     },
     {
      "word_text": "yanhthabarra",
-     "word_breakdown": "yanhtha-ba-rra",
+     "form": "yanhtha-ba-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -2942,15 +3194,23 @@
     "several other instances of ba + -ra (future) are glossed as EMPH, not 'away'"
    ]
   },
-  "32": {
-   "full_text": "wikarla ngali gampa yanhthabarra",
-   "translations": {
-    "translation-en": "Tomorrow the two of us will go a long way."
+  {
+   "metadata": {
+    "segNum": "32",
+    "paragraphNum": 32,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarla ngali gampa yanhthabarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Tomorrow the two of us will go a long way."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarla",
-     "word_breakdown": "wikarla",
+     "form": "wikarla",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -2966,7 +3226,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -2982,7 +3242,7 @@
     },
     {
      "word_text": "gampa",
-     "word_breakdown": "gampa",
+     "form": "gampa",
      "morphs": [
       {
        "morph-txt": "gampa",
@@ -2997,7 +3257,7 @@
     },
     {
      "word_text": "yanhthabarra",
-     "word_breakdown": "yanhtha-ba-rra",
+     "form": "yanhtha-ba-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -3028,15 +3288,23 @@
    ],
    "notes": []
   },
-  "33": {
-   "full_text": "gulharra ini nganytya ngurralanga",
-   "translations": {
-    "translation-en": "Sit down in my camp."
+  {
+   "metadata": {
+    "segNum": "33",
+    "paragraphNum": 33,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gulharra ini nganytya ngurralanga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Sit down in my camp."
+    }
+   ],
+   "words": [
     {
      "word_text": "gulharra",
-     "word_breakdown": "gulha-rra",
+     "form": "gulha-rra",
      "morphs": [
       {
        "morph-txt": "gulha",
@@ -3060,7 +3328,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -3075,7 +3343,7 @@
     },
     {
      "word_text": "nganytya",
-     "word_breakdown": "nganytya",
+     "form": "nganytya",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -3090,7 +3358,7 @@
     },
     {
      "word_text": "ngurralanga",
-     "word_breakdown": "ngurra-langa",
+     "form": "ngurra-langa",
      "morphs": [
       {
        "morph-txt": "ngurra",
@@ -3115,15 +3383,23 @@
    ],
    "notes": []
   },
-  "34": {
-   "full_text": "wikarlawatyu gulha ini yanhthabarra",
-   "translations": {
-    "translation-en": "The day after tomorrow stay - (then?) you will go away."
+  {
+   "metadata": {
+    "segNum": "34",
+    "paragraphNum": 34,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarlawatyu gulha ini yanhthabarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The day after tomorrow stay - (then?) you will go away."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarlawatyu",
-     "word_breakdown": "wikarlawatyu",
+     "form": "wikarlawatyu",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -3146,7 +3422,7 @@
     },
     {
      "word_text": "gulha",
-     "word_breakdown": "gulha",
+     "form": "gulha",
      "morphs": [
       {
        "morph-txt": "gulha",
@@ -3161,7 +3437,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -3176,7 +3452,7 @@
     },
     {
      "word_text": "yanhthabarra",
-     "word_breakdown": "yanhtha-ba-rra",
+     "form": "yanhtha-ba-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -3207,15 +3483,23 @@
    ],
    "notes": []
   },
-  "35": {
-   "full_text": "gala nganyta nhanigurru nguthiani",
-   "translations": {
-    "translation-en": "Hey, this is my meat here."
+  {
+   "metadata": {
+    "segNum": "35",
+    "paragraphNum": 35,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gala nganyta nhanigurru nguthiani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Hey, this is my meat here."
+    }
+   ],
+   "words": [
     {
      "word_text": "gala",
-     "word_breakdown": "gala",
+     "form": "gala",
      "morphs": [
       {
        "morph-txt": "gala",
@@ -3231,7 +3515,7 @@
     },
     {
      "word_text": "nganyta",
-     "word_breakdown": "nganyta",
+     "form": "nganyta",
      "morphs": [
       {
        "morph-txt": "nganyta",
@@ -3247,7 +3531,7 @@
     },
     {
      "word_text": "nhanigurru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -3269,7 +3553,7 @@
     },
     {
      "word_text": "nguthiani",
-     "word_breakdown": "nguthi-ani",
+     "form": "nguthi-ani",
      "morphs": [
       {
        "morph-txt": "nguthi",
@@ -3291,15 +3575,23 @@
    ],
    "notes": []
   },
-  "36": {
-   "full_text": "walya ingka nhaniguru nguthiani/ ngutyadhikarra nganha",
-   "translations": {
-    "translation-en": "This is not your meat, give it back to me."
+  {
+   "metadata": {
+    "segNum": "36",
+    "paragraphNum": 36,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya ingka nhaniguru nguthiani/ ngutyadhikarra nganha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This is not your meat, give it back to me."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -3314,7 +3606,7 @@
     },
     {
      "word_text": "ingka",
-     "word_breakdown": "ingka",
+     "form": "ingka",
      "morphs": [
       {
        "morph-txt": "ingka",
@@ -3329,7 +3621,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -3351,7 +3643,7 @@
     },
     {
      "word_text": "nguthiani",
-     "word_breakdown": "nguthi-ani",
+     "form": "nguthi-ani",
      "morphs": [
       {
        "morph-txt": "nguthi",
@@ -3372,14 +3664,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "ngutyadhikarra",
-     "word_breakdown": "ngutyadhika-rra",
+     "form": "ngutyadhika-rra",
      "morphs": [
       {
        "morph-txt": "ngutya",
@@ -3410,7 +3702,7 @@
     },
     {
      "word_text": "nganha",
-     "word_breakdown": "nganha",
+     "form": "nganha",
      "morphs": [
       {
        "morph-txt": "nganha",
@@ -3426,15 +3718,23 @@
    ],
    "notes": []
   },
-  "37": {
-   "full_text": "murra ngathu inha ngutyadhikarra/ ingka nguthiani",
-   "translations": {
-    "translation-en": "OK, I will give you back your meat. [Finished, I will give it back to you / It is your meat.]"
+  {
+   "metadata": {
+    "segNum": "37",
+    "paragraphNum": 37,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murra ngathu inha ngutyadhikarra/ ingka nguthiani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "OK, I will give you back your meat. [Finished, I will give it back to you / It is your meat.]"
+    }
+   ],
+   "words": [
     {
      "word_text": "murra",
-     "word_breakdown": "murra",
+     "form": "murra",
      "morphs": [
       {
        "morph-txt": "murra",
@@ -3450,7 +3750,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -3466,7 +3766,7 @@
     },
     {
      "word_text": "inha",
-     "word_breakdown": "inha",
+     "form": "inha",
      "morphs": [
       {
        "morph-txt": "inha",
@@ -3482,7 +3782,7 @@
     },
     {
      "word_text": "ngutyadhikarra",
-     "word_breakdown": "ngutyadhika-rra",
+     "form": "ngutyadhika-rra",
      "morphs": [
       {
        "morph-txt": "ngutya",
@@ -3513,14 +3813,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "ingka",
-     "word_breakdown": "ingka",
+     "form": "ingka",
      "morphs": [
       {
        "morph-txt": "ingka",
@@ -3535,7 +3835,7 @@
     },
     {
      "word_text": "nguthiani",
-     "word_breakdown": "nguthi-ani",
+     "form": "nguthi-ani",
      "morphs": [
       {
        "morph-txt": "nguthi",
@@ -3557,15 +3857,23 @@
    ],
    "notes": []
   },
-  "38": {
-   "full_text": "nganytyawarra ngathu ngalkanga nhanha nguthianha",
-   "translations": {
-    "translation-en": "I thought this meat here was mine."
+  {
+   "metadata": {
+    "segNum": "38",
+    "paragraphNum": 38,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganytyawarra ngathu ngalkanga nhanha nguthianha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I thought this meat here was mine."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganytyawarra",
-     "word_breakdown": "nganytyawarra",
+     "form": "nganytyawarra",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -3587,7 +3895,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -3603,7 +3911,7 @@
     },
     {
      "word_text": "ngalkanga",
-     "word_breakdown": "ngalka-nga",
+     "form": "ngalka-nga",
      "morphs": [
       {
        "morph-txt": "ngalka",
@@ -3626,7 +3934,7 @@
     },
     {
      "word_text": "nhanha",
-     "word_breakdown": "nhanha",
+     "form": "nhanha",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -3641,7 +3949,7 @@
     },
     {
      "word_text": "nguthianha",
-     "word_breakdown": "nguthi-anha",
+     "form": "nguthi-anha",
      "morphs": [
       {
        "morph-txt": "nguthi",
@@ -3664,15 +3972,23 @@
    ],
    "notes": []
   },
-  "39": {
-   "full_text": "walya nhanhaguru makurra manhdha garnawatyunga",
-   "translations": {
-    "translation-en": "Don't pick up this man's stick. (It is) this man's."
+  {
+   "metadata": {
+    "segNum": "39",
+    "paragraphNum": 39,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya nhanhaguru makurra manhdha garnawatyunga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Don't pick up this man's stick. (It is) this man's."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -3687,7 +4003,7 @@
     },
     {
      "word_text": "nhanhaguru",
-     "word_breakdown": "nhanha-guru",
+     "form": "nhanha-guru",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -3709,7 +4025,7 @@
     },
     {
      "word_text": "makurra",
-     "word_breakdown": "makurra",
+     "form": "makurra",
      "morphs": [
       {
        "morph-txt": "makurra",
@@ -3725,7 +4041,7 @@
     },
     {
      "word_text": "manhdha",
-     "word_breakdown": "manhdha",
+     "form": "manhdha",
      "morphs": [
       {
        "morph-txt": "manhdha",
@@ -3740,7 +4056,7 @@
     },
     {
      "word_text": "garnawatyunga",
-     "word_breakdown": "garnawatyu-nga",
+     "form": "garnawatyu-nga",
      "morphs": [
       {
        "morph-txt": "garna",
@@ -3773,15 +4089,23 @@
     "changed -nga1 'past' to -nga2 'dative'"
    ]
   },
-  "40": {
-   "full_text": "makurra nhani nganytya ngarnidyanga nhani",
-   "translations": {
-    "translation-en": "This is my father's stick."
+  {
+   "metadata": {
+    "segNum": "40",
+    "paragraphNum": 40,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "makurra nhani nganytya ngarnidyanga nhani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This is my father's stick."
+    }
+   ],
+   "words": [
     {
      "word_text": "makurra",
-     "word_breakdown": "makurra",
+     "form": "makurra",
      "morphs": [
       {
        "morph-txt": "makurra",
@@ -3797,7 +4121,7 @@
     },
     {
      "word_text": "nhani",
-     "word_breakdown": "nhani",
+     "form": "nhani",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -3812,7 +4136,7 @@
     },
     {
      "word_text": "nganytya",
-     "word_breakdown": "nganytya",
+     "form": "nganytya",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -3827,7 +4151,7 @@
     },
     {
      "word_text": "ngarnidyanga",
-     "word_breakdown": "ngarnidya-nga",
+     "form": "ngarnidya-nga",
      "morphs": [
       {
        "morph-txt": "ngarnidya",
@@ -3850,7 +4174,7 @@
     },
     {
      "word_text": "nhani",
-     "word_breakdown": "nhani",
+     "form": "nhani",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -3868,15 +4192,23 @@
     "changed -nga1 'past' to -nga2 'dative'"
    ]
   },
-  "41": {
-   "full_text": "yandraanha nhanhayi warlpabarra ngathu",
-   "translations": {
-    "translation-en": "I lift this stone."
+  {
+   "metadata": {
+    "segNum": "41",
+    "paragraphNum": 41,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yandraanha nhanhayi warlpabarra ngathu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I lift this stone."
+    }
+   ],
+   "words": [
     {
      "word_text": "yandraanha",
-     "word_breakdown": "yandra-anha",
+     "form": "yandra-anha",
      "morphs": [
       {
        "morph-txt": "yandra",
@@ -3899,7 +4231,7 @@
     },
     {
      "word_text": "nhanhayi",
-     "word_breakdown": "nhanha-yi",
+     "form": "nhanha-yi",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -3921,7 +4253,7 @@
     },
     {
      "word_text": "warlpabarra",
-     "word_breakdown": "warlpa-ba-rra",
+     "form": "warlpa-ba-rra",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -3951,7 +4283,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -3970,15 +4302,23 @@
     "tense - future?"
    ]
   },
-  "42": {
-   "full_text": "walya girniani nhani",
-   "translations": {
-    "translation-en": "This is not heavy."
+  {
+   "metadata": {
+    "segNum": "42",
+    "paragraphNum": 42,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya girniani nhani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This is not heavy."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -3993,7 +4333,7 @@
     },
     {
      "word_text": "girniani",
-     "word_breakdown": "girni-ani",
+     "form": "girni-ani",
      "morphs": [
       {
        "morph-txt": "girni",
@@ -4016,7 +4356,7 @@
     },
     {
      "word_text": "nhani",
-     "word_breakdown": "nhani",
+     "form": "nhani",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -4034,15 +4374,23 @@
     "example - negation"
    ]
   },
-  "43": {
-   "full_text": "barninyi ngathu warlpabalangu nhanha yandraanha",
-   "translations": {
-    "translation-en": "I am not able to lift up this stone."
+  {
+   "metadata": {
+    "segNum": "43",
+    "paragraphNum": 43,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "barninyi ngathu warlpabalangu nhanha yandraanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I am not able to lift up this stone."
+    }
+   ],
+   "words": [
     {
      "word_text": "barninyi",
-     "word_breakdown": "barninyi",
+     "form": "barninyi",
      "morphs": [
       {
        "morph-txt": "barninyi",
@@ -4057,7 +4405,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -4073,7 +4421,7 @@
     },
     {
      "word_text": "warlpabalangu",
-     "word_breakdown": "warlpa-ba-langu",
+     "form": "warlpa-ba-langu",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -4102,7 +4450,7 @@
     },
     {
      "word_text": "nhanha",
-     "word_breakdown": "nhanha",
+     "form": "nhanha",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -4117,7 +4465,7 @@
     },
     {
      "word_text": "yandraanha",
-     "word_breakdown": "yandra-anha",
+     "form": "yandra-anha",
      "morphs": [
       {
        "morph-txt": "yandra",
@@ -4141,15 +4489,23 @@
    ],
    "notes": []
   },
-  "44": {
-   "full_text": "ngathu warlpabagala nhanha",
-   "translations": {
-    "translation-en": "I am lifting this one."
+  {
+   "metadata": {
+    "segNum": "44",
+    "paragraphNum": 44,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngathu warlpabagala nhanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I am lifting this one."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -4165,7 +4521,7 @@
     },
     {
      "word_text": "warlpabagala",
-     "word_breakdown": "warlpa-ba-gala",
+     "form": "warlpa-ba-gala",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -4194,7 +4550,7 @@
     },
     {
      "word_text": "nhanha",
-     "word_breakdown": "nhanha",
+     "form": "nhanha",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -4210,15 +4566,23 @@
    ],
    "notes": []
   },
-  "45": {
-   "full_text": "gala yundru warlpabarra nhanha bilkaanha",
-   "translations": {
-    "translation-en": "Will you lift this log?"
+  {
+   "metadata": {
+    "segNum": "45",
+    "paragraphNum": 45,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gala yundru warlpabarra nhanha bilkaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Will you lift this log?"
+    }
+   ],
+   "words": [
     {
      "word_text": "gala",
-     "word_breakdown": "gala",
+     "form": "gala",
      "morphs": [
       {
        "morph-txt": "gala",
@@ -4234,7 +4598,7 @@
     },
     {
      "word_text": "yundru",
-     "word_breakdown": "yundru",
+     "form": "yundru",
      "morphs": [
       {
        "morph-txt": "yundru",
@@ -4250,7 +4614,7 @@
     },
     {
      "word_text": "warlpabarra",
-     "word_breakdown": "warlpa-ba-rra",
+     "form": "warlpa-ba-rra",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -4280,7 +4644,7 @@
     },
     {
      "word_text": "nhanha",
-     "word_breakdown": "nhanha",
+     "form": "nhanha",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -4295,7 +4659,7 @@
     },
     {
      "word_text": "bilkaanha",
-     "word_breakdown": "bilka-anha",
+     "form": "bilka-anha",
      "morphs": [
       {
        "morph-txt": "bilka"
@@ -4314,15 +4678,23 @@
    ],
    "notes": []
   },
-  "46": {
-   "full_text": "ga ngathu nhanhaguru warlpabarra bilkaanha ingka",
-   "translations": {
-    "translation-en": "Yes, I will lift this log for you."
+  {
+   "metadata": {
+    "segNum": "46",
+    "paragraphNum": 46,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ga ngathu nhanhaguru warlpabarra bilkaanha ingka",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Yes, I will lift this log for you."
+    }
+   ],
+   "words": [
     {
      "word_text": "ga",
-     "word_breakdown": "ga",
+     "form": "ga",
      "morphs": [
       {
        "morph-txt": "ga",
@@ -4337,7 +4709,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -4353,7 +4725,7 @@
     },
     {
      "word_text": "nhanhaguru",
-     "word_breakdown": "nhanha-guru",
+     "form": "nhanha-guru",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -4375,7 +4747,7 @@
     },
     {
      "word_text": "warlpabarra",
-     "word_breakdown": "warlpa-ba-rra",
+     "form": "warlpa-ba-rra",
      "morphs": [
       {
        "morph-txt": "warlpa",
@@ -4405,7 +4777,7 @@
     },
     {
      "word_text": "bilkaanha",
-     "word_breakdown": "bilka-anha",
+     "form": "bilka-anha",
      "morphs": [
       {
        "morph-txt": "bilka"
@@ -4423,7 +4795,7 @@
     },
     {
      "word_text": "ingka",
-     "word_breakdown": "ingka",
+     "form": "ingka",
      "morphs": [
       {
        "morph-txt": "ingka",
@@ -4439,15 +4811,23 @@
    ],
    "notes": []
   },
-  "47": {
-   "full_text": "gawa ngali barnrdirra gakalawatyuangani",
-   "translations": {
-    "translation-en": "Come, the two of us will cross to the other side."
+  {
+   "metadata": {
+    "segNum": "47",
+    "paragraphNum": 47,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gawa ngali barnrdirra gakalawatyuangani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Come, the two of us will cross to the other side."
+    }
+   ],
+   "words": [
     {
      "word_text": "gawa",
-     "word_breakdown": "gawa",
+     "form": "gawa",
      "morphs": [
       {
        "morph-txt": "gawa",
@@ -4462,7 +4842,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -4478,7 +4858,7 @@
     },
     {
      "word_text": "barnrdirra",
-     "word_breakdown": "barnrdi-rra",
+     "form": "barnrdi-rra",
      "morphs": [
       {
        "morph-txt": "barnrdi",
@@ -4501,7 +4881,7 @@
     },
     {
      "word_text": "gakalawatyuangani",
-     "word_breakdown": "gakalawatyu-angani",
+     "form": "gakalawatyu-angani",
      "morphs": [
       {
        "morph-txt": "gakala",
@@ -4531,15 +4911,23 @@
    ],
    "notes": []
   },
-  "48": {
-   "full_text": "walya barnrdilangu ngakani nhaniguru/ gityabarruani",
-   "translations": {
-    "translation-en": "This water is not crossable. It is deep. [Cannot cross the water, deep.]"
+  {
+   "metadata": {
+    "segNum": "48",
+    "paragraphNum": 48,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya barnrdilangu ngakani nhaniguru/ gityabarruani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This water is not crossable. It is deep. [Cannot cross the water, deep.]"
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -4554,7 +4942,7 @@
     },
     {
      "word_text": "barnrdilangu",
-     "word_breakdown": "barnrdi-langu",
+     "form": "barnrdi-langu",
      "morphs": [
       {
        "morph-txt": "barnrdi",
@@ -4576,7 +4964,7 @@
     },
     {
      "word_text": "ngakani",
-     "word_breakdown": "ngaka-ni",
+     "form": "ngaka-ni",
      "morphs": [
       {
        "morph-txt": "ngaka",
@@ -4599,7 +4987,7 @@
     },
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -4621,14 +5009,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "gityabarruani",
-     "word_breakdown": "gityabarru-ani",
+     "form": "gityabarru-ani",
      "morphs": [
       {
        "morph-txt": "gityabarru",
@@ -4651,15 +5039,23 @@
    ],
    "notes": []
   },
-  "49": {
-   "full_text": "nhungka ngarnidya bunhthigala",
-   "translations": {
-    "translation-en": "His father is coming."
+  {
+   "metadata": {
+    "segNum": "49",
+    "paragraphNum": 49,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhungka ngarnidya bunhthigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "His father is coming."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhungka",
-     "word_breakdown": "nhungka",
+     "form": "nhungka",
      "morphs": [
       {
        "morph-txt": "nhungka",
@@ -4674,7 +5070,7 @@
     },
     {
      "word_text": "ngarnidya",
-     "word_breakdown": "ngarnidya",
+     "form": "ngarnidya",
      "morphs": [
       {
        "morph-txt": "ngarnidya",
@@ -4689,7 +5085,7 @@
     },
     {
      "word_text": "bunhthigala",
-     "word_breakdown": "bunhthi-gala",
+     "form": "bunhthi-gala",
      "morphs": [
       {
        "morph-txt": "bunhthi",
@@ -4712,22 +5108,30 @@
    ],
    "notes": []
   },
-  "50": {
-   "full_text": "dhuna-bari ngali wirarra burlilha nhanigurru ngakaani",
-   "translations": {
-    "translation-en": "The two of us will wait until the water falls. [The two of us will wait, the water will fall.]"
+  {
+   "metadata": {
+    "segNum": "50",
+    "paragraphNum": 50,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhuna-bari ngali wirarra burlilha nhanigurru ngakaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The two of us will wait until the water falls. [The two of us will wait, the water will fall.]"
+    }
+   ],
+   "words": [
     {
      "word_text": "dhuna-bari",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -4743,7 +5147,7 @@
     },
     {
      "word_text": "wirarra",
-     "word_breakdown": "wira-rra",
+     "form": "wira-rra",
      "morphs": [
       {
        "morph-txt": "wira",
@@ -4766,7 +5170,7 @@
     },
     {
      "word_text": "burlilha",
-     "word_breakdown": "burli-lha",
+     "form": "burli-lha",
      "morphs": [
       {
        "morph-txt": "burli",
@@ -4789,7 +5193,7 @@
     },
     {
      "word_text": "nhanigurru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -4811,7 +5215,7 @@
     },
     {
      "word_text": "ngakaani",
-     "word_breakdown": "ngaka-ani",
+     "form": "ngaka-ani",
      "morphs": [
       {
        "morph-txt": "ngaka",
@@ -4834,15 +5238,23 @@
    ],
    "notes": []
   },
-  "51": {
-   "full_text": "nganytya dhithi dhaliani",
-   "translations": {
-    "translation-en": "My dog is good."
+  {
+   "metadata": {
+    "segNum": "51",
+    "paragraphNum": 51,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganytya dhithi dhaliani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "My dog is good."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganytya",
-     "word_breakdown": "nganytya",
+     "form": "nganytya",
      "morphs": [
       {
        "morph-txt": "nganytya",
@@ -4857,7 +5269,7 @@
     },
     {
      "word_text": "dhithi",
-     "word_breakdown": "dhithi",
+     "form": "dhithi",
      "morphs": [
       {
        "morph-txt": "dhithi",
@@ -4873,7 +5285,7 @@
     },
     {
      "word_text": "dhaliani",
-     "word_breakdown": "dhali-ani",
+     "form": "dhali-ani",
      "morphs": [
       {
        "morph-txt": "dhali",
@@ -4899,15 +5311,23 @@
     "example - another one with no copula"
    ]
   },
-  "52": {
-   "full_text": "nganyi yanhthabarra",
-   "translations": {
-    "translation-en": "I'm going away."
+  {
+   "metadata": {
+    "segNum": "52",
+    "paragraphNum": 52,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganyi yanhthabarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I'm going away."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -4923,7 +5343,7 @@
     },
     {
      "word_text": "yanhthabarra",
-     "word_breakdown": "yanhtha-ba-rra",
+     "form": "yanhtha-ba-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -4956,15 +5376,23 @@
     "example - response to 'where' question"
    ]
   },
-  "53": {
-   "full_text": "ngalaanga ini yanhthagala",
-   "translations": {
-    "translation-en": "Where are you going?"
+  {
+   "metadata": {
+    "segNum": "53",
+    "paragraphNum": 53,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaanga ini yanhthagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where are you going?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaanga",
-     "word_breakdown": "ngala-anga",
+     "form": "ngala-anga",
      "morphs": [
       {
        "morph-txt": "ngala",
@@ -4987,7 +5415,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -5002,7 +5430,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -5027,15 +5455,23 @@
     "example - wh- question"
    ]
   },
-  "54": {
-   "full_text": "gampa nganyi yanhthagala",
-   "translations": {
-    "translation-en": "I'm going far away."
+  {
+   "metadata": {
+    "segNum": "54",
+    "paragraphNum": 54,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gampa nganyi yanhthagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I'm going far away."
+    }
+   ],
+   "words": [
     {
      "word_text": "gampa",
-     "word_breakdown": "gampa",
+     "form": "gampa",
      "morphs": [
       {
        "morph-txt": "gampa",
@@ -5050,7 +5486,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -5066,7 +5502,7 @@
     },
     {
      "word_text": "yanhthagala",
-     "word_breakdown": "yanhtha-gala",
+     "form": "yanhtha-gala",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -5091,15 +5527,23 @@
     "example - response to 'where' question"
    ]
   },
-  "55": {
-   "full_text": "wanhdhugutu ini dhikarra",
-   "translations": {
-    "translation-en": "When will you return?"
+  {
+   "metadata": {
+    "segNum": "55",
+    "paragraphNum": 55,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wanhdhugutu ini dhikarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "When will you return?"
+    }
+   ],
+   "words": [
     {
      "word_text": "wanhdhugutu",
-     "word_breakdown": "wanhdhugutu",
+     "form": "wanhdhugutu",
      "morphs": [
       {
        "morph-txt": "wanhdhu",
@@ -5118,7 +5562,7 @@
     },
     {
      "word_text": "ini",
-     "word_breakdown": "ini",
+     "form": "ini",
      "morphs": [
       {
        "morph-txt": "ini",
@@ -5133,7 +5577,7 @@
     },
     {
      "word_text": "dhikarra",
-     "word_breakdown": "dhika-rra",
+     "form": "dhika-rra",
      "morphs": [
       {
        "morph-txt": "dhika",
@@ -5157,15 +5601,23 @@
    ],
    "notes": []
   },
-  "56": {
-   "full_text": "wikarlawatyu nganyi dhikarra",
-   "translations": {
-    "translation-en": "I will return the day after tomorrow."
+  {
+   "metadata": {
+    "segNum": "56",
+    "paragraphNum": 56,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarlawatyu nganyi dhikarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I will return the day after tomorrow."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarlawatyu",
-     "word_breakdown": "wikarlawatyu",
+     "form": "wikarlawatyu",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -5188,7 +5640,7 @@
     },
     {
      "word_text": "nganyi",
-     "word_breakdown": "nganyi",
+     "form": "nganyi",
      "morphs": [
       {
        "morph-txt": "nganyi",
@@ -5204,7 +5656,7 @@
     },
     {
      "word_text": "dhikarra",
-     "word_breakdown": "dhika-rra",
+     "form": "dhika-rra",
      "morphs": [
       {
        "morph-txt": "dhika",
@@ -5230,15 +5682,23 @@
     "example - time"
    ]
   },
-  "57": {
-   "full_text": "wanhdhugutu yula dhikarra",
-   "translations": {
-    "translation-en": "When will the two of you return?"
+  {
+   "metadata": {
+    "segNum": "57",
+    "paragraphNum": 57,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wanhdhugutu yula dhikarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "When will the two of you return?"
+    }
+   ],
+   "words": [
     {
      "word_text": "wanhdhugutu",
-     "word_breakdown": "wanhdhugutu",
+     "form": "wanhdhugutu",
      "morphs": [
       {
        "morph-txt": "wanhdhu",
@@ -5257,7 +5717,7 @@
     },
     {
      "word_text": "yula",
-     "word_breakdown": "yula",
+     "form": "yula",
      "morphs": [
       {
        "morph-txt": "yula",
@@ -5272,7 +5732,7 @@
     },
     {
      "word_text": "dhikarra",
-     "word_breakdown": "dhika-rra",
+     "form": "dhika-rra",
      "morphs": [
       {
        "morph-txt": "dhika",
@@ -5296,15 +5756,23 @@
    ],
    "notes": []
   },
-  "58": {
-   "full_text": "wikarlawatyu ngali dhikarra",
-   "translations": {
-    "translation-en": "The two of us will return the day after tomorrow."
+  {
+   "metadata": {
+    "segNum": "58",
+    "paragraphNum": 58,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarlawatyu ngali dhikarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The two of us will return the day after tomorrow."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarlawatyu",
-     "word_breakdown": "wikarlawatyu",
+     "form": "wikarlawatyu",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -5327,7 +5795,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -5343,7 +5811,7 @@
     },
     {
      "word_text": "dhikarra",
-     "word_breakdown": "dhika-rra",
+     "form": "dhika-rra",
      "morphs": [
       {
        "morph-txt": "dhika",
@@ -5367,15 +5835,23 @@
    ],
    "notes": []
   },
-  "59": {
-   "full_text": "wikarlawatyu dhikarra",
-   "translations": {
-    "translation-en": "He will return the day after tomorrow."
+  {
+   "metadata": {
+    "segNum": "59",
+    "paragraphNum": 59,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "wikarlawatyu dhikarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "He will return the day after tomorrow."
+    }
+   ],
+   "words": [
     {
      "word_text": "wikarlawatyu",
-     "word_breakdown": "wikarlawatyu",
+     "form": "wikarlawatyu",
      "morphs": [
       {
        "morph-txt": "wikarla",
@@ -5398,7 +5874,7 @@
     },
     {
      "word_text": "dhikarra",
-     "word_breakdown": "dhika-rra",
+     "form": "dhika-rra",
      "morphs": [
       {
        "morph-txt": "dhika",
@@ -5422,15 +5898,23 @@
    ],
    "notes": []
   },
-  "60": {
-   "full_text": "gawa ngali yanhtharra",
-   "translations": {
-    "translation-en": "Come, the two of us will go."
+  {
+   "metadata": {
+    "segNum": "60",
+    "paragraphNum": 60,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gawa ngali yanhtharra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Come, the two of us will go."
+    }
+   ],
+   "words": [
     {
      "word_text": "gawa",
-     "word_breakdown": "gawa",
+     "form": "gawa",
      "morphs": [
       {
        "morph-txt": "gawa",
@@ -5445,7 +5929,7 @@
     },
     {
      "word_text": "ngali",
-     "word_breakdown": "ngali",
+     "form": "ngali",
      "morphs": [
       {
        "morph-txt": "ngali",
@@ -5461,7 +5945,7 @@
     },
     {
      "word_text": "yanhtharra",
-     "word_breakdown": "yanhtha-rra",
+     "form": "yanhtha-rra",
      "morphs": [
       {
        "morph-txt": "yanhtha",
@@ -5485,15 +5969,23 @@
    ],
    "notes": []
   },
-  "61": {
-   "full_text": "nhadya nhanhaguru/ murnaani yandralunga",
-   "translations": {
-    "translation-en": "Look at the snake on the stone. [Look at it / The snake is on the stone.]"
+  {
+   "metadata": {
+    "segNum": "61",
+    "paragraphNum": 61,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhadya nhanhaguru/ murnaani yandralunga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Look at the snake on the stone. [Look at it / The snake is on the stone.]"
+    }
+   ],
+   "words": [
     {
      "word_text": "nhadya",
-     "word_breakdown": "nhadya",
+     "form": "nhadya",
      "morphs": [
       {
        "morph-txt": "nhadya",
@@ -5508,7 +6000,7 @@
     },
     {
      "word_text": "nhanhaguru",
-     "word_breakdown": "nhanha-guru",
+     "form": "nhanha-guru",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -5530,14 +6022,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "murnaani",
-     "word_breakdown": "murna-ani",
+     "form": "murna-ani",
      "morphs": [
       {
        "morph-txt": "murna",
@@ -5560,7 +6052,7 @@
     },
     {
      "word_text": "yandralunga",
-     "word_breakdown": "yandra-lunga",
+     "form": "yandra-lunga",
      "morphs": [
       {
        "morph-txt": "yandra",
@@ -5584,15 +6076,23 @@
    ],
    "notes": []
   },
-  "62": {
-   "full_text": "ngalaani murnaani/ walya ngathu nhadyagala",
-   "translations": {
-    "translation-en": "Where is the snake? I don't see (it)."
+  {
+   "metadata": {
+    "segNum": "62",
+    "paragraphNum": 62,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaani murnaani/ walya ngathu nhadyagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where is the snake? I don't see (it)."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaani",
-     "word_breakdown": "ngala-ani",
+     "form": "ngala-ani",
      "morphs": [
       {
        "morph-txt": "ngala",
@@ -5615,7 +6115,7 @@
     },
     {
      "word_text": "murnaani",
-     "word_breakdown": "murna-ani",
+     "form": "murna-ani",
      "morphs": [
       {
        "morph-txt": "murna",
@@ -5638,14 +6138,14 @@
     },
     {
      "word_text": "/",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "walya",
-     "word_breakdown": "walya",
+     "form": "walya",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -5660,7 +6160,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -5676,7 +6176,7 @@
     },
     {
      "word_text": "nhadyagala",
-     "word_breakdown": "nhadya-gala",
+     "form": "nhadya-gala",
      "morphs": [
       {
        "morph-txt": "nhadya",
@@ -5701,15 +6201,23 @@
     "example - wh- question"
    ]
   },
-  "63": {
-   "full_text": "nhaniguru yandralunga burngu wina",
-   "translations": {
-    "translation-en": "That one on the stone by the gum tree."
+  {
+   "metadata": {
+    "segNum": "63",
+    "paragraphNum": 63,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhaniguru yandralunga burngu wina",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That one on the stone by the gum tree."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhaniguru",
-     "word_breakdown": "nhani-guru",
+     "form": "nhani-guru",
      "morphs": [
       {
        "morph-txt": "nhani",
@@ -5731,7 +6239,7 @@
     },
     {
      "word_text": "yandralunga",
-     "word_breakdown": "yandra-lunga",
+     "form": "yandra-lunga",
      "morphs": [
       {
        "morph-txt": "yandra",
@@ -5754,7 +6262,7 @@
     },
     {
      "word_text": "burngu",
-     "word_breakdown": "burngu",
+     "form": "burngu",
      "morphs": [
       {
        "morph-txt": "burngu",
@@ -5770,7 +6278,7 @@
     },
     {
      "word_text": "wina",
-     "word_breakdown": "wina",
+     "form": "wina",
      "morphs": [
       {
        "morph-txt": "wina",
@@ -5786,15 +6294,23 @@
    ],
    "notes": []
   },
-  "64": {
-   "full_text": "ga murra ngathu nhadyagala nhanhagurru murnaanha",
-   "translations": {
-    "translation-en": "Yes, OK, I see the snake."
+  {
+   "metadata": {
+    "segNum": "64",
+    "paragraphNum": 64,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ga murra ngathu nhadyagala nhanhagurru murnaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Yes, OK, I see the snake."
+    }
+   ],
+   "words": [
     {
      "word_text": "ga",
-     "word_breakdown": "ga",
+     "form": "ga",
      "morphs": [
       {
        "morph-txt": "ga",
@@ -5809,7 +6325,7 @@
     },
     {
      "word_text": "murra",
-     "word_breakdown": "murra",
+     "form": "murra",
      "morphs": [
       {
        "morph-txt": "murra",
@@ -5825,7 +6341,7 @@
     },
     {
      "word_text": "ngathu",
-     "word_breakdown": "ngathu",
+     "form": "ngathu",
      "morphs": [
       {
        "morph-txt": "ngathu",
@@ -5841,7 +6357,7 @@
     },
     {
      "word_text": "nhadyagala",
-     "word_breakdown": "nhadya-gala",
+     "form": "nhadya-gala",
      "morphs": [
       {
        "morph-txt": "nhadya",
@@ -5863,7 +6379,7 @@
     },
     {
      "word_text": "nhanhagurru",
-     "word_breakdown": "nhanha-guru",
+     "form": "nhanha-guru",
      "morphs": [
       {
        "morph-txt": "nhanha",
@@ -5885,7 +6401,7 @@
     },
     {
      "word_text": "murnaanha",
-     "word_breakdown": "murna-anha",
+     "form": "murna-anha",
      "morphs": [
       {
        "morph-txt": "murna",
@@ -5909,5 +6425,5 @@
    ],
    "notes": []
   }
- }
+ ]
 }

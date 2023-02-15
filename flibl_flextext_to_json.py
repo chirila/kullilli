@@ -8,6 +8,7 @@ import os
 morph_keys = ["txt", "cf", "gls", "msa", "variantTypes", "hn", "glsAppend"]
 
 # put in the directory where your flextexts are located
+cwd = os.getcwd()
 # make sure it ends with a /
 flextext_dir = "data/flextext/"
 # if your flextexts have an extension like "xml" or something else, change this
@@ -15,8 +16,8 @@ flextext_extension = "flextext"
 # put in the directory where you would like your JSON files to go (it doesn't have to exist yet)
 # make sure it ends with a /
 json_dir = "data/json/"
-# create list of texts by finding all the items in a specified directory with the specified extension 
-texts = [file for file in os.listdir(flextext_dir) if not os.path.isdir(file) and file.endswith(flextext_extension)]
+# create list of text_paths by finding all the items in a specified directory with the specified extension 
+text_file_names = [file for file in os.listdir(flextext_dir) if not os.path.isdir(file) and file.endswith(flextext_extension)]
 # make the directory where the new JSON files will live (and if it already exists, that's fine)
 try:
     os.mkdir(json_dir)
@@ -24,31 +25,60 @@ except:
     pass
 
 # make each JSON file
-for text in texts:
+for text_file_name in text_file_names:
+    text_path = flextext_dir+text_file_name
     # open the flextext
-    ft = ET.parse(flextext_dir+text).getroot()
+    flextext_tree = ET.parse(text_path).getroot()
     # start creating what will become the JSON
-    new_json = {
-        "flextext":text
+    new_text = {
+      "metadata": {
+        "filePath": cwd + "/" + text_path,
+        "titles":{}
+      }
     }
 
     # add the title(s) to the JSON
     try:
-        for lang_title in ft.findall(".//item[@type='title']"):
-            new_json["title-{}".format(lang_title.attrib["lang"])] = lang_title.text
+        for lang_title in flextext_tree.findall(".//item[@type='title']"):
+            new_text["metadata"]["titles"][lang_title.attrib["lang"]] = lang_title.text
+            # new_text["metadata"]["title-{}".format(lang_title.attrib["lang"])] = lang_title.text
     except:
-        new_json["title"] = ""
+        new_text["metadata"]["title"] = ""
     
     # initialize the dict of utterances
-    new_json["utterances"] = {}
+    # new_text["utterances"] = {}
+    new_text["sentences"] = []
+    
 
-    for phrase in ft.findall(".//phrase"):
+    for phrase in flextext_tree.findall(".//phrase"):
+        # first make the sentence-level metadata, with the segnum as a string (if available) and paragraph and phrase numbers as ints (if available)
+        segdict = {
+            "metadata":{
+            }
+        }
+        # segment (sentence) number
         try:
             segnum = phrase.find("./item[@type='segnum']").text
         except:
-            pass
-        segdict = {}
-        full_text = ""
+            segnum = ""
+        finally:
+            segdict["metadata"]["segNum"] = segnum
+        # paragraph number
+        try:
+            paragraphNum = int(segnum.split(".")[0])
+        except:
+            paragraphNum = ""
+        finally:
+            segdict["metadata"]["paragraphNum"] = paragraphNum
+        # phrase number
+        try:
+            phraseNum = int(segnum.split(".")[1])
+        except:
+            phraseNum = ""
+        finally:
+            segdict["metadata"]["phraseNum"] = phraseNum
+
+        transcription = ""
         word_list = []
         # add the words into the segdict
         try:
@@ -58,10 +88,10 @@ for text in texts:
         for word in words:
             # add this word's text to the segdict
             # if the item in word is punctuation or at the front of the phrase, don't add an extra space
-            if not full_text or word[0].attrib["type"] == "punct":
-                full_text += word[0].text
+            if not transcription or word[0].attrib["type"] == "punct":
+                transcription += word[0].text
             else:
-                full_text += " " + word[0].text
+                transcription += " " + word[0].text
             # add each word to the word_list
             word_dict = {}
             word_dict["word_text"] = word[0].text
@@ -97,7 +127,7 @@ for text in texts:
                     pass
 
                 morph_list.append(morph_dict)
-            word_dict["word_breakdown"] = word_breakdown
+            word_dict["form"] = word_breakdown
 
             word_dict["morphs"] = morph_list
             # add word level part of speech
@@ -114,13 +144,16 @@ for text in texts:
             # put the word_dict in the word_list
             word_list.append(word_dict)
         # add the phrase level baseline to the segdict
-        segdict["full_text"] = full_text
+        segdict["transcription"] = transcription
         
         # add translation to segdict
-        segdict["translations"] = {}
+        segdict["translations"] = []
         try:
-            for lang_translation in phrase.findall(".//item[@type='gls']"):
-                segdict["translations"]["translation-{}".format(lang_translation.attrib["lang"])] = lang_translation.text
+            for lang_translation in phrase.findall("./item[@type='gls']"):
+                segdict["translations"].append({
+                    "language":lang_translation.attrib["lang"],
+                    "translation":lang_translation.text
+                })
         except:
             # if you want an empty translation to appear when there is no translation
             # segdict["translation"] = ""
@@ -128,7 +161,7 @@ for text in texts:
             pass
         
         # add the word list to the segdict
-        segdict["word_list"] = word_list
+        segdict["words"] = word_list
 
         # add notes to segdict
         try:
@@ -143,7 +176,8 @@ for text in texts:
             pass
         
         # add the segdict to the main dict
-        new_json["utterances"][segnum] = segdict
+        # new_text["utterances"][segnum] = segdict
+        new_text["sentences"].append(segdict)
 
     # create the json
-    json.dump(new_json, open(json_dir + text[:-1*len(flextext_extension)] + "json", mode="w", encoding="utf8"), indent=1)
+    json.dump(new_text, open(json_dir + text_file_name[:-1*len(flextext_extension)] + "json", mode="w", encoding="utf8"), indent=1)

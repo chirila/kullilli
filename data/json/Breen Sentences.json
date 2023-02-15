@@ -1,16 +1,28 @@
 {
- "flextext": "Breen Sentences.flextext",
- "title-en": "Breen Sentences",
- "utterances": {
-  "1": {
-   "full_text": "barrkulu walyubala",
-   "translations": {
-    "translation-en": null
+ "metadata": {
+  "filePath": "/Users/patrickhall/Sites/Languages/chirila/kullilli/data/flextext/Breen Sentences.flextext",
+  "titles": {
+   "en": "Breen Sentences"
+  }
+ },
+ "sentences": [
+  {
+   "metadata": {
+    "segNum": "1",
+    "paragraphNum": 1,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "barrkulu walyubala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": null
+    }
+   ],
+   "words": [
     {
      "word_text": "barrkulu",
-     "word_breakdown": "barkulu",
+     "form": "barkulu",
      "morphs": [
       {
        "morph-txt": "barkulu",
@@ -26,7 +38,7 @@
     },
     {
      "word_text": "walyubala",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
@@ -36,15 +48,23 @@
     "not at all sure about the walyu- transcription, looks like walyuvEla"
    ]
   },
-  "2": {
-   "full_text": "murrumurrugala nyinalinga",
-   "translations": {
-    "translation-en": "men sitting down over there"
+  {
+   "metadata": {
+    "segNum": "2",
+    "paragraphNum": 2,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murrumurrugala nyinalinga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "men sitting down over there"
+    }
+   ],
+   "words": [
     {
      "word_text": "murrumurrugala",
-     "word_breakdown": "murrumurru-gala",
+     "form": "murrumurru-gala",
      "morphs": [
       {
        "morph-txt": "murrumurru",
@@ -66,7 +86,7 @@
     },
     {
      "word_text": "nyinalinga",
-     "word_breakdown": "nyina-li-nga",
+     "form": "nyina-li-nga",
      "morphs": [
       {
        "morph-txt": "nyina",
@@ -98,15 +118,23 @@
    ],
    "notes": []
   },
-  "3": {
-   "full_text": "yarna wayalingu",
-   "translations": {
-    "translation-en": null
+  {
+   "metadata": {
+    "segNum": "3",
+    "paragraphNum": 3,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yarna wayalingu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": null
+    }
+   ],
+   "words": [
     {
      "word_text": "yarna",
-     "word_breakdown": "yarna",
+     "form": "yarna",
      "morphs": [
       {
        "morph-txt": "yarna",
@@ -122,7 +150,7 @@
     },
     {
      "word_text": "wayalingu",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
@@ -130,15 +158,23 @@
    ],
    "notes": []
   },
-  "4": {
-   "full_text": "ganyi",
-   "translations": {
-    "translation-en": null
+  {
+   "metadata": {
+    "segNum": "4",
+    "paragraphNum": 4,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": null
+    }
+   ],
+   "words": [
     {
      "word_text": "ganyi",
-     "word_breakdown": "ganyi",
+     "form": "ganyi",
      "morphs": [
       {
        "morph-txt": "ganyi",
@@ -155,15 +191,23 @@
    ],
    "notes": []
   },
-  "5": {
-   "full_text": "dhaka wet dhugarna",
-   "translations": {
-    "translation-en": null
+  {
+   "metadata": {
+    "segNum": "5",
+    "paragraphNum": 5,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhaka wet dhugarna",
+   "translations": [
+    {
+     "language": "en",
+     "translation": null
+    }
+   ],
+   "words": [
     {
      "word_text": "dhaka",
-     "word_breakdown": "dhaka",
+     "form": "dhaka",
      "morphs": [
       {
        "morph-txt": "dhaka",
@@ -178,14 +222,14 @@
     },
     {
      "word_text": "wet",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "dhugarna",
-     "word_breakdown": "dhugarna",
+     "form": "dhugarna",
      "morphs": [
       {
        "morph-txt": "dhugarna",
@@ -201,15 +245,23 @@
    ],
    "notes": []
   },
-  "6": {
-   "full_text": "nilaya, nilaya yarna walyaani",
-   "translations": {
-    "translation-en": "It was raining yesterday"
+  {
+   "metadata": {
+    "segNum": "6",
+    "paragraphNum": 6,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nilaya, nilaya yarna walyaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "It was raining yesterday"
+    }
+   ],
+   "words": [
     {
      "word_text": "nilaya",
-     "word_breakdown": "nilaya",
+     "form": "nilaya",
      "morphs": [
       {
        "morph-txt": "nilaya",
@@ -224,14 +276,14 @@
     },
     {
      "word_text": ",",
-     "word_breakdown": "",
+     "form": "",
      "morphs": [],
      "pos": "",
      "gls": ""
     },
     {
      "word_text": "nilaya",
-     "word_breakdown": "nilaya",
+     "form": "nilaya",
      "morphs": [
       {
        "morph-txt": "nilaya",
@@ -246,7 +298,7 @@
     },
     {
      "word_text": "yarna",
-     "word_breakdown": "yarna",
+     "form": "yarna",
      "morphs": [
       {
        "morph-txt": "yarna",
@@ -262,7 +314,7 @@
     },
     {
      "word_text": "walyaani",
-     "word_breakdown": "walya-ani",
+     "form": "walya-ani",
      "morphs": [
       {
        "morph-txt": "walya",
@@ -285,5 +337,5 @@
    ],
    "notes": []
   }
- }
+ ]
 }

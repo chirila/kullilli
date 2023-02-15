@@ -1,13 +1,25 @@
 {
- "flextext": "001-064 Kullilli sentences.flextext",
- "title-en": "001-064 Kullilli sentences",
- "utterances": {
-  "1": {
-   "full_text": "dhanagurungu murabanga gungaanha",
-   "translations": {
-    "translation-en": "All of them have finished this food."
+ "metadata": {
+  "filePath": "/Users/patrickhall/Sites/Languages/chirila/kullilli/data/flextext/001-064 Kullilli sentences.flextext",
+  "titles": {
+   "en": "001-064 Kullilli sentences"
+  }
+ },
+ "sentences": [
+  {
+   "metadata": {
+    "segNum": "1",
+    "paragraphNum": 1,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhanagurungu murabanga gungaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "All of them have finished this food."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhanagurungu",
      "word_breakdown": "dhana-guru-ngu",
@@ -91,12 +103,20 @@
     "Note doubly written a for gunga+anha"
    ]
   },
-  "2": {
-   "full_text": "dhaltharra yundru gungaanha",
-   "translations": {
-    "translation-en": "Eat food here."
+  {
+   "metadata": {
+    "segNum": "2",
+    "paragraphNum": 2,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhaltharra yundru gungaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Eat food here."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhaltharra",
      "word_breakdown": "dhaltha-rra",
@@ -166,12 +186,20 @@
     "Note verb first order. -\"Eat you food.\""
    ]
   },
-  "3": {
-   "full_text": "yulagurungu dhaltharra gungaanha",
-   "translations": {
-    "translation-en": "You two eat the food."
+  {
+   "metadata": {
+    "segNum": "3",
+    "paragraphNum": 3,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yulagurungu dhaltharra gungaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You two eat the food."
+    }
+   ],
+   "words": [
     {
      "word_text": "yulagurungu",
      "word_breakdown": "yula-guru-ngu",
@@ -254,12 +282,20 @@
     "Note here that the order is pronoun first, then the verb. But still VO."
    ]
   },
-  "4": {
-   "full_text": "murra bulagurungu murubanga gungaanha",
-   "translations": {
-    "translation-en": "OK, they two have finished the food."
+  {
+   "metadata": {
+    "segNum": "4",
+    "paragraphNum": 4,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murra bulagurungu murubanga gungaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "OK, they two have finished the food."
+    }
+   ],
+   "words": [
     {
      "word_text": "murra",
      "word_breakdown": "murra",
@@ -357,12 +393,20 @@
    ],
    "notes": []
   },
-  "5": {
-   "full_text": "yurra murubanga",
-   "translations": {
-    "translation-en": "You are all finished."
+  {
+   "metadata": {
+    "segNum": "5",
+    "paragraphNum": 5,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yurra murubanga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You are all finished."
+    }
+   ],
+   "words": [
     {
      "word_text": "yurra",
      "word_breakdown": "yurra",
@@ -408,12 +452,20 @@
     "lit \"You've gone\"? so not finished as in gone with food?"
    ]
   },
-  "6": {
-   "full_text": "nganytya dhithi mipa",
-   "translations": {
-    "translation-en": "My dog is bad."
+  {
+   "metadata": {
+    "segNum": "6",
+    "paragraphNum": 6,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganytya dhithi mipa",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "My dog is bad."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganytya",
      "word_breakdown": "nganytya",
@@ -465,12 +517,20 @@
     "no copula. Good for early lessons. I wonder how past copulas are done..."
    ]
   },
-  "7": {
-   "full_text": "dhikagala nganytya ngurraanga nhanigarri walya gampa nhanigarri ngukulanga",
-   "translations": {
-    "translation-en": "I'm going back to my camp now / it is over there, not far away / it is near the water."
+  {
+   "metadata": {
+    "segNum": "7",
+    "paragraphNum": 7,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhikagala nganytya ngurraanga nhanigarri walya gampa nhanigarri ngukulanga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I'm going back to my camp now / it is over there, not far away / it is near the water."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhikagala",
      "word_breakdown": "dhika-gala",
@@ -635,12 +695,20 @@
     "good walya example"
    ]
   },
-  "8": {
-   "full_text": "bunhthinga ngalingala nhaniguru garnaani",
-   "translations": {
-    "translation-en": "That man came to the two of us."
+  {
+   "metadata": {
+    "segNum": "8",
+    "paragraphNum": 8,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "bunhthinga ngalingala nhaniguru garnaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That man came to the two of us."
+    }
+   ],
+   "words": [
     {
      "word_text": "bunhthinga",
      "word_breakdown": "bunhthi-nga",
@@ -737,12 +805,20 @@
     "Note word order, V then the pronoun (I wonder if they are cliticised?) then the other pronoun."
    ]
   },
-  "9": {
-   "full_text": "dhithiani nhaniguru gulhanga nganhala birtaburra",
-   "translations": {
-    "translation-en": "That dog sat on top of me."
+  {
+   "metadata": {
+    "segNum": "9",
+    "paragraphNum": 9,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "dhithiani nhaniguru gulhanga nganhala birtaburra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That dog sat on top of me."
+    }
+   ],
+   "words": [
     {
      "word_text": "dhithiani",
      "word_breakdown": "dhithi-ani",
@@ -848,12 +924,20 @@
     "Is the hyphen in 'bita-bura' ther in the original?"
    ]
   },
-  "10": {
-   "full_text": "ngalaani ingka ngurra",
-   "translations": {
-    "translation-en": "Where is your camp?"
+  {
+   "metadata": {
+    "segNum": "10",
+    "paragraphNum": 10,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaani ingka ngurra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where is your camp?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaani",
      "word_breakdown": "ngala-ani",
@@ -915,12 +999,20 @@
     "interesting that there's a 'nominative' here - implies that it's also a type of deixis? "
    ]
   },
-  "11": {
-   "full_text": "ngaka nanigarri walya wina",
-   "translations": {
-    "translation-en": "Water is over there far away."
+  {
+   "metadata": {
+    "segNum": "11",
+    "paragraphNum": 11,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngaka nanigarri walya wina",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Water is over there far away."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngaka",
      "word_breakdown": "ngaka",
@@ -994,12 +1086,20 @@
     "ie \"not close\""
    ]
   },
-  "12": {
-   "full_text": "ngali yanhtharra dhaldraanha galkarra",
-   "translations": {
-    "translation-en": "The two of us go to kill kangaroos."
+  {
+   "metadata": {
+    "segNum": "12",
+    "paragraphNum": 12,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngali yanhtharra dhaldraanha galkarra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The two of us go to kill kangaroos."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngali",
      "word_breakdown": "ngali",
@@ -1088,12 +1188,20 @@
    ],
    "notes": []
   },
-  "13": {
-   "full_text": "nguthianha ngandrangu dhaltharra",
-   "translations": {
-    "translation-en": "All of us will eat the meat."
+  {
+   "metadata": {
+    "segNum": "13",
+    "paragraphNum": 13,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nguthianha ngandrangu dhaltharra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "All of us will eat the meat."
+    }
+   ],
+   "words": [
     {
      "word_text": "nguthianha",
      "word_breakdown": "nguthi-anha",
@@ -1165,12 +1273,20 @@
    ],
    "notes": []
   },
-  "14": {
-   "full_text": "murra ngali wiyianha galkarra/ ngali marrparra",
-   "translations": {
-    "translation-en": "OK, the two of us will light the fire. We will cook."
+  {
+   "metadata": {
+    "segNum": "14",
+    "paragraphNum": 14,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murra ngali wiyianha galkarra/ ngali marrparra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "OK, the two of us will light the fire. We will cook."
+    }
+   ],
+   "words": [
     {
      "word_text": "murra",
      "word_breakdown": "murra",
@@ -1297,12 +1413,20 @@
    ],
    "notes": []
   },
-  "15": {
-   "full_text": "walya yanhdha wiyianha manhdharra yundru/ walya wiyimunhdhu",
-   "translations": {
-    "translation-en": "Go get wood, there's no fire."
+  {
+   "metadata": {
+    "segNum": "15",
+    "paragraphNum": 15,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya yanhdha wiyianha manhdharra yundru/ walya wiyimunhdhu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Go get wood, there's no fire."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
      "word_breakdown": "walya",
@@ -1446,12 +1570,20 @@
     "privative example"
    ]
   },
-  "16": {
-   "full_text": "winiwini wiyiani/ nhani walya garrigala",
-   "translations": {
-    "translation-en": "This firewood is bad. It isn't burning."
+  {
+   "metadata": {
+    "segNum": "16",
+    "paragraphNum": 16,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "winiwini wiyiani/ nhani walya garrigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This firewood is bad. It isn't burning."
+    }
+   ],
+   "words": [
     {
      "word_text": "winiwini",
      "word_breakdown": "winiwini",
@@ -1552,12 +1684,20 @@
    ],
    "notes": []
   },
-  "17": {
-   "full_text": "winbidhika nhanhaguru/ mipaani",
-   "translations": {
-    "translation-en": "Throw it away. It is bad."
+  {
+   "metadata": {
+    "segNum": "17",
+    "paragraphNum": 17,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "winbidhika nhanhaguru/ mipaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Throw it away. It is bad."
+    }
+   ],
+   "words": [
     {
      "word_text": "winbidhika",
      "word_breakdown": "wirnbi-dhika",
@@ -1638,12 +1778,20 @@
     "-ani on an adjective/predicate"
    ]
   },
-  "18": {
-   "full_text": "nhaniguru walya garrigala",
-   "translations": {
-    "translation-en": "This one is not burning."
+  {
+   "metadata": {
+    "segNum": "18",
+    "paragraphNum": 18,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhaniguru walya garrigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "This one is not burning."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhaniguru",
      "word_breakdown": "nhani-guru",
@@ -1707,12 +1855,20 @@
    ],
    "notes": []
   },
-  "19": {
-   "full_text": "manhdharra wiyianha dhalianha",
-   "translations": {
-    "translation-en": "Go and get good wood."
+  {
+   "metadata": {
+    "segNum": "19",
+    "paragraphNum": 19,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "manhdharra wiyianha dhalianha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Go and get good wood."
+    }
+   ],
+   "words": [
     {
      "word_text": "manhdharra",
      "word_breakdown": "manhdha-rra",
@@ -1787,12 +1943,20 @@
     "shows us that there's agreement marking on the object and the adjectives come after the noun."
    ]
   },
-  "20": {
-   "full_text": "gunga dhaltharra",
-   "translations": {
-    "translation-en": "(I) am hungry."
+  {
+   "metadata": {
+    "segNum": "20",
+    "paragraphNum": 20,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gunga dhaltharra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "(I) am hungry."
+    }
+   ],
+   "words": [
     {
      "word_text": "gunga",
      "word_breakdown": "gunga",
@@ -1836,12 +2000,20 @@
     "nice example of the future being a desiderative."
    ]
   },
-  "21": {
-   "full_text": "ngathu nhanhaguru",
-   "translations": {
-    "translation-en": "I (will eat) it."
+  {
+   "metadata": {
+    "segNum": "21",
+    "paragraphNum": 21,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngathu nhanhaguru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I (will eat) it."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngathu",
      "word_breakdown": "ngathu",
@@ -1883,12 +2055,20 @@
    ],
    "notes": []
   },
-  "22": {
-   "full_text": "ngalaani ngaka daparra ngathu",
-   "translations": {
-    "translation-en": "Where is water to drink?"
+  {
+   "metadata": {
+    "segNum": "22",
+    "paragraphNum": 22,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaani ngaka daparra ngathu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where is water to drink?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaani",
      "word_breakdown": "ngala-ani",
@@ -1969,12 +2149,20 @@
    ],
    "notes": []
   },
-  "23": {
-   "full_text": "ngandra ngaymarringa nganyi",
-   "translations": {
-    "translation-en": "We are thirsty. I as well."
+  {
+   "metadata": {
+    "segNum": "23",
+    "paragraphNum": 23,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngandra ngaymarringa nganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "We are thirsty. I as well."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngandra",
      "word_breakdown": "ngandra",
@@ -2035,12 +2223,20 @@
     "could ngaymari without -nga be the copula-less, present tense form 'We are thirsty', while -nga makes it past?"
    ]
   },
-  "24": {
-   "full_text": "ini ngaymarringa ngakaanga",
-   "translations": {
-    "translation-en": "You are thirsty for water."
+  {
+   "metadata": {
+    "segNum": "24",
+    "paragraphNum": 24,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ini ngaymarringa ngakaanga",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You are thirsty for water."
+    }
+   ],
+   "words": [
     {
      "word_text": "ini",
      "word_breakdown": "ini",
@@ -2107,12 +2303,20 @@
     "note -nga on ADJ (unless it's actually a verb)"
    ]
   },
-  "25": {
-   "full_text": "ngaka ngudyarra inha",
-   "translations": {
-    "translation-en": "(I'll) give you water."
+  {
+   "metadata": {
+    "segNum": "25",
+    "paragraphNum": 25,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngaka ngudyarra inha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "(I'll) give you water."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngaka",
      "word_breakdown": "ngaka",
@@ -2170,12 +2374,20 @@
    ],
    "notes": []
   },
-  "26": {
-   "full_text": "walya ngakamunhdhu",
-   "translations": {
-    "translation-en": "No water here."
+  {
+   "metadata": {
+    "segNum": "26",
+    "paragraphNum": 26,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya ngakamunhdhu",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "No water here."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
      "word_breakdown": "walya",
@@ -2216,12 +2428,20 @@
    ],
    "notes": []
   },
-  "27": {
-   "full_text": "ngalaani ngakaani",
-   "translations": {
-    "translation-en": "Where is water?"
+  {
+   "metadata": {
+    "segNum": "27",
+    "paragraphNum": 27,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaani ngakaani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where is water?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaani",
      "word_breakdown": "ngala-ani",
@@ -2272,12 +2492,20 @@
     "example - wh- question"
    ]
   },
-  "28": {
-   "full_text": "nhaniguru ngakaani gurrpulanga burnga wina",
-   "translations": {
-    "translation-en": "The water is over there in a hole near the gum tree."
+  {
+   "metadata": {
+    "segNum": "28",
+    "paragraphNum": 28,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhaniguru ngakaani gurrpulanga burnga wina",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The water is over there in a hole near the gum tree."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhaniguru",
      "word_breakdown": "nhani-guru",
@@ -2378,12 +2606,20 @@
    ],
    "notes": []
   },
-  "29": {
-   "full_text": "waywa burnguani walya ngathu nadyagala",
-   "translations": {
-    "translation-en": "I don't see the small gum tree. OR I don't see the gum tree. It is small. OR I don't see it. The gum tree is small."
+  {
+   "metadata": {
+    "segNum": "29",
+    "paragraphNum": 29,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "waywa burnguani walya ngathu nadyagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I don't see the small gum tree. OR I don't see the gum tree. It is small. OR I don't see it. The gum tree is small."
+    }
+   ],
+   "words": [
     {
      "word_text": "waywa",
      "word_breakdown": "waywa",
@@ -2478,12 +2714,20 @@
    ],
    "notes": []
   },
-  "30": {
-   "full_text": "nhaniguru gukadhinagala",
-   "translations": {
-    "translation-en": "There it sticks out."
+  {
+   "metadata": {
+    "segNum": "30",
+    "paragraphNum": 30,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhaniguru gukadhinagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "There it sticks out."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhaniguru",
      "word_breakdown": "nhani-guru",
@@ -2539,12 +2783,20 @@
    ],
    "notes": []
   },
-  "31": {
-   "full_text": "ngathu nadyagala dhaldra",
-   "translations": {
-    "translation-en": "I see the (a?) kangaroo."
+  {
+   "metadata": {
+    "segNum": "31",
+    "paragraphNum": 31,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngathu nadyagala dhaldra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I see the (a?) kangaroo."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngathu",
      "word_breakdown": "ngathu",
@@ -2603,12 +2855,20 @@
    ],
    "notes": []
   },
-  "32": {
-   "full_text": "ngaymarringa ngandra",
-   "translations": {
-    "translation-en": "We are thirsty."
+  {
+   "metadata": {
+    "segNum": "32",
+    "paragraphNum": 32,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngaymarringa ngandra",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "We are thirsty."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngaymarringa",
      "word_breakdown": "ngaymarri-nga",
@@ -2652,12 +2912,20 @@
     "unlike other similar examples, subject comes after predicate"
    ]
   },
-  "33": {
-   "full_text": "yundru nadyagala dhaldraanha",
-   "translations": {
-    "translation-en": "You see the kangaroo."
+  {
+   "metadata": {
+    "segNum": "33",
+    "paragraphNum": 33,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yundru nadyagala dhaldraanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You see the kangaroo."
+    }
+   ],
+   "words": [
     {
      "word_text": "yundru",
      "word_breakdown": "yundru",
@@ -2722,12 +2990,20 @@
    ],
    "notes": []
   },
-  "34": {
-   "full_text": "yarna balthigala",
-   "translations": {
-    "translation-en": "Rain is coming."
+  {
+   "metadata": {
+    "segNum": "34",
+    "paragraphNum": 34,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yarna balthigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Rain is coming."
+    }
+   ],
+   "words": [
     {
      "word_text": "yarna",
      "word_breakdown": "yarna",
@@ -2769,12 +3045,20 @@
    ],
    "notes": []
   },
-  "35": {
-   "full_text": "nganytya ngarnidya dhikagala wikarla",
-   "translations": {
-    "translation-en": "My father is coming tomorrow."
+  {
+   "metadata": {
+    "segNum": "35",
+    "paragraphNum": 35,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganytya ngarnidya dhikagala wikarla",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "My father is coming tomorrow."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganytya",
      "word_breakdown": "nganytya",
@@ -2846,12 +3130,20 @@
    ],
    "notes": []
   },
-  "36": {
-   "full_text": "nganytya ngarnidya bunhthigali niladha",
-   "translations": {
-    "translation-en": "My father came yesterday."
+  {
+   "metadata": {
+    "segNum": "36",
+    "paragraphNum": 36,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nganytya ngarnidya bunhthigali niladha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "My father came yesterday."
+    }
+   ],
+   "words": [
     {
      "word_text": "nganytya",
      "word_breakdown": "nganytya",
@@ -2922,12 +3214,20 @@
    ],
    "notes": []
   },
-  "37": {
-   "full_text": "nadyagala ngathu nganytya ngarnidya bunhthigala",
-   "translations": {
-    "translation-en": "Look there, my father is coming."
+  {
+   "metadata": {
+    "segNum": "37",
+    "paragraphNum": 37,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nadyagala ngathu nganytya ngarnidya bunhthigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Look there, my father is coming."
+    }
+   ],
+   "words": [
     {
      "word_text": "nadyagala",
      "word_breakdown": "nadya-gala",
@@ -3021,12 +3321,20 @@
    ],
    "notes": []
   },
-  "38": {
-   "full_text": "galkarra dhithianha nhandru makarrandru",
-   "translations": {
-    "translation-en": "Hit the dog with this stick."
+  {
+   "metadata": {
+    "segNum": "38",
+    "paragraphNum": 38,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "galkarra dhithianha nhandru makarrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Hit the dog with this stick."
+    }
+   ],
+   "words": [
     {
      "word_text": "galkarra",
      "word_breakdown": "galka-rra",
@@ -3115,12 +3423,20 @@
    ],
    "notes": []
   },
-  "39": {
-   "full_text": "galkanyarragala bulagurru garnabula",
-   "translations": {
-    "translation-en": "They hit each other, the two men."
+  {
+   "metadata": {
+    "segNum": "39",
+    "paragraphNum": 39,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "galkanyarragala bulagurru garnabula",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "They hit each other, the two men."
+    }
+   ],
+   "words": [
     {
      "word_text": "galkanyarragala",
      "word_breakdown": "galka-nyara-gala",
@@ -3197,12 +3513,20 @@
    ],
    "notes": []
   },
-  "40": {
-   "full_text": "nhandruguru galkanga nhanhaguru garnaanha",
-   "translations": {
-    "translation-en": "He hit that man."
+  {
+   "metadata": {
+    "segNum": "40",
+    "paragraphNum": 40,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhandruguru galkanga nhanhaguru garnaanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "He hit that man."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhandruguru",
      "word_breakdown": "nhandru-guru",
@@ -3296,12 +3620,20 @@
    ],
    "notes": []
   },
-  "41": {
-   "full_text": "munkaiyigala nganyi",
-   "translations": {
-    "translation-en": "I feel sick."
+  {
+   "metadata": {
+    "segNum": "41",
+    "paragraphNum": 41,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "munkaiyigala nganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I feel sick."
+    }
+   ],
+   "words": [
     {
      "word_text": "munkaiyigala",
      "word_breakdown": "munka-iyi-gala",
@@ -3353,12 +3685,20 @@
     "example - feeling/condition/emotion (with reflexive)"
    ]
   },
-  "42": {
-   "full_text": "murrtagala ini",
-   "translations": {
-    "translation-en": "Are you sick?"
+  {
+   "metadata": {
+    "segNum": "42",
+    "paragraphNum": 42,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murrtagala ini",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Are you sick?"
+    }
+   ],
+   "words": [
     {
      "word_text": "murrtagala",
      "word_breakdown": "murrta-gala",
@@ -3401,12 +3741,20 @@
     "example - simple y/n question"
    ]
   },
-  "43": {
-   "full_text": "murrtaiyigala ngali",
-   "translations": {
-    "translation-en": "The two of us feel sick."
+  {
+   "metadata": {
+    "segNum": "43",
+    "paragraphNum": 43,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murrtaiyigala ngali",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The two of us feel sick."
+    }
+   ],
+   "words": [
     {
      "word_text": "murrtaiyigala",
      "word_breakdown": "murrta-iyi-gala",
@@ -3455,12 +3803,20 @@
    ],
    "notes": []
   },
-  "44": {
-   "full_text": "murrtaiyigala",
-   "translations": {
-    "translation-en": "He feels sick."
+  {
+   "metadata": {
+    "segNum": "44",
+    "paragraphNum": 44,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "murrtaiyigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "He feels sick."
+    }
+   ],
+   "words": [
     {
      "word_text": "murrtaiyigala",
      "word_breakdown": "murrta-iyi-gala",
@@ -3495,12 +3851,20 @@
     " example - feeling/condition/emotion (with reflexive)"
    ]
   },
-  "45": {
-   "full_text": "munkaiyigala",
-   "translations": {
-    "translation-en": "They feel sick."
+  {
+   "metadata": {
+    "segNum": "45",
+    "paragraphNum": 45,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "munkaiyigala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "They feel sick."
+    }
+   ],
+   "words": [
     {
      "word_text": "munkaiyigala",
      "word_breakdown": "munka-iyi-gala",
@@ -3536,12 +3900,20 @@
     " example - feeling/condition/emotion (with reflexive)"
    ]
   },
-  "46": {
-   "full_text": "walya murtagala nganyi",
-   "translations": {
-    "translation-en": "I am not sick."
+  {
+   "metadata": {
+    "segNum": "46",
+    "paragraphNum": 46,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "walya murtagala nganyi",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I am not sick."
+    }
+   ],
+   "words": [
     {
      "word_text": "walya",
      "word_breakdown": "walya",
@@ -3600,12 +3972,20 @@
     " example - negation"
    ]
   },
-  "47": {
-   "full_text": "galkarra marrandru",
-   "translations": {
-    "translation-en": "Hit with hand."
+  {
+   "metadata": {
+    "segNum": "47",
+    "paragraphNum": 47,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "galkarra marrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Hit with hand."
+    }
+   ],
+   "words": [
     {
      "word_text": "galkarra",
      "word_breakdown": "galka-rra",
@@ -3654,12 +4034,20 @@
    ],
    "notes": []
   },
-  "48": {
-   "full_text": "ngathu inha galkarra makarrandru",
-   "translations": {
-    "translation-en": "I hit you with the stick."
+  {
+   "metadata": {
+    "segNum": "48",
+    "paragraphNum": 48,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngathu inha galkarra makarrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I hit you with the stick."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngathu",
      "word_breakdown": "ngathu",
@@ -3741,12 +4129,20 @@
    ],
    "notes": []
   },
-  "49": {
-   "full_text": "yundru galkarra nganha makarrandru",
-   "translations": {
-    "translation-en": "You hit me with the stick."
+  {
+   "metadata": {
+    "segNum": "49",
+    "paragraphNum": 49,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yundru galkarra nganha makarrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You hit me with the stick."
+    }
+   ],
+   "words": [
     {
      "word_text": "yundru",
      "word_breakdown": "yundru",
@@ -3829,12 +4225,20 @@
     "Note the purposive on the verb, which doesn't seem to be translated in the free translation, unless it's a type of imperative."
    ]
   },
-  "50": {
-   "full_text": "yundru galkarra nganha marrandru",
-   "translations": {
-    "translation-en": "You hit me with your hand."
+  {
+   "metadata": {
+    "segNum": "50",
+    "paragraphNum": 50,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yundru galkarra nganha marrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You hit me with your hand."
+    }
+   ],
+   "words": [
     {
      "word_text": "yundru",
      "word_breakdown": "yundru",
@@ -3914,12 +4318,20 @@
    ],
    "notes": []
   },
-  "51": {
-   "full_text": "yundru galkarra ngalinha marrandru",
-   "translations": {
-    "translation-en": "You hit the two of us with your hand."
+  {
+   "metadata": {
+    "segNum": "51",
+    "paragraphNum": 51,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yundru galkarra ngalinha marrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You hit the two of us with your hand."
+    }
+   ],
+   "words": [
     {
      "word_text": "yundru",
      "word_breakdown": "yundru",
@@ -4008,12 +4420,20 @@
    ],
    "notes": []
   },
-  "52": {
-   "full_text": "yundru galkarra ngandranha marrandru",
-   "translations": {
-    "translation-en": "You hit us all with your hand."
+  {
+   "metadata": {
+    "segNum": "52",
+    "paragraphNum": 52,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yundru galkarra ngandranha marrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "You hit us all with your hand."
+    }
+   ],
+   "words": [
     {
      "word_text": "yundru",
      "word_breakdown": "yundru",
@@ -4101,12 +4521,20 @@
    ],
    "notes": []
   },
-  "53": {
-   "full_text": "galkanga ngathu nhanha niladha",
-   "translations": {
-    "translation-en": "I hit him yesterday."
+  {
+   "metadata": {
+    "segNum": "53",
+    "paragraphNum": 53,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "galkanga ngathu nhanha niladha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I hit him yesterday."
+    }
+   ],
+   "words": [
     {
      "word_text": "galkanga",
      "word_breakdown": "galka-nga",
@@ -4179,12 +4607,20 @@
    ],
    "notes": []
   },
-  "54": {
-   "full_text": "ngandrangu galkarra nhanha",
-   "translations": {
-    "translation-en": "We will hit him."
+  {
+   "metadata": {
+    "segNum": "54",
+    "paragraphNum": 54,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngandrangu galkarra nhanha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "We will hit him."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngandrangu",
      "word_breakdown": "ngandra-ngu",
@@ -4250,12 +4686,20 @@
    ],
    "notes": []
   },
-  "55": {
-   "full_text": "ngathu galkarra inha nganytya makurrandru",
-   "translations": {
-    "translation-en": "I hit you with my big stick."
+  {
+   "metadata": {
+    "segNum": "55",
+    "paragraphNum": 55,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngathu galkarra inha nganytya makurrandru",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "I hit you with my big stick."
+    }
+   ],
+   "words": [
     {
      "word_text": "ngathu",
      "word_breakdown": "ngathu",
@@ -4352,12 +4796,20 @@
    ],
    "notes": []
   },
-  "56": {
-   "full_text": "gawa ngali yanhtharra nganytya ngurraangani",
-   "translations": {
-    "translation-en": "Come on, the two of us will go to my camp."
+  {
+   "metadata": {
+    "segNum": "56",
+    "paragraphNum": 56,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "gawa ngali yanhtharra nganytya ngurraangani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Come on, the two of us will go to my camp."
+    }
+   ],
+   "words": [
     {
      "word_text": "gawa",
      "word_breakdown": "gawa",
@@ -4453,12 +4905,20 @@
    ],
    "notes": []
   },
-  "57": {
-   "full_text": "ngalaani ingka ngarnidyani",
-   "translations": {
-    "translation-en": "Where is your father?"
+  {
+   "metadata": {
+    "segNum": "57",
+    "paragraphNum": 57,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ngalaani ingka ngarnidyani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Where is your father?"
+    }
+   ],
+   "words": [
     {
      "word_text": "ngalaani",
      "word_breakdown": "ngala-ani",
@@ -4523,12 +4983,20 @@
    ],
    "notes": []
   },
-  "58": {
-   "full_text": "nhanigarri nhungka ngurralunga gulagala",
-   "translations": {
-    "translation-en": "There in his camp he sits."
+  {
+   "metadata": {
+    "segNum": "58",
+    "paragraphNum": 58,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhanigarri nhungka ngurralunga gulagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "There in his camp he sits."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhanigarri",
      "word_breakdown": "nhani-garri",
@@ -4615,12 +5083,20 @@
    ],
    "notes": []
   },
-  "59": {
-   "full_text": "nhungka ngurraandru nganytya ngarnidyani dhikagala",
-   "translations": {
-    "translation-en": "My father comes back from his camp."
+  {
+   "metadata": {
+    "segNum": "59",
+    "paragraphNum": 59,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "nhungka ngurraandru nganytya ngarnidyani dhikagala",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "My father comes back from his camp."
+    }
+   ],
+   "words": [
     {
      "word_text": "nhungka",
      "word_breakdown": "nhungka",
@@ -4722,12 +5198,20 @@
    ],
    "notes": []
   },
-  "60": {
-   "full_text": "ingka dhithi dratyanga nganha",
-   "translations": {
-    "translation-en": "Your dog bit me."
+  {
+   "metadata": {
+    "segNum": "60",
+    "paragraphNum": 60,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "ingka dhithi dratyanga nganha",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "Your dog bit me."
+    }
+   ],
+   "words": [
     {
      "word_text": "ingka",
      "word_breakdown": "ingka",
@@ -4800,12 +5284,20 @@
    ],
    "notes": []
   },
-  "61": {
-   "full_text": "yawanga dhawilgala nhani burngulunga gapinyangani",
-   "translations": {
-    "translation-en": "The boy is climbing up the gum tree for eggs."
+  {
+   "metadata": {
+    "segNum": "61",
+    "paragraphNum": 61,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "yawanga dhawilgala nhani burngulunga gapinyangani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The boy is climbing up the gum tree for eggs."
+    }
+   ],
+   "words": [
     {
      "word_text": "yawanga",
      "word_breakdown": "yawanga",
@@ -4907,12 +5399,20 @@
    ],
    "notes": []
   },
-  "62": {
-   "full_text": "bulinga nhani yawangani dakaanga watya gatyingani nhani",
-   "translations": {
-    "translation-en": "The boy fell down into the dirt (and) he broke his leg [his leg is broken?]."
+  {
+   "metadata": {
+    "segNum": "62",
+    "paragraphNum": 62,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "bulinga nhani yawangani dakaanga watya gatyingani nhani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The boy fell down into the dirt (and) he broke his leg [his leg is broken?]."
+    }
+   ],
+   "words": [
     {
      "word_text": "bulinga",
      "word_breakdown": "buli-nga",
@@ -5062,12 +5562,20 @@
    ],
    "notes": []
   },
-  "63": {
-   "full_text": "bulinga nhani yawangani burngulunga dakaangani watya gatyingani",
-   "translations": {
-    "translation-en": "The boy in the gum tree fell down into the dirt and broke his leg [his leg is broken?]."
+  {
+   "metadata": {
+    "segNum": "63",
+    "paragraphNum": 63,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "bulinga nhani yawangani burngulunga dakaangani watya gatyingani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "The boy in the gum tree fell down into the dirt and broke his leg [his leg is broken?]."
+    }
+   ],
+   "words": [
     {
      "word_text": "bulinga",
      "word_breakdown": "buli-nga",
@@ -5224,12 +5732,20 @@
    ],
    "notes": []
   },
-  "64": {
-   "full_text": "bulinga burnguandru nhani",
-   "translations": {
-    "translation-en": "That one fell down from that gum tree."
+  {
+   "metadata": {
+    "segNum": "64",
+    "paragraphNum": 64,
+    "phraseNum": ""
    },
-   "word_list": [
+   "transcription": "bulinga burnguandru nhani",
+   "translations": [
+    {
+     "language": "en",
+     "translation": "That one fell down from that gum tree."
+    }
+   ],
+   "words": [
     {
      "word_text": "bulinga",
      "word_breakdown": "buli-nga",
@@ -5294,5 +5810,5 @@
    ],
    "notes": []
   }
- }
+ ]
 }

@@ -1,0 +1,87 @@
+k-text h2 {
+  font-family: sans-serif;
+  color: green;;
+}
+.cf {
+}
+
+.form {
+}
+
+.sentence {
+  display: grid;
+  margin-bottom: 4em;
+}
+
+
+.transcription {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin:0;
+}
+
+.gloss {
+  color: red;
+}
+
+.gls {
+}
+
+.morpheme {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.morphemes {
+  font-size: small;
+}
+
+.sentence .words .word {
+  order:1;
+}
+span {
+  height: 1rem;
+  padding:.2rem;
+}
+/* .sentence .words .word:nth-of-type(1) .morpheme:nth-of-type(1) span:before {
+  content: attr(data-type);
+  width:5ch;
+  display: inline-block;
+  color:gray;
+  text-transform: uppercase;
+  font-size: xx-small;
+  font-family: sans-serif;
+  text-align: right
+    ;
+  margin-right: 4px;
+} */
+
+.morpheme > * {
+padding:.2em .5em ;}
+
+.msa {
+}
+
+.orthographic {
+}
+
+.morpheme .pos {
+  display: none;
+}
+
+.word {
+  display: inline-grid;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+
+.word > span.orthographic {
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+}
+
+.words {
+/*   display: none; */
+  margin:1em;
+}

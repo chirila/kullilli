@@ -10,8 +10,11 @@
 
 <body>
     <script src="./jsonToLaTeX.js"></script>
-    <input type="file" name="json" id="json" onchange="rendergb4e()">
+    <input type="file" name="json" id="json"> 
+    <button onclick="rendergb4eFromFile(document.querySelector('#json').files[0])">Convert file</button>
+    <button onclick="rendergb4eFromRawJSON(document.querySelector('#jsonText').value)">Convert raw JSON text</button>
     <br />
+    <textarea name="latex" id="jsonText" cols="100" rows="60"></textarea>
     <textarea name="latex" id="latex" cols="100" rows="60"></textarea>
 </body>
 

@@ -525,12 +525,24 @@ ${glosses.join(" ")} \\\\
     return texGloss
 }
 
-let rendergb4e = () => {
+// let rendergb4eFromFile = () => {
+//     let reader = new FileReader()
+//     reader.addEventListener("load", () => {
+//         document.querySelector("#latex").value = togb4e(reader.result)
+//     }, false)
+//     reader.readAsText(document.querySelector("#json").files[0])
+// }
+
+let rendergb4eFromFile = text => {
     let reader = new FileReader()
     reader.addEventListener("load", () => {
         document.querySelector("#latex").value = togb4e(reader.result)
     }, false)
-    reader.readAsText(document.querySelector("#json").files[0])
+    reader.readAsText(text)
+}
+
+let rendergb4eFromRawJSON = text => {
+    document.querySelector("#latex").value = togb4e(text)
 }
 
 

@@ -520,7 +520,7 @@ ${glosses.join(" ")} \\\\
 `
         newSentences.push(newSentence)
     })
-    let texGloss = newSentences.join("\n\n")
+    let texGloss = newSentences.join("\n")
     document.querySelector("#latex").value = texGloss
     return texGloss
 }
@@ -530,7 +530,7 @@ let rendergb4e = () => {
     reader.addEventListener("load", () => {
         document.querySelector("#latex").value = togb4e(reader.result)
     }, false)
-    console.log(reader.readAsText(document.querySelector("#json").files[0]))
+    reader.readAsText(document.querySelector("#json").files[0])
 }
 
 
@@ -559,7 +559,7 @@ let toExPex = (text, dimensions = ["morph-txt", "morph-gls"]) => {
         `
         newSentences.push(newSentence)
     })
-    let texGloss = newSentences.join("\n\n")
+    let texGloss = newSentences.join("\n")
     return texGloss
 }
 

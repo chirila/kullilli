@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "title" : "Leipzig Glossing Grammatical Categories",
+    "source": "Leipzig Glossing Rules",
+    "url": "https://www.eva.mpg.de/lingua/resources/glossing-rules.php"
+  },
+  "categories": [
+  {
+    "abbreviation": "1",
+    "value": "first person",
+    "category": ""
+  },
+  {
+    "abbreviation": "2",
+    "value": "second person",
+    "category": ""
+  },
+  {
+    "abbreviation": "3",
+    "value": "third person",
+    "category": ""
+  },
+  {
+    "abbreviation": "A",
+    "value": "agent-like argument of canonical transitive verb",
+    "category": ""
+  },
+  {
+    "abbreviation": "ABL",
+    "value": "ablative",
+    "category": ""
+  },
+  {
+    "abbreviation": "ABS",
+    "value": "absolutive",
+    "category": ""
+  },
+  {
+    "abbreviation": "ACC",
+    "value": "accusative",
+    "category": ""
+  },
+  {
+    "abbreviation": "ADJ",
+    "value": "adjective",
+    "category": ""
+  },
+  {
+    "abbreviation": "ADV",
+    "value": "adverb(ial)",
+    "category": ""
+  },
+  {
+    "abbreviation": "AGR",
+    "value": "agreement",
+    "category": ""
+  },
+  {
+    "abbreviation": "ALL",
+    "value": "allative",
+    "category": ""
+  },
+  {
+    "abbreviation": "ANTIP",
+    "value": "antipassive",
+    "category": ""
+  },
+  {
+    "abbreviation": "APPL",
+    "value": "applicative",
+    "category": ""
+  },
+  {
+    "abbreviation": "ART",
+    "value": "article",
+    "category": ""
+  },
+  {
+    "abbreviation": "AUX",
+    "value": "auxiliary",
+    "category": ""
+  },
+  {
+    "abbreviation": "BEN",
+    "value": "benefactive",
+    "category": ""
+  },
+  {
+    "abbreviation": "CAUS",
+    "value": "causative",
+    "category": ""
+  },
+  {
+    "abbreviation": "CLF",
+    "value": "classifier",
+    "category": ""
+  },
+  {
+    "abbreviation": "COM",
+    "value": "comitative",
+    "category": ""
+  },
+  {
+    "abbreviation": "COMP",
+    "value": "complementizer",
+    "category": ""
+  },
+  {
+    "abbreviation": "COMPL",
+    "value": "completive",
+    "category": ""
+  },
+  {
+    "abbreviation": "COND",
+    "value": "conditional",
+    "category": ""
+  },
+  {
+    "abbreviation": "COP",
+    "value": "copula",
+    "category": ""
+  },
+  {
+    "abbreviation": "CVB",
+    "value": "converb",
+    "category": ""
+  },
+  {
+    "abbreviation": "DAT",
+    "value": "dative",
+    "category": ""
+  },
+  {
+    "abbreviation": "DECL",
+    "value": "declarative",
+    "category": ""
+  },
+  {
+    "abbreviation": "DEF",
+    "value": "definite",
+    "category": ""
+  },
+  {
+    "abbreviation": "DEM",
+    "value": "demonstrative",
+    "category": ""
+  },
+  {
+    "abbreviation": "DET",
+    "value": "determiner",
+    "category": ""
+  },
+  {
+    "abbreviation": "DIST",
+    "value": "distal",
+    "category": ""
+  },
+  {
+    "abbreviation": "DISTR",
+    "value": "distributive",
+    "category": ""
+  },
+  {
+    "abbreviation": "DU",
+    "value": "dual",
+    "category": ""
+  },
+  {
+    "abbreviation": "DUR",
+    "value": "durative",
+    "category": ""
+  },
+  {
+    "abbreviation": "ERG",
+    "value": "ergative",
+    "category": ""
+  },
+  {
+    "abbreviation": "EXCL",
+    "value": "exclusive",
+    "category": ""
+  },
+  {
+    "abbreviation": "F",
+    "value": "feminine",
+    "category": ""
+  },
+  {
+    "abbreviation": "FOC",
+    "value": "focus",
+    "category": ""
+  },
+  {
+    "abbreviation": "FUT",
+    "value": "future",
+    "category": ""
+  },
+  {
+    "abbreviation": "GEN",
+    "value": "genitive",
+    "category": ""
+  },
+  {
+    "abbreviation": "IMP",
+    "value": "imperative",
+    "category": ""
+  },
+  {
+    "abbreviation": "INCL",
+    "value": "inclusive",
+    "category": ""
+  },
+  {
+    "abbreviation": "IND",
+    "value": "indicative",
+    "category": ""
+  },
+  {
+    "abbreviation": "INDF",
+    "value": "indefinite",
+    "category": ""
+  },
+  {
+    "abbreviation": "INF",
+    "value": "infinitive",
+    "category": ""
+  },
+  {
+    "abbreviation": "INS",
+    "value": "instrumental",
+    "category": ""
+  },
+  {
+    "abbreviation": "INTR",
+    "value": "intransitive",
+    "category": ""
+  },
+  {
+    "abbreviation": "IPFV",
+    "value": "imperfective",
+    "category": ""
+  },
+  {
+    "abbreviation": "IRR",
+    "value": "irrealis",
+    "category": ""
+  },
+  {
+    "abbreviation": "LOC",
+    "value": "locative",
+    "category": ""
+  },
+  {
+    "abbreviation": "M",
+    "value": "masculine",
+    "category": ""
+  },
+  {
+    "abbreviation": "N",
+    "value": "neuter",
+    "category": ""
+  },
+  {
+    "abbreviation": "N-",
+    "value": "non- (e.g. NSG nonsingular, NPST nonpast)",
+    "category": ""
+  },
+  {
+    "abbreviation": "NEG",
+    "value": "negation, negative",
+    "category": ""
+  },
+  {
+    "abbreviation": "NMLZ",
+    "value": "nominalizer/nominalization",
+    "category": ""
+  },
+  {
+    "abbreviation": "NOM",
+    "value": "nominative",
+    "category": ""
+  },
+  {
+    "abbreviation": "OBJ",
+    "value": "object",
+    "category": ""
+  },
+  {
+    "abbreviation": "OBL",
+    "value": "oblique",
+    "category": ""
+  },
+  {
+    "abbreviation": "P",
+    "value": "patient-like argument of canonical transitive verb",
+    "category": ""
+  },
+  {
+    "abbreviation": "PASS",
+    "value": "passive",
+    "category": ""
+  },
+  {
+    "abbreviation": "PFV",
+    "value": "perfective",
+    "category": ""
+  },
+  {
+    "abbreviation": "PL",
+    "value": "plural",
+    "category": ""
+  },
+  {
+    "abbreviation": "POSS",
+    "value": "possessive",
+    "category": ""
+  },
+  {
+    "abbreviation": "PRED",
+    "value": "predicative",
+    "category": ""
+  },
+  {
+    "abbreviation": "PRF",
+    "value": "perfect",
+    "category": ""
+  },
+  {
+    "abbreviation": "PRS",
+    "value": "present",
+    "category": ""
+  },
+  {
+    "abbreviation": "PROG",
+    "value": "progressive",
+    "category": ""
+  },
+  {
+    "abbreviation": "PROH",
+    "value": "prohibitive",
+    "category": ""
+  },
+  {
+    "abbreviation": "PROX",
+    "value": "proximal/proximate",
+    "category": ""
+  },
+  {
+    "abbreviation": "PST",
+    "value": "past",
+    "category": ""
+  },
+  {
+    "abbreviation": "PTCP",
+    "value": "participle",
+    "category": ""
+  },
+  {
+    "abbreviation": "PURP",
+    "value": "purposive",
+    "category": ""
+  },
+  {
+    "abbreviation": "Q",
+    "value": "question particle/marker",
+    "category": ""
+  },
+  {
+    "abbreviation": "QUOT",
+    "value": "quotative",
+    "category": ""
+  },
+  {
+    "abbreviation": "RECP",
+    "value": "reciprocal",
+    "category": ""
+  },
+  {
+    "abbreviation": "REFL",
+    "value": "reflexive",
+    "category": ""
+  },
+  {
+    "abbreviation": "REL",
+    "value": "relative",
+    "category": ""
+  },
+  {
+    "abbreviation": "RES",
+    "value": "resultative",
+    "category": ""
+  },
+  {
+    "abbreviation": "S",
+    "value": "single argument of canonical intransitive verb",
+    "category": ""
+  },
+  {
+    "abbreviation": "SBJ",
+    "value": "subject",
+    "category": ""
+  },
+  {
+    "abbreviation": "SBJV",
+    "value": "subjunctive",
+    "category": ""
+  },
+  {
+    "abbreviation": "SG",
+    "value": "singular",
+    "category": ""
+  },
+  {
+    "abbreviation": "TOP",
+    "value": "topic",
+    "category": ""
+  },
+  {
+    "abbreviation": "TR",
+    "value": "transitive",
+    "category": ""
+  },
+  {
+    "abbreviation": "VOC",
+    "value": "vocative",
+    "category": ""
+  }
+]
+}

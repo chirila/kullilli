@@ -10,11 +10,71 @@
 
 <body>
     <script src="./jsonToLaTeX.js"></script>
-    <input type="file" name="json" id="json"> 
-    <button onclick="rendergb4eFromFile(document.querySelector('#json').files[0])">Convert file</button>
-    <button onclick="rendergb4eFromRawJSON(document.querySelector('#jsonText').value)">Convert raw JSON text</button>
+    <input type="file" name="json" id="json">
+    <br />
+    <div>Gloss fields (for use with ExPex typesetting)</div>
+    <ul style="list-style-type: none;" id="gloss-fields">
+        <li>
+            <input type="checkbox" name="word_breakdown" id="word_breakdown">
+            <label for="word_breakdown">word_breakdown (the words with morphological separators such as - and =)</label>
+        </li>
+        <li>
+            <input type="checkbox" name="morph-txt" id="morph-txt" checked="true">
+            <label for="morph-txt">morph-txt (the text of the morpheme)</label>
+        </li>
+        <li><input type="checkbox" name="morph-cf" id="morph-cf">
+            <label for="morph-cf">morph-cf (the citation form of the morpheme)</label>
+        </li>
+        <li>
+            <input type="checkbox" name="morph-gls" id="morph-gls" checked="true">
+            <label for="morph-gls">morph-gls (the Leipzig gloss of the morpheme)</label>
+        </li>
+        <li>
+            <input type="checkbox" name="morph-msa" id="morph-msa">
+            <label for="morph-msa">morph-msa (how the morpheme behaves syntactically)</label>
+        </li>
+        <li>
+            <input type="checkbox" name="morph_type" id="morph_type">
+            <label for="morph_type">morph_type (the "part of speech", as it were, of the morpheme)</label>
+        </li>
+        <li>
+            <input type="checkbox" name="note" id="note">
+            <label for="notes">notes</label>
+        </li>
+    </ul>
+    <table id="render-buttons">
+        <tr>
+            <td>
+                <button onclick="rendergb4eFromFile(document.querySelector('#json').files[0])">Convert file to
+                    gb4e</button>
+            </td>
+            <td>
+                <button
+                    onclick="renderExPexFromFile(document.querySelector('#json').files[0], Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert
+                    file to ExPex</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="rendergb4eFromRawJSON(document.querySelector('#jsonText').value)">Convert raw JSON text
+                    to gb4e</button>
+            </td>
+            <td>
+                <button
+                    onclick="renderExPexFromRawJSON(document.querySelector('#jsonText').value,Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert
+                    raw JSON text to ExPex</button>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div>For glosses with multiple words</div>
+    <!-- <br /> -->
+    <input type="radio" name="underscore-or-space" id="underscores" value="underscores" checked="true"><label
+        for="underscores">Underscores</label>
+    <input type="radio" name="underscore-or-space" id="spaces" value="spaces"><label for="spaces">Spaces</label>
     <br />
     <textarea name="latex" id="jsonText" cols="100" rows="60"></textarea>
+    <!-- add a way to have user define some things to catch as needs to be small caps'd -->
     <textarea name="latex" id="latex" cols="100" rows="60"></textarea>
 </body>
 

@@ -447,11 +447,15 @@ let selectGlossDimensions = (text, dimensions = ["morph-txt", "morph-gls"]) => {
         let reducedSentence = {
             "transcription": sentence.transcription,
             // just using the first one
-            "translation": sentence.translations[0]["translation"]
+            "translation": sentence.translations[0]["translation"],
+            "word_breakdown": ""
         }
         let words = sentence.words
         reducedMorphs = []
         words.forEach(word => {
+            if (dimensions.includes("word_breakdown")) {
+                reducedSentence["word_breakdown"] += word["word_breakdown"] + " "
+            }
             // we don't want anything at the word level for this, just morphs
             word.morphs.forEach(morph => {
                 let newMorphDict = {} // change from "Dict" at some point--python terminology holdover
@@ -471,6 +475,51 @@ let selectGlossDimensions = (text, dimensions = ["morph-txt", "morph-gls"]) => {
     })
     return reducedSentences
 }
+
+let getGlosses = morphs => {
+    return morphs.map(morph => {
+        let gloss
+        if (document.querySelector("#underscores").checked) {
+            gloss = morph["morph-gls"].replace(/ /g, "\\_")
+        }
+        else {
+            if (morph["morph-gls"].includes(" ")) {
+                gloss = `{${morph["morph-gls"]}}`
+            }
+            else {
+                gloss = morph["morph-gls"]
+            }
+        }
+        // let gloss = morph["morph-gls"].replace(/ /g, "\\_")
+        if (leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == gloss.toLowerCase())) {
+            gloss = `\\textsc{${gloss.toLowerCase()}}`
+        }
+        else {
+            if (leipzigGrammar.categories.some(cat => cat.value.toLowerCase() == gloss.toLowerCase())) {
+                gloss = `\\textsc{${leipzigGrammar.categories.find(cat => cat.value.toLowerCase() == gloss.toLowerCase()).abbreviation.toLowerCase()}}`
+            }
+            if (gloss.split(".").some(glossPart => leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == glossPart.toLowerCase()))) {
+                let newGloss = []
+                gloss.split(".").forEach(glossPart => {
+                    if (leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == glossPart.toLowerCase())) {
+                        newGloss.push(`\\textsc{${glossPart.toLowerCase()}}`)
+                    }
+                    else {
+                        if (leipzigGrammar.categories.some(cat => cat.value.toLowerCase() == gloss.toLowerCase())) {
+                            newGloss.push(`\\textsc{${leipzigGrammar.categories.find(cat => cat.value.toLowerCase() == gloss.toLowerCase()).abbreviation.toLowerCase()}}`)
+                        }
+                        else {
+                            newGloss.push(glossPart)
+                        }
+                    }
+                })
+                gloss = newGloss.join(".")
+            }
+        }
+        return gloss
+    })
+}
+
 let togb4e = text => {
     let newSentences = []
     // this parses the input as text
@@ -479,35 +528,7 @@ let togb4e = text => {
         let forms = sentence.morphs.map(morph => morph["morph-txt"])
         // let glosses = sentence.morphs.map(morph => morph["morph-gls"])
         // this (below) is flawed because it will small-capitalize things like "pass" and "top". the ethod above does the same thing but doesn't bother with small capitalizing anything, so it's safer in that regard but doesn't follow leipzig in that way
-        let glosses = sentence.morphs.map(morph => {
-            let gloss = morph["morph-gls"].replace(/ /g, "\\_")
-            if (leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == gloss.toLowerCase())) {
-                gloss = `\\textsc{${gloss.toLowerCase()}}`
-            }
-            else {
-                if (leipzigGrammar.categories.some(cat => cat.value.toLowerCase() == gloss.toLowerCase())) {
-                    gloss = `\\textsc{${leipzigGrammar.categories.find(cat => cat.value.toLowerCase() == gloss.toLowerCase()).abbreviation.toLowerCase()}}`
-                }
-                if (gloss.split(".").some(glossPart => leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == glossPart.toLowerCase()))) {
-                    let newGloss = []
-                    gloss.split(".").forEach(glossPart => {
-                        if (leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == glossPart.toLowerCase())) {
-                            newGloss.push(`\\textsc{${glossPart.toLowerCase()}}`)
-                        }
-                        else {
-                            if (leipzigGrammar.categories.some(cat => cat.value.toLowerCase() == gloss.toLowerCase())) {
-                                newGloss.push(`\\textsc{${leipzigGrammar.categories.find(cat => cat.value.toLowerCase() == gloss.toLowerCase()).abbreviation.toLowerCase()}}`)
-                            }
-                            else {
-                                newGloss.push(glossPart)
-                            }
-                        }
-                    })
-                    gloss = newGloss.join(".")
-                }
-            }
-            return gloss
-        })
+        let glosses = getGlosses(sentence.morphs)
         let translation = sentence.translation
         let newSentence =
             `
@@ -546,35 +567,55 @@ let rendergb4eFromRawJSON = text => {
 }
 
 
-let toExPex = (text, dimensions = ["morph-txt", "morph-gls"]) => {
+let toExPex = (text, dimensions=["morph-txt", "morph-gls"]) => {
     let newSentences = []
-    let oldSentences = selectGlossDimensions(text, dimensions)
+    // this parses the input as text
+    let oldSentences = selectGlossDimensions(JSON.parse(text), dimensions)
     oldSentences.forEach(sentence => {
+        let morphParts = {}
         let forms = sentence.morphs.map(morph => morph["morph-txt"])
         // let glosses = sentence.morphs.map(morph => morph["morph-gls"])
         // this (below) is flawed because it will small-capitalize things like "pass" and "top". the ethod above does the same thing but doesn't bother with small capitalizing anything, so it's safer in that regard but doesn't follow leipzig in that way
-        let glosses = sentence.morphs.map(morph => {
-            let gloss = morph["morph-gls"]
-            if (leipzigGrammar.categories.find(cat => cat.abbreviation == gloss || cat.value == gloss)) {
-                gloss = `\\textsc{${gloss}}`
-            }
-            return gloss
+        let glosses = getGlosses(sentence.morphs)
+
+
+
+        dimensions.forEach(dimension => {
+            morphParts[dimension] = morph[dimension]
         })
+
         let translation = sentence.translation
-        let newSentence = `
-        \\pex
-        \\ex
-            \\gll ${forms.join(" ")} \\\\
-                  ${glosses.join(" ")} \\\\
-            \\glt ${translation}
-        \\xe
-        `
+        let transcription = sentence.transcription
+        // we should make morph-cf a \glb line before morph-gls; the rest should be after
+        let newSentence =
+            `
+    \\pex
+    \\begingl
+    \\glpreamble ${transcription}
+    \\gla ${forms.join(" ")} //
+    \\glb ${glosses.join(" ")} //
+    \\glft ${translation} //
+    \\endgl
+    \\xe
+    `
         newSentences.push(newSentence)
     })
     let texGloss = newSentences.join("\n")
+    document.querySelector("#latex").value = texGloss
     return texGloss
 }
 
+let renderExPexFromFile = (text, dimensions) => {
+    let reader = new FileReader()
+    reader.addEventListener("load", () => {
+        document.querySelector("#latex").value = toExPex(reader.result, dimensions)
+    }, false)
+    reader.readAsText(text)
+}
+
+let renderExPexFromRawJSON = (text, dimensions) => {
+    document.querySelector("#latex").value = toExPex(text, dimensions)
+}
 
 // let thisText = JSON.parse(
 //     {

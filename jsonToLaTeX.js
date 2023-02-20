@@ -448,7 +448,8 @@ let selectGlossDimensions = (text, dimensions = ["morph-txt", "morph-gls"]) => {
             "transcription": sentence.transcription,
             // just using the first one
             "translation": sentence.translations[0]["translation"],
-            "word_breakdown": ""
+            "word_breakdown": "",
+            "notes": sentence.notes
         }
         let words = sentence.words
         reducedMorphs = []
@@ -464,7 +465,7 @@ let selectGlossDimensions = (text, dimensions = ["morph-txt", "morph-gls"]) => {
                         newMorphDict[dimension] = morph[dimension]
                     }
                     else {
-                        newMorphDict[dimension] = ""
+                        newMorphDict[dimension] = "{}"
                     }
                 })
                 reducedMorphs.push(newMorphDict)
@@ -487,10 +488,16 @@ let getGlosses = morphs => {
                 gloss = `{${morph["morph-gls"]}}`
             }
             else {
-                gloss = morph["morph-gls"]
+                if (morph["morph-gls"]) {
+                    console.log("hi")
+                    gloss = morph["morph-gls"]
+                }
+                else {
+                    console.log("hello")
+                    gloss = "{}"
+                }
             }
         }
-        // let gloss = morph["morph-gls"].replace(/ /g, "\\_")
         if (leipzigGrammar.categories.some(cat => cat.abbreviation.toLowerCase() == gloss.toLowerCase())) {
             gloss = `\\textsc{${gloss.toLowerCase()}}`
         }
@@ -546,14 +553,6 @@ ${glosses.join(" ")} \\\\
     return texGloss
 }
 
-// let rendergb4eFromFile = () => {
-//     let reader = new FileReader()
-//     reader.addEventListener("load", () => {
-//         document.querySelector("#latex").value = togb4e(reader.result)
-//     }, false)
-//     reader.readAsText(document.querySelector("#json").files[0])
-// }
-
 let rendergb4eFromFile = text => {
     let reader = new FileReader()
     reader.addEventListener("load", () => {
@@ -572,35 +571,42 @@ let toExPex = (text, dimensions=["morph-txt", "morph-gls"]) => {
     // this parses the input as text
     let oldSentences = selectGlossDimensions(JSON.parse(text), dimensions)
     oldSentences.forEach(sentence => {
-        let morphParts = {}
+        let newSentence = `\\pex\n\\begingl\n\\glpreamble ${sentence.transcription} //\n`
+        if (dimensions.includes("word_breakdown")) {
+            newSentence += `\\glpreamble ${sentence.word_breakdown} //\n`
+        }
         let forms = sentence.morphs.map(morph => morph["morph-txt"])
+        newSentence += `\\gla ${forms.join(" ")} //\n`
+        if (dimensions.includes("morph-cf")) {
+            let morphCF = sentence.morphs.map(morph => morph["morph-cf"])
+            newSentence += `\\glb ${morphCF.join(" ")} //\n`
+        }
         // let glosses = sentence.morphs.map(morph => morph["morph-gls"])
-        // this (below) is flawed because it will small-capitalize things like "pass" and "top". the ethod above does the same thing but doesn't bother with small capitalizing anything, so it's safer in that regard but doesn't follow leipzig in that way
         let glosses = getGlosses(sentence.morphs)
+        newSentence += `\\glb ${glosses.join(" ")} //\n`
 
-
-
-        dimensions.forEach(dimension => {
-            morphParts[dimension] = morph[dimension]
-        })
-
-        let translation = sentence.translation
-        let transcription = sentence.transcription
-        // we should make morph-cf a \glb line before morph-gls; the rest should be after
-        let newSentence =
-            `
-    \\pex
-    \\begingl
-    \\glpreamble ${transcription}
-    \\gla ${forms.join(" ")} //
-    \\glb ${glosses.join(" ")} //
-    \\glft ${translation} //
-    \\endgl
-    \\xe
-    `
+        if (dimensions.includes("morph-msa")) {
+            let morphMSA = sentence.morphs.map(morph => morph["morph-msa"])
+            newSentence += `\\glc ${morphMSA.join(" ")} //\n`
+        }
+        if (dimensions.includes("morph_type")) {
+            let morphType = sentence.morphs.map(morph => morph["morph_type"])
+            newSentence += `\\glc ${morphType.join(" ")} //\n`
+        }
+        newSentence += `\\glft ${sentence.translation}\n`
+        
+        if (dimensions.includes("notes") && sentence.notes.length) {
+            newSentence += `\\footnotesize\n`
+            sentence.notes.forEach(note => {
+                newSentence += `\\\\ ${note}\n`
+            })
+            // newSentence += `//`
+        }
+        
+        newSentence += `//\n\\endgl\n\\xe`
         newSentences.push(newSentence)
     })
-    let texGloss = newSentences.join("\n")
+    let texGloss = newSentences.join("\n\n")
     document.querySelector("#latex").value = texGloss
     return texGloss
 }

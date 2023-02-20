@@ -38,39 +38,34 @@
             <label for="morph_type">morph_type (the "part of speech", as it were, of the morpheme)</label>
         </li>
         <li>
-            <input type="checkbox" name="note" id="note">
+            <input type="checkbox" name="notes" id="notes">
             <label for="notes">notes</label>
         </li>
     </ul>
     <table id="render-buttons">
         <tr>
             <td>
-                <button onclick="rendergb4eFromFile(document.querySelector('#json').files[0])">Convert file to
-                    gb4e</button>
+                <button onclick="rendergb4eFromFile(document.querySelector('#json').files[0])">Convert file to gb4e</button>
             </td>
             <td>
                 <button
-                    onclick="renderExPexFromFile(document.querySelector('#json').files[0], Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert
-                    file to ExPex</button>
+                    onclick="renderExPexFromFile(document.querySelector('#json').files[0], Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert file to ExPex</button>
             </td>
         </tr>
         <tr>
             <td>
-                <button onclick="rendergb4eFromRawJSON(document.querySelector('#jsonText').value)">Convert raw JSON text
-                    to gb4e</button>
+                <button onclick="rendergb4eFromRawJSON(document.querySelector('#jsonText').value)">Convert raw JSON text to gb4e</button>
             </td>
             <td>
                 <button
-                    onclick="renderExPexFromRawJSON(document.querySelector('#jsonText').value,Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert
-                    raw JSON text to ExPex</button>
+                    onclick="renderExPexFromRawJSON(document.querySelector('#jsonText').value,Array.from(document.querySelector('#gloss-fields').querySelectorAll('input:checked')).map(glossField => glossField.getAttribute('name')))">Convert raw JSON text to ExPex</button>
             </td>
         </tr>
     </table>
     <br />
     <div>For glosses with multiple words</div>
     <!-- <br /> -->
-    <input type="radio" name="underscore-or-space" id="underscores" value="underscores" checked="true"><label
-        for="underscores">Underscores</label>
+    <input type="radio" name="underscore-or-space" id="underscores" value="underscores" checked="true"><label for="underscores">Underscores</label>
     <input type="radio" name="underscore-or-space" id="spaces" value="spaces"><label for="spaces">Spaces</label>
     <br />
     <textarea name="latex" id="jsonText" cols="100" rows="60"></textarea>

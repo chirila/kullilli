@@ -8,8 +8,9 @@ class KText extends HTMLElement {
     return ['src']
   }
 
-  attributeChangedCallback(attribute, oldValue, newValue){
+  async attributeChangedCallback(attribute, oldValue, newValue){
     if(attribute == 'src'){
+      console.log(newValue)
       this.fetch(newValue)
     }
   }
@@ -24,12 +25,29 @@ class KText extends HTMLElement {
     this.text = text
     this.render()
   }
+
+  get data(){
+    return this.text
+  }
   
   render() {
     let h2 = document.createElement('h2')
     this.append(h2)
     h2.textContent = this.text.metadata.titles.en
-    
+
+    // the center cannot hold
+    document.querySelector('nav')
+    let a = document.createElement('a')
+    a.textContent = this.data.metadata.titles.en
+    let rando = `_${crypto.randomUUID()}`
+    a.href = `#${rando}`
+    this.id = rando
+
+    let li = document.createElement("li")
+    li.append(a)
+    document.querySelector('nav').append(li)
+  
+
     this.text.sentences.forEach(sentence => {
       let sentenceDiv = document.createElement('div')
       sentenceDiv.classList.add('sentence')
@@ -45,8 +63,8 @@ class KText extends HTMLElement {
 
         wordDiv.innerHTML = `
         <span class=orthographic>${word.word_text}</span>
-        <span class=form>${word.word_breakdown}</span>
-        <span class=gls>${word.gls}</span>
+        <span class=word-form>${word.word_breakdown || ""}</span>
+        <span class=word-gls>${word.gls}</span>
 
 				<div class="morphemes">
         	${word.morphs.map(morph => {

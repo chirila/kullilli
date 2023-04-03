@@ -9,21 +9,35 @@
 </head>
 <body>
 
+  <header>
+<h1>Kullilli texts</h1>
+  </header>
 
-<k-text src="data/json/001-064 Kullilli sentences.json"></k-text>
-<k-text src="data/json/065-128 Kullilli sentences.json"></k-text>
-<k-text src="data/json/129-192 Kullilli sentences.json"></k-text>
-<k-text src="data/json/193-256 Kullilli sentences.json"></k-text>
-<k-text src="data/json/257-320 Kullilli sentences.json"></k-text>
-<k-text src="data/json/321-384 Kullilli sentences.json"></k-text>
-<k-text src="data/json/385-448 Kullilli sentences.json"></k-text>
-<k-text src="data/json/449-514 Kullilli sentences.json"></k-text>
-<k-text src="data/json/Animal trouble in the camp.json"></k-text>
-<k-text src="data/json/Breen Sentences.json"></k-text>
+<aside>
+  <nav>
+    <ul></ul>
+  </nav>
 
+  <toggle-by-selector id="toggle" selectors=".word-form .word-gls .form .cf .gls .msa .pos"></toggle-by-selector>
+</aside>
 
+<main>
+  <k-text id=text_0 src="data/json/001-064 Kullilli sentences.json"></k-text>
+  <k-text id=text_1 src="data/json/065-128 Kullilli sentences.json"></k-text>
+  <k-text id=text_2 src="data/json/129-192 Kullilli sentences.json"></k-text>
+  <k-text id=text_3 src="data/json/193-256 Kullilli sentences.json"></k-text>
+  <k-text id=text_4 src="data/json/257-320 Kullilli sentences.json"></k-text>
+  <k-text id=text_5 src="data/json/321-384 Kullilli sentences.json"></k-text>
+  <k-text id=text_6 src="data/json/385-448 Kullilli sentences.json"></k-text>
+  <k-text id=text_7 src="data/json/449-514 Kullilli sentences.json"></k-text>
+  <k-text id=text_8 src="data/json/Animal trouble in the camp.json"></k-text>
+  <k-text id=text_9 src="data/json/Breen Sentences.json"></k-text>
+</main>
+  
 <script type="module">
+console.log(`wtf`)
 import {KText} from './KText.js'
+import {ToggleBySelector} from './toggle-by-selector/ToggleBySelector.js'
 </script>
   
 </body>

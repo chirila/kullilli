@@ -35,8 +35,8 @@ body {
 body > header {
   grid-area: header;
   border-bottom: 1px solid;
-  background: linear-gradient(to bottom, var(--primary-sunrise), 90%, var(--primary-dark));
-  color: var(--accent);
+  background: linear-gradient(to bottom right, hsl(216, 31.3%, 93.7%) , hsl(216.3, 41.7%, 79.8%));
+  color: hsl(215, 85.7%, 2.7%);
   font-family: sans-serif;
   padding:1em;
   border-bottom: 1px solid var(--blackish);
@@ -66,10 +66,9 @@ aside nav li a {
 
 k-text h2 {
   font-family: sans-serif;
-
-
-  color: var(--accent);
+  color: hsl(214.9, 75.4%, 22.4%);
 }
+
 .cf {
 }
 

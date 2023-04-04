@@ -21,7 +21,6 @@ class ToggleBySelector extends HTMLElement {
 
   attributeChangedCallback(attribute, oldValue, newValue){
     if(attribute == "selectors"){
-      console.log(newValue)
       this.data = newValue.split(/\p{White_Space}+/gu)
     }
   }

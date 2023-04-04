@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "Kullilli Corpus"
+  },
+  "urls": [
+    "./json/001-064 Kullilli sentences.json",
+    "./json/065-128 Kullilli sentences.json",
+    "./json/129-192 Kullilli sentences.json",
+    "./json/193-256 Kullilli sentences.json",
+    "./json/257-320 Kullilli sentences.json",
+    "./json/321-384 Kullilli sentences.json",
+    "./json/385-448 Kullilli sentences.json",
+    "./json/449-514 Kullilli sentences.json",
+    "./json/Animal trouble in the camp.json",
+    "./json/Breen Sentences.json"
+  ]
+}

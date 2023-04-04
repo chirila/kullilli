@@ -10,7 +10,6 @@ class KText extends HTMLElement {
 
   async attributeChangedCallback(attribute, oldValue, newValue){
     if(attribute == 'src'){
-      console.log(newValue)
       this.fetch(newValue)
     }
   }

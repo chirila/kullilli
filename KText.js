@@ -10,6 +10,7 @@ class KText extends HTMLElement {
 
   async attributeChangedCallback(attribute, oldValue, newValue){
     if(attribute == 'src'){
+      console.log(newValue)
       this.fetch(newValue)
     }
   }
@@ -63,18 +64,18 @@ class KText extends HTMLElement {
         wordDiv.innerHTML = `
         <span class=orthographic>${word.word_text}</span>
         <span class=word-form>${word.word_breakdown || ""}</span>
-        <span class=word-gls>${word.gls}</span>
+        <span class=word-gls>${word.gls || ""}</span>
 
 				<div class="morphemes">
         	${word.morphs.map(morph => {
           let morphemeDiv = document.createElement('div')
           morphemeDiv.classList.add("morpheme")
           morphemeDiv.innerHTML = `
-           	<span class=form data-type=form>${morph["morph-txt"]}</span>
-           	<span class=cf data-type=cf>${morph["morph-cf"]}</span>
-           	<span class=gls data-type=gls>${morph["morph-gls"]}</span>
-           	<span class=msa data-type=msa>${morph["morph-msa"]}</span>
-           	<span class=pos data-type=pos>${morph["morph_type"]}</span>
+           	<span class=form data-type=form>${morph["morph-txt"] || ""}</span>
+           	<span class=cf data-type=cf>${morph["morph-cf"] || ""}</span>
+           	<span class=gls data-type=gls>${morph["morph-gls"] || ""}</span>
+           	<span class=msa data-type=msa>${morph["morph-msa"] || ""}</span>
+           	<span class=pos data-type=pos>${morph["morph_type"] || ""}</span>
            
            `
           return morphemeDiv.outerHTML

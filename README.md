@@ -46,6 +46,24 @@ Then commit and push `docs/` (and `build/` if the scripts changed).
 Run `python3 -m http.server 8803 --directory docs` and go to http://localhost:8803.
 To try it on a phone on the same wi-fi, use the computer's address instead of localhost.
 
+## Offline use and installing as an app
+
+`docs/sw.js` (a service worker) saves the site the first time it is opened: every file `index.html` loads, as
+listed by the build (`write_service_worker()` rewrites the list between `// <assets>` markers, with a version
+that changes whenever any file does). Pages come from the network when online and from the saved copy when not;
+scripts, styles and data come from the saved copy (their `?v=` fingerprints change when they change). A new
+version replaces the old saved copy as a whole. Recordings are saved in a separate store (`recordings`) as they
+are played, and kept across updates; the About page's "Using the dictionary offline" has **Save all recordings**
+(869 files, about 40 MB, with progress) and **Remove saved recordings**, and says how many are saved. Sound files
+are served in parts when the browser asks (Safari needs this). `docs/manifest.webmanifest` and `docs/icons/`
+(made from `kullillidictionary.png`, corners filled with its red) let phones add the site to the home screen as
+an app. Nothing to do when publishing: rebuilding updates the list.
+
+**Last updated.** The About page says "Last updated 7 November 2026. The words were last edited on 10 August
+2023." The first date is the day of the last build that changed anything on the site (kept in `sw.js` as `UPDATED`
+and in `index.html` as `<meta name="site-updated">`; a rebuild with no changes keeps the old date, so files stay
+the same). The second is the newest "date modified" of any entry in the LIFT export (`edited` in the data).
+
 ## Publish on GitHub Pages
 
 On GitHub: Settings → Pages → Build and deployment → "Deploy from a branch", then choose the
@@ -66,12 +84,22 @@ The recordings come to about 40 MB, which is fine for Pages.
 - Complex forms ("Made from" / "Used in"), Compare ("See also") and minimal pairs link entry to entry.
 - "Original Orthography" is shown as *Original spelling* and is searchable.
 - Semantic domains and reversal entries are kept in the data. Reversals feed the English search and the
-  English-first wordlist; domains are the topics in the games.
+  English-first wordlist; domains are the topics (By topic in the Wordlist, topic links on entries, the games).
+- `SKIP_ENTRIES` leaves entries out of the site: `aaa`, FLEx's "how to use the dictionary" record, whose text is
+  now on the About page.
 - Letters: `DIGRAPHS` (dh dy ng nh ny th ty) get their own tabs. `SPELLING` lists the
   "similar spelling" rules for search.
 
-**English-first wordlist.** The Wordlist tab has a switch, "Kullilli → English" / "English → Kullilli"
-(`#/letter/b` / `#/english/b`); the site remembers which one was used last. The English list has the
+**By topic.** The third choice on the Wordlist switch (`#/topic`) lists the FLEx semantic domains (DDP4) used in
+the data, under their top-level domain (Universe, creation; Person; …), indented by level, with word counts. A
+topic page (`#/topic/1.6.1.2`) has a trail back up (All topics › Universe, creation › Animal › Types of animals),
+buttons for its smaller topics, the usual word-type filters and Cards/List switch, and the entries: a topic
+includes its smaller topics. A domain's parent is the nearest shorter code in the data; top-level names come from
+DDP4 if FLEx has none. "Words without a topic" (`#/topic/none`) lists the rest. Each entry shows its topics as
+links under the word type.
+
+**English-first wordlist.** The Wordlist tab has a switch, "Kullilli → English" / "English → Kullilli" / "By topic"
+(`#/letter/b` / `#/english/b` / `#/topic`); the site remembers which one was used last. The English list has the
 English alphabet A–Z along the top (letters with no words are greyed out) and # for pronoun labels such as
 *1sg.nom*. Each card leads with the English word, then the Kullilli word, its word type, its recording and
 bookmark, and its full gloss when that says more than the English word. Opening a card opens the full
@@ -142,7 +170,9 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   word (with its recording) or, with "English → Kullilli", the English meaning. Click or tap the card, or press
   Enter, to turn it over. The back has the other language, the word type, an example sentence with its translation
   (a sense example, or else a text sentence that uses the word) and a link to the entry. Both sides have
-  the study-list bookmark (its spoken label doesn't name the word, so it can't give the answer away). With English first, the
+  the study-list bookmark (its spoken label doesn't name the word, so it can't give the answer away). Under a
+  turned card, "Did you know it? ✓ Got it / Still learning" (once per card per round) goes on to the next card:
+  Still learning puts the word on the tricky list, Got it counts as a right answer. With English first, the
   recording is on the back. Arrow keys go to the previous or next card. With "Which words: Studied before" (see
   Practised words), the cards are the words practised longest ago. Cards per round is `g.fcards`. A card counts as
   studied the first time it is turned over in a round: that adds to the flashcard count for the day (store
@@ -184,22 +214,28 @@ the same gloss. Players choose a topic (FLEx semantic domains, including subdoma
 whether to use only words with recordings. Rounds end with cards for the words played, linked to their entries.
 
 **Tricky words.** A word answered wrongly in Match up, Word in the middle, Listen and choose, Hidden word,
-Unscramble, Spell it, Sort into groups, Word search or Daily five goes on the player's tricky list; two right
-answers in a row take it off. "★ My tricky words" is then a topic in every game, and the Learn page links to the
-list (with a Clear button). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
+Unscramble, Spell it, Sort into groups, Word search or Daily five, or marked "Still learning" on a flashcard,
+goes on the player's tricky list; two right
+answers in a row take it off. "★ My tricky words" is then a topic in every game, and the list is on the My lists
+tab (`#/mylist/tricky`; the Learn page links to it). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
 a wrong turn there is about memory, categories or hearing rather than knowing the word.
 
 **My study list.** Every word card, list row and entry has a bookmark button (`data-study`; aria-pressed) that
-adds the word to the reader's study list or takes it off. "My study list" is a topic in every game. The list has
-its own main tab, **My list** (`#/mylist`; tabs: Wordlist, Learn, My list, Affixes, and About on the far right),
-and the Learn page links to it: the words, newest first, each with how often it has been practised. Words
+adds the word to the reader's study list or takes it off. "My study list" is a topic in every game.
+
+**My lists tab** (`#/mylist`; tabs: Wordlist, Learn, My lists, Affixes, and About on the far right). One page with
+jump links at the top to its four sections, each with its own address: *My study list* (`#/mylist/study`: the
+words, newest first, each with how often it has been practised; save, clear, share), *★ My tricky words*
+(`#/mylist/tricky`: most-missed first; save, clear), *Practice so far* (`#/mylist/practice`) and *Back up your
+data* (`#/mylist/backup`). The Learn page links to the two lists; the older `#/learn/study` and `#/learn/tricky`
+addresses open the same page. Words
 the games can't use (variants, affixes, no short meaning) can be bookmarked too; the page says how many of these
 there are. The list is kept in `app.js` (`study`) and handed to the games as `ctx.study`; the page itself is drawn
-by `DictGames.myList()` in `core.js`, since it uses the games' word picker and practice counts.
+by `DictGames.myList()` (`listsPage`) in `core.js`, since it uses the games' word picker and practice counts.
 
 **Sharing a list.** "Share this list" on the study list page makes a link with the words and an optional name,
-e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My list
-tab). Older `#/learn/study` and `#/learn/list/…` addresses still work. On a phone it opens the
+e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My lists
+tab). Older `#/learn/list/…` addresses still work. On a phone it opens the
 system share sheet; elsewhere it copies the link (and shows it for copying by hand). Whoever opens the link sees
 the words as cards and can add them all to their own study list, or replace their list with them; ids no longer
 in the dictionary are skipped and counted. The link is the whole list: nothing is stored on a server. Entry ids
@@ -220,6 +256,42 @@ practised yet" topic; a saved choice of that topic becomes *New to me*.
 The study list, practice history, flashcard counts, tricky list, settings and the daily streak are kept in the browser on that
 device only (localStorage); nothing is sent anywhere, so the site owner can't see what people study, and a
 reader's lists don't follow them to another phone or browser.
+
+**Saving lists.** "Save as a spreadsheet" under each list on My lists downloads a CSV file
+(`kullilli-study-list-<date>.csv`, `kullilli-tricky-words-<date>.csv`): the word (with homograph number), word type,
+English meaning, one example with its translation, times practised (study list) or times missed (tricky words),
+and a link to the entry. It starts with a byte-order mark so Excel shows accented letters correctly; Numbers,
+Google Sheets and flashcard apps such as Anki can open or import it.
+
+**Backup and restore.** "Back up your data" on the My lists page saves everything the site keeps in the browser
+(every `Kullilli.*` localStorage key: lists, practice history, flashcard counts, daily streak, settings) to
+`kullilli-dictionary-backup-<date>.json`. "Restore from a backup…" reads such a file, checks that it is a backup
+from this dictionary (`backup: "dictionary-site-data"`, same language, plain text values only), says what it holds
+and asks before replacing everything in the browser, then reloads the page. This is also how a reader moves their
+data to another device. Code: `store.dump()` / `store.load()` in `app.js`, the page parts in `core.js`.
+
+## Feedback (`.github/ISSUE_TEMPLATE/`)
+
+Readers send feedback as GitHub issues, through three forms:
+- `1-word.yml`, **Comment on a word or meaning** (label `word`): word, link, what the dictionary says now, what the
+  comment is about (meaning, spelling, recording, example, something to add, other), the comment, and an optional
+  "Where does this come from?".
+- `2-problem.yml`, **Something isn't working** (label `bug`): what happened, what was expected, page, device and browser.
+- `3-idea.yml`, **Idea for a feature or activity** (label `enhancement`): kind of idea, the idea, who it would help.
+
+On the site, the footer of every page links to **Send feedback** (`#/feedback`), and so does the About page. Every
+entry ends with "Comment on this word or its meaning" (`#/feedback/word/<id>`), which shows the word's card and
+fills in the word, its link and its current meaning. "Report a problem" fills in the page the reader came from and
+their browser and screen size. The buttons open the GitHub form in a new tab; the page says that a free GitHub
+account is needed and that what people write is public.
+
+Settings at the top of `build/build_lift.py`: `FEEDBACK_REPO` ("owner/repository"; empty = worked out from the
+github.io address, so the buttons only show on the published site) and `FEEDBACK_EMAIL` (optional). With an
+address set, each form also gets an **Email instead** button for people without a GitHub account: it opens the
+reader's email app with a subject (e.g. "Kullilli Dictionary: comment on baka (1)") and the same questions in the
+body, with the word, link and meaning (or page and device) filled in. The address is visible in the site's files. On GitHub, Issues must be switched on for the repository (they
+are by default); the `bug` and `enhancement` labels exist by default, and `word` is added to an issue only once a
+label of that name has been created.
 
 ## Glossing review (`build/glosscheck.py`)
 
@@ -242,6 +314,23 @@ rewritten, and the build applies what's in them:
 Decisions change the website only; the docx and the LIFT are not touched. Save the files as
 tab-separated text, not .xlsx.
 
+## Lessons (`lessons/` → `docs/lessons/`)
+
+Short lessons made from the sketch grammar: 17 units, 129 lessons, each with a short explanation, examples
+and review questions (answers behind "Show answer"). The texts are Markdown, one file per unit, in `lessons/`;
+the format is in `lessons/README.md`. After editing them:
+
+    python3 build/build_lessons.py
+
+This writes `docs/lessons/lessons-data.js` and refreshes the `?v=` fingerprints in `docs/lessons/index.html`.
+It stops if an example's Kullilli and English lines have different numbers of words, or if a lesson id is
+missing or used twice. The page is `/lessons/` on the site (`#/` contents, `#/saved`, `#/<lesson id>`). It
+uses the dictionary's `style.css` plus its own `lessons.css`, and links back to the dictionary; the dictionary
+doesn't link to it yet. **Save for later** keeps lesson ids in the browser under `Kullilli.lessons`, so the
+backup on My lists includes them. The lesson files aren't in the offline list in `sw.js` yet, so the lessons
+need a connection. Notes on what was changed from the grammar, and questions about it:
+`KullilliDictionary/review/lessons_review.md`.
+
 ## Files
 
 | File | What it does |
@@ -254,5 +343,10 @@ tab-separated text, not .xlsx.
 | `docs/search.js` | Kullilli (spelling-tolerant) and English (stemmed, typo-tolerant) search |
 | `docs/render.js` | cards, list rows, interlinear examples and entry HTML; part-of-speech labels |
 | `docs/games/core.js`, `games.css` | the Learn tab's shared parts and the game registry |
+| `docs/sw.js`, `docs/manifest.webmanifest`, `docs/icons/` | offline use and the home-screen app (see Offline use) |
 | `docs/games/<name>.js`, `<name>.css` | one game each (see the Learn tab section) |
-| `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing |
+| `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing, feedback page |
+| `.github/ISSUE_TEMPLATE/*.yml` | the feedback forms (word comment, problem, idea) |
+| `lessons/*.md` | the lesson texts, one file per unit (format in `lessons/README.md`) |
+| `build/build_lessons.py` | lesson texts → `docs/lessons/lessons-data.js` |
+| `docs/lessons/` | the lessons page: `index.html`, `lessons.js` (contents, lessons, save for later), `lessons.css` |

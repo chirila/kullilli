@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#17405a">
 <title>Kullilli Dictionary</title>
 <meta name="description" content="Kullilli–English dictionary with recordings: browse by letter, search Kullilli or English, and read full entries with examples.">
-<link rel="stylesheet" href="style.css?v=a466ea25">
+<link rel="stylesheet" href="style.css?v=e8ae9cdb">
 <!-- game styles: written by build/build_lift.py from docs/games/*.css -->
-<link rel="stylesheet" href="games/games.css?v=e309eb9a">
+<link rel="stylesheet" href="games/games.css?v=28d08a2d">
 <link rel="stylesheet" href="games/circle.css?v=57fc8708">
 <link rel="stylesheet" href="games/daily.css?v=10ea7dfc">
 <link rel="stylesheet" href="games/flashcards.css?v=8718e12f">
@@ -48,7 +48,7 @@
   <nav class="tabs wrap" aria-label="Sections">
     <a data-tab="letter" href="#/letter/a">Wordlist</a>
     <a data-tab="learn" href="#/learn">Learn</a>
-    <a data-tab="mylist" href="#/mylist">My list</a>
+    <a data-tab="mylist" href="#/mylist">My lists</a>
     <a data-tab="affixes" href="#/affixes">Affixes</a>
     <span data-tab="search" class="tab-search" hidden>Search results</span>
     <a data-tab="about" href="#/about">About</a>
@@ -59,6 +59,7 @@
 
 <footer class="site-footer wrap">
   <span id="stats"></span>
+  <a href="#/feedback">Send feedback: problems, ideas, comments on words</a>
 </footer>
 
 <div id="overlay" class="overlay" hidden>
@@ -117,17 +118,21 @@
     <h3>Abbreviations</h3>
     <dl class="abbr-list" data-abbr-list></dl>
 
+    <h3>Feedback</h3>
+    <p>Found a problem, have an idea for a new activity, or know something about a word or its meaning?
+       <a href="#/feedback">Send feedback</a>. Every entry also has a “Comment on this word” link at the bottom.</p>
+
     <h3>Sources</h3>
     <p>Words come from Breen's fieldnotes (also written <em>brefn</em>), the Galali sentence list and Galali vocabulary list,
        Holmer (<em>hol88</em>), Tindale (<em>tin57</em>), and McDonald and Wurm.</p>
   </article>
 </template>
 
-<script src="data/dictionary.js?v=9145047d"></script>
+<script src="data/dictionary.js?v=f632e47b"></script>
 <script src="search.js?v=7fc450b3"></script>
-<script src="render.js?v=cf27f6ec"></script>
+<script src="render.js?v=7128515a"></script>
 <!-- game scripts: written by build/build_lift.py from docs/games/*.js -->
-<script src="games/core.js?v=b0090cee"></script>
+<script src="games/core.js?v=b3482ac1"></script>
 <script src="games/circle.js?v=6df7b98c"></script>
 <script src="games/daily.js?v=6bc87705"></script>
 <script src="games/flashcards.js?v=42b7a2e7"></script>
@@ -143,6 +148,6 @@
 <script src="games/unscramble.js?v=769897e6"></script>
 <script src="games/wordsearch.js?v=0dd3cb0b"></script>
 <!-- /game scripts -->
-<script src="app.js?v=084c0143"></script>
+<script src="app.js?v=835403e8"></script>
 </body>
 </html>

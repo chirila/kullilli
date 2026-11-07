@@ -1,0 +1,52 @@
+name: Comment on a word or meaning
+description: A meaning, spelling, recording or example sentence that could be better, or something to add.
+title: "Word: "
+labels: ["word"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping with the Kullilli dictionary. What you write here is **public**, so please don't
+        include private information about yourself or other people.
+  - type: input
+    id: word
+    attributes:
+      label: Word
+      description: The Kullilli word. This is filled in when you come from "Comment on this word" in the dictionary.
+    validations:
+      required: true
+  - type: input
+    id: entry
+    attributes:
+      label: Link to the entry
+  - type: input
+    id: meaning
+    attributes:
+      label: What the dictionary says now
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is your comment about?
+      options:
+        - The meaning or translation
+        - The spelling
+        - The recording
+        - An example sentence
+        - Something to add (another meaning, a related word, a story)
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Your comment
+      description: What should change, or what would you add?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Where does this come from? (optional)
+      description: >-
+        For example, a family member or Elder who uses the word, a book, or a recording. Only share what you are
+        comfortable making public.

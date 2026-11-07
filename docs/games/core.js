@@ -1,8 +1,8 @@
 /* Learn tab, shared parts: which words can be played, topics, settings bar, end-of-round panel,
    letters and keyboard helpers, tricky words, and the game registry.  Each game is its own file in
    docs/games/ and calls DictGames.register(); the build lists those files in index.html.
-   view(main, game, ctx) draws the Learn page or a game; myList(main, spec, ctx) draws the My list tab
-   (the reader's study list, or a list shared as a link); ctx comes from app.js. */
+   view(main, game, ctx) draws the Learn page or a game; myList(main, spec, ctx, section) draws the My lists tab
+   (the reader's study list and tricky words, or a list shared as a link); ctx comes from app.js. */
 'use strict';
 window.DictGames = (() => {
   let ctx;
@@ -275,63 +275,134 @@ window.DictGames = (() => {
   function register(game) { GAMES.push(game); GAMES.sort((a, b) => a.order - b.order); }
   const available = () => GAMES.filter(g => g.needs !== 'keyboard' || (ctx.keyboard && ctx.keyboard.length));
 
-  function trickyPage(main) {
-    const t = trickyMap();
-    const its = ctx.items.filter(it => t[it.id]).sort((a, b) => t[b.id].miss - t[a.id].miss);
-    ctx.setList(its.map(it => it.id));
-    main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a><h2 class="gtitle">★ My tricky words</h2>' +
-      '<p class="gintro">Words you got wrong in the games, most-missed first. Choose <strong>★ My tricky words</strong> as the topic ' +
-      'in any game to practise them; a word comes off the list after you get it right twice in a row. ' +
-      'The list is kept on this device only.</p>' +
-      (its.length ? `<div class="grid">${its.map(it => ctx.R.cardHTML(it, `missed ${t[it.id].miss}×`)).join('')}</div>` +
-        '<p><button type="button" class="gbtn" data-clear-tricky>Clear the list</button></p>'
-        : '<p class="empty">No tricky words yet. Words you get wrong in the games will appear here.</p>');
-    main.querySelector('[data-clear-tricky]')?.addEventListener('click', () => {
-      if (confirm('Clear your tricky words?')) { ctx.store.set('tricky', '{}'); trickyPage(main); }
+  // ---- saving to files: lists as spreadsheets (CSV), and a backup of everything the site keeps in the browser
+  const today = () => new Date().toISOString().slice(0, 10);
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  function download(name, text, type) {
+    const url = URL.createObjectURL(new Blob([text], { type }));
+    const a = Object.assign(document.createElement('a'), { href: url, download: name });
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+  /** a word list as CSV (opens in Excel, Numbers, Google Sheets; Anki and other flashcard apps can import it).
+      extra = [column name, value(it)] for a list's own column */
+  function saveList(its, what, extra) {
+    const R = ctx.R, base = location.href.split('#')[0];
+    const cell = v => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const rows = [[ctx.lang, 'Word type', 'English', 'Example', 'Example in English'].concat(extra ? [extra[0]] : [], ['Link'])]
+      .concat(its.map(it => [R.hwOf(it.c) + (it.c.hm ? ` (${it.c.hm})` : ''), R.posLabel(it.c.ps), R.plain(R.meaning(it.c))]
+        .concat(R.exampleText(it.c), extra ? [extra[1](it)] : [], [base + '#/entry/' + encodeURIComponent(it.id)])));
+    download(`${slug(ctx.lang)}-${what}-${today()}.csv`, '\uFEFF' + rows.map(r => r.map(cell).join(',')).join('\r\n'), 'text/csv;charset=utf-8');
+  }
+
+  // a backup file holds every setting and list; restoring one replaces what this browser has
+  const BACKUP = 'dictionary-site-data';
+  function backupHTML() {
+    return '<h3 class="section-title">Back up your data</h3>' +
+      '<p class="gintro">Your study list, practice history, flashcard counts, tricky words, daily streak and settings are kept ' +
+      'only in this browser. Clearing the browser’s data deletes them, and they don’t move to your other devices. Save a backup ' +
+      'file to keep them safe, or to move them: open this site on the other phone or computer and restore the file there.</p>' +
+      '<div class="share-row"><button type="button" class="gbtn" data-backup>Save a backup</button>' +
+      '<button type="button" class="gbtn" data-restore>Restore from a backup…</button>' +
+      '<input type="file" accept=".json,application/json" data-restore-file hidden></div>' +
+      '<p class="gnote" role="status" data-backup-msg></p>';
+  }
+  function wireBackup(main) {
+    const msg = main.querySelector('[data-backup-msg]'), file = main.querySelector('[data-restore-file]');
+    const count = (data, k) => { try { return Object.keys(JSON.parse(data[k] || '{}')).length; } catch (e) { return 0; } };
+    const words = (n, what) => `${n} ${what}${n === 1 ? 'word' : 'words'}`;
+    main.querySelector('[data-backup]').addEventListener('click', () => {
+      const data = ctx.store.dump();
+      download(`${slug(ctx.title)}-backup-${today()}.json`,
+        JSON.stringify({ backup: BACKUP, language: ctx.lang, saved: new Date().toISOString(), data }, null, 1), 'application/json');
+      msg.textContent = `Backup saved: ${words(count(data, 'study'), '')} in your study list, ${words(count(data, 'practised'), 'practised ')} and your settings.`;
+    });
+    main.querySelector('[data-restore]').addEventListener('click', () => file.click());
+    file.addEventListener('change', async () => {
+      const f = file.files[0];
+      file.value = '';
+      if (!f) return;
+      let b = null;
+      try { b = JSON.parse(await f.text()); } catch (e) { /* not JSON */ }
+      const ok = b && b.backup === BACKUP && b.data && typeof b.data === 'object' &&
+        Object.entries(b.data).every(([k, v]) => /^[\w.-]{1,40}$/.test(k) && typeof v === 'string' && v.length < 2e6);
+      if (!ok) { msg.textContent = 'That file isn’t a backup from this site.'; return; }
+      if (b.language !== ctx.lang) { msg.textContent = `That backup is from the ${b.language} dictionary, not this one.`; return; }
+      const when = new Date(b.saved).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
+      if (!confirm(`Restore the backup saved on ${when}? It has ${words(count(b.data, 'study'), '')} in the study list and ` +
+        `${words(count(b.data, 'practised'), 'practised ')}. Everything this browser has now will be replaced.`)) return;
+      if (!ctx.store.load(b.data)) { msg.textContent = 'The backup couldn’t be restored: this browser isn’t letting the site save data.'; return; }
+      location.reload();
     });
   }
 
-  // the player's study list and how much they have practised
-  function studyPage(main) {
-    const m = ctx.study.map(), p = practisedMap();
+  // the My lists tab: the study list, the tricky words, practice so far, and backups.
+  // section = where to start on the page: 'study', 'tricky', 'practice' or 'backup' (#/mylist/<section>)
+  function listsPage(main, section) {
+    const m = ctx.study.map(), p = practisedMap(), t = trickyMap();
     const its = ctx.items.filter(it => has(m, it.id)).sort((a, b) => m[b.id] - m[a.id]);
+    const tricky = ctx.items.filter(it => has(t, it.id)).sort((a, b) => t[b.id].miss - t[a.id].miss);
     const inGames = new Set(pool({ topic: 'study', audio: false }).map(it => it.id));
-    const day = t => new Date(t).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
+    const day = d => new Date(d).toLocaleDateString(undefined, { day: 'numeric', month: 'short' });
     const note = it => (!inGames.has(it.id) ? 'not used in the games'
       : p[it.id] ? `practised ${p[it.id].n}× · last ${day(p[it.id].t)}` : 'not practised yet');
     const nOut = its.length - inGames.size;
     const all = pool({ topic: '', audio: false }, true), done = all.filter(it => has(p, it.id)).length;
     const icon = `<span class="study-ico">${ctx.R.bookmarkSVG}</span>`;
-    ctx.setList(its.map(it => it.id));
-    main.innerHTML = '<h2 class="gtitle">My study list</h2>' +
-      `<p class="gintro">Words you have marked with the bookmark button ${icon} on a word card or at the top of an entry, ` +
-      'newest first. Choose <strong>My study list</strong> as the topic in any game to practise them. ' +
-      'The list is kept on this device only.</p>' +
+    const words = n => `${n} ${n === 1 ? 'word' : 'words'}`;
+    ctx.setList([...new Set(its.concat(tricky).map(it => it.id))]);
+    main.innerHTML = '<h2 class="gtitle">My lists</h2>' +
+      '<p class="gintro">Your own lists of words, and how much you have practised. They are kept on this device only.</p>' +
+      '<nav class="ml-nav" aria-label="On this page">' +
+      `<a href="#/mylist/study">My study list (${its.length})</a><a href="#/mylist/tricky">★ My tricky words (${tricky.length})</a>` +
+      '<a href="#/mylist/practice">Practice so far</a><a href="#/mylist/backup">Back up your data</a></nav>' +
+
+      `<h3 class="section-title" id="ml-study">My study list <small>${words(its.length)}</small></h3>` +
+      `<p class="gintro">Words you have marked with the bookmark button ${icon} on a word card, an entry or a flashcard, ` +
+      'newest first. Choose <strong>My study list</strong> as the topic in any game to practise them.</p>' +
       (its.length ? `<div class="grid">${its.map(it => ctx.R.cardHTML(it, note(it))).join('')}</div>` +
         (nOut ? `<p class="gnote">${nOut} of these ${nOut === 1 ? 'is' : 'are'} not used in the games (only words with a short, certain meaning are).</p>` : '') +
-        '<p><button type="button" class="gbtn" data-clear-study>Clear the list</button></p>' +
-        '<h3 class="section-title">Share this list</h3>' +
-        '<p class="gintro">Send your list as a link, for example to a class. Whoever opens the link sees the words and can ' +
+        '<p class="share-row"><button type="button" class="gbtn" data-save-study>Save as a spreadsheet</button>' +
+        '<button type="button" class="gbtn" data-clear-study>Clear the list</button></p>' +
+        '<p class="gnote">The spreadsheet has each word’s meaning, an example and a link to its entry. It opens in Excel, Numbers ' +
+        'or Google Sheets, and flashcard apps such as Anki can import it.</p>' +
+        '<p class="gintro">Share the list as a link, for example with a class. Whoever opens the link sees the words and can ' +
         'add them to their own study list. The link holds only the words and the name you give it.</p>' +
         '<div class="share-row"><label class="gsel">List name (optional) <input type="text" data-share-name maxlength="60"></label>' +
         '<button type="button" class="gbtn primary" data-share>Share this list</button></div>' +
         '<p class="share-out" hidden><input type="text" readonly data-share-url aria-label="Link to your study list"></p>' +
         '<p class="gnote" role="status" data-share-msg></p>'
         : `<p class="empty">No words yet. Tap the bookmark ${icon} on any word card, or at the top of an entry, to add it.</p>`) +
-      '<h3 class="section-title">Practice so far</h3>' +
+
+      `<h3 class="section-title" id="ml-tricky">★ My tricky words <small>${words(tricky.length)}</small></h3>` +
+      '<p class="gintro">Words you got wrong in the games, most-missed first. Choose <strong>★ My tricky words</strong> as the topic ' +
+      'in any game to practise them; a word comes off the list after you get it right twice in a row.</p>' +
+      (tricky.length ? `<div class="grid">${tricky.map(it => ctx.R.cardHTML(it, `missed ${t[it.id].miss}×`)).join('')}</div>` +
+        '<p class="share-row"><button type="button" class="gbtn" data-save-tricky>Save as a spreadsheet</button>' +
+        '<button type="button" class="gbtn" data-clear-tricky>Clear the list</button></p>'
+        : '<p class="empty">No tricky words yet. Words you get wrong in the games will appear here.</p>') +
+
+      '<h3 class="section-title" id="ml-practice">Practice so far</h3>' +
       `<p class="gintro">You have practised ${done} of the ${all.length} words used in the games. A word counts as practised ` +
       'when it is in a round you finish, or when you turn its flashcard. In any game, choose <strong>New to me</strong> to meet new ' +
       'words, or <strong>Studied before</strong> to go over words you have already practised.</p>' +
-      (done ? '<p><button type="button" class="gbtn" data-clear-practised>Forget my practice history</button></p>' : '');
-    main.querySelector('[data-clear-study]')?.addEventListener('click', () => {
-      if (confirm('Clear your study list?')) { ctx.study.clear(); studyPage(main); }
-    });
+      (done ? '<p><button type="button" class="gbtn" data-clear-practised>Forget my practice history</button></p>' : '') +
+      backupHTML();
+    wireBackup(main);
+    const again = () => listsPage(main, '');
+    main.querySelector('[data-save-study]')?.addEventListener('click', () => saveList(its, 'study-list',
+      ['Times practised', it => (p[it.id] ? p[it.id].n : 0)]));
+    main.querySelector('[data-save-tricky]')?.addEventListener('click', () => saveList(tricky, 'tricky-words', ['Times missed', it => t[it.id].miss]));
+    main.querySelector('[data-clear-study]')?.addEventListener('click', () => { if (confirm('Clear your study list?')) { ctx.study.clear(); again(); } });
+    main.querySelector('[data-clear-tricky]')?.addEventListener('click', () => { if (confirm('Clear your tricky words?')) { ctx.store.set('tricky', '{}'); again(); } });
     main.querySelector('[data-clear-practised]')?.addEventListener('click', () => {
-      if (confirm('Forget which words you have practised?')) { ctx.store.set('practised', '{}'); studyPage(main); }
+      if (confirm('Forget which words you have practised?')) { ctx.store.set('practised', '{}'); again(); }
     });
     main.querySelector('[data-share]')?.addEventListener('click', async () => {
-      const name = main.querySelector('[data-share-name]').value.trim(), m = ctx.study.map();
-      const ids = Object.keys(m).sort((a, b) => m[b] - m[a]);
+      const name = main.querySelector('[data-share-name]').value.trim(), sm = ctx.study.map();
+      const ids = Object.keys(sm).sort((a, b) => sm[b] - sm[a]);
       const url = location.href.split('#')[0] + '#/shared/' + (name ? encodeURIComponent(name) + '/' : '') + ids.map(encodeURIComponent).join(',');
       const out = main.querySelector('[data-share-url]'), msg = main.querySelector('[data-share-msg]');
       out.value = url;
@@ -343,6 +414,9 @@ window.DictGames = (() => {
       catch (e) { msg.textContent = 'Copy the link above and send it.'; out.focus(); out.select(); }
     });
     main.querySelector('[data-share-url]')?.addEventListener('focus', e => e.target.select());
+    // start at the section asked for (after the router's scroll to the top)
+    const h = section && main.querySelector('#ml-' + section);
+    if (h) setTimeout(() => { h.scrollIntoView({ block: 'start' }); if (lastInput === 'key') { h.tabIndex = -1; h.focus({ preventScroll: true }); } }, 0);
   }
 
   // a study list someone shared as a link: #/shared/[name/]id,id,…
@@ -359,7 +433,7 @@ window.DictGames = (() => {
     function draw(done) {
       const m = ctx.study.map(), fresh = its.filter(it => !has(m, it.id)).length;
       const others = Object.keys(m).some(id => !shared.has(id));
-      main.innerHTML = '<a class="gback" href="#/mylist">‹ My study list</a>' +
+      main.innerHTML = '<a class="gback" href="#/mylist">‹ My lists</a>' +
         `<h2 class="gtitle">${name ? esc(name) : 'A shared study list'}</h2>` +
         `<p class="gintro">${name ? 'A study list' : 'Someone'} shared with you: ${words(its.length)}. Add them to your own study list to practise ` +
         'them in the games (choose <strong>My study list</strong> as the topic), or use the bookmark on a card to add one word.</p>' +
@@ -389,7 +463,6 @@ window.DictGames = (() => {
   function view(main, game, context) {
     ctx = context;
     sayEl = null;
-    if (game === 'tricky') { document.title = `My tricky words – ${ctx.title}`; trickyPage(main); focusHeading(main); return; }
     const games = available();
     const g = games.find(x => x.id === game);
     if (!g) {
@@ -402,7 +475,7 @@ window.DictGames = (() => {
         `<a class="tricky-band study-band" href="#/mylist"><strong>My study list · ${nStudy} ${nStudy === 1 ? 'word' : 'words'}</strong>` +
         `<span>${nStudy ? 'See your list and how much you have practised, or choose “My study list” as the topic in any game.'
           : 'Mark words with the bookmark button on any word card or entry, then practise them here. See how much you have practised.'}</span></a>` +
-        (n ? `<a class="tricky-band" href="#/learn/tricky"><strong>★ ${n} tricky ${n === 1 ? 'word' : 'words'}</strong>` +
+        (n ? `<a class="tricky-band" href="#/mylist/tricky"><strong>★ ${n} tricky ${n === 1 ? 'word' : 'words'}</strong>` +
           '<span>See them, or choose “My tricky words” as the topic in any game to practise.</span></a>' : '') +
         SECTIONS.concat(['More games']).map(sec => {
           const here = games.filter(x => (SECTIONS.includes(x.group) ? x.group : 'More games') === sec);
@@ -422,13 +495,14 @@ window.DictGames = (() => {
     g.run(root, ctx);
     focusHeading(root);
   }
-  // the My list tab: the reader's study list, or (spec = [name/]id,id,…) a list someone shared as a link
-  function myList(main, spec, context) {
+  // the My lists tab: the reader's lists (section = where on the page to start), or (spec = [name/]id,id,…)
+  // a list someone shared as a link
+  function myList(main, spec, context, section) {
     ctx = context;
     sayEl = null;
     if (spec) listPage(main, spec);
-    else { document.title = `My study list – ${ctx.title}`; studyPage(main); }
-    focusHeading(main);
+    else { document.title = `My lists – ${ctx.title}`; listsPage(main, section); }
+    if (!section) focusHeading(main);
   }
   // after opening a page with the keyboard, start screen readers at its heading
   function focusHeading(root) {

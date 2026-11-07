@@ -180,13 +180,23 @@ window.BardiRender = (() => {
   }
   const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
 
-  // one example for a word (flashcards): a sense example with a translation, else a text sentence that uses it
-  function exampleHTML(c) {
+  // one example for a word (flashcards, saved lists): a sense example with a translation, else a text
+  // sentence that uses it.  exampleOf gives [Kullilli, English] as stored, or null.
+  function exampleOf(c) {
     const x = (c.senses || []).flatMap(s => s.ex || []).find(e => e.v && e.e);
-    if (x) return `<span class="exv v">${fmtEx(x.v, false)}</span><span class="exe">${fmt(x.e, false)}</span>`;
+    if (x) return [x.v, x.e, true];
     const s = (c.xs || []).map(si => SENTS[si]).find(t => t && t.v && t.ft && t.ft[0]);
-    return s ? `<span class="exv v">${esc(s.v)}</span><span class="exe">${esc(s.ft[0])}</span>` : '';
+    return s ? [s.v, s.ft[0], false] : null;
   }
+  function exampleHTML(c) {
+    const x = exampleOf(c);
+    if (!x) return '';
+    return x[2] ? `<span class="exv v">${fmtEx(x[0], false)}</span><span class="exe">${fmt(x[1], false)}</span>`
+      : `<span class="exv v">${esc(x[0])}</span><span class="exe">${esc(x[1])}</span>`;
+  }
+  // plain text, for files: markup like |fv{…} and *highlight* removed
+  const plain = s => String(s ?? '').replace(/\|[a-z]+\{([^}]*)\}/g, '$1').replace(/\*([^*]+)\*/g, '$1');
+  const exampleText = c => { const x = exampleOf(c); return x ? [plain(x[0]), plain(x[1])] : ['', '']; };
 
   // ---- full entry --------------------------------------------------------
   const block = (title, inner) => `<section class="blk">${title ? `<h3>${title}</h3>` : ''}${inner}</section>`;
@@ -297,16 +307,23 @@ window.BardiRender = (() => {
       (dir === 'prev' ? `${arrow} ${lab}` : `${lab} ${arrow}`) + '</button>';
   }
 
+  // the entry's topics (FLEx semantic domains), each a link to its topic in the wordlist
+  const topicsHTML = c => {
+    const ts = (c.sd || []).map(d => /^([\d.]+)\s+(.*)$/.exec(d)).filter(Boolean);
+    return ts.length ? `<div class="entry-topics">${ts.length > 1 ? 'Topics' : 'Topic'}: ` +
+      ts.map(m => `<a href="#/topic/${enc(m[1])}">${esc(m[2])}</a>`).join(', ') + '</div>' : '';
+  };
   function entryHTML(top, prev, next, open, ling) {
     const c = top.c;
     return `<div class="entry-bar">${navBtn(prev, 'prev')}${navBtn(next, 'next')}<span class="spacer"></span>` +
       `<button type="button" class="close-btn" aria-label="Close entry" title="Close (Esc)">✕</button></div>` +
       `<header class="entry-head"><div class="hw-line"><h2 class="entry-hw v" id="entry-title">${esc(hwOf(c))}${c.hm ? `<sup>${esc(c.hm)}</sup>` : ''}</h2>` +
       `${playBtn(c.audio, hwOf(c), true)}${studyBtn(top, true)}</div>` +
-      `<div class="entry-meta">${metaHTML(c)}</div>${hasLing(c) ? lingToggle(ling) : ''}</header>` +
+      `<div class="entry-meta">${metaHTML(c)}</div>${topicsHTML(c)}${hasLing(c) ? lingToggle(ling) : ''}</header>` +
       bodyHTML(c, true) + moreHTML(c, open) +
       (top.subs.length ? `<section class="subs"><h3>Sub-entries (${top.subs.length})</h3>${top.subs.map(s => subHTML(s, open)).join('')}</section>` : '') +
-      (c.dt ? `<div class="entry-foot">Last edited ${esc(c.dt)}</div>` : '');
+      `<div class="entry-foot">${c.dt ? `Last edited ${esc(c.dt)} · ` : ''}` +
+      `<a href="#/feedback/word/${enc(top.id)}">Comment on this word or its meaning</a></div>`;
   }
 
   // the abbreviation key for the About page
@@ -317,5 +334,5 @@ window.BardiRender = (() => {
       .map(([a, full]) => `<dt><abbr class="gab">${esc(a)}</abbr></dt><dd>${esc(full)}</dd>`).join('');
   };
 
-  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, meaning: summary };
+  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, exampleText, plain, meaning: summary };
 })();

@@ -19,6 +19,10 @@
 .fc-tools a.gbtn { text-decoration: none; }
 .fc-tools .study { width: 40px; height: 40px; }
 .fc-tools .study svg { width: 18px; height: 18px; }
+.fc-rate { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 10px; margin: 0 0 12px; }
+.fc-rate span { color: var(--muted); font-size: .95rem; margin-right: 2px; }
+.fc-rate .gbtn[aria-pressed="true"] { background: var(--sea); border-color: var(--sea); color: #fff; cursor: default; }
+.fc-rate .gbtn:disabled:not([aria-pressed="true"]) { opacity: .45; cursor: default; }
 .fc-nav { display: flex; justify-content: center; gap: 10px; margin: 6px 0 14px; }
 .fc-nav .gbtn:disabled { opacity: .45; cursor: default; }
 .fc-totals { text-align: center; color: var(--muted); font-size: .9rem; }
@@ -27,6 +31,8 @@
 
 @media (max-width: 760px) {
   .fc { min-height: 240px; }
+  .fc-rate span { flex-basis: 100%; text-align: center; margin: 0; }    /* the question on its own line, buttons side by side */
+  .fc-tools { gap: 8px; padding: 10px 10px 14px; }
   .fc-main .fc-word { font-size: 1.35rem; }
   .fc-main .fc-word.v { font-size: 1.9rem; }
 }

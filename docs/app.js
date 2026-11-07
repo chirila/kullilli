@@ -1,5 +1,6 @@
 /* Dictionary: wordlist, affixes, search, entry panel, audio and URL routing.
-   URLs: #/letter/b  #/english/b  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>) */
+   URLs: #/letter/b  #/english/b  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>)
+         #/feedback  #/feedback/word/<id> */
 'use strict';
 (() => {
   const DATA = window.DICT_DATA, S = window.BardiSearch, R = window.BardiRender;
@@ -94,6 +95,20 @@
   const store = {
     get: (k, d) => { try { return localStorage.getItem(LANG + '.' + k) ?? d; } catch (e) { return d; } },
     set: (k, v) => { try { localStorage.setItem(LANG + '.' + k, v); } catch (e) { /* private mode */ } },
+    // everything this site keeps in the browser (for a backup file); load() replaces all of it
+    dump() {
+      const out = {}, P = LANG + '.';
+      try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k.startsWith(P)) out[k.slice(P.length)] = localStorage.getItem(k); } }
+      catch (e) { /* private mode */ }
+      return out;
+    },
+    load(data) {
+      try {
+        Object.keys(store.dump()).forEach(k => localStorage.removeItem(LANG + '.' + k));
+        Object.entries(data).forEach(([k, v]) => localStorage.setItem(LANG + '.' + k, v));
+        return true;
+      } catch (e) { return false; }
+    },
   };
   // ---- my study list: words the reader marks with the bookmark button; kept on this device only
   let studyCache = null;
@@ -225,6 +240,57 @@
     setList: ids => { state.list = ids; },
   };
 
+  // ---- feedback: the GitHub issue forms in .github/ISSUE_TEMPLATE/, filled in from where the reader was ----
+  const FB = DATA.feedback || {};
+  const fbRepo = () => FB.repo || (location.hostname.endsWith('.github.io')
+    ? `${location.hostname.split('.')[0]}/${location.pathname.split('/')[1] || location.hostname}` : '');
+  const issueURL = (template, fields) => `https://github.com/${fbRepo()}/issues/new?` + new URLSearchParams(Object.assign({ template }, fields));
+  let lastPage = '';                              // the page the reader was on before opening the feedback page
+  function viewFeedback(kind, id) {
+    const repo = fbRepo(), it = id ? byId.get(id) : null, base = location.href.split('#')[0];
+    const go = (template, fields, label) => (repo
+      ? `<a class="gbtn primary" href="${esc(issueURL(template, fields))}" target="_blank" rel="noopener">${label}` +
+        '<span class="sr-only"> (opens GitHub in a new tab)</span></a>' : '');
+    const word = it ? { title: `Word: ${hwOf(it.c)}${it.c.hm ? ' ' + it.c.hm : ''}`, word: hwOf(it.c) + (it.c.hm ? ` (${it.c.hm})` : ''),
+      entry: base + '#/entry/' + enc(it.id), meaning: R.plain(R.meaning(it.c)) } : {};
+    // without a GitHub account: the same questions as an email, opened in the reader's email app
+    const email = (subject, lines) => (FB.email
+      ? `<a class="gbtn" href="mailto:${esc(FB.email)}?subject=${enc(`${TITLE}: ${subject}`)}&body=${enc(lines.join('\r\n'))}">Email instead</a>` : '');
+    const card = (key, title, text, extra, btns) => `<section class="fb-card${kind === key ? ' on' : ''}" id="fb-${key}">` +
+      `<h3>${title}</h3><p>${text}</p>${extra}<div class="share-row">${btns}</div></section>`;
+    const device = `${navigator.userAgent} (screen ${innerWidth}×${innerHeight})`;
+    const mail = FB.email ? ' No GitHub account? Use <strong>Email instead</strong>: it opens your email app with the same questions, ' +
+      `ready to send to ${esc(FB.email)}. Emails are not public.` : '';
+    main.innerHTML = '<h2 class="gtitle">Send feedback</h2>' +
+      `<p class="gintro">Tell us about problems with the website, ideas for new features or activities, and comments on the ` +
+      `words and their meanings. Everything you send helps make the dictionary better.</p><div class="fb-cards">` +
+      card('problem', 'Report a problem with the site',
+        'Something that doesn’t work or looks wrong: a page, a game, search, sound, or how the site looks on your phone or ' +
+        'computer. The form fills in the page you were on and your device.', '',
+        go('2-problem.yml', { title: 'Problem: ', page: lastPage || base, device }, 'Report a problem') +
+        email('problem with the site', ['What happened?', '', '', 'What did you expect to happen?', '', '', `Page: ${lastPage || base}`, `Device: ${device}`])) +
+      card('idea', 'Suggest a feature or activity',
+        'Something you’d like the dictionary to do, an idea for a new game or activity, or a change to one.', '',
+        go('3-idea.yml', { title: 'Idea: ' }, 'Suggest an idea') +
+        email('idea', ['My idea:', '', '', 'Who would it help, and how?', ''])) +
+      card('word', it ? `Comment on <span class="v">${esc(hwOf(it.c))}</span>` : 'Comment on a word or meaning',
+        'A meaning or translation that could be better, a spelling, a recording, an example sentence, or something to add.' +
+        (it ? '' : ' To comment on one word, use “Comment on this word” at the bottom of its entry: that fills in the word for you.'),
+        it ? `<div class="grid fb-word">${R.cardHTML(it)}</div>` : '',
+        go('1-word.yml', it ? word : { title: 'Word: ' }, it ? 'Comment on this word' : 'Comment on a word') +
+        email(it ? `comment on ${word.word}` : 'comment on a word', (it
+          ? [`Word: ${word.word}`, `Link: ${word.entry}`, `What the dictionary says now: ${word.meaning}`, '']
+          : ['Word:', '']).concat(['My comment:', '', '', 'Where does this come from? (optional)', '']))) +
+      '</div>' +
+      '<p class="fb-note">The forms are on GitHub, where the dictionary’s files are kept. You need a free GitHub account to send ' +
+      'one, and what you write is public, so please don’t include private information about yourself or other people.' + mail + '</p>' +
+      (repo ? '' : '<p class="fb-note">(The GitHub buttons appear on the published site. To send feedback somewhere else, set ' +
+        'FEEDBACK_REPO in build/build_lift.py.)</p>');
+    state.list = it ? [it.id] : [];
+    document.title = `Send feedback – ${TITLE}`;
+    if (kind) setTimeout(() => main.querySelector('#fb-' + kind)?.scrollIntoView({ block: 'start' }), 0);
+  }
+
   function viewAbout() {
     main.innerHTML = '';
     main.append($('#about-tpl').content.cloneNode(true));
@@ -245,13 +311,17 @@
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
     if (head === 'affixes' || head === 'about') return { type: head };
+    if (head === 'feedback') {                    // #/feedback/<kind>[/<entry id>]: kind = problem, idea or word
+      const k = rest.indexOf('/');
+      return { type: 'feedback', kind: dec(k < 0 ? rest : rest.slice(0, k)), id: k < 0 ? '' : dec(rest.slice(k + 1)) };
+    }
     if (head === 'english') return { type: 'english', letter: dec(rest) || state.eLetter };
     if (!h && store.get('wl', 'k') === 'e') return { type: 'english', letter: state.eLetter };
-    if (head === 'mylist') return { type: 'mylist', spec: '' };
+    if (head === 'mylist') return { type: 'mylist', spec: '', section: dec(rest) };     // #/mylist/tricky: start at that list
     if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
     if (head === 'learn') {
       const g = dec(rest);
-      if (g === 'study') return { type: 'mylist', spec: '' };                 // earlier addresses of the same pages
+      if (g === 'study' || g === 'tricky') return { type: 'mylist', spec: '', section: g };   // earlier addresses of the same pages
       if (g.startsWith('list/')) return { type: 'mylist', spec: g.slice(5) };
       return { type: 'learn', game: g };
     }
@@ -275,14 +345,16 @@
     else if (r.type === 'english') viewLetter(r.letter, true);
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
+    else if (r.type === 'feedback') viewFeedback(r.kind, r.id);
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
-    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx);
+    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx, r.section);
     else viewSearch(r.q);
     window.scrollTo(0, 0);
   }
 
   function route() {
     const r = parse();
+    if (r.type !== 'feedback') lastPage = location.href;
     if (r.type === 'entry') {
       const it = byId.get(r.id);
       if (!it) return go('#/letter/' + enc(state.letter), true);

@@ -1,35 +1,41 @@
 #!/usr/bin/env python3
-"""Turn a FLEx LIFT export into the data file for the web dictionary in docs/.
+"""Build the Kullilli web dictionary (docs/ in this repository) from the
+source material, which is kept outside the repository.
 
-    python3 build_lift.py
+    python3 build/build_lift.py                      # source in ../KullilliDictionary
+    python3 build/build_lift.py /path/to/KullilliDictionary
 
-Reads ../Kullilli.lift and ../audio/, writes docs/data/dictionary.js (same
-entry format as the Bardi site) and copies the sound files the dictionary
-uses into docs/audio/.  Untyped FLEx notes are shown (as "Note") while
-SHOW_UNTYPED_NOTES is True.
+Reads data/Kullilli.lift, data/audio/ and data/Kullilli sentences.docx from
+the source folder; writes docs/data/dictionary.js and copies the sound files
+the dictionary uses into docs/audio/.  Untyped FLEx notes are shown (as
+"Note") while SHOW_UNTYPED_NOTES is True.
 
-The interlinear sentences in ../kullilli sentences.docx are linked to the
-entries for their stems and affixes and shown as examples in those entries;
-morphemes that can't be matched to an entry are listed in
-review/unlinked_morphemes.tsv.
+The interlinear sentences are linked to the entries for their stems and
+affixes and shown as examples in those entries.  The glossing review files
+(and the list of morphemes that can't be matched to an entry) go to review/
+in the source folder.
 """
 import json
 import re
 import shutil
+import sys
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from pathlib import Path
 
-import glosscheck
-from sentences import parse as parse_sentences
+sys.dont_write_bytecode = True        # no __pycache__ in the repository
+import glosscheck                     # noqa: E402
+from sentences import parse as parse_sentences   # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-LIFT = HERE.parent / "Kullilli.lift"
-AUDIO_IN = HERE.parent / "audio"
-SENTENCES = HERE.parent / "kullilli sentences.docx"
-OUT = HERE / "docs" / "data" / "dictionary.js"
-AUDIO_OUT = HERE / "docs" / "audio"
-REVIEW = HERE / "review"
+REPO = HERE.parent
+SOURCE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else REPO.parent / "KullilliDictionary"
+LIFT = SOURCE / "data" / "Kullilli.lift"
+AUDIO_IN = SOURCE / "data" / "audio"
+SENTENCES = SOURCE / "data" / "Kullilli sentences.docx"
+REVIEW = SOURCE / "review"
+OUT = REPO / "docs" / "data" / "dictionary.js"
+AUDIO_OUT = REPO / "docs" / "audio"
 
 LANGUAGE = "Kullilli"
 VERN = "gll-Latn"                 # vernacular writing system
@@ -314,7 +320,7 @@ def attach_sentences(pairs, by_id):
     # glossing review (step 2): report on the data as it is, then apply Claire's decisions
     glosscheck.review(out, by_id, REVIEW)
     n_lab, n_morph = glosscheck.apply(out, by_id, REVIEW)
-    print(f"glossing decisions applied: {n_lab} labels, {n_morph} morphemes (review/gloss_*.tsv)")
+    print(f"glossing decisions applied: {n_lab} labels, {n_morph} morphemes ({REVIEW}/gloss_*.tsv)")
     for si, s in enumerate(out):
         for _, _, i in s["m"]:
             if i and si not in uses[i]:
@@ -347,7 +353,7 @@ def attach_sentences(pairs, by_id):
     print(f"{len(out)} sentences: {n_linked}/{n_m} morphemes linked to entries; "
           f"{sum(1 for _, c in pairs if c['xs'] or any(x.get('s') is not None for s in c['senses'] for x in s['ex']))} "
           f"entries get sentence examples; {matched} LIFT examples matched to their sentence; "
-          f"{len(unlinked)} unmatched forms in {(REVIEW / 'unlinked_morphemes.tsv').relative_to(HERE)}")
+          f"{len(unlinked)} unmatched forms in {REVIEW / 'unlinked_morphemes.tsv'}")
     return out
 
 
@@ -365,6 +371,10 @@ def stamp_assets():
 
 
 def main():
+    for p in (LIFT, AUDIO_IN, SENTENCES):
+        if not p.exists():
+            sys.exit(f"Can't find {p}\nGive the folder that holds the Kullilli source material, e.g.\n"
+                     f"    python3 build/build_lift.py /path/to/KullilliDictionary")
     root = ET.parse(LIFT).getroot()
     lift_entries = [e for e in root.findall("entry") if not e.get("dateDeleted")]
     pairs = [(e, build_entry(e)) for e in lift_entries]
@@ -445,8 +455,8 @@ def main():
     stamp_assets()
     cls = Counter(c["cls"] for c in entries)
     n_audio = sum(1 for c in entries if c.get("audio"))
-    print(f"{len(entries)} entries written to {OUT.relative_to(HERE)} ({OUT.stat().st_size // 1024} KB); "
-          f"{n_audio} with audio, files copied to {AUDIO_OUT.relative_to(HERE)}/")
+    print(f"{len(entries)} entries written to {OUT.relative_to(REPO)} ({OUT.stat().st_size // 1024} KB); "
+          f"{n_audio} with audio, files copied to {AUDIO_OUT.relative_to(REPO)}/")
     print("classes:", dict(cls.most_common()))
     print("letters:", " ".join(data["letters"]))
     if missing:

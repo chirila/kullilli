@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17405a">
+<title>Kullilli Dictionary</title>
+<meta name="description" content="Kullilli–English dictionary with recordings: browse by letter, search Kullilli or English, and read full entries with examples.">
+<link rel="stylesheet" href="style.css?v=f72ebad4">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap head-row">
+    <a class="brand" href="#/letter/a">
+      <span class="brand-title">Kullilli Dictionary</span>
+      <span class="brand-sub">Kullilli – English</span>
+    </a>
+    <form class="search" role="search" onsubmit="return false">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg>
+        <input id="q" type="search" placeholder="Search Kullilli or English…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search the dictionary">
+        <kbd class="hint" title="Press / to search">/</kbd>
+      </div>
+      <div class="search-opts">
+        <div class="seg" role="group" aria-label="Search in">
+          <button type="button" data-mode="both">Both</button>
+          <button type="button" data-mode="bardi">Kullilli</button>
+          <button type="button" data-mode="english">English</button>
+        </div>
+        <label class="chk"><input type="checkbox" id="withEx"> include example sentences</label>
+      </div>
+    </form>
+  </div>
+  <nav class="tabs wrap" aria-label="Sections">
+    <a data-tab="letter" href="#/letter/a">Wordlist</a>
+    <a data-tab="affixes" href="#/affixes">Affixes</a>
+    <a data-tab="about" href="#/about">About</a>
+    <span data-tab="search" class="tab-search" hidden>Search results</span>
+  </nav>
+</header>
+
+<main id="main" class="wrap" tabindex="-1"></main>
+
+<footer class="site-footer wrap">
+  <span id="stats"></span>
+</footer>
+
+<div id="overlay" class="overlay" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="entry-title">
+    <div id="entry"></div>
+  </div>
+</div>
+
+<!-- Edit the About page here.  Add authorship, acknowledgements and licence before publishing. -->
+<template id="about-tpl">
+  <article class="prose">
+    <h2>About this dictionary</h2>
+    <p>This site presents the Kullilli dictionary as a searchable wordlist with recordings.
+       It currently holds <strong data-stat="entries"></strong> entries.</p>
+
+    <h3>Browsing and listening</h3>
+    <p>Use the <strong>Wordlist</strong> tab to browse by letter. <em>dh, dy, ng, nh, ny, th</em> and <em>ty</em> are
+       letters of their own and come after the single letter they start with (<em>dh</em> and <em>dy</em> after <em>d</em>).
+       The buttons above the list narrow it to nouns, verbs and so on. Tap any card to open the full entry;
+       use the ‹ › buttons (or the arrow keys) to step through neighbouring entries.</p>
+    <p>Words with a recording have a speaker button
+       <span class="play inline" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
+       on their card and next to the word in the entry. Tap it to listen; tap again to stop.</p>
+    <p>Suffixes are in the wordlist under their first letter and also have their own <strong>Affixes</strong> tab.
+       The hyphen shows where a suffix attaches (<span class="v">-ya</span>).</p>
+
+    <h3>Searching</h3>
+    <p>Type in the search box at the top. <strong>Both</strong> searches Kullilli words and English meanings at once;
+       the other two buttons search only one side.</p>
+    <ul>
+      <li><strong>Kullilli search</strong> matches headwords, variant spellings, and the spellings used in the original
+        sources (such as <span class="v">ŋuᶁa</span> for <span class="v">ngudya</span>). Exact spellings come first; after them
+        come similar spellings: <em>k/g</em>, <em>p/b</em>, <em>t/d</em>, <em>dh/d</em>, <em>nh/n</em>, <em>rr/r</em>,
+        <em>j/dy/tj</em>, long and short vowels, <em>o/u</em>, and small typing mistakes.</li>
+      <li><strong>English search</strong> looks at glosses, definitions and notes. It ignores word endings
+        (<em>bite, bites, biting</em>), allows small spelling mistakes, and needs every word you type to match.</li>
+      <li>Tick <strong>include example sentences</strong> to search inside example sentences as well.</li>
+    </ul>
+
+    <h3>Reading an entry</h3>
+    <ul>
+      <li>Numbered meanings are separate senses, often from different sources.</li>
+      <li>Example sentences show each word, the parts it is made of (tap a part to go to its entry), what each part
+        means, and a translation. Grammatical parts are shown as abbreviations such as <abbr class="gab">ACC</abbr>
+        or <abbr class="gab">1SG.ERG</abbr>: hover over one, or tap it on a phone, to see what it means.
+        The full list is below.</li>
+      <li><em>Original spelling</em> shows how the word was written in the source it comes from.</li>
+      <li>Variant spellings link to their own entries, and those entries point back to the main word.</li>
+      <li><em>Notes, etymology and sources</em> at the end of an entry lists pronunciation notes, borrowings, and which
+        sources record the word.</li>
+    </ul>
+
+    <h3>Abbreviations</h3>
+    <dl class="abbr-list" data-abbr-list></dl>
+
+    <h3>Sources</h3>
+    <p>Words come from Breen's fieldnotes (also written <em>brefn</em>), the Galali sentence list and Galali vocabulary list,
+       Holmer (<em>hol88</em>), Tindale (<em>tin57</em>), and McDonald and Wurm.</p>
+  </article>
+</template>
+
+<script src="data/dictionary.js?v=95ae8cb6"></script>
+<script src="search.js?v=7fc450b3"></script>
+<script src="render.js?v=41289680"></script>
+<script src="app.js?v=9a24dc93"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* listen and choose */
+.ls-q { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 10px 0 16px; }
+.ls-play.play.big { width: 84px; height: 84px; background: var(--sea); border-color: var(--sea); color: #fff; }
+.ls-play.play.big svg { width: 40px; height: 40px; }
+.ls-play.play.big.playing { background: var(--ochre); border-color: var(--ochre); }
+.ls-prompt { margin: 0; color: var(--muted); }
+.ls-opts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 560px; margin: 0 auto 12px; }
+@media (max-width: 760px) {
+  .ls-opts { gap: 8px; }
+}

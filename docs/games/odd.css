@@ -1,0 +1,6 @@
+/* Odd one out */
+.odd-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 560px; margin: 0 auto 10px; }
+.odd-gl { display: block; font: 400 .85rem var(--ui-font); color: var(--muted); margin-top: 2px; }
+.lopt.right .odd-gl, .lopt.wrong .odd-gl { color: inherit; }
+.odd-say { text-align: center; color: var(--muted); min-height: 1.4em; margin-bottom: 8px; }
+@media (max-width: 760px) { .odd-grid { gap: 8px; } }

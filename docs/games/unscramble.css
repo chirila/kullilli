@@ -1,0 +1,7 @@
+/* Unscramble */
+.us-slot { cursor: pointer; font-family: var(--v-font); }
+.us-slots.shake { animation: shake .35s; }
+.us-slots.shake .ht { border-color: #c0392b; }
+.us-tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 420px; margin: 4px auto 14px; }
+.us-tile.hk { flex: 0 0 56px; max-width: 56px; height: 56px; font-size: 1.25rem; box-shadow: var(--shadow); }
+.us-tile.hk:disabled { visibility: hidden; }

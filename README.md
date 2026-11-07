@@ -85,37 +85,61 @@ The recordings come to about 40 MB, which is fine for Pages.
 - Grammatical labels are shown as small-caps abbreviations (food-ACC, 1SG.ERG). Hovering or tapping
   shows the full name, and the About page lists them all.
 
-## Learn tab (`docs/games.js`)
+## Learn tab (`docs/games/`)
 
-Six games, all usable with a mouse, a keyboard or a touch screen:
+Each game is its own file in `docs/games/` (`<name>.js`, plus `<name>.css` if it has its own styles). Shared parts
+are in `core.js` and `games.css`: the word picker, topics, the settings bar, the end-of-round panel, the letters
+and keyboard, and tricky words. The build writes the links to every file in `docs/games/` into `index.html`,
+so **to remove a game, delete its files and rebuild**; to add one, add its files (it calls
+`DictGames.register({ id, group, order, title, desc, run })`) and rebuild. `group` puts it in a section of the
+Learn page: Every day, Words and meanings, Listening, Spelling.
 
-- **Memory pairs**: 6 pairs face down; turn over two cards at a time to match a word with its meaning.
-- **Match up**: drag each word onto its meaning (or the other way round); on a phone, tap one and then the other.
-- **Word in the middle**: a word in the centre and six meanings in a circle round it (or the reverse); 10 questions.
-- **Listen and choose**: a recording plays (tap the big speaker to hear it again); pick the word from four,
-  either by its spelling or by its English meaning. *Easy*: the other three are at least 3 letters different
-  and start with a different letter. *Harder*: the other three are the closest-sounding words, usually 1–2
-  letters away (minimal and near-minimal pairs, e.g. *thaya* 'mouth' / *dhaya* 'stars'), counting Kullilli
-  letters (ng, dh … are one letter). The word heard comes from the chosen topic and always has a recording;
-  the other choices come from anywhere in the dictionary, but never a variant spelling of the answer or a word
-  with the same meaning. After each answer every choice shows its meaning (or spelling) and can be played,
-  so the sound-alikes can be compared. 10 questions.
-- **Letter by letter** (the easier word puzzle): boxes for a hidden 4–6 letter word and the alphabet; each letter
-  picked either fills its boxes or is greyed out, with no limit and no penalty. "Show the meaning" and "Listen"
-  (the recording) are hints. Single letters can also be typed; two-letter ones (ng, dh …) are on-screen keys.
-- **Hidden word**: guess a 4–6 letter word in six tries. After each guess, tiles show letters in the right place
-  (blue), in the word but somewhere else (ochre, dashed) and not in the word (grey). Letters are Kullilli
-  letters, so *ng*, *dh*, *rr* and the like are one tile each. The on-screen keyboard is the alphabet from the
-  sketch grammar, set by `KEYBOARD` in `build/build_lift.py`; typing *n* then *g* (on screen or on a computer
-  keyboard) makes *ng*. Guesses that are real words show their meaning, there's a "Show the meaning" hint,
-  and the end of a round plays the word and links to its entry.
+All games work with a mouse, a keyboard or a touch screen.
 
-Words in the games are nouns, verbs, adjectives, adverbs, interjections and similar words with a short, certain
-gloss (no "?", no "unknown"). Affixes, pronoun labels, place names and variant spellings are left out, and each
-round uses different glosses so the pairs are never ambiguous. Players can choose a topic (the FLEx semantic
-domains, a domain including its subdomains, those with at least 6 words), limit the games to words with
-recordings (the recording plays on each correct match), and set the direction. Each round ends with cards for
-the words played, which link to their entries.
+**Every day**
+- **Daily five** (`daily`): five quick questions, the same for everyone on a given day (picked from the date):
+  meaning of a word, word for a meaning, hear and choose. Progress and a day streak are kept on the device.
+
+**Words and meanings**
+- **Memory pairs** (`memory`): 6 pairs face down. Cards: word & meaning, sound & word, or sound & meaning (a sound
+  card plays when turned over).
+- **Match up** (`match`): drag each word onto its meaning (or the other way round); on a phone, tap one then the other.
+- **Word in the middle** (`circle`): a word in the centre and six meanings round it (or the reverse); 10 questions.
+- **Odd one out** (`odd`): four words, three from one topic (a specific FLEx domain such as Bird or Body) and one
+  from a different top-level domain; afterwards all four meanings are shown.
+- **Sort into groups** (`sort`): drag words (or tap a word, then a basket) into baskets for two or three topics
+  from different top-level domains, so no word fits two baskets. "Show meanings" is a hint.
+- **Word search** (`wordsearch`): six topic words hidden across, down or diagonally in an 8×8 grid of Kullilli
+  letters (ng, dh … fill one cell; filler letters in their dictionary proportions). Clues are the Kullilli words
+  or their English meanings. Drag across a word or tap its first and last letters.
+
+**Listening**
+- **Listen and choose** (`listen`): hear a word, pick it from four by spelling or meaning. *Easy*: the others are
+  at least 3 letters different and start differently. *Harder*: the closest-sounding words, usually minimal and
+  near-minimal pairs (*thaya* 'mouth' / *dhaya* 'stars'). The word heard is from the chosen topic; the others from
+  anywhere, never a variant spelling or a same-meaning word. After answering, every choice can be played.
+- **Same or different?** (`same`): two recordings, the same word twice or a minimal pair (one Kullilli letter apart;
+  never two spellings of one word). Practise one kind of difference: vowels; b/p, d/t, g/k…; r/rr; d/rd, n/rn…;
+  d/dh, n/nh…; d/dy, n/ny… Afterwards both words are shown, with the letters that differ, and can be replayed.
+  This assumes the recordings make these contrasts consistently.
+
+**Spelling** (these use the alphabet set by `KEYBOARD` in `build/build_lift.py`; ng, dh, rr … are one letter)
+- **Unscramble** (`unscramble`): tap shuffled letter tiles into order; clue is the meaning or the recording.
+- **Spell it** (`spell`): hear a word and type it; Check marks each letter; "Show me" after a wrong try.
+- **Letter by letter** (`letters`): pick letters to fill in a hidden word, with no penalty; meaning and recording as hints.
+- **Hidden word** (`hidden`): guess a 4–6 letter word in six tries, with right-place / elsewhere / not-in-word tiles.
+
+**Words used.** Nouns, verbs, adjectives, adverbs, interjections and similar words with a short, certain gloss (no
+"?", no "unknown"); no affixes, pronoun labels, place names or variant spellings; a round never has two words with
+the same gloss. Players choose a topic (FLEx semantic domains, including subdomains, with at least 6 words) and
+whether to use only words with recordings. Rounds end with cards for the words played, linked to their entries.
+
+**Tricky words.** A word answered wrongly in Match up, Word in the middle, Listen and choose, Hidden word,
+Unscramble, Spell it, Sort into groups, Word search or Daily five goes on the player's tricky list; two right
+answers in a row take it off. "★ My tricky words" is then a topic in every game, and the Learn page links to the
+list (with a Clear button). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
+a wrong turn there is about memory, categories or hearing rather than knowing the word. The list, settings and
+the daily streak are kept in the browser on that device only (localStorage); nothing is sent anywhere.
 
 ## Glossing review (`build/glosscheck.py`)
 
@@ -149,5 +173,6 @@ tab-separated text, not .xlsx.
 | `docs/style.css` | styles, including the phone layout |
 | `docs/search.js` | Kullilli (spelling-tolerant) and English (stemmed, typo-tolerant) search |
 | `docs/render.js` | cards, list rows, interlinear examples and entry HTML; part-of-speech labels |
-| `docs/games.js` | the Learn tab: word picker, memory pairs, match up, word in the middle, listen and choose, letter by letter, hidden word |
+| `docs/games/core.js`, `games.css` | the Learn tab's shared parts and the game registry |
+| `docs/games/<name>.js`, `<name>.css` | one game each (see the Learn tab section) |
 | `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing |

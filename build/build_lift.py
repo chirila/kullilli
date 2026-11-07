@@ -365,15 +365,26 @@ def attach_sentences(pairs, by_id):
 
 
 def stamp_assets():
-    """Add a content fingerprint to each script/stylesheet link in index.html (app.js?v=1a2b3c4d),
-    so browsers fetch the new file after an update instead of a cached copy."""
+    """Write the links to the Learn-tab games (every docs/games/*.js and *.css, core first) into
+    index.html, and add a content fingerprint to each script/stylesheet link (app.js?v=1a2b3c4d)
+    so browsers fetch the new file after an update instead of a cached copy.
+    To remove a game, delete its files from docs/games/ and rebuild."""
     import hashlib
     docs = OUT.parent.parent
     page = docs / "index.html"
     html = page.read_text(encoding="utf-8")
-    for asset in ("style.css", "search.js", "render.js", "games.js", "app.js", "data/dictionary.js"):
-        v = hashlib.md5((docs / asset).read_bytes()).hexdigest()[:8]
-        html = re.sub(rf'((?:src|href)="{re.escape(asset)})(\?v=\w+)?"', rf'\1?v={v}"', html)
+    fp = lambda rel: hashlib.md5((docs / rel).read_bytes()).hexdigest()[:8]
+
+    def game_files(ext, first):
+        names = sorted(p.name for p in (docs / "games").glob(f"*.{ext}"))
+        return [first] + [n for n in names if n != first] if first in names else names
+
+    styles = "".join(f'<link rel="stylesheet" href="games/{n}?v={fp("games/" + n)}">\n' for n in game_files("css", "games.css"))
+    scripts = "".join(f'<script src="games/{n}?v={fp("games/" + n)}"></script>\n' for n in game_files("js", "core.js"))
+    html = re.sub(r"(<!-- game styles[^>]*-->\n).*?(<!-- /game styles -->)", lambda m: m.group(1) + styles + m.group(2), html, flags=re.S)
+    html = re.sub(r"(<!-- game scripts[^>]*-->\n).*?(<!-- /game scripts -->)", lambda m: m.group(1) + scripts + m.group(2), html, flags=re.S)
+    for asset in ("style.css", "search.js", "render.js", "app.js", "data/dictionary.js"):
+        html = re.sub(rf'((?:src|href)="{re.escape(asset)})(\?v=\w+)?"', rf'\1?v={fp(asset)}"', html)
     page.write_text(html, encoding="utf-8")
 
 

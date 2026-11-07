@@ -1,0 +1,20 @@
+/* Same or different? */
+.sd-box { display: flex; flex-direction: column; align-items: center; gap: 14px; margin: 6px auto 10px; max-width: 520px; }
+.sd-marks { display: flex; gap: 18px; }
+.sd-n { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+  border: 2px solid var(--line); background: var(--paper); font: 700 1.3rem var(--ui-font); color: var(--muted); transition: all .15s; }
+.sd-n.on { background: var(--sea); border-color: var(--sea); color: #fff; transform: scale(1.08); }
+.sd-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
+.sd-ans { -webkit-tap-highlight-color: transparent; min-height: 58px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--paper); box-shadow: var(--shadow); font: 700 1.1rem var(--ui-font); color: var(--sea); cursor: pointer; }
+.sd-ans:hover:not(:disabled) { border-color: var(--ochre); }
+.sd-ans.right { background: #e7f5ea; border-color: #3d8a4f; color: #245c31; }
+.sd-ans.wrong { background: #fbe9e7; border-color: #c0392b; color: #8e2a1f; }
+.sd-ans:disabled { cursor: default; }
+.sd-reveal { width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.sd-reveal:empty { display: none; }
+.sd-say { margin: 0; text-align: center; color: var(--muted); }
+.sd-word { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.sd-word .v { font: 700 1.25rem var(--v-font); color: var(--sea); }
+.sd-word .play { width: 34px; height: 34px; }
+.sd-word .play svg { width: 18px; height: 18px; }

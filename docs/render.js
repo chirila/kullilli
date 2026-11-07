@@ -70,6 +70,14 @@ window.BardiRender = (() => {
       '<path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></button>'
     : '');
 
+  // ---- my study list: a bookmark toggle on every card, row and entry (app.js keeps the list)
+  let inStudy = () => false;
+  const setStudy = fn => { inStudy = fn; };
+  const bookmarkSVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4.2-5.5 4.2z"/></svg>';
+  const studyBtn = (it, wide) => `<button type="button" class="study${wide ? ' wide' : ''}" data-study="${esc(it.id)}" aria-pressed="${inStudy(it.id)}"` +
+    (wide ? ` title="Add to or remove from my study list">${bookmarkSVG}<span>My study list</span>`
+      : ` aria-label="${esc(hwOf(it.c))} in my study list" title="My study list">${bookmarkSVG}`) + '</button>';
+
   // ---- inline markup: |tsc{..} small caps, |fv{..} Bardi word, |fi{..} italic; *x* in examples = highlighted part
   function fmt(s, links = true) {
     return String(s ?? '').split(/(\|[a-z]+\{[^}]*\})/).map(p => {
@@ -150,7 +158,7 @@ window.BardiRender = (() => {
       `<span class="gl">${gl ? (c.cls === 'pronoun' && ABBR[gl] ? abbrHTML(gl, false) : fmt(gl, false)) : '<span class="muted">no gloss</span>'}</span>` +
       (it.parent ? `<span class="under">under ${esc(hwOf(it.parent.c))}</span>` : '') +
       (note ? `<span class="note">${esc(note)}</span>` : '') + '</a>' +
-      playBtn(c.audio, hwOf(c)) + '</div>';
+      playBtn(c.audio, hwOf(c)) + studyBtn(it) + '</div>';
   }
   const cardHTML = (it, note) => itemHTML('card', it, note);
 
@@ -280,7 +288,7 @@ window.BardiRender = (() => {
     return `<div class="entry-bar">${navBtn(prev, 'prev')}${navBtn(next, 'next')}<span class="spacer"></span>` +
       `<button type="button" class="close-btn" aria-label="Close entry" title="Close (Esc)">✕</button></div>` +
       `<header class="entry-head"><div class="hw-line"><h2 class="entry-hw v" id="entry-title">${esc(hwOf(c))}${c.hm ? `<sup>${esc(c.hm)}</sup>` : ''}</h2>` +
-      `${playBtn(c.audio, hwOf(c), true)}</div>` +
+      `${playBtn(c.audio, hwOf(c), true)}${studyBtn(top, true)}</div>` +
       `<div class="entry-meta">${metaHTML(c)}</div>${hasLing(c) ? lingToggle(ling) : ''}</header>` +
       bodyHTML(c, true) + moreHTML(c, open) +
       (top.subs.length ? `<section class="subs"><h3>Sub-entries (${top.subs.length})</h3>${top.subs.map(s => subHTML(s, open)).join('')}</section>` : '') +
@@ -295,5 +303,5 @@ window.BardiRender = (() => {
       .map(([a, full]) => `<dt><abbr class="gab">${esc(a)}</abbr></dt><dd>${esc(full)}</dd>`).join('');
   };
 
-  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML };
+  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG };
 })();

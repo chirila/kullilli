@@ -79,6 +79,16 @@
 .tricky-band strong { color: var(--sea); }
 .tricky-band span { color: var(--muted); font-size: .92rem; }
 .tricky-band:hover { border-color: var(--sea2); }
+.study-band { border-left-color: var(--ochre); }
+.study-band:hover { border-color: var(--ochre); }
+.study-ico { display: inline-flex; vertical-align: -3px; color: var(--ochre); }
+.study-ico svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.gnote { color: var(--muted); font-size: .9rem; }
+.share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 6px 0 12px; }
+.share-row input, .share-out input { font: inherit; color: var(--ink); padding: 7px 10px; border: 1px solid var(--ctl-line);
+  border-radius: 8px; background: #fff; }
+.share-out input { width: 100%; max-width: 680px; font-size: .85rem; }
+.share-done { color: var(--ink); background: var(--ochre-soft); padding: 8px 12px; border-radius: 8px; }
 @media (max-width: 760px) {
   .gtitle { font-size: 1.35rem; }
   .game-bar { gap: 8px 12px; }

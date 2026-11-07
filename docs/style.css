@@ -261,6 +261,27 @@ details.more-ex summary { cursor: pointer; color: var(--sea2); font-weight: 600;
 .play.inline { width: 26px; height: 26px; vertical-align: middle; cursor: default; }
 .play.inline svg { width: 15px; height: 15px; }
 .hw-line { display: flex; align-items: center; gap: 14px; }
+
+/* ---------- my study list: bookmark toggle ---------- */
+.study {
+  -webkit-tap-highlight-color: transparent;
+  width: 32px; height: 32px; flex: none; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--faint);
+  font: 600 .9rem var(--ui-font); cursor: pointer; transition: color .12s, border-color .12s;
+}
+.study svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.study:hover { border-color: var(--ochre); color: var(--ochre); }
+.study[aria-pressed="true"] { color: var(--ochre); border-color: var(--ochre); }
+.study[aria-pressed="true"] svg { fill: currentColor; }
+.study.wide { width: auto; height: 40px; padding: 0 14px 0 11px; border-radius: 999px; color: var(--sea); }
+.study.wide[aria-pressed="true"] { color: var(--ochre); background: var(--ochre-soft); }
+.cell > .study { position: absolute; bottom: 8px; right: 8px; }
+.grid .cell > .card .gl, .grid .cell > .card .under, .grid .cell > .card .note { margin-right: 30px; }
+.rows .cell > .study { bottom: auto; top: 50%; transform: translateY(-50%); right: 12px; }
+.rows .cell.has-audio > .study { right: 56px; }
+.rows > .cell > .row { padding-right: 52px; }
+.rows > .cell.has-audio > .row { padding-right: 98px; }
 .wotd-wrap { position: relative; }
 .wotd-wrap > .play { position: absolute; top: 16px; right: 16px; }
 .wotd-wrap.has-audio > .wotd { padding-right: 84px; }
@@ -396,6 +417,10 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
   .grid .cell > .play { top: auto; bottom: 8px; right: 8px; }
   .cell.has-audio > .card .hw { padding-right: 0; }
   .cell.has-audio > .card { padding-bottom: 50px; }
+  .grid .cell > .card { padding-bottom: 46px; }
+  .grid .cell.has-audio > .card { padding-bottom: 50px; }
+  .grid .cell > .card .gl, .grid .cell > .card .under, .grid .cell > .card .note { margin-right: 0; }
+  .grid .cell.has-audio > .study { bottom: 12px; right: 54px; }
   .letters, .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
   .letters::-webkit-scrollbar, .chips::-webkit-scrollbar { display: none; }
   .letters a { min-width: 36px; height: 36px; flex: none; }

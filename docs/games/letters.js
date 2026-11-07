@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and letters.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, sr, auto } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, practise, say, sr, auto } = window.DictGames.kit;
   let ctx;
 
   // ---- letter by letter (easier): pick letters to fill in a hidden word, no wrong answers ------------
@@ -40,7 +40,7 @@
     function guess(u) {
       if (done() || tried[u] || !units.has(u)) return;
       tried[u] = target.includes(u) ? 'hit' : 'miss';
-      if (done()) { auto(it.c.audio); ctx.setList([it.id]); }
+      if (done()) { auto(it.c.audio); ctx.setList([it.id]); practise([it]); }
       draw();
       const pattern = target.map(x => (tried[x] ? x : 'blank')).join(', ');
       say(`${u} is ${tried[u] === 'hit' ? '' : 'not '}in the word. ` + (done() ? `You found it: ${plain(it)}, ${gloss(it)}.` : `The word so far: ${pattern}.`));

@@ -65,10 +65,24 @@ The recordings come to about 40 MB, which is fine for Pages.
   each with its own recording. `<variant>` forms are listed too.
 - Complex forms ("Made from" / "Used in"), Compare ("See also") and minimal pairs link entry to entry.
 - "Original Orthography" is shown as *Original spelling* and is searchable.
-- Semantic domains and reversal entries are kept in the data. Reversals feed the English search;
-  domains are kept for a future topic browser.
+- Semantic domains and reversal entries are kept in the data. Reversals feed the English search and the
+  English-first wordlist; domains are the topics in the games.
 - Letters: `DIGRAPHS` (dh dy ng nh ny th ty) get their own tabs. `SPELLING` lists the
   "similar spelling" rules for search.
+
+**English-first wordlist.** The Wordlist tab has a switch, "Kullilli → English" / "English → Kullilli"
+(`#/letter/b` / `#/english/b`); the site remembers which one was used last. The English list has the
+English alphabet A–Z along the top (letters with no words are greyed out) and # for pronoun labels such as
+*1sg.nom*. Each card leads with the English word, then the Kullilli word, its word type, its recording and
+bookmark, and its full gloss when that says more than the English word. Opening a card opens the full
+Kullilli entry, with examples, as in the Kullilli list, and Previous/Next follow the English order. The same
+word-type filters and Cards/List switch apply.
+
+The English words are FLEx's English reversal index (in FLEx: the Reversal Indexes view), one card per
+English word and entry; an entry with no reversal uses its glosses (split at ";"). Reversals with "?" or
+"unknown" are left out. Reversals that FLEx uses as categories come through as they are, so "birds" (50
+words), "grammar" (77), "pronouns" (42) and "animals" (13) each list every entry tagged with them; edit or
+remove them in FLEx to change that. Built in `app.js` (`engIndex`).
 
 ## Example sentences (`build/sentences.py`)
 
@@ -105,7 +119,9 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   wiyi means fire."), the score line, what was selected, and each letter typed. Letter states (in the word / somewhere
   else / not in the word) and blank boxes are also given as hidden text, not only as colours.
 - **Sound.** "Play sounds automatically" in each game's settings bar (on by default) can be switched off so that
-  recordings don't talk over a screen reader; every recording also has its own labelled play button. Nothing in
+  recordings don't talk over a screen reader; every recording also has its own labelled play button. Automatic
+  sounds start 300 ms after the screen changes (`AUTO_DELAY` in `core.js`); paging on quickly, pressing a play
+  button or leaving the game cancels one that hasn't started. Nothing in
   the games is timed: Memory pairs keeps a wrong pair face up until the next card is turned, and Word in the middle
   waits for Next.
 - **Language.** Kullilli words are marked `lang="gll"` (the code comes from the FLEx writing system and is in the
@@ -122,6 +138,16 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
 **Every day**
 - **Daily five** (`daily`): five quick questions, the same for everyone on a given day (picked from the date):
   meaning of a word, word for a meaning, hear and choose. Progress and a day streak are kept on the device.
+- **Flashcards** (`flashcards`): 10 cards by default (5, 20, 30 or 50 to choose). The front shows the Kullilli
+  word (with its recording) or, with "English → Kullilli", the English meaning. Click or tap the card, or press
+  Enter, to turn it over. The back has the other language, the word type, an example sentence with its translation
+  (a sense example, or else a text sentence that uses the word) and a link to the entry. Both sides have
+  the study-list bookmark (its spoken label doesn't name the word, so it can't give the answer away). With English first, the
+  recording is on the back. Arrow keys go to the previous or next card. With "Which words: Studied before" (see
+  Practised words), the cards are the words practised longest ago. Cards per round is `g.fcards`. A card counts as
+  studied the first time it is turned over in a round: that adds to the flashcard count for the day (store
+  `flash`, one number per date) and marks the word as practised. The game shows the words studied with
+  flashcards today, this week (from Monday), this month and this year.
 
 **Words and meanings**
 - **Memory pairs** (`memory`): 6 pairs face down. Cards: word & meaning, sound & word, or sound & meaning (a sound
@@ -182,10 +208,16 @@ respelled or homographs are renumbered in FLEx.
 
 **Practised words.** Every word shown at the end of a round the player finishes counts as practised once, with
 the date (`practise()` in `core.js`; Letter by letter and Hidden word, which end on a single word, count that
-word). "Not practised yet" is a topic in every game, and the study list page shows "You have practised N of the M
+word; Flashcards count a word when its card is turned). The study list page shows "You have practised N of the M
 words used in the games", with a button to forget the history. Words from rounds left half-way don't count.
 
-The study list, practice history, tricky list, settings and the daily streak are kept in the browser on that
+**Which words.** Every game's settings bar (all but Daily five and Same or different?) has *Any words* /
+*New to me* / *Studied before*, on top of the topic. New = never practised anywhere on the site; studied before
+= practised in any game or in flashcards, so it means "words I know", not "words seen in this game". It is one
+setting (`g.which`) shared by all games, and the topic counts follow it. This replaced the earlier "Not
+practised yet" topic; a saved choice of that topic becomes *New to me*.
+
+The study list, practice history, flashcard counts, tricky list, settings and the daily streak are kept in the browser on that
 device only (localStorage); nothing is sent anywhere, so the site owner can't see what people study, and a
 reader's lists don't follow them to another phone or browser.
 

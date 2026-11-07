@@ -118,6 +118,16 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 }
 .letters a:hover { border-color: var(--ochre); color: var(--ochre); }
 .letters a.on { background: var(--ochre); border-color: var(--ochre); color: #fff; }
+.letters .off {                                    /* a letter with no entries (English alphabet) */
+  min-width: 40px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
+  font: 700 .95rem var(--v-font); color: var(--faint); border: 1px dashed var(--line); border-radius: 9px; opacity: .6;
+}
+/* wordlist order: Kullilli first / English first */
+.wl-order { display: inline-flex; margin-top: 16px; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--paper); }
+.wl-order a { font: 600 .86rem var(--ui-font); color: var(--sea); text-decoration: none; padding: 7px 15px; }
+.wl-order a + a { border-left: 1px solid var(--line); }
+.wl-order a:hover { color: var(--ochre); }
+.wl-order a.on { background: var(--sea); color: #fff; }
 .tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 10px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
@@ -188,6 +198,12 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .card .note, .row .note { font-size: .75rem; color: var(--faint); font-style: italic; }
 .card.sub { background: #fcf9f3; border-left: 3px solid var(--sand); }
 .card.nk .hw::after, .row.nk .hw::after { content: " †"; color: var(--faint); font-weight: 400; }
+/* English-first cards and rows: the English word leads, the entry's word comes under it */
+.card .ehw { font: 700 1.1rem/1.25 var(--ui-font); color: var(--ink); overflow-wrap: anywhere; }
+.card.eng .hw { font-size: 1.02rem; }
+.card.eng .gl .pos, .row.eng .gl .pos { margin-right: 3px; }
+.row.eng { grid-template-columns: minmax(130px, 24%) minmax(130px, 24%) minmax(0, 1fr); }
+.row .ehw { font-weight: 700; color: var(--ink); overflow-wrap: anywhere; }
 
 /* compact list view */
 .rows { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -204,6 +220,8 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .rows > .cell > .row { border-top: 0; }
 .rows > .cell + .cell { border-top: 1px solid var(--line); }
 .cell.has-audio > .card .hw { padding-right: 40px; }
+.cell.has-audio > .card .ehw { padding-right: 40px; }
+.cell.has-audio > .card.eng .hw { padding-right: 0; }
 .cell.has-audio > .row { padding-right: 60px; }
 
 /* ---------- interlinear examples ---------- */
@@ -417,6 +435,9 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
   .card { padding: 10px 12px; min-height: 0; }
   .row { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .row .pos, .row .gl, .row .under, .row .note { grid-column: 1; }
+  .row.eng { grid-template-columns: minmax(0, 1fr); }
+  .cell.has-audio > .card .ehw { padding-right: 0; }
+  .letters .off { min-width: 36px; height: 36px; flex: none; }
   .browse-bar { position: static; }
   .wotd { grid-template-columns: minmax(0, 1fr); padding: 14px 16px; margin-top: 14px; }
   .wotd .hw { font-size: 1.6rem; }

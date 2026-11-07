@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and sort.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, record, wireBar, say, auto, autoplayHTML, focusIfKey } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, record, wireBar, say, auto, autoplayHTML, focusIfKey , fewTopics, whichHTML } = window.DictGames.kit;
   let ctx;
 
   function sortGame(root) {
@@ -11,7 +11,7 @@
     const L = esc(ctx.lang);
     root.innerHTML = '<h2 class="gtitle">Sort into groups</h2><p class="gintro">' +
       `Put each ${L} word in the basket for its topic: drag it there, or tap the word and then the basket (with a keyboard, press Enter on the word, then on the basket).</p>` +
-      '<div class="game-bar">' +
+      '<div class="game-bar">' + whichHTML(s) +
       `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` +
       segHTML('groups', 'Baskets', String(n), [['2', 'Two topics'], ['3', 'Three topics']]) + autoplayHTML() +
       '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
@@ -27,7 +27,7 @@
       const words = pick(g.items.filter(it => !others.some(t => tops(it).has(t))), 4);
       if (words.length === 4) chosen.push(Object.assign({}, g, { words }));
     }
-    if (chosen.length < n) { play.innerHTML = '<p class="empty">Not enough topics with words for this game.</p>'; return; }
+    if (chosen.length < n) { play.innerHTML = fewTopics(); return; }
     chosen.forEach(g => { g.words = g.words.filter(it => !chosen.some(o => o !== g && tops(it).has(o.top))); });
     const chips = shuffle(chosen.flatMap((g, gi) => g.words.map(it => ({ it, gi }))));
     const missed = new Set();

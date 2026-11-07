@@ -74,9 +74,10 @@ window.BardiRender = (() => {
   let inStudy = () => false;
   const setStudy = fn => { inStudy = fn; };
   const bookmarkSVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4.2-5.5 4.2z"/></svg>';
-  const studyBtn = (it, wide) => `<button type="button" class="study${wide ? ' wide' : ''}" data-study="${esc(it.id)}" aria-pressed="${inStudy(it.id)}"` +
+  // label: what a screen reader hears for the icon-only button (default "<word> in my study list")
+  const studyBtn = (it, wide, label) => `<button type="button" class="study${wide ? ' wide' : ''}" data-study="${esc(it.id)}" aria-pressed="${inStudy(it.id)}"` +
     (wide ? ` title="Add to or remove from my study list">${bookmarkSVG}<span>My study list</span>`
-      : ` aria-label="${esc(hwOf(it.c))} in my study list" title="My study list">${bookmarkSVG}`) + '</button>';
+      : ` aria-label="${esc(label || `${hwOf(it.c)} in my study list`)}" title="My study list">${bookmarkSVG}`) + '</button>';
 
   // ---- inline markup: |tsc{..} small caps, |fv{..} Bardi word, |fi{..} italic; *x* in examples = highlighted part
   function fmt(s, links = true) {
@@ -148,19 +149,24 @@ window.BardiRender = (() => {
   const shortPos = c => (c.cls === 'place' ? 'place name' : posLabel(c.ps));
 
   // ---- cards and rows ----------------------------------------------------
-  function itemHTML(kind, it, note) {
+  // eng = an English word to lead with (the English-first wordlist): English word, then the entry as usual,
+  // with its full gloss only when that says more than the English word
+  function itemHTML(kind, it, note, eng) {
     const c = it.c, gl = summary(c);
-    const cls = kind + (it.parent ? ' sub' : '') + (c.status === 'NK' ? ' nk' : '');
+    const cls = kind + (eng ? ' eng' : '') + (it.parent ? ' sub' : '') + (c.status === 'NK' ? ' nk' : '');
     const title = c.status === 'NK' ? ' title="Not known to speakers today"' : '';
+    const glHTML = gl ? (c.cls === 'pronoun' && ABBR[gl] ? abbrHTML(gl, false) : fmt(gl, false)) : '<span class="muted">no gloss</span>';
+    const pos = `<span class="pos">${esc(shortPos(c))}</span>`;
     return `<div class="cell${c.audio ? ' has-audio' : ''}"><a class="${cls}" href="#/entry/${enc(it.id)}" data-id="${esc(it.id)}"${title}>` +
+      (eng ? `<span class="ehw">${esc(eng)}</span>` : '') +
       `<span class="hw">${esc(hwOf(c))}${c.hm ? `<sup>${esc(c.hm)}</sup>` : ''}</span>` +
-      `<span class="pos">${esc(shortPos(c))}</span>` +
-      `<span class="gl">${gl ? (c.cls === 'pronoun' && ABBR[gl] ? abbrHTML(gl, false) : fmt(gl, false)) : '<span class="muted">no gloss</span>'}</span>` +
+      (eng ? `<span class="gl">${pos}${gl.toLowerCase() === eng.toLowerCase() ? '' : ' ' + glHTML}</span>`
+        : `${pos}<span class="gl">${glHTML}</span>`) +
       (it.parent ? `<span class="under">under ${esc(hwOf(it.parent.c))}</span>` : '') +
       (note ? `<span class="note">${esc(note)}</span>` : '') + '</a>' +
       playBtn(c.audio, hwOf(c)) + studyBtn(it) + '</div>';
   }
-  const cardHTML = (it, note) => itemHTML('card', it, note);
+  const cardHTML = (it, note, eng) => itemHTML('card', it, note, eng);
 
   function wotdHTML(it, dateLabel) {
     const c = it.c;
@@ -172,7 +178,15 @@ window.BardiRender = (() => {
       (ex ? `<span class="wotd-ex"><span class="exv v">${fmtEx(ex.v, false)}</span><span class="exe">${fmt(ex.e, false)}</span></span>` : '') +
       '</a>' + playBtn(c.audio, hwOf(c), true) + '</div>';
   }
-  const rowHTML = (it, note) => itemHTML('row', it, note);
+  const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
+
+  // one example for a word (flashcards): a sense example with a translation, else a text sentence that uses it
+  function exampleHTML(c) {
+    const x = (c.senses || []).flatMap(s => s.ex || []).find(e => e.v && e.e);
+    if (x) return `<span class="exv v">${fmtEx(x.v, false)}</span><span class="exe">${fmt(x.e, false)}</span>`;
+    const s = (c.xs || []).map(si => SENTS[si]).find(t => t && t.v && t.ft && t.ft[0]);
+    return s ? `<span class="exv v">${esc(s.v)}</span><span class="exe">${esc(s.ft[0])}</span>` : '';
+  }
 
   // ---- full entry --------------------------------------------------------
   const block = (title, inner) => `<section class="blk">${title ? `<h3>${title}</h3>` : ''}${inner}</section>`;
@@ -303,5 +317,5 @@ window.BardiRender = (() => {
       .map(([a, full]) => `<dt><abbr class="gab">${esc(a)}</abbr></dt><dd>${esc(full)}</dd>`).join('');
   };
 
-  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG };
+  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, meaning: summary };
 })();

@@ -1,5 +1,5 @@
 /* Dictionary: wordlist, affixes, search, entry panel, audio and URL routing.
-   URLs: #/letter/b  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>) */
+   URLs: #/letter/b  #/english/b  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>) */
 'use strict';
 (() => {
   const DATA = window.DICT_DATA, S = window.BardiSearch, R = window.BardiRender;
@@ -46,6 +46,32 @@
     ['clitic', 'Clitics', 'Attach to the end of a word or phrase; written with =.'],
   ].filter(([k]) => items.some(it => it.c.cls === k));
 
+  // ---- English-first wordlist: FLEx's English reversal index (c.fl), one card per English word and entry.
+  //      An entry with no reversal uses its glosses.  Built the first time it is shown.
+  const EN_LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const junk = s => !s || /\?|unknown/i.test(s);
+  let ENG = null;
+  function engIndex() {
+    if (ENG) return ENG;
+    const list = [];
+    items.forEach(it => {
+      const c = it.c, seen = new Set();
+      let keys = (c.fl || []).filter(f => !junk(f));
+      if (!keys.length) keys = (c.senses || []).flatMap(s => s.gl || []).flatMap(g => g.split(/\s*;\s*/)).filter(g => !junk(g));
+      keys.forEach(k => {
+        const key = k.trim(), lk = key.toLowerCase(), m = /[a-z0-9]/.exec(lk);
+        if (!m || seen.has(lk)) return;
+        seen.add(lk);
+        list.push({ key, it, sk: lk.slice(m.index), L: /\d/.test(m[0]) ? '#' : m[0] });   // pronoun labels (1sg …) go under #
+      });
+    });
+    list.sort((a, b) => a.sk.localeCompare(b.sk, 'en') || a.it.i - b.it.i);
+    const count = {};
+    list.forEach(x => { count[x.L] = (count[x.L] || 0) + 1; });
+    ENG = { list, count, letters: EN_LETTERS.concat(count['#'] ? ['#'] : []) };
+    return ENG;
+  }
+
   // ---- word of the day: same for everyone on a given date; steps through the whole
   //      pool (glossed words with a translated example or a recording) before any word repeats ----
   const WOTD_POOL = items.filter(({ c }) => c.status !== 'NK' && group(c.cls) !== 'affix' &&
@@ -89,8 +115,9 @@
   const state = {
     mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1',
     filter: store.get('filter', 'all'), view: store.get('view', 'cards'),
-    letter: LETTERS[0], baseKey: '', list: [], openId: null,
+    letter: LETTERS[0], eLetter: 'a', baseKey: '', list: [], openId: null,
   };
+  if (store.get('wl', 'k') === 'e') $('[data-tab="letter"]').href = '#/english/a';   // the Wordlist tab opens the order last used
   if (!FILTERS.some(([k]) => k === state.filter)) state.filter = 'all';
   // linguist notes and questions on example sentences: hidden unless switched on (remembered)
   state.ling = store.get('ling', '0') === '1';
@@ -109,7 +136,7 @@
     const draw = state.view === 'list' ? R.rowHTML : R.cardHTML;
     const more = () => {
       const end = Math.min(n + CHUNK, list.length);
-      el.insertAdjacentHTML('beforeend', list.slice(n, end).map(x => draw(x.it, x.note)).join(''));
+      el.insertAdjacentHTML('beforeend', list.slice(n, end).map(x => draw(x.it, x.note, x.eng)).join(''));
       n = end;
       if (n < list.length) { btn.textContent = `Show more (${list.length - n})`; el.after(btn); } else btn.remove();
     };
@@ -127,19 +154,30 @@
     `<button type="button" data-view="list" aria-pressed="${state.view === 'list'}"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="14" height="2.4" rx="1"/><rect x="1" y="6.8" width="14" height="2.4" rx="1"/><rect x="1" y="11.6" width="14" height="2.4" rx="1"/></svg>List</button></div>`;
 
   // ---- views ---------------------------------------------------------------
-  function viewLetter(letter) {
-    if (!letterCount[letter]) letter = LETTERS[0];
-    state.letter = letter;
-    $('[data-tab="letter"]').href = '#/letter/' + enc(letter);
-    const inL = items.filter(it => it.c.L === letter);
+  // Kullilli first (#/letter/…) or English first (#/english/…): same letters bar, filters, cards and entries
+  const orderHTML = eng => '<nav class="wl-order" aria-label="Wordlist order">' +
+    `<a href="#/letter/${enc(state.letter)}"${eng ? '' : ' class="on" aria-current="page"'}>${esc(LANG)} → English</a>` +
+    `<a href="#/english/${enc(state.eLetter)}"${eng ? ' class="on" aria-current="page"' : ''}>English → ${esc(LANG)}</a></nav>`;
+
+  function viewLetter(letter, eng) {
+    const E = eng ? engIndex() : null;
+    const count = eng ? E.count : letterCount, order = eng ? E.letters : LETTERS, base = eng ? '#/english/' : '#/letter/';
+    if (!count[letter]) letter = order.find(l => count[l]);
+    if (eng) state.eLetter = letter; else state.letter = letter;
+    store.set('wl', eng ? 'e' : 'k');
+    $('[data-tab="letter"]').href = base + enc(letter);
+    const inL = eng ? E.list.filter(x => x.L === letter) : items.filter(it => it.c.L === letter).map(it => ({ it }));
     const gc = {};
-    inL.forEach(it => { const g = group(it.c.cls); gc[g] = (gc[g] || 0) + 1; });
-    const shown = state.filter === 'all' ? inL : inL.filter(it => group(it.c.cls) === state.filter);
+    inL.forEach(({ it }) => { const g = group(it.c.cls); gc[g] = (gc[g] || 0) + 1; });
+    const shown = state.filter === 'all' ? inL : inL.filter(({ it }) => group(it.c.cls) === state.filter);
     const fLabel = (FILTERS.find(f => f[0] === state.filter) || ['', ''])[1];
     const wotd = wordOfTheDay();
-    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label) : '') +
-      '<div class="browse-bar"><nav class="letters" aria-label="Letters">' +
-      LETTERS.map(l => `<a href="#/letter/${enc(l)}"${l === letter ? ' class="on" aria-current="page"' : ''} title="${letterCount[l]} entries">${esc(l.toUpperCase())}</a>`).join('') +
+    const letterLink = l => (count[l]
+      ? `<a href="${base}${enc(l)}"${l === letter ? ' class="on" aria-current="page"' : ''} title="${count[l]} entries">${esc(l.toUpperCase())}</a>`
+      : `<span class="off" title="No entries">${esc(l.toUpperCase())}</span>`);
+    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label) : '') + orderHTML(eng) +
+      `<div class="browse-bar"><nav class="letters" aria-label="${eng ? 'English letters' : 'Letters'}">` +
+      order.map(letterLink).join('') +
       '</nav><div class="tools"><div class="chips" role="group" aria-label="Word type">' +
       FILTERS.map(([k, lab]) => {
         const n = k === 'all' ? inL.length : (gc[k] || 0);
@@ -147,8 +185,8 @@
       }).join('') + `</div>${toggleHTML()}</div></div>` +
       `<h2 class="list-title">${esc(letter.toUpperCase())} <small>${shown.length} ${shown.length === 1 ? 'entry' : 'entries'}${state.filter !== 'all' ? ' · ' + esc(fLabel.toLowerCase()) : ''}</small></h2>` +
       (shown.length ? '<div id="list"></div>' : `<p class="empty">No ${esc(fLabel.toLowerCase())} under ${esc(letter.toUpperCase())}.</p>`);
-    if (shown.length) mountList($('#list'), shown.map(it => ({ it })));
-    state.list = shown.map(it => it.id);
+    if (shown.length) mountList($('#list'), shown.map(x => ({ it: x.it, eng: x.key })));
+    state.list = [...new Set(shown.map(x => x.it.id))];
   }
 
   function viewAffixes() {
@@ -207,6 +245,8 @@
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
     if (head === 'affixes' || head === 'about') return { type: head };
+    if (head === 'english') return { type: 'english', letter: dec(rest) || state.eLetter };
+    if (!h && store.get('wl', 'k') === 'e') return { type: 'english', letter: state.eLetter };
     if (head === 'mylist') return { type: 'mylist', spec: '' };
     if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
     if (head === 'learn') {
@@ -226,11 +266,13 @@
     state.baseKey = key;
     observers.forEach(o => o.disconnect());
     observers = [];
-    document.querySelectorAll('.tabs [data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === r.type));
+    const tab = r.type === 'english' ? 'letter' : r.type;
+    document.querySelectorAll('.tabs [data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
     $('.tab-search').hidden = r.type !== 'search';
     if (r.type === 'search') { if (document.activeElement !== qInput) qInput.value = r.q; }
     else if (document.activeElement !== qInput) qInput.value = '';
     if (r.type === 'letter') viewLetter(r.letter);
+    else if (r.type === 'english') viewLetter(r.letter, true);
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);

@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and sort.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, record } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, record, wireBar, say, auto, autoplayHTML, focusIfKey } = window.DictGames.kit;
   let ctx;
 
   function sortGame(root) {
@@ -10,14 +10,12 @@
     const n = ctx.store.get('g.groups', '2') === '3' ? 3 : 2;
     const L = esc(ctx.lang);
     root.innerHTML = '<h2 class="gtitle">Sort into groups</h2><p class="gintro">' +
-      `Put each ${L} word in the basket for its topic: drag it there, or tap the word and then the basket.</p>` +
+      `Put each ${L} word in the basket for its topic: drag it there, or tap the word and then the basket (with a keyboard, press Enter on the word, then on the basket).</p>` +
       '<div class="game-bar">' +
       `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` +
-      segHTML('groups', 'Baskets', String(n), [['2', 'Two topics'], ['3', 'Three topics']]) +
+      segHTML('groups', 'Baskets', String(n), [['2', 'Two topics'], ['3', 'Three topics']]) + autoplayHTML() +
       '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
-    const bar = root.querySelector('.game-bar');
-    bar.addEventListener('change', e => { if (e.target.dataset.g === 'audio') ctx.store.set('g.audio', e.target.checked ? '1' : '0'); sortGame(root); });
-    bar.addEventListener('click', e => { const b = e.target.closest('button[data-g]'); if (!b) return; if (b.dataset.v) ctx.store.set('g.' + b.dataset.g, b.dataset.v); sortGame(root); });
+    wireBar(root, () => sortGame(root));
     const play = root.querySelector('.gplay');
 
     // topics from different top-level domains, so no word could belong to two baskets
@@ -36,10 +34,13 @@
     let placed = 0, mistakes = 0, sel = null, meanings = false;
 
     function draw() {
-      play.innerHTML = `<p class="gstat" aria-live="polite">Sorted: ${placed} of ${chips.length}</p>` +
-        `<div class="sort-baskets n${n}">` + chosen.map((g, gi) => `<div class="basket" data-b="${gi}"><div class="basket-name">${esc(g.name)}</div>` +
-          '<div class="basket-in">' + chips.filter(c => c.done && c.gi === gi).map(c => `<span class="wchip in v">${esc(hw(c.it))}</span>`).join('') + '</div></div>').join('') +
-        '</div><div class="sort-pool">' + chips.map((c, i) => c.done ? '' : `<button type="button" class="wchip${sel === i ? ' sel' : ''}" data-c="${i}">` +
+      const inBasket = gi => chips.filter(c => c.done && c.gi === gi);
+      play.innerHTML = `<p class="gstat">Sorted: ${placed} of ${chips.length}</p>` +
+        `<div class="sort-baskets n${n}">` + chosen.map((g, gi) => `<div class="basket" data-bk="${gi}">` +
+          `<button type="button" class="basket-name" data-b="${gi}">${esc(g.name)}<span class="sr-only">, basket, ` +
+          `${inBasket(gi).length ? inBasket(gi).map(c => esc(hw(c.it))).join(', ') : 'empty'}</span></button>` +
+          '<div class="basket-in" aria-hidden="true">' + inBasket(gi).map(c => `<span class="wchip in v">${esc(hw(c.it))}</span>`).join('') + '</div></div>').join('') +
+        '</div><div class="sort-pool">' + chips.map((c, i) => c.done ? '' : `<button type="button" class="wchip${sel === i ? ' sel' : ''}" data-c="${i}" aria-pressed="${sel === i}">` +
           `<span class="v">${esc(hw(c.it))}</span>${meanings ? `<span class="wchip-gl">${esc(gloss(c.it))}</span>` : ''}</button>`).join('') + '</div>' +
         `<div class="hd-tools"><button type="button" class="gbtn" data-meanings${meanings ? ' disabled' : ''}>${meanings ? 'Meanings shown' : 'Show meanings'}</button></div>`;
     }
@@ -49,24 +50,28 @@
       if (c.gi === gi) {
         c.done = true; placed++;
         record(c.it, !missed.has(c.it));
-        if (c.it.c.audio) ctx.playFile(c.it.c.audio);
+        auto(c.it.c.audio);
         sel = null;
+        say(`${hw(c.it)} goes in ${chosen[gi].name}.`);
         if (placed === chips.length) {
           play.innerHTML = finishHTML(`All sorted${mistakes ? `, with ${mistakes} ${mistakes === 1 ? 'word' : 'words'} in the wrong basket on the way` : ' first time'}.`, chips.map(x => x.it));
           return;
         }
         draw();
+        focusIfKey(play.querySelector('.wchip[data-c]'));
       } else {
         mistakes++; missed.add(c.it);
         sel = null;
         draw();
-        const again = play.querySelector(`[data-c="${ci}"]`), basket = play.querySelector(`[data-b="${gi}"]`);
+        say(`${hw(c.it)} doesn't go in ${chosen[gi].name}.`);
+        focusIfKey(play.querySelector(`[data-c="${ci}"]`));
+        const again = play.querySelector(`[data-c="${ci}"]`), basket = play.querySelector(`[data-bk="${gi}"]`);
         [again, basket].forEach(x => { if (x) { x.classList.remove('bad'); void x.offsetWidth; x.classList.add('bad'); } });
       }
     }
 
     // tap a word then a basket, or drag the word onto a basket (pointer events: mouse, touch, pen)
-    let drag = null;
+    let drag = null, dragged = 0;
     play.addEventListener('pointerdown', e => {
       const b = e.target.closest('.wchip[data-c]');
       if (!b || e.button > 0) return;
@@ -92,22 +97,33 @@
       drag = null;
       play.querySelectorAll('.basket.over').forEach(x => x.classList.remove('over'));
       b.classList.remove('lifted');
-      if (!ghost) { if (e.type === 'pointerup') { const i = +b.dataset.c; sel = sel === i ? null : i; draw(); } return; }
+      if (!ghost) return;                               // a tap: the click that follows picks the word
       ghost.remove();
+      dragged = Date.now();
       const t = document.elementFromPoint(e.clientX, e.clientY)?.closest('.basket');
-      if (t) drop(+b.dataset.c, +t.dataset.b, b);
+      if (t) drop(+b.dataset.c, +t.dataset.bk, b);
     };
     play.addEventListener('pointerup', end);
     play.addEventListener('pointercancel', end);
     play.addEventListener('click', e => {
       if (e.target.closest('[data-again]')) { sortGame(root); return; }
       if (e.target.closest('[data-meanings]')) { meanings = true; draw(); return; }
+      // picking a word or a basket is a click: mouse, tap, Enter/Space and screen readers all produce one
+      const chip = e.target.closest('.wchip[data-c]');
+      if (chip) {
+        if (Date.now() - dragged < 300) return;
+        const i = +chip.dataset.c;
+        sel = sel === i ? null : i;
+        draw();
+        focusIfKey(play.querySelector(`[data-c="${i}"]`));
+        say(sel === null ? 'Unselected.' : `${hw(chips[i].it)} selected. Now choose its basket: ${chosen.map(g => g.name).join(' or ')}.`);
+        return;
+      }
       const basket = e.target.closest('.basket');
-      if (basket && sel !== null) drop(sel, +basket.dataset.b);
-    });
-    play.addEventListener('keydown', e => {                    // keyboard: Enter on a word selects it, Enter on a basket drops it
-      const c = e.target.closest('.wchip[data-c]');
-      if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); const i = +c.dataset.c; sel = sel === i ? null : i; draw(); play.querySelector(`[data-c="${i}"]`)?.focus(); }
+      if (basket) {
+        if (sel !== null) drop(sel, +basket.dataset.bk);
+        else say('Choose a word first.');
+      }
     });
     draw();
   }

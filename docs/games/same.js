@@ -3,7 +3,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and same.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, segHTML, finishHTML, letterKit, speakerHTML } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, segHTML, finishHTML, letterKit, speakerHTML, say, autoplayHTML, focusIfKey } = window.DictGames.kit;
   let ctx;
 
   // kinds of sound difference, by the two letters that differ
@@ -66,9 +66,10 @@
       'Choose a kind of sound difference to practise just that.</p>' +
       '<div class="game-bar"><label class="gsel">Sounds <select data-g="contrast">' +
       opts.map(([v, t]) => `<option value="${v}"${v === kind ? ' selected' : ''}>${esc(t)}</option>`).join('') + '</select></label>' +
-      '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
-    root.querySelector('[data-g="contrast"]').addEventListener('change', e => { ctx.store.set('g.contrast', e.target.value); stop(); same(root); });
-    root.querySelector('[data-g="new"]').addEventListener('click', () => { stop(); same(root); });
+      autoplayHTML() + '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
+    root.querySelector('[data-g="contrast"]').addEventListener('change', e => { ctx.store.set('g.contrast', e.target.value); stop(); same(root); focusIfKey(root.querySelector('[data-g="contrast"]')); });
+    root.querySelector('[data-g="new"]').addEventListener('click', () => { stop(); same(root); focusIfKey(root.querySelector('[data-g="new"]')); });
+    root.querySelector('[data-g="autoplay"]').addEventListener('change', e => ctx.store.set('g.autoplay', e.target.checked ? '1' : '0'));
     const play = root.querySelector('.gplay');
     const pool = shuffle(all.filter(p => kind === 'all' || p.kind === kind));
     if (pool.length < 3) { play.innerHTML = '<p class="empty">Not enough recorded pairs for this kind of sound yet.</p>'; return; }
@@ -82,16 +83,16 @@
 
     function ask() {
       const t = trials[q];
-      play.innerHTML = `<p class="gstat" aria-live="polite">Pair ${q + 1} of ${trials.length} · Score ${score}</p>` +
-        '<div class="sd-box"><div class="sd-marks"><span class="sd-n" data-n="1">1</span><span class="sd-n" data-n="2">2</span></div>' +
-        '<button type="button" class="gbtn sd-play" data-replay>▶ Play again</button>' +
+      play.innerHTML = `<p class="gstat">Pair ${q + 1} of ${trials.length} · Score ${score}</p>` +
+        '<div class="sd-box"><div class="sd-marks" aria-hidden="true"><span class="sd-n" data-n="1">1</span><span class="sd-n" data-n="2">2</span></div>' +
+        '<button type="button" class="gbtn sd-play" data-replay>▶ Play the two recordings</button>' +
         '<div class="sd-choices"><button type="button" class="sd-ans" data-ans="same">Same</button>' +
         '<button type="button" class="sd-ans" data-ans="diff">Different</button></div><div class="sd-reveal"></div></div><div class="gnext"></div>';
-      hear();
+      if (ctx.store.get('g.autoplay', '1') === '1') hear();
     }
     const mark = n => play.querySelectorAll('.sd-n').forEach(x => x.classList.toggle('on', +x.dataset.n === n));
     const hear = () => { const t = trials[q]; playTwo(t.a.c.audio, (t.same ? t.a : t.b).c.audio, mark); };
-    const wordHTML = it => `<div class="sd-word"><span class="v">${esc(hw(it))}</span><span class="tr">${esc(gloss(it) || (it.c.senses || []).flatMap(s => s.gl || [])[0] || '')}</span>${speakerHTML(it.c.audio)}</div>`;
+    const wordHTML = it => `<div class="sd-word"><span class="v">${esc(hw(it))}</span><span class="tr">${esc(gloss(it) || (it.c.senses || []).flatMap(s => s.gl || [])[0] || '')}</span>${speakerHTML(it.c.audio, '', `Listen to ${hw(it)}`)}</div>`;
 
     play.addEventListener('click', e => {
       if (e.target.closest('[data-again]')) { same(root); return; }
@@ -114,6 +115,8 @@
         : `<p class="sd-say">${right ? 'Right: ' : ''}two different words, <strong class="v">${esc(x)}</strong> / <strong class="v">${esc(y)}</strong>.</p>${wordHTML(t.a)}${wordHTML(t.b)}`);
       play.querySelector('.gstat').textContent = `Pair ${q + 1} of ${trials.length} · Score ${score}`;
       play.querySelector('.gnext').innerHTML = `<button type="button" class="gbtn primary" data-next>${q + 1 < trials.length ? 'Next' : 'See your score'}</button>`;
+      say((right ? 'Right. ' : 'Not right. ') + (t.same ? `It was the same word twice: ${hw(t.a)}.` : `They were different: ${hw(t.a)} and ${hw(t.b)}, which differ in ${x} and ${y}.`));
+      focusIfKey(play.querySelector('[data-next]'));
     });
     ask();
   }

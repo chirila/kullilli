@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and odd.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, speakerHTML } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, speakerHTML, wireBar, say, autoplayHTML, focusIfKey } = window.DictGames.kit;
   let ctx;
 
   function odd(root) {
@@ -14,11 +14,9 @@
       'After each answer you\'ll see what all four mean.</p>' +
       '<div class="game-bar">' +
       `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` +
-      segHTML('oddshow', 'Show', show, [['k', `${L} words`], ['ke', 'Words and meanings']]) +
+      segHTML('oddshow', 'Show', show, [['k', `${L} words`], ['ke', 'Words and meanings']]) + autoplayHTML() +
       '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
-    const bar = root.querySelector('.game-bar');
-    bar.addEventListener('change', e => { if (e.target.dataset.g === 'audio') ctx.store.set('g.audio', e.target.checked ? '1' : '0'); odd(root); });
-    bar.addEventListener('click', e => { const b = e.target.closest('button[data-g]'); if (!b) return; if (b.dataset.v) ctx.store.set('g.' + b.dataset.g, b.dataset.v); odd(root); });
+    wireBar(root, () => odd(root));
     const play = root.querySelector('.gplay');
     const groups = domainGroups(s, 4);
     if (groups.length < 2) { play.innerHTML = '<p class="empty">Not enough topics with words for this game.</p>'; return; }
@@ -39,9 +37,9 @@
 
     function ask() {
       const Q = qs[q];
-      play.innerHTML = `<p class="gstat" aria-live="polite">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
+      play.innerHTML = `<p class="gstat">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
         '<div class="odd-grid">' + Q.words.map(it => `<div class="lcell"><button type="button" class="lopt v" data-id="${esc(it.id)}">${esc(hw(it))}` +
-          (show === 'ke' ? `<span class="odd-gl">${esc(gloss(it))}</span>` : '') + '</button><div class="lmore"></div></div>').join('') +
+          (show === 'ke' ? `<span class="odd-gl" lang="en">${esc(gloss(it))}</span>` : '') + '</button><div class="lmore"></div></div>').join('') +
         '</div><div class="odd-say"></div><div class="gnext"></div>';
     }
     play.addEventListener('click', e => {
@@ -55,12 +53,15 @@
       play.querySelectorAll('.lopt').forEach(x => { x.disabled = true; if (x.dataset.id === Q.odd.id) x.classList.add('right'); });
       play.querySelectorAll('.lcell').forEach((cell, i) => {
         const it = Q.words[i];
-        cell.querySelector('.lmore').innerHTML = `<span>${esc(gloss(it))}</span>` + (it.c.audio ? speakerHTML(it.c.audio) : '');
+        cell.querySelector('.lmore').innerHTML = `<span>${esc(gloss(it))}</span>` + (it.c.audio ? speakerHTML(it.c.audio, '', `Listen to ${hw(it)}`) : '');
       });
       Q.words.forEach(it => { if (!seen.includes(it)) seen.push(it); });
       play.querySelector('.odd-say').innerHTML = `${right ? 'Right! ' : ''}The others are all <strong>${esc(Q.g.name)}</strong>.`;
       play.querySelector('.gstat').textContent = `Question ${q + 1} of ${qs.length} · Score ${score}`;
       play.querySelector('.gnext').innerHTML = `<button type="button" class="gbtn primary" data-next>${q + 1 < qs.length ? 'Next' : 'See your score'}</button>`;
+      say(`${right ? 'Right.' : 'Not right.'} The odd one out is ${hw(Q.odd)}, ${gloss(Q.odd)}. The others are all ${Q.g.name}: ` +
+        Q.words.filter(x => x !== Q.odd).map(x => `${hw(x)}, ${gloss(x)}`).join('; ') + '.');
+      focusIfKey(play.querySelector('[data-next]'));
     });
     ask();
   }

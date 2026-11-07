@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and letters.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, sr, auto } = window.DictGames.kit;
   let ctx;
 
   // ---- letter by letter (easier): pick letters to fill in a hidden word, no wrong answers ------------
@@ -27,9 +27,9 @@
     function draw() {
       const finished = done();
       const misses = Object.values(tried).filter(v => v === 'miss').length, count = Object.keys(tried).length;
-      const tiles = target.map(u => `<span class="ht ${tried[u] ? 'hit' : ''}"${tried[u] ? '' : ' aria-label="hidden letter"'}>${tried[u] ? esc(u) : ''}</span>`).join('');
-      play.innerHTML = `<p class="gstat" aria-live="polite">${n} letters · ${count} tried${misses ? ` (${misses} not in the word)` : ''}</p>` +
-        `<div class="hd-board"><div class="hd-row"><div class="hd-tiles">${tiles}</div></div></div>` +
+      const tiles = target.map(u => `<span class="ht ${tried[u] ? 'hit' : ''}">${tried[u] ? esc(u) : sr('blank')}</span>`).join('');
+      play.innerHTML = `<p class="gstat">${n} letters · ${count} tried${misses ? ` (${misses} not in the word)` : ''}</p>` +
+        `<div class="hd-board"><div class="hd-row" role="group" aria-label="The word so far"><div class="hd-tiles">${tiles}</div></div></div>` +
         (finished
           ? `<div class="gdone"><p class="gdone-msg">You found it with ${count} ${count === 1 ? 'letter' : 'letters'} tried.</p>` +
             '<button type="button" class="gbtn primary" data-again>New word</button></div>' +
@@ -40,15 +40,17 @@
     function guess(u) {
       if (done() || tried[u] || !units.has(u)) return;
       tried[u] = target.includes(u) ? 'hit' : 'miss';
-      if (done()) { if (it.c.audio) ctx.playFile(it.c.audio); ctx.setList([it.id]); }
+      if (done()) { auto(it.c.audio); ctx.setList([it.id]); }
       draw();
+      const pattern = target.map(x => (tried[x] ? x : 'blank')).join(', ');
+      say(`${u} is ${tried[u] === 'hit' ? '' : 'not '}in the word. ` + (done() ? `You found it: ${plain(it)}, ${gloss(it)}.` : `The word so far: ${pattern}.`));
     }
     play.addEventListener('click', e => {
       const k = e.target.closest('[data-k]');
       if (k) { guess(k.dataset.k); return; }
       const l = e.target.closest('[data-listen]');
       if (l) { ctx.playFile(l.dataset.listen); return; }
-      if (e.target.closest('[data-hint]')) { hint = true; draw(); return; }
+      if (e.target.closest('[data-hint]')) { hint = true; draw(); say(`Meaning: ${gloss(it)}.`); return; }
       if (e.target.closest('[data-again]')) letters(root);
     });
     const onKey = e => {                                  // single letters can be typed; two-letter ones are on screen

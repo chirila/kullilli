@@ -80,22 +80,27 @@ window.DictGames = (() => {
     return '<div class="game-bar">' +
       `<label class="gsel">Topic <select data-g="topic">${opts.join('')}</select></label>` +
       (audio ? `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` : '') +
+      autoplayHTML() +
       (withDir ? segHTML('dir', 'Direction', s.dir, [['k2e', `${L} → English`], ['e2k', `English → ${L}`]]) : '') +
       extra + '<button type="button" class="gbtn" data-g="new">New round</button></div>';
   }
 
+  /** settings bar: every control with data-g is stored as g.<name>; changing one starts a new round,
+      except "Play sounds automatically", which just takes effect. Focus stays on the control that changed. */
   function wireBar(root, redraw) {
-    root.querySelector('.game-bar').addEventListener('change', e => {
+    const bar = root.querySelector('.game-bar');
+    const again = sel => { redraw(); const el = root.querySelector(sel); if (el && lastInput === 'key') el.focus(); };
+    bar.addEventListener('change', e => {
       const k = e.target.dataset.g;
-      if (k === 'topic') ctx.store.set('g.topic', e.target.value);
-      if (k === 'audio') ctx.store.set('g.audio', e.target.checked ? '1' : '0');
-      redraw();
+      if (!k) return;
+      ctx.store.set('g.' + k, e.target.type === 'checkbox' ? (e.target.checked ? '1' : '0') : e.target.value);
+      if (k !== 'autoplay') again(`.game-bar [data-g="${k}"]`);
     });
-    root.querySelector('.game-bar').addEventListener('click', e => {
+    bar.addEventListener('click', e => {
       const b = e.target.closest('button[data-g]');
       if (!b) return;
       if (b.dataset.v) ctx.store.set('g.' + b.dataset.g, b.dataset.v);
-      redraw();
+      again(b.dataset.v ? `.game-bar [data-g="${b.dataset.g}"][data-v="${b.dataset.v}"]` : `.game-bar [data-g="${b.dataset.g}"]`);
     });
   }
 
@@ -110,6 +115,7 @@ window.DictGames = (() => {
       `<h3 class="section-title">Words in this round</h3><div class="grid">${words.map(it => ctx.R.cardHTML(it)).join('')}</div>`;
   }
 
+  const KEYSAY = { hit: ', in the word', near: ', in the word, somewhere else', miss: ', not in the word' };
   // ---- letter games: the language's own letters (ctx.keyboard); two-letter units like ng or dh count as one
   function letterKit() {
     const rows = ctx.keyboard, units = new Set(rows.flat());
@@ -119,7 +125,8 @@ window.DictGames = (() => {
     const fits = it => { const w = plain(it); if (!/^[a-z]+$/.test(w)) return false; const t = tok(w); return t.length >= 4 && t.length <= 6 && t.every(u => units.has(u)); };
     /** the on-screen keyboard; state = letter -> hit/near/miss; extra = buttons added to the last row */
     const keysHTML = (state, extra = '', disableUsed = false) => '<div class="hd-keys">' + rows.map((row, ri) => '<div class="hd-krow">' +
-      row.map(u => `<button type="button" class="hk ${state[u] || ''}" data-k="${esc(u)}"${disableUsed && state[u] ? ' disabled' : ''}>${esc(u)}</button>`).join('') +
+      row.map(u => `<button type="button" class="hk ${state[u] || ''}" data-k="${esc(u)}"${disableUsed && state[u] ? ' disabled' : ''}>${esc(u)}` +
+        `${state[u] ? sr(KEYSAY[state[u]] || '') : ''}</button>`).join('') +
       (ri === rows.length - 1 ? extra : '') + '</div>').join('') + '</div>';
     return { rows, units, tok, plain, fits, keysHTML };
   }
@@ -136,8 +143,72 @@ window.DictGames = (() => {
     else if (r) { r.streak = (r.streak || 0) + 1; if (r.streak >= 2) delete t[it.id]; }
     ctx.store.set('tricky', JSON.stringify(t));
   }
-  const speakerHTML = (file, cls = '') => `<button type="button" class="play ${cls}" data-audio="${esc(file)}" aria-label="Listen">` +
+  /** a speaker button; label says what it plays ("Listen to gunga"), never revealing an answer */
+  const speakerHTML = (file, cls = '', label = 'Listen') => `<button type="button" class="play ${cls}" data-audio="${esc(file)}" aria-label="${esc(label)}">` +
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></button>';
+  const sr = text => `<span class="sr-only">${esc(text)}</span>`;          // words for screen readers only
+
+  // ---- accessibility: announcements, keeping focus through redraws, optional automatic sound ----------
+  // say(): read a message out through a live region that stays in the page (games redraw their boards,
+  // and a status line that is replaced each time is often not announced).
+  let sayEl = null, sayQueue = [], sayTimer = null, lastInput = 'pointer';
+  document.addEventListener('keydown', () => { lastInput = 'key'; }, true);
+  document.addEventListener('pointerdown', () => { lastInput = 'pointer'; }, true);
+  function say(msg, key) {                            // a message with a key replaces a waiting one with the same key
+    if (!msg || !sayEl) return;
+    if (key) sayQueue = sayQueue.filter(m => m.key !== key);
+    sayQueue.push({ key, text: String(msg).replace(/\s+/g, ' ').trim() });
+    clearTimeout(sayTimer);
+    sayTimer = setTimeout(() => {
+      const text = sayQueue.map(m => m.text).join(' ');
+      sayQueue = [];
+      sayEl.textContent = '';
+      setTimeout(() => { if (sayEl) sayEl.textContent = text; }, 60);
+    }, 120);
+  }
+  // "Play sounds automatically": recordings that start by themselves can talk over a screen reader
+  const autoOn = () => ctx.store.get('g.autoplay', '1') === '1';
+  const auto = file => { if (file && autoOn()) ctx.playFile(file); };
+  // move focus for keyboard users only (touch users' screens shouldn't jump about)
+  const focusIfKey = el => { if (el && lastInput === 'key') el.focus(); };
+  const autoplayHTML = () => `<label class="chk2"><input type="checkbox" data-g="autoplay"${autoOn() ? ' checked' : ''}> Play sounds automatically</label>`;
+
+  // After a keyboard action redraws the board, put focus back on the same control, or the nearest one
+  // of its kind (next letter tile, first choice of a new question), or "Next" / "Play again".
+  const FOCUS_ATTRS = ['data-k', 'data-tile', 'data-slot', 'data-c', 'data-b', 'data-ans', 'data-i', 'data-r', 'data-id',
+    'data-hint', 'data-show', 'data-replay', 'data-meanings', 'data-reveal', 'data-listen'];
+  function focusKey(el) {
+    if (!el || el === document.body) return null;
+    const attr = el.hasAttribute('data-r') ? 'data-r' : FOCUS_ATTRS.find(a => el.hasAttribute(a));   // grid cells go by row and column
+    if (!attr) return null;
+    const same = [...el.closest('.gplay, .game')?.querySelectorAll(`[${attr}]`) || []];
+    const sel = attr === 'data-r' ? `[data-r="${el.dataset.r}"][data-c="${el.dataset.c}"]` : `[${attr}="${CSS.escape(el.getAttribute(attr))}"]`;
+    return { attr, sel, index: same.indexOf(el) };
+  }
+  const usable = b => b && !b.disabled && b.getAttribute('aria-disabled') !== 'true' && b.offsetParent !== null;
+  function watch(root) {
+    let last = null, lastStat = '';
+    const note = e => { const el = e.target.closest && e.target.closest(FOCUS_ATTRS.map(a => `[${a}]`).join(',')); last = el ? focusKey(el) : null; };
+    root.addEventListener('focusin', note);
+    root.addEventListener('click', note, true);           // some screen readers press a button without focusing it
+    new MutationObserver(() => {
+      if (!root.isConnected) return;
+      const stat = (root.querySelector('.gstat') || {}).textContent || '';
+      const newStat = stat !== lastStat;
+      if (stat && newStat) { lastStat = stat; say(stat); }
+      const a = document.activeElement;
+      if (lastInput !== 'key' || (a && a !== document.body)) return;      // focus is still somewhere: leave it
+      const play = root.querySelector('.gplay') || root;
+      let target = last && play.querySelector(last.sel);
+      if (!usable(target)) target = play.querySelector('[data-autofocus]') || play.querySelector('[data-next]') || play.querySelector('[data-again]');
+      if (!usable(target) && last) {
+        const same = [...play.querySelectorAll(`[${last.attr}]`)].filter(usable);
+        target = same[newStat ? 0 : Math.min(Math.max(last.index, 0), same.length - 1)];
+      }
+      if (!usable(target)) target = [...play.querySelectorAll('button, a[href], [tabindex="0"]')].find(usable);
+      if (target) target.focus();
+    }).observe(root, { childList: true, subtree: true });
+  }
 
   // ---- registry and the Learn page --------------------------------------------------------
   const GAMES = [];
@@ -163,11 +234,14 @@ window.DictGames = (() => {
 
   function view(main, game, context) {
     ctx = context;
-    if (game === 'tricky') { trickyPage(main); return; }
+    sayEl = null;
+    if (game === 'tricky') { document.title = `My tricky words – ${ctx.title}`; trickyPage(main); focusHeading(main); return; }
     const games = available();
     const g = games.find(x => x.id === game);
     if (!g) {
       ctx.setList([]);
+      document.title = `Learn – ${ctx.title}`;
+      setTimeout(() => focusHeading(main), 0);
       const n = Object.keys(trickyMap()).length;
       main.innerHTML = `<h2 class="gtitle">Learn ${esc(ctx.lang)}</h2><p class="gintro">Games with words from the dictionary. ` +
         'Choose a topic in each game, and listen to the words as you match them.</p>' +
@@ -181,9 +255,20 @@ window.DictGames = (() => {
         }).join('');
       return;
     }
-    main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a><div class="game"></div>';
+    main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a><div class="game"></div>' +
+      '<div class="sr-only" aria-live="polite" aria-atomic="true" data-say></div>';
+    sayEl = main.querySelector('[data-say]');
     ctx.setList([]);
-    g.run(main.querySelector('.game'), ctx);
+    document.title = `${g.title} – ${ctx.title}`;
+    const root = main.querySelector('.game');
+    watch(root);
+    g.run(root, ctx);
+    focusHeading(root);
+  }
+  // after opening a page with the keyboard, start screen readers at its heading
+  function focusHeading(root) {
+    const h = root.querySelector('.gtitle');
+    if (h && lastInput === 'key') { h.tabIndex = -1; h.focus({ preventScroll: true }); }
   }
 
   /** topic groups for the sorting games: specific FLEx domains (two levels deep or more, e.g. Bird, Body, Food)
@@ -197,6 +282,7 @@ window.DictGames = (() => {
   const tops = it => new Set((it.c.sd || []).map(d => d.split(/[.\s]/)[0]));
 
   const kit = { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML,
-    letterKit, listenBtn, record, speakerHTML, inTopic, domainGroups, tops, CLASSES, get ctx() { return ctx; } };
+    letterKit, listenBtn, record, speakerHTML, inTopic, domainGroups, tops, CLASSES, say, sr, auto, autoplayHTML, focusIfKey,
+    get ctx() { return ctx; } };
   return { register, view, kit };
 })();

@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and wordsearch.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, record } = window.DictGames.kit;
+  const { esc, shuffle, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, record, say, sr, auto } = window.DictGames.kit;
   let ctx;
   const SIZE = 8, WORDS = 6;
   const DIRS = [[0, 1], [1, 0], [1, 1]];              // across, down, diagonal
@@ -14,7 +14,7 @@
     const { units, tok, plain } = letterKit();
     root.innerHTML = '<h2 class="gtitle">Word search</h2><p class="gintro">' +
       `Find the ${clue === 'k' ? `${L} words in the list` : `${L} words for the English meanings in the list`} hidden in the grid. ` +
-      'They run across, down or diagonally. Drag across a word, or tap its first and last letters.</p>' +
+      'They run across, down or diagonally. Drag across a word, or tap its first and last letters (with a keyboard, move with the arrow keys and press Enter on the first and last letters).</p>' +
       barHTML(s, false, { extra: segHTML('wsclue', 'Clues', clue, [['k', `Clues: ${L} words`], ['e', 'Clues: English meanings']]) }) +
       '<div class="gplay"></div>';
     wireBar(root, () => wordsearch(root));
@@ -53,12 +53,15 @@
       placed.forEach((p, i) => { if (p.found) p.cells.forEach(([r, c]) => foundCells.set(key(r, c), i % 6)); });
       const onPath = new Set(path.map(([r, c]) => key(r, c)));
       const left = placed.filter(p => !p.found).length;
-      play.innerHTML = `<p class="gstat" aria-live="polite">Found ${placed.length - left} of ${placed.length}</p>` +
-        '<div class="ws-wrap"><div class="ws-grid" style="--n:' + SIZE + '">' + grid.map((row, r) => row.map((u, c) =>
+      const isStart = (r, c) => start && start[0] === r && start[1] === c;
+      play.innerHTML = `<p class="gstat">Found ${placed.length - left} of ${placed.length}</p>` +
+        `<div class="ws-wrap"><div class="ws-grid" style="--n:${SIZE}" role="group" aria-label="Letter grid, ${SIZE} rows of ${SIZE}. Arrow keys move between letters.">` +
+        grid.map((row, r) => row.map((u, c) =>
           `<button type="button" class="ws-cell${foundCells.has(key(r, c)) ? ' f' + foundCells.get(key(r, c)) : ''}${onPath.has(key(r, c)) ? ' sel' : ''}` +
-          `${start && start[0] === r && start[1] === c ? ' start' : ''}" data-r="${r}" data-c="${c}">${esc(u)}</button>`).join('')).join('') + '</div>' +
-        '<ul class="ws-list">' + placed.map((p, i) => `<li class="${p.found ? 'got f' + (i % 6) : ''}">` +
-          `${clue === 'k' || p.found ? `<span class="v">${esc(plain(p.it))}</span>` : ''}${clue === 'e' || p.found ? `<span class="tr">${clue === 'k' ? '' : ''}${esc(gloss(p.it))}</span>` : ''}</li>`).join('') + '</ul></div>' +
+          `${isStart(r, c) ? ' start' : ''}" data-r="${r}" data-c="${c}" aria-label="${esc(u)}, row ${r + 1}, column ${c + 1}` +
+          `${foundCells.has(key(r, c)) ? ', in a found word' : ''}${isStart(r, c) ? ', chosen as the first letter' : ''}">${esc(u)}</button>`).join('')).join('') + '</div>' +
+        '<ul class="ws-list" aria-label="Words to find">' + placed.map((p, i) => `<li class="${p.found ? 'got f' + (i % 6) : ''}">${p.found ? sr('Found: ') : ''}` +
+          `${clue === 'k' || p.found ? `<span class="v">${esc(plain(p.it))}</span>` : ''}${clue === 'e' || p.found ? `${p.found ? sr(', ') : ''}<span class="tr">${esc(gloss(p.it))}</span>` : ''}</li>`).join('') + '</ul></div>' +
         `<div class="hd-tools">${left && !shown ? '<button type="button" class="gbtn" data-reveal>Show the words</button>' : ''}</div>`;
     }
     const line = (a, b) => {                                // cells from a to b if they are in a straight line
@@ -72,7 +75,10 @@
       if (p) {
         p.found = true;
         if (!shown) record(p.it, true);
-        if (p.it.c.audio) ctx.playFile(p.it.c.audio);
+        auto(p.it.c.audio);
+        say(`Found ${plain(p.it)}, ${gloss(p.it)}.`);
+      } else {
+        say(`No word there: ${cells.map(([r, c]) => grid[r][c]).join(', ')}.`);
       }
       start = null; path = [];
       if (placed.every(x => x.found) && !shown) { draw(); setTimeout(() => { play.innerHTML = finishHTML(`You found all ${placed.length} words!`, placed.map(x => x.it)); }, 900); return; }
@@ -80,7 +86,7 @@
     }
 
     // drag across cells, or tap the first and then the last cell
-    let down = null;
+    let down = null, dragged = 0;
     const cellAt = e => { const el = document.elementFromPoint(e.clientX, e.clientY); const b = el && el.closest('.ws-cell'); return b ? [+b.dataset.r, +b.dataset.c] : null; };
     play.addEventListener('pointerdown', e => {
       const b = e.target.closest('.ws-cell'); if (!b) return;
@@ -98,21 +104,37 @@
     const up = e => {
       if (!down) return;
       const d = down; down = null;
-      if (d.moved) { const at = cellAt(e) || path[path.length - 1] || d.at; choose(line(d.at, at)); return; }
-      if (!start) { start = d.at; path = [d.at]; draw(); return; }
-      choose(line(start, d.at));
+      if (d.moved) { const at = cellAt(e) || path[path.length - 1] || d.at; dragged = Date.now(); choose(line(d.at, at)); }
+      // a tap without moving: the click that follows chooses the letter
     };
     play.addEventListener('pointerup', up);
     play.addEventListener('pointercancel', () => { down = null; });
     play.addEventListener('click', e => {
       if (e.target.closest('[data-again]')) { wordsearch(root); return; }
+      const cell = e.target.closest('.ws-cell');
+      if (cell) {                                     // tap, click, Enter/Space or a screen reader: first letter, then last
+        if (Date.now() - dragged < 300) return;
+        const at = [+cell.dataset.r, +cell.dataset.c];
+        if (!start) { start = at; path = [at]; draw(); say(`First letter: ${grid[at[0]][at[1]]}, row ${at[0] + 1}, column ${at[1] + 1}. Now choose the last letter of the word.`); return; }
+        choose(line(start, at));
+        return;
+      }
       if (e.target.closest('[data-reveal]')) {
         shown = true;
         placed.forEach(p => { if (!p.found) { p.found = true; record(p.it, false); } });
         start = null; path = [];
         draw();
+        say('The words are: ' + placed.map(p => `${plain(p.it)}, ${gloss(p.it)}`).join('; ') + '.');
         play.insertAdjacentHTML('beforeend', `<div class="gnext"><button type="button" class="gbtn primary" data-again>New word search</button></div>`);
       }
+    });
+    play.addEventListener('keydown', e => {           // arrow keys move between letters
+      const cell = e.target.closest('.ws-cell');
+      const step = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] }[e.key];
+      if (!cell || !step) return;
+      e.preventDefault();
+      const r = Math.min(SIZE - 1, Math.max(0, +cell.dataset.r + step[0])), c = Math.min(SIZE - 1, Math.max(0, +cell.dataset.c + step[1]));
+      play.querySelector(`.ws-cell[data-r="${r}"][data-c="${c}"]`)?.focus();
     });
     draw();
   }

@@ -465,7 +465,8 @@ def main():
             "abbr": glosscheck.abbreviations(sentences, by_id, REVIEW),
             "letters": sorted(present, key=sort_key),
             "source": LIFT.name, "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
-            "spelling": SPELLING, "keyboard": KEYBOARD}
+            "spelling": SPELLING, "keyboard": KEYBOARD,
+            "langCode": VERN.split("-")[0]}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("window.DICT_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",
                    encoding="utf-8")

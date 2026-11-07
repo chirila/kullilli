@@ -239,6 +239,29 @@ from this dictionary (`backup: "dictionary-site-data"`, same language, plain tex
 and asks before replacing everything in the browser, then reloads the page. This is also how a reader moves their
 data to another device. Code: `store.dump()` / `store.load()` in `app.js`, the page parts in `core.js`.
 
+## Feedback (`.github/ISSUE_TEMPLATE/`)
+
+Readers send feedback as GitHub issues, through three forms:
+- `1-word.yml`, **Comment on a word or meaning** (label `word`): word, link, what the dictionary says now, what the
+  comment is about (meaning, spelling, recording, example, something to add, other), the comment, and an optional
+  "Where does this come from?".
+- `2-problem.yml`, **Something isn't working** (label `bug`): what happened, what was expected, page, device and browser.
+- `3-idea.yml`, **Idea for a feature or activity** (label `enhancement`): kind of idea, the idea, who it would help.
+
+On the site, the footer of every page links to **Send feedback** (`#/feedback`), and so does the About page. Every
+entry ends with "Comment on this word or its meaning" (`#/feedback/word/<id>`), which shows the word's card and
+fills in the word, its link and its current meaning. "Report a problem" fills in the page the reader came from and
+their browser and screen size. The buttons open the GitHub form in a new tab; the page says that a free GitHub
+account is needed and that what people write is public.
+
+Settings at the top of `build/build_lift.py`: `FEEDBACK_REPO` ("owner/repository"; empty = worked out from the
+github.io address, so the buttons only show on the published site) and `FEEDBACK_EMAIL` (optional). With an
+address set, each form also gets an **Email instead** button for people without a GitHub account: it opens the
+reader's email app with a subject (e.g. "Kullilli Dictionary: comment on baka (1)") and the same questions in the
+body, with the word, link and meaning (or page and device) filled in. The address is visible in the site's files. On GitHub, Issues must be switched on for the repository (they
+are by default); the `bug` and `enhancement` labels exist by default, and `word` is added to an issue only once a
+label of that name has been created.
+
 ## Glossing review (`build/glosscheck.py`)
 
 Every build rewrites these files in `KullilliDictionary/review/`:
@@ -273,4 +296,5 @@ tab-separated text, not .xlsx.
 | `docs/render.js` | cards, list rows, interlinear examples and entry HTML; part-of-speech labels |
 | `docs/games/core.js`, `games.css` | the Learn tab's shared parts and the game registry |
 | `docs/games/<name>.js`, `<name>.css` | one game each (see the Learn tab section) |
-| `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing |
+| `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing, feedback page |
+| `.github/ISSUE_TEMPLATE/*.yml` | the feedback forms (word comment, problem, idea) |

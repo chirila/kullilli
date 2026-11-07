@@ -1,0 +1,30 @@
+name: Idea for a feature or activity
+description: Something you'd like the website to do, an idea for a new game or activity, or a change to one.
+title: "Idea: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your idea. What you write here is **public**, so please don't include private information.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of idea is it?
+      options:
+        - A new game or activity
+        - Something new for the dictionary
+        - A change to something that's already there
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who would it help, and how? (optional)

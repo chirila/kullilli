@@ -42,6 +42,11 @@ VERN = "gll-Latn"                 # vernacular writing system
 AUDIO_WS = "gll-Zxxx-x-audio"     # audio writing system (file names)
 ENG = "en"
 SHOW_UNTYPED_NOTES = True        # Claire, 2026-11-06: show them all
+# Feedback (problems, ideas, comments on words) goes to GitHub issues, using the forms in .github/ISSUE_TEMPLATE/.
+# FEEDBACK_REPO = "owner/repository"; empty = the site works it out from its github.io address.
+# FEEDBACK_EMAIL (optional) is offered to people without a GitHub account.
+FEEDBACK_REPO = ""
+FEEDBACK_EMAIL = "chirila.apps@gmail.com"   # Claire, 2026-11-07
 
 # Two-letter letters: own tab in the wordlist, sorted after their first letter (d, dh, dy, ...).
 DIGRAPHS = ["dh", "dy", "ng", "nh", "ny", "th", "ty"]
@@ -466,7 +471,7 @@ def main():
             "letters": sorted(present, key=sort_key),
             "source": LIFT.name, "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
             "spelling": SPELLING, "keyboard": KEYBOARD,
-            "langCode": VERN.split("-")[0]}
+            "langCode": VERN.split("-")[0], "feedback": {"repo": FEEDBACK_REPO, "email": FEEDBACK_EMAIL}}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("window.DICT_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",
                    encoding="utf-8")

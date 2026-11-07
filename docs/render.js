@@ -316,7 +316,8 @@ window.BardiRender = (() => {
       `<div class="entry-meta">${metaHTML(c)}</div>${hasLing(c) ? lingToggle(ling) : ''}</header>` +
       bodyHTML(c, true) + moreHTML(c, open) +
       (top.subs.length ? `<section class="subs"><h3>Sub-entries (${top.subs.length})</h3>${top.subs.map(s => subHTML(s, open)).join('')}</section>` : '') +
-      (c.dt ? `<div class="entry-foot">Last edited ${esc(c.dt)}</div>` : '');
+      `<div class="entry-foot">${c.dt ? `Last edited ${esc(c.dt)} · ` : ''}` +
+      `<a href="#/feedback/word/${enc(top.id)}">Comment on this word or its meaning</a></div>`;
   }
 
   // the abbreviation key for the About page

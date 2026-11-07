@@ -423,7 +423,19 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
 .prose h3 { font: 700 1.2rem var(--v-font); color: var(--sea); margin: 24px 0 6px; }
 .prose li { margin-bottom: 6px; }
 
-.site-footer { padding: 30px 20px 40px; color: var(--faint); font-size: .85rem; }
+.site-footer { padding: 30px 20px 40px; color: var(--faint); font-size: .85rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+.site-footer a { color: var(--link); font-weight: 600; }
+
+/* ---------- feedback page ---------- */
+.fb-cards { display: grid; gap: 14px; margin-top: 12px; }
+.fb-card { background: var(--paper); border: 1px solid var(--line); border-left: 5px solid var(--sea2); border-radius: var(--radius); padding: 14px 18px; }
+.fb-card.on { border-left-color: var(--ochre); }
+.fb-card h3 { margin: 0 0 4px; font: 700 1.2rem var(--v-font); color: var(--sea); }
+.fb-card p { margin: 0 0 12px; }
+.fb-card a.gbtn { display: inline-block; text-decoration: none; }
+.fb-word { max-width: 320px; margin: 0 0 12px; }
+.fb-note { color: var(--muted); font-size: .9rem; margin-top: 16px; }
 
 /* ---------- small screens ---------- */
 @media (max-width: 760px) {

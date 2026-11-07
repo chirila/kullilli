@@ -4,14 +4,14 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = '55d4a6ddbc';
+const VERSION = '1a4272184d';
 const UPDATED = '2026-11-07';
 const ASSETS = [
  "./",
  "manifest.webmanifest",
  "icons/ngulkana-180.png",
  "icons/ngulkana-192.png",
- "style.css?v=f923e901",
+ "style.css?v=fc36669f",
  "games/games.css?v=28d08a2d",
  "games/circle.css?v=57fc8708",
  "games/daily.css?v=10ea7dfc",

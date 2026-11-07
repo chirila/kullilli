@@ -3,7 +3,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and memory.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, say, auto } = window.DictGames.kit;
   let ctx;
 
   // card sides: k = written word, e = English meaning, s = sound (plays when turned over)
@@ -15,7 +15,7 @@
     const sound = mode !== 'we';
     const L = esc(ctx.lang);
     const sp = sound ? Object.assign({}, s, { audio: true }) : s;          // sound cards need recordings
-    root.innerHTML = '<h2 class="gtitle">Memory pairs</h2><p class="gintro">Turn over two cards at a time and find the pairs: ' +
+    root.innerHTML = '<h2 class="gtitle">Memory pairs</h2><p class="gintro">Turn over two cards at a time and find the pairs (cards that don\'t match stay up until you turn the next one): ' +
       (mode === 'we' ? `each ${L} word and its English meaning.` : mode === 'sw'
         ? `each recording and the ${L} word it says. A sound card plays when you turn it over.`
         : 'each recording and its English meaning. A sound card plays when you turn it over.') + '</p>' +
@@ -29,23 +29,26 @@
     const face = cd => cd.side === 's'
       ? '<svg class="snd" viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>'
       : esc(cd.side === 'k' ? hw(cd.it) : gloss(cd.it));
-    const label = cd => (cd.side === 's' ? 'sound' : cd.side === 'k' ? hw(cd.it) : gloss(cd.it));
-    play.innerHTML = '<p class="gstat" aria-live="polite">Moves: 0</p><div class="mem-grid">' + cards.map((cd, i) =>
+    const label = cd => (cd.side === 's' ? 'a recording' : cd.side === 'k' ? hw(cd.it) : gloss(cd.it));
+    play.innerHTML = '<p class="gstat">Moves: 0</p><div class="mem-grid">' + cards.map((cd, i) =>
       `<button type="button" class="mcard ${cd.side}" data-i="${i}" aria-label="Card ${i + 1}, face down">` +
       `<span class="mface${cd.side === 'k' ? ' v' : ''}">${face(cd)}</span></button>`).join('') + '</div>';
-    let open = [], moves = 0, found = 0, busy = false;
+    let open = [], moves = 0, found = 0, wrongPair = null;
     const el = i => play.querySelector(`.mcard[data-i="${i}"]`);
     const show = (i, on) => { const b = el(i), cd = cards[i]; b.classList.toggle('up', on);
       b.setAttribute('aria-label', on ? label(cd) : `Card ${i + 1}, face down`); };
     play.querySelector('.mem-grid').addEventListener('click', e => {
       const b = e.target.closest('.mcard');
-      if (!b || busy) return;
+      if (!b) return;
       const i = +b.dataset.i;
-      if (b.classList.contains('up')) {                         // tap a turned-up sound card to hear it again
+      if (b.classList.contains('up') && !(wrongPair && wrongPair.includes(i))) {   // a turned-up sound card plays again
         if (cards[i].side === 's') ctx.playFile(cards[i].it.c.audio);
         return;
       }
+      if (wrongPair) { wrongPair.forEach(k => show(k, false)); wrongPair = null; }  // turn back the last pair that didn't match
+      if (b.classList.contains('up')) return;
       show(i, true);
+      say(`${label(cards[i])}.`);
       if (cards[i].side === 's') ctx.playFile(cards[i].it.c.audio);
       open.push(i);
       if (open.length < 2) return;
@@ -54,14 +57,16 @@
       open = [];
       play.querySelector('.gstat').textContent = `Moves: ${moves}`;
       if (cards[a].it === cards[c].it) {
-        el(a).classList.add('got'); el(c).classList.add('got');
-        if (!sound && cards[a].it.c.audio) ctx.playFile(cards[a].it.c.audio);
+        [a, c].forEach(k => { el(k).classList.add('got'); el(k).setAttribute('aria-disabled', 'true');
+          el(k).setAttribute('aria-label', `${label(cards[k])}, matched`); });
+        say(`A pair: ${hw(cards[a].it)}, ${gloss(cards[a].it)}.`);
+        if (!sound) auto(cards[a].it.c.audio);
         if (++found === words.length) {
           setTimeout(() => { play.innerHTML = finishHTML(`You found all ${words.length} pairs in ${moves} moves.`, words); }, 900);
         }
       } else {
-        busy = true;
-        setTimeout(() => { show(a, false); show(c, false); busy = false; }, sound ? 1400 : 1000);
+        wrongPair = [a, c];                                        // stays face up until the next card is turned
+        say('Not a pair. They will turn back when you turn over the next card.');
       }
     });
     play.addEventListener('click', e => { if (e.target.closest('[data-again]')) memory(root); });

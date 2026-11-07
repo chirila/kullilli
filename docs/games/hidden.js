@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and hidden.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, sr, auto } = window.DictGames.kit;
   let ctx;
 
   // ---- hidden word: guess a word in six tries, letter by letter ---------------------------
@@ -37,10 +37,12 @@
       const board = Array.from({ length: TRIES }, (_, r) => {
         const g = guesses[r], letters = g ? g.units : (r === guesses.length && !over ? cur : []);
         const real = g && meaning.get(g.units.join(''));
-        return `<div class="hd-row${r === guesses.length && !over ? ' now' : ''}"><div class="hd-tiles">` +
+        const now = r === guesses.length && !over;
+        const rowLabel = g ? ` role="group" aria-label="Guess ${r + 1}"` : now ? ' role="group" aria-label="Your guess"' : ' aria-hidden="true"';
+        return `<div class="hd-row${now ? ' now' : ''}"${rowLabel}><div class="hd-tiles">` +
           Array.from({ length: n }, (_, i) => {
             const u = letters[i] || '', st = g ? g.res[i] : (u ? 'typed' : '');
-            return `<span class="ht ${st}"${g ? ` aria-label="${esc(u)}: ${SAY[st]}"` : ''}>${esc(u)}</span>`;
+            return `<span class="ht ${st}">${esc(u)}${g ? sr(`, ${SAY[st]}`) : ''}</span>`;
           }).join('') + '</div>' + (real ? `<span class="hd-real">‘${esc(real)}’</span>` : '') + '</div>';
       }).join('');
       const keys = keysHTML(keyState, '<button type="button" class="hk wide" data-k="back" aria-label="Delete letter">⌫</button>' +
@@ -49,7 +51,7 @@
         ? `You found it in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}!` : 'Out of tries. The word was:'}</p>` +
         '<button type="button" class="gbtn primary" data-again>New word</button></div>' +
         `<div class="grid hd-answer">${ctx.R.cardHTML(it)}</div>` : '';
-      play.innerHTML = `<p class="gstat" aria-live="polite">${note || `${n} letters · guess ${Math.min(guesses.length + 1, TRIES)} of ${TRIES}`}</p>` +
+      play.innerHTML = `<p class="gstat">${note || `${n} letters · guess ${Math.min(guesses.length + 1, TRIES)} of ${TRIES}`}</p>` +
         `<div class="hd-board">${board}</div>` + (over ? end :
         `<div class="hd-tools"><button type="button" class="gbtn" data-hint${hint ? ' disabled' : ''}>` +
         `${hint ? 'Meaning: ' + esc(gloss(it)) : 'Show the meaning'}</button></div>` + keys);
@@ -58,9 +60,9 @@
     function add(u) {
       if (over) return;
       const next = tok(cur.join('') + u);             // n then g makes ng, d then h makes dh
-      if (next.length <= n && next.every(x => units.has(x))) { cur = next; draw(); }
+      if (next.length <= n && next.every(x => units.has(x))) { cur = next; draw(); say(cur.join(', '), 'typed'); }
     }
-    function back() { if (!over && cur.length) { cur = cur.slice(0, -1); draw(); } }
+    function back() { if (!over && cur.length) { cur = cur.slice(0, -1); draw(); say(cur.length ? cur.join(', ') : 'Empty', 'typed'); } }
     function enter() {
       if (over) return;
       if (cur.length < n) { note = `The word has ${n} letters.`; draw(); return; }
@@ -70,13 +72,16 @@
       cur = [];
       if (res.every(x => x === 'hit')) over = 'won';
       else if (guesses.length === TRIES) over = 'lost';
-      if (over) { record(it, over === 'won'); if (it.c.audio) ctx.playFile(it.c.audio); ctx.setList([it.id]); }
+      if (over) { record(it, over === 'won'); auto(it.c.audio); ctx.setList([it.id]); }
       draw();
+      const g = guesses[guesses.length - 1];
+      say(`Guess ${guesses.length}: ` + g.units.map((u, i) => `${u}, ${SAY[g.res[i]]}`).join('; ') + '.' +
+        (over === 'won' ? ` You found it: ${plain(it)}, ${gloss(it)}.` : over === 'lost' ? ` Out of tries. The word was ${plain(it)}, ${gloss(it)}.` : ''), 'typed');
     }
     play.addEventListener('click', e => {
       const k = e.target.closest('[data-k]');
       if (k) { const v = k.dataset.k; if (v === 'back') back(); else if (v === 'enter') enter(); else add(v); return; }
-      if (e.target.closest('[data-hint]')) { hint = true; draw(); return; }
+      if (e.target.closest('[data-hint]')) { hint = true; draw(); say(`Meaning: ${gloss(it)}.`); return; }
       if (e.target.closest('[data-again]')) hidden(root);
     });
     const onKey = e => {                                  // typing on a computer keyboard
@@ -84,6 +89,7 @@
       const ae = document.activeElement;
       if ((ae && /^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName)) || !document.getElementById('overlay').hidden) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest && e.target.closest('button, a, select, input')) return;   // Enter on a focused key types that key
       if (e.key === 'Enter') { e.preventDefault(); enter(); } else if (e.key === 'Backspace') { e.preventDefault(); back(); } else if (/^[a-z]$/i.test(e.key)) add(e.key.toLowerCase());
     };
     document.addEventListener('keydown', onKey);

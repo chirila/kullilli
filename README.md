@@ -94,7 +94,30 @@ so **to remove a game, delete its files and rebuild**; to add one, add its files
 `DictGames.register({ id, group, order, title, desc, run })`) and rebuild. `group` puts it in a section of the
 Learn page: Every day, Words and meanings, Listening, Spelling.
 
-All games work with a mouse, a keyboard or a touch screen.
+All games work with a mouse, a keyboard, a touch screen or a screen reader:
+
+- **Keyboard.** Every button can be reached with Tab and pressed with Enter or Space. After a move redraws the
+  board, focus stays where the player was (or goes to the next word, Next, or Play again), so keyboard and
+  screen-reader users don't lose their place. Mouse and touch players don't get focus moved for them. Drag games
+  (Match up, Sort into groups) also work by pressing one item and then the other, and Word search letters can be
+  moved between with the arrow keys and chosen with Enter.
+- **Spoken results.** Each game has a hidden live region (`say()` in `core.js`) that reads out results ("Not right.
+  wiyi means fire."), the score line, what was selected, and each letter typed. Letter states (in the word / somewhere
+  else / not in the word) and blank boxes are also given as hidden text, not only as colours.
+- **Sound.** "Play sounds automatically" in each game's settings bar (on by default) can be switched off so that
+  recordings don't talk over a screen reader; every recording also has its own labelled play button. Nothing in
+  the games is timed: Memory pairs keeps a wrong pair face up until the next card is turned, and Word in the middle
+  waits for Next.
+- **Language.** Kullilli words are marked `lang="gll"` (the code comes from the FLEx writing system and is in the
+  data as `langCode`), as WCAG asks for text in another language. No screen reader has a Kullilli voice, so they
+  fall back to the reader's default voice (usually English) and say the words much as they would without the tag;
+  the recordings are the way to hear them properly. The tag mainly tells software that these words aren't English.
+  They are also marked `translate="no"`, so browser page translation (e.g. English → Spanish) leaves them as they
+  are. Hidden screen-reader text inside them ("blank", "in the word") stays marked as English and translatable.
+  This marking is done in `app.js` (`markLang`) for every page, not only the games.
+- **Looks.** Text and control colours meet the WCAG contrast levels (4.5:1 for text, 3:1 for controls); right and wrong
+  answers also get ✓ / ✗ and a solid or dashed border; animations are switched off for people whose system is set to
+  reduce motion. The page title names the game being played.
 
 **Every day**
 - **Daily five** (`daily`): five quick questions, the same for everyone on a given day (picked from the date):
@@ -111,7 +134,7 @@ All games work with a mouse, a keyboard or a touch screen.
   from different top-level domains, so no word fits two baskets. "Show meanings" is a hint.
 - **Word search** (`wordsearch`): six topic words hidden across, down or diagonally in an 8×8 grid of Kullilli
   letters (ng, dh … fill one cell; filler letters in their dictionary proportions). Clues are the Kullilli words
-  or their English meanings. Drag across a word or tap its first and last letters.
+  or their English meanings. Drag across a word or tap its first and last letters (arrow keys + Enter on a keyboard).
 
 **Listening**
 - **Listen and choose** (`listen`): hear a word, pick it from four by spelling or meaning. *Easy*: the others are

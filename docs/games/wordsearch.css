@@ -2,7 +2,7 @@
 .ws-wrap { display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start; justify-content: center; margin-bottom: 10px; }
 .ws-grid { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 3px; width: min(100%, 440px); touch-action: none;
   user-select: none; -webkit-user-select: none; }
-.ws-cell { -webkit-tap-highlight-color: transparent; aspect-ratio: 1; padding: 0; border: 1px solid var(--line); border-radius: 6px;
+.ws-cell { -webkit-tap-highlight-color: transparent; aspect-ratio: 1; padding: 0; border: 1px solid var(--ctl-line); border-radius: 6px;
   background: var(--paper); font: 700 1.05rem var(--v-font); color: var(--ink); cursor: pointer; text-transform: lowercase; }
 .ws-cell.sel { background: var(--ochre-soft); border-color: var(--ochre); }
 .ws-cell.start { box-shadow: 0 0 0 2px var(--ochre) inset; }
@@ -21,3 +21,7 @@
   .ws-list { flex-direction: row; flex-wrap: wrap; justify-content: center; min-width: 0; }
   .ws-list li { padding: 4px 10px; }
 }
+/* found words: a darker edge in each colour, so they stand out from the paper (3:1) */
+.ws-cell.f0 { box-shadow: inset 0 0 0 2px #3a7aa0; } .ws-cell.f1 { box-shadow: inset 0 0 0 2px #4a8a3a; }
+.ws-cell.f2 { box-shadow: inset 0 0 0 2px #b0602f; } .ws-cell.f3 { box-shadow: inset 0 0 0 2px #8a5aa8; }
+.ws-cell.f4 { box-shadow: inset 0 0 0 2px #8a7a20; } .ws-cell.f5 { box-shadow: inset 0 0 0 2px #2f8a78; }

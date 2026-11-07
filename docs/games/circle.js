@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and circle.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, auto, speakerHTML, focusIfKey } = window.DictGames.kit;
   let ctx;
 
   // ---- word in the middle: one word in the centre, meanings in a circle round it ------------------
@@ -26,17 +26,16 @@
         && hw(x).toLowerCase() !== hw(it).toLowerCase()), 5)));
       const k2e = s.dir === 'k2e';
       const centre = k2e
-        ? `<span class="cw-word v">${esc(hw(it))}</span>${it.c.audio ? `<button type="button" class="play" data-audio="${esc(it.c.audio)}" aria-label="Listen">` +
-          '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></button>' : ''}`
+        ? `<span class="cw-word v">${esc(hw(it))}</span>${it.c.audio ? speakerHTML(it.c.audio, '', `Listen to ${hw(it)}`) : ''}`
         : `<span class="cw-word">${esc(gloss(it))}</span>`;
       const n = opts.length;
-      play.innerHTML = `<p class="gstat" aria-live="polite">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
+      play.innerHTML = `<p class="gstat">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
         `<div class="circle"><div class="cw">${centre}</div>` + opts.map((o, i) => {
           const a = -Math.PI / 2 + i * 2 * Math.PI / n;
           return `<button type="button" class="opt${k2e ? '' : ' v'}" data-id="${esc(o.id)}" style="left:${(50 + 36 * Math.cos(a)).toFixed(2)}%;top:${(50 + 36 * Math.sin(a)).toFixed(2)}%">` +
             `${esc(k2e ? gloss(o) : hw(o))}</button>`;
         }).join('') + '</div><div class="gnext"></div>';
-      if (k2e && it.c.audio) ctx.playFile(it.c.audio);
+      if (k2e) auto(it.c.audio);
     }
     play.addEventListener('click', e => {
       if (e.target.closest('[data-again]')) { circle(root); return; }
@@ -50,10 +49,12 @@
       play.querySelectorAll('.opt').forEach(x => { x.disabled = true; });
       if (right) score++;
       record(it, right);
-      if (it.c.audio) ctx.playFile(it.c.audio);
+      auto(it.c.audio);
+      const k2e = s.dir === 'k2e';
+      say(right ? `Right: ${hw(it)} means ${gloss(it)}.` : `Not right. ${k2e ? `${hw(it)} means ${gloss(it)}` : `${gloss(it)} is ${hw(it)}`}.`);
       play.querySelector('.gstat').textContent = `Question ${q + 1} of ${qs.length} · Score ${score}`;
-      if (right) setTimeout(next, 1100);
-      else play.querySelector('.gnext').innerHTML = '<button type="button" class="gbtn primary" data-next>Next</button>';
+      play.querySelector('.gnext').innerHTML = `<button type="button" class="gbtn primary" data-next>${q + 1 < qs.length ? 'Next' : 'See your score'}</button>`;
+      focusIfKey(play.querySelector('[data-next]'));
     });
     function next() {
       if (!play.querySelector('.opt.right')) return;                  // already moved on

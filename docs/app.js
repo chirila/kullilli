@@ -165,7 +165,7 @@
 
   // what the Learn-tab games get from the app (see games.js)
   const gameCtx = {
-    items, lang: LANG, R, store, keyboard: DATA.keyboard,
+    items, lang: LANG, title: TITLE, R, store, keyboard: DATA.keyboard,
     playFile: file => playFile(file),
     setList: ids => { state.list = ids; },
   };
@@ -357,6 +357,25 @@
   $('#stats').textContent = [`${DATA.entries.length.toLocaleString()} entries`,
     nSubs ? `${nSubs.toLocaleString()} sub-entries` : '', nAudio ? `${nAudio.toLocaleString()} recordings` : '',
     `built from ${DATA.source}`].filter(Boolean).join(' · ');
+  // Kullilli text carries its language code (from the FLEx writing system) and translate="no", so it is
+  // known not to be English and page translators leave it alone. Marked as it appears: wordlist, entries,
+  // examples and games. Hidden English for screen readers inside it (.sr-only) is marked back as the page's language.
+  const VERN_LANG = DATA.langCode || '';
+  const VERN_SEL = '.v, .hw, .sub-hw, .exv, .iw-s, .iw-m, .ht, .hk:not(.wide), .ws-cell, .us-tile';
+  const mark = el => {
+    if (el.lang) return;
+    el.lang = VERN_LANG;
+    el.setAttribute('translate', 'no');
+    el.querySelectorAll('.sr-only').forEach(s => { s.lang = document.documentElement.lang; s.setAttribute('translate', 'yes'); });
+  };
+  const markLang = node => {
+    if (!VERN_LANG || node.nodeType !== 1) return;
+    if (node.matches(VERN_SEL)) mark(node);
+    node.querySelectorAll(VERN_SEL).forEach(mark);
+  };
+  new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(markLang))).observe(document.body, { childList: true, subtree: true });
+  markLang(document.body);
+
   modeUI();
   window.addEventListener('hashchange', route);
   route();

@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and listen.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, auto, focusIfKey } = window.DictGames.kit;
   let ctx;
 
   // ---- listen and choose: hear a word, pick it (or its meaning) from four ----------------------
@@ -56,16 +56,16 @@
     }
 
     let q = 0, score = 0, opts = [];
-    const speaker = (file, big) => `<button type="button" class="play${big ? ' big ls-play' : ''}" data-audio="${esc(file)}" aria-label="Listen">` +
+    const speaker = (file, big, label = 'Play the word again') => `<button type="button" class="play${big ? ' big ls-play' : ''}" data-audio="${esc(file)}" aria-label="${esc(label)}">` +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></button>';
     function ask() {
       const t = qs[q];
       opts = shuffle([t].concat(others(t)));
-      play.innerHTML = `<p class="gstat" aria-live="polite">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
+      play.innerHTML = `<p class="gstat">Question ${q + 1} of ${qs.length} · Score ${score}</p>` +
         `<div class="ls-q">${speaker(t.c.audio, true)}<p class="ls-prompt">${byMeaning ? 'What does it mean?' : 'Which word is it?'}</p></div>` +
         '<div class="ls-opts">' + opts.map(o => `<div class="lcell"><button type="button" class="lopt${byMeaning ? '' : ' v'}" data-id="${esc(o.id)}">` +
           `${esc(byMeaning ? gloss(o) : hw(o))}</button><div class="lmore"></div></div>`).join('') + '</div><div class="gnext"></div>';
-      ctx.playFile(t.c.audio);
+      auto(t.c.audio);
     }
     play.addEventListener('click', e => {
       if (e.target.closest('[data-again]')) { listen(root); return; }
@@ -82,11 +82,13 @@
         const o = opts[i];
         const meaning = gloss(o) || (o.c.senses || []).flatMap(z => z.gl || [])[0] || '';    // e.g. 1sg.nom for a pronoun
         cell.querySelector('.lmore').innerHTML = `<span class="${byMeaning ? 'v' : ''}">${esc(byMeaning ? hw(o) : meaning)}</span>` +
-          (o.c.audio ? speaker(o.c.audio) : '');
+          (o.c.audio ? speaker(o.c.audio, false, `Listen to ${hw(o)}`) : '');
       });
       play.querySelector('.gstat').textContent = `Question ${q + 1} of ${qs.length} · Score ${score}`;
       play.querySelector('.gnext').innerHTML = `<button type="button" class="gbtn primary" data-next>${q + 1 < qs.length ? 'Next' : 'See your score'}</button>`;
-      if (!right) ctx.playFile(t.c.audio);
+      say(right ? `Right: ${hw(t)}, ${gloss(t)}.` : `Not right. It was ${hw(t)}, ${gloss(t)}.`);
+      focusIfKey(play.querySelector('[data-next]'));
+      if (!right) auto(t.c.audio);
     });
     ask();
   }

@@ -124,8 +124,8 @@ window.DictGames = (() => {
   };
 
   /** end-of-round panel: message, play again, and the words played (cards link to their entries) */
-  function finishHTML(msg, words) {
-    practise(words);
+  function finishHTML(msg, words, counted) {        // counted: the game has already recorded these words as practised
+    if (!counted) practise(words);
     ctx.setList(words.map(it => it.id));
     return `<div class="gdone"><p class="gdone-msg">${msg}</p><button type="button" class="gbtn primary" data-again>Play again</button></div>` +
       `<h3 class="section-title">Words in this round</h3><div class="grid">${words.map(it => ctx.R.cardHTML(it)).join('')}</div>`;
@@ -184,7 +184,7 @@ window.DictGames = (() => {
     sayQueue.push({ key, text: String(msg).replace(/\s+/g, ' ').trim() });
     clearTimeout(sayTimer);
     sayTimer = setTimeout(() => {
-      const text = sayQueue.map(m => m.text).join(' ');
+      const text = sayQueue.map(m => (/[.!?:]$/.test(m.text) ? m.text : m.text + '.')).join(' ');   // a full stop = a pause
       sayQueue = [];
       sayEl.textContent = '';
       setTimeout(() => { if (sayEl) sayEl.textContent = text; }, 60);
@@ -192,7 +192,15 @@ window.DictGames = (() => {
   }
   // "Play sounds automatically": recordings that start by themselves can talk over a screen reader
   const autoOn = () => ctx.store.get('g.autoplay', '1') === '1';
-  const auto = file => { if (file && autoOn()) ctx.playFile(file); };
+  // automatic sounds start after a short pause (AUTO_DELAY ms), so they don't cut in as the screen changes.
+  // A newer one replaces one still waiting; pressing a play button, or leaving the game, cancels it.
+  const AUTO_DELAY = 300;
+  let autoTimer = null;
+  const auto = file => {
+    clearTimeout(autoTimer);
+    if (file && autoOn()) autoTimer = setTimeout(() => { if (sayEl && sayEl.isConnected) ctx.playFile(file); }, AUTO_DELAY);
+  };
+  document.addEventListener('click', e => { if (e.target.closest('[data-audio], [data-listen]')) clearTimeout(autoTimer); }, true);
   // move focus for keyboard users only (touch users' screens shouldn't jump about)
   const focusIfKey = el => { if (el && lastInput === 'key') el.focus(); };
   const autoplayHTML = () => `<label class="chk2"><input type="checkbox" data-g="autoplay"${autoOn() ? ' checked' : ''}> Play sounds automatically</label>`;
@@ -200,7 +208,7 @@ window.DictGames = (() => {
   // After a keyboard action redraws the board, put focus back on the same control, or the nearest one
   // of its kind (next letter tile, first choice of a new question), or "Next" / "Play again".
   const FOCUS_ATTRS = ['data-k', 'data-tile', 'data-slot', 'data-c', 'data-b', 'data-ans', 'data-i', 'data-r', 'data-id',
-    'data-hint', 'data-show', 'data-replay', 'data-meanings', 'data-reveal', 'data-listen'];
+    'data-hint', 'data-show', 'data-replay', 'data-meanings', 'data-reveal', 'data-listen', 'data-flip', 'data-prev'];
   function focusKey(el) {
     if (!el || el === document.body) return null;
     const attr = el.hasAttribute('data-r') ? 'data-r' : FOCUS_ATTRS.find(a => el.hasAttribute(a));   // grid cells go by row and column
@@ -219,7 +227,7 @@ window.DictGames = (() => {
       if (!root.isConnected) return;
       const stat = (root.querySelector('.gstat') || {}).textContent || '';
       const newStat = stat !== lastStat;
-      if (stat && newStat) { lastStat = stat; say(stat); }
+      if (stat && newStat) { lastStat = stat; say(stat, 'stat'); }
       const a = document.activeElement;
       if (lastInput !== 'key' || (a && a !== document.body)) return;      // focus is still somewhere: leave it
       const play = root.querySelector('.gplay') || root;
@@ -411,7 +419,7 @@ window.DictGames = (() => {
   const tops = it => new Set((it.c.sd || []).map(d => d.split(/[.\s]/)[0]));
 
   const kit = { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML,
-    letterKit, listenBtn, record, practise, speakerHTML, inTopic, domainGroups, tops, CLASSES, say, sr, auto, autoplayHTML, focusIfKey,
+    letterKit, listenBtn, record, practise, practised: () => practisedMap(), speakerHTML, inTopic, domainGroups, tops, CLASSES, say, sr, auto, autoplayHTML, focusIfKey,
     get ctx() { return ctx; } };
   return { register, view, myList, kit };
 })();

@@ -74,9 +74,10 @@ window.BardiRender = (() => {
   let inStudy = () => false;
   const setStudy = fn => { inStudy = fn; };
   const bookmarkSVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4.2-5.5 4.2z"/></svg>';
-  const studyBtn = (it, wide) => `<button type="button" class="study${wide ? ' wide' : ''}" data-study="${esc(it.id)}" aria-pressed="${inStudy(it.id)}"` +
+  // label: what a screen reader hears for the icon-only button (default "<word> in my study list")
+  const studyBtn = (it, wide, label) => `<button type="button" class="study${wide ? ' wide' : ''}" data-study="${esc(it.id)}" aria-pressed="${inStudy(it.id)}"` +
     (wide ? ` title="Add to or remove from my study list">${bookmarkSVG}<span>My study list</span>`
-      : ` aria-label="${esc(hwOf(it.c))} in my study list" title="My study list">${bookmarkSVG}`) + '</button>';
+      : ` aria-label="${esc(label || `${hwOf(it.c)} in my study list`)}" title="My study list">${bookmarkSVG}`) + '</button>';
 
   // ---- inline markup: |tsc{..} small caps, |fv{..} Bardi word, |fi{..} italic; *x* in examples = highlighted part
   function fmt(s, links = true) {
@@ -178,6 +179,14 @@ window.BardiRender = (() => {
       '</a>' + playBtn(c.audio, hwOf(c), true) + '</div>';
   }
   const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
+
+  // one example for a word (flashcards): a sense example with a translation, else a text sentence that uses it
+  function exampleHTML(c) {
+    const x = (c.senses || []).flatMap(s => s.ex || []).find(e => e.v && e.e);
+    if (x) return `<span class="exv v">${fmtEx(x.v, false)}</span><span class="exe">${fmt(x.e, false)}</span>`;
+    const s = (c.xs || []).map(si => SENTS[si]).find(t => t && t.v && t.ft && t.ft[0]);
+    return s ? `<span class="exv v">${esc(s.v)}</span><span class="exe">${esc(s.ft[0])}</span>` : '';
+  }
 
   // ---- full entry --------------------------------------------------------
   const block = (title, inner) => `<section class="blk">${title ? `<h3>${title}</h3>` : ''}${inner}</section>`;
@@ -308,5 +317,5 @@ window.BardiRender = (() => {
       .map(([a, full]) => `<dt><abbr class="gab">${esc(a)}</abbr></dt><dd>${esc(full)}</dd>`).join('');
   };
 
-  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG };
+  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, meaning: summary };
 })();

@@ -1,0 +1,32 @@
+/* flashcards */
+.fc { max-width: 540px; min-height: 280px; margin: 6px auto 12px; display: flex; flex-direction: column;
+  background: var(--paper); border: 1px solid var(--ctl-line); border-radius: 18px; box-shadow: 0 4px 16px rgba(23, 40, 55, .08); }
+.fc.back { border-color: var(--ochre); }
+.fc-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  padding: 24px 22px 8px; text-align: center; cursor: pointer; animation: fc-turn .28s ease-out; }
+.fc-side { font: 700 .72rem var(--ui-font); letter-spacing: .08em; text-transform: uppercase; color: var(--ochre); }
+.fc-main .fc-word { font: 700 1.6rem/1.25 var(--ui-font); color: var(--ink); overflow-wrap: anywhere; }
+.fc-main .fc-word.v { font: 700 2.3rem/1.15 var(--v-font); color: var(--sea); }
+.fc-also { color: var(--muted); font-size: 1rem; }
+.fc-also .fc-word { font-weight: 600; color: var(--ink); }
+.fc-also .fc-word.v { font: 700 1.2rem var(--v-font); color: var(--sea); }
+.fc-pos { margin-left: 4px; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ochre); }
+.fc-ex { display: flex; flex-direction: column; gap: 3px; margin-top: 6px; padding: 10px 14px; max-width: 100%;
+  text-align: left; background: var(--bg); border-left: 3px solid var(--sand); border-radius: 8px; }
+.fc-ex .exv { font: 1.05rem/1.35 var(--v-font); color: var(--ink); }
+.fc-ex .exe { font-size: .92rem; color: var(--muted); }
+.fc-tools { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; padding: 10px 16px 16px; }
+.fc-tools a.gbtn { text-decoration: none; }
+.fc-tools .study { width: 40px; height: 40px; }
+.fc-tools .study svg { width: 18px; height: 18px; }
+.fc-nav { display: flex; justify-content: center; gap: 10px; margin: 6px 0 14px; }
+.fc-nav .gbtn:disabled { opacity: .45; cursor: default; }
+.fc-totals { text-align: center; color: var(--muted); font-size: .9rem; }
+.fc-totals strong { color: var(--sea); }
+@keyframes fc-turn { from { transform: perspective(900px) rotateY(75deg); opacity: .3; } to { transform: none; opacity: 1; } }
+
+@media (max-width: 760px) {
+  .fc { min-height: 240px; }
+  .fc-main .fc-word { font-size: 1.35rem; }
+  .fc-main .fc-word.v { font-size: 1.9rem; }
+}

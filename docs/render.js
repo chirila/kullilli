@@ -307,13 +307,19 @@ window.BardiRender = (() => {
       (dir === 'prev' ? `${arrow} ${lab}` : `${lab} ${arrow}`) + '</button>';
   }
 
+  // the entry's topics (FLEx semantic domains), each a link to its topic in the wordlist
+  const topicsHTML = c => {
+    const ts = (c.sd || []).map(d => /^([\d.]+)\s+(.*)$/.exec(d)).filter(Boolean);
+    return ts.length ? `<div class="entry-topics">${ts.length > 1 ? 'Topics' : 'Topic'}: ` +
+      ts.map(m => `<a href="#/topic/${enc(m[1])}">${esc(m[2])}</a>`).join(', ') + '</div>' : '';
+  };
   function entryHTML(top, prev, next, open, ling) {
     const c = top.c;
     return `<div class="entry-bar">${navBtn(prev, 'prev')}${navBtn(next, 'next')}<span class="spacer"></span>` +
       `<button type="button" class="close-btn" aria-label="Close entry" title="Close (Esc)">✕</button></div>` +
       `<header class="entry-head"><div class="hw-line"><h2 class="entry-hw v" id="entry-title">${esc(hwOf(c))}${c.hm ? `<sup>${esc(c.hm)}</sup>` : ''}</h2>` +
       `${playBtn(c.audio, hwOf(c), true)}${studyBtn(top, true)}</div>` +
-      `<div class="entry-meta">${metaHTML(c)}</div>${hasLing(c) ? lingToggle(ling) : ''}</header>` +
+      `<div class="entry-meta">${metaHTML(c)}</div>${topicsHTML(c)}${hasLing(c) ? lingToggle(ling) : ''}</header>` +
       bodyHTML(c, true) + moreHTML(c, open) +
       (top.subs.length ? `<section class="subs"><h3>Sub-entries (${top.subs.length})</h3>${top.subs.map(s => subHTML(s, open)).join('')}</section>` : '') +
       `<div class="entry-foot">${c.dt ? `Last edited ${esc(c.dt)} · ` : ''}` +

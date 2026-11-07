@@ -128,6 +128,23 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .wl-order a + a { border-left: 1px solid var(--line); }
 .wl-order a:hover { color: var(--ochre); }
 .wl-order a.on { background: var(--sea); color: #fff; }
+/* topics */
+.tp-group .section-title a { color: inherit; text-decoration: none; }
+.tp-group .section-title a:hover { color: var(--ochre); }
+.tp-list { list-style: none; margin: 4px 0 6px; padding: 0; columns: 3 220px; column-gap: 28px; }
+.tp-list li { padding: 3px 0 3px calc(var(--d) * 18px); break-inside: avoid; }
+.tp-list a { color: var(--link); font-weight: 600; text-decoration: none; }
+.tp-list a:hover { text-decoration: underline; }
+.tp-list span { color: var(--faint); font-size: .85rem; margin-left: 2px; }
+.tp-crumbs { margin: 16px 0 2px; font-size: .9rem; color: var(--muted); }
+.tp-crumbs a { color: var(--link); }
+.tp-subs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 6px; }
+.tp-subs a { font: 600 .84rem var(--ui-font); color: var(--sea); text-decoration: none; padding: 4px 11px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 999px; }
+.tp-subs a:hover { border-color: var(--ochre); color: var(--ochre); }
+.tp-subs span { color: var(--faint); font-weight: 500; }
+.entry-topics { margin-top: 6px; font-size: .88rem; color: var(--muted); }
+.entry-topics a { color: var(--link); }
 .tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 10px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
@@ -284,6 +301,8 @@ details.more-ex summary { cursor: pointer; color: var(--sea2); font-weight: 600;
 .forms .play svg { width: 17px; height: 17px; }
 .play.inline { width: 26px; height: 26px; vertical-align: middle; cursor: default; }
 .play.inline svg { width: 15px; height: 15px; }
+.study.inline { width: 26px; height: 26px; vertical-align: middle; cursor: default; }
+.study.inline svg { width: 14px; height: 14px; }
 .hw-line { display: flex; align-items: center; gap: 14px; }
 
 /* ---------- my study list: bookmark toggle ---------- */
@@ -450,6 +469,8 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
   .row.eng { grid-template-columns: minmax(0, 1fr); }
   .cell.has-audio > .card .ehw { padding-right: 0; }
   .letters .off { min-width: 36px; height: 36px; flex: none; }
+  .wl-order { display: grid; grid-template-columns: 1fr 1fr auto; border-radius: 14px; }
+  .wl-order a { padding: 7px 10px; text-align: center; font-size: .82rem; }
   .browse-bar { position: static; }
   .wotd { grid-template-columns: minmax(0, 1fr); padding: 14px 16px; margin-top: 14px; }
   .wotd .hw { font-size: 1.6rem; }

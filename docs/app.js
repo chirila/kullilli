@@ -7,7 +7,7 @@
   const LANG = DATA.language, TITLE = DATA.title;
   const { esc, enc, hwOf } = R;
   const $ = (sel, el = document) => el.querySelector(sel);
-  const main = $('#main'), qInput = $('#q'), withEx = $('#withEx'), withSug = $('#withSug');
+  const main = $('#main'), qInput = $('#q');
   const overlay = $('#overlay'), entryEl = $('#entry');
 
   // ---- every entry and sub-entry is an item; sorted alphabetically ----------
@@ -128,7 +128,6 @@
   window.addEventListener('storage', e => { if (e.key === LANG + '.study') studyCache = null; });   // changed in another tab
 
   const state = {
-    mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1', withSug: store.get('sug', '1') === '1',
     filter: store.get('filter', 'all'), view: store.get('view', 'cards'),
     letter: LETTERS[0], eLetter: 'a', baseKey: '', list: [], openId: null,
   };
@@ -184,11 +183,14 @@
   function viewLetter(letter, eng) {
     const E = eng ? engIndex() : null;
     const count = eng ? E.count : letterCount, order = eng ? E.letters : LETTERS, base = eng ? '#/english/' : '#/letter/';
-    if (!count[letter]) letter = order.find(l => count[l]);
+    const all = letter === 'all';                  // "All" (#/letter/all, #/english/all): every word, in alphabetical order
+    if (!all && !count[letter]) letter = order.find(l => count[l]);
     if (eng) state.eLetter = letter; else state.letter = letter;
     store.set('wl', eng ? 'e' : 'k');
     $('[data-tab="letter"]').href = base + enc(letter);
-    const inL = eng ? E.list.filter(x => x.L === letter) : items.filter(it => it.c.L === letter).map(it => ({ it }));
+    const inL = eng ? (all ? E.list.filter(x => x.L !== '#').concat(E.list.filter(x => x.L === '#'))   // # (1sg …) last, as on the bar
+      : E.list.filter(x => x.L === letter)) : items.filter(it => all || it.c.L === letter).map(it => ({ it }));
+    const head = all ? 'All' : letter.toUpperCase();
     const gc = {};
     inL.forEach(({ it }) => { const g = group(it.c.cls); gc[g] = (gc[g] || 0) + 1; });
     const shown = state.filter === 'all' ? inL : inL.filter(({ it }) => group(it.c.cls) === state.filter);
@@ -197,12 +199,13 @@
     const letterLink = l => (count[l]
       ? `<a href="${base}${enc(l)}"${l === letter ? ' class="on" aria-current="page"' : ''} title="${count[l]} entries">${esc(l.toUpperCase())}</a>`
       : `<span class="off" title="No entries">${esc(l.toUpperCase())}</span>`);
-    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label) : '') + orderHTML(eng ? 'e' : 'k') +
+    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label, store.get('wotd', '1') === '1') : '') + orderHTML(eng ? 'e' : 'k') +
       `<div class="browse-bar"><nav class="letters" aria-label="${eng ? 'English letters' : 'Letters'}">` +
+      `<a class="all${all ? ' on" aria-current="page' : ''}" href="${base}all" title="Every word, A to Z">All</a>` +
       order.map(letterLink).join('') +
       `</nav><div class="tools">${chipsHTML(gc, inL.length)}${toggleHTML()}</div></div>` +
-      `<h2 class="list-title">${esc(letter.toUpperCase())} <small>${shown.length} ${shown.length === 1 ? 'entry' : 'entries'}${state.filter !== 'all' ? ' · ' + esc(fLabel.toLowerCase()) : ''}</small></h2>` +
-      (shown.length ? '<div id="list"></div>' : `<p class="empty">No ${esc(fLabel.toLowerCase())} under ${esc(letter.toUpperCase())}.</p>`);
+      `<h2 class="list-title">${esc(head)} <small>${shown.length} ${shown.length === 1 ? 'entry' : 'entries'}${state.filter !== 'all' ? ' · ' + esc(fLabel.toLowerCase()) : ''}</small></h2>` +
+      (shown.length ? '<div id="list"></div>' : `<p class="empty">No ${esc(fLabel.toLowerCase())}${all ? '' : ' under ' + esc(head)}.</p>`);
     if (shown.length) mountList($('#list'), shown.map(x => ({ it: x.it, eng: x.key })));
     state.list = [...new Set(shown.map(x => x.it.id))];
   }
@@ -309,23 +312,30 @@
   function viewSearch(q) {
     const MAX = 600;
     const conv = r => r.slice(0, MAX).map(x => ({ it: items[x.i], note: x.note, score: x.score }));
-    const b = state.mode !== 'english' ? conv(S.bardi(q, state.withEx)) : [];
-    const e = state.mode !== 'bardi' ? conv(S.english(q, state.withEx)) : [];
-    const secs = [];
-    const bSec = { k: 'b', title: `${LANG} words`, list: b };
-    const eSec = { k: 'e', title: 'English meanings', list: e };
-    if (b.length && (!e.length || b[0].score >= 80)) secs.push(bSec, eSec); else secs.push(eSec, bSec);
+    const b = conv(S.bardi(q, true)), e = conv(S.english(q, true));   // Kullilli and English, examples included
+    // words found only in an example sentence (they come last) go in a folded part under each list;
+    // shown open when they are all the list has
+    const isEx = x => /in an example/.test(x.note || '');
+    const sec = (k, title, list) => ({ k, title, list, direct: list.filter(x => !isEx(x)), ex: list.filter(isEx) });
+    const bSec = sec('b', `${LANG} words`, b), eSec = sec('e', 'English meanings', e);
+    const secs = b.length && (!eSec.direct.length || b[0].score >= 80) ? [bSec, eSec] : [eSec, bSec];
     const shown = secs.filter(s => s.list.length);
-    const tips = ['try fewer letters'];
-    if (state.mode !== 'both') tips.push('search Both');
-    if (!state.withEx) tips.push('tick “search in examples”');
-    const wantSuggest = state.withSug && state.mode !== 'bardi' && e.length < 3;
+    // suggestions when English meanings (not just example sentences) give fewer than 3 words
+    const wantSuggest = eSec.direct.length < 3;
+    const more = s => s.list.length === MAX ? '+' : '';
+    const secHTML = s => `<h3 class="section-title">${s.title} <small>${s.direct.length || s.ex.length}${s.direct.length ? '' : more(s)}</small></h3>` +
+      (s.direct.length ? `<div data-list="${s.k}"></div>` : '') +
+      (s.ex.length ? `<details class="ex-hits"${s.direct.length ? '' : ' open'}><summary>` +
+        `${s.direct.length ? `${s.ex.length}${more(s)} more` : 'Only'} in example sentences` +
+        '<span class="ex-act" aria-hidden="true"><span class="ex-show">Show</span><span class="ex-hide">Hide</span></span></summary>' +
+        `<div data-list="${s.k}x"></div></details>` : '');
     main.innerHTML = `<div class="results-head"><h2>Results for “${esc(q)}”</h2>${toggleHTML()}</div>` +
       (wantSuggest ? '<p class="suggest" data-suggest hidden></p>' : '') +
-      (shown.length
-        ? shown.map(s => `<h3 class="section-title">${s.title} <small>${s.list.length}${s.list.length === MAX ? '+' : ''}</small></h3><div data-list="${s.k}"></div>`).join('')
-        : `<p class="empty">No matches for “${esc(q)}”. You could ${tips.join(', or ')}.</p>`);
-    shown.forEach(s => mountList($(`[data-list="${s.k}"]`), s.list));
+      (shown.length ? shown.map(secHTML).join('') : `<p class="empty">No matches for “${esc(q)}”. You could try fewer letters.</p>`);
+    shown.forEach(s => {
+      if (s.direct.length) mountList($(`[data-list="${s.k}"]`), s.direct);
+      if (s.ex.length) mountList($(`[data-list="${s.k}x"]`), s.ex);
+    });
     if (wantSuggest) loadSuggest().then(SG => {
       const box = main.querySelector('[data-suggest]'), list = SG ? suggestionsFor(q, SG) : [];
       if (!box || !list.length) return;
@@ -511,7 +521,7 @@
   }
 
   function showBase(r, hash) {
-    const key = JSON.stringify(r) + [state.filter, state.view, state.mode, state.withEx, state.withSug].join('|');
+    const key = JSON.stringify(r) + [state.filter, state.view].join('|');
     state.baseHash = hash;
     if (r.type !== 'search') state.lastBrowse = hash;
     if (key === state.baseKey) return;          // same view: keep scroll position
@@ -592,12 +602,6 @@
   }
 
   // ---- events ----------------------------------------------------------------
-  function modeUI() {
-    document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
-    qInput.placeholder = { both: `Search ${LANG} or English…`, bardi: `Search ${LANG} words…`, english: 'Search English meanings…' }[state.mode];
-    withEx.checked = state.withEx;
-    withSug.checked = state.withSug;
-  }
   const rerender = () => { const r = parse(); if (r.type !== 'entry') showBase(r, location.hash || state.baseHash); };
 
   let timer;
@@ -618,8 +622,6 @@
       runSearch();
     }
   });
-  withEx.addEventListener('change', () => { state.withEx = withEx.checked; store.set('ex', state.withEx ? '1' : '0'); rerender(); });
-  withSug.addEventListener('change', () => { state.withSug = withSug.checked; store.set('sug', state.withSug ? '1' : '0'); rerender(); });
 
   // ---- audio: one player; tapping the same button again stops it -------------
   const player = new Audio();
@@ -651,15 +653,15 @@
     if (st) { e.preventDefault(); study.toggle(st.dataset.study); return; }
     const a = e.target.closest('[data-audio]');
     if (a) { e.preventDefault(); playAudio(a); return; }
-    const t = e.target.closest('[data-filter],[data-view],[data-mode],[data-go],.close-btn');
+    const t = e.target.closest('[data-filter],[data-view],[data-go],.close-btn');
     if (!t) return;
     if (t.dataset.filter) { state.filter = t.dataset.filter; store.set('filter', state.filter); rerender(); }
     else if (t.dataset.view) { state.view = t.dataset.view; store.set('view', state.view); rerender(); }
-    else if (t.dataset.mode) { state.mode = t.dataset.mode; store.set('mode', state.mode); modeUI(); rerender(); qInput.focus(); }
     else if (t.dataset.go) go('#/entry/' + enc(t.dataset.go), true);
     else go(state.baseHash);
   });
   overlay.addEventListener('click', e => { if (e.target === overlay) go(state.baseHash); });
+  main.addEventListener('toggle', e => { if (e.target.matches('details.wotd-box')) store.set('wotd', e.target.open ? '1' : '0'); }, true);
   entryEl.addEventListener('toggle', e => { if (e.target.matches('details.more')) store.set('more', e.target.open ? '1' : '0'); }, true);
   entryEl.addEventListener('change', e => {
     if (!e.target.matches('[data-ling]')) return;
@@ -704,7 +706,6 @@
   new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(markLang))).observe(document.body, { childList: true, subtree: true });
   markLang(document.body);
 
-  modeUI();
   window.addEventListener('hashchange', route);
   route();
 })();

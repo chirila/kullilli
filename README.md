@@ -99,7 +99,9 @@ DDP4 if FLEx has none. "Words without a topic" (`#/topic/none`) lists the rest. 
 links under the word type.
 
 **English-first wordlist.** The Wordlist tab has a switch, "Kullilli → English" / "English → Kullilli" / "By topic"
-(`#/letter/b` / `#/english/b` / `#/topic`); the site remembers which one was used last. The English list has the
+(`#/letter/b` / `#/english/b` / `#/topic`); the site remembers which one was used last. In both letter lists,
+**All** before the letters (`#/letter/all`, `#/english/all`) shows every word in alphabetical order (1,106 Kullilli
+entries, 1,491 English cards, pronoun labels last); cards are drawn in chunks as you scroll. The English list has the
 English alphabet A–Z along the top (letters with no words are greyed out) and # for pronoun labels such as
 *1sg.nom*. Each card leads with the English word, then the Kullilli word, its word type, its recording and
 bookmark, and its full gloss when that says more than the English word. Opening a card opens the full
@@ -114,10 +116,15 @@ remove them in FLEx to change that. Built in `app.js` (`engIndex`).
 
 ## English suggestions (`build/suggest.py`)
 
-When an English (or Both) search finds fewer than three English matches, the results page offers related English
-words that are in the dictionary: "Try a related word: child" for *infant*, "pup · dog" for *puppies*, "car" for
-*automobile*. Tapping one searches for it. Readers can turn this off with the **suggest related English words**
-tick box under the search box (on by default, remembered on the device); the About page explains it.
+Every search looks at Kullilli words, English meanings and the example sentences at once. Words found only in an
+example are folded away under each list ("62 more in example sentences · Show", a `details.ex-hits` in
+`viewSearch`); when a list has nothing else, that part starts open ("Only in example sentences"). (The Both / Kullilli / English buttons and the "search in
+examples" and "suggest related English words" tick boxes were removed on 2026-11-07 to make the phone view less
+crowded; old settings saved on a device are ignored.)
+
+When a search finds fewer than three words by their English meanings (words found only in examples don't count),
+the results page offers related English words that are in the dictionary: "Try a related word: child" for *infant*,
+"pup · dog" for *puppies*, "car" for *automobile*. Tapping one searches for it. The About page explains it.
 
 The build makes `docs/data/suggest.js` (about 150 KB, ~7,900 English words) from the WordNet 3.1 database files in
 `Documents/Claude/Wordnet_dict` (`WORDNET` in `build/build_lift.py`). For each searched word not already in the
@@ -135,11 +142,16 @@ top of `docs/style.css` (`--sea`, `--sea2`, `--link`, `--head1`, `--head2`, `--l
 The logo itself is now the black-and-white "kullilli ngulkana / learning kullilli" logo (`docs/icons/ngulkana-*.png`,
 cut from `kullilli ngulkana app store logo.png`). In the header it sits with the title "Kullilli Dictionary" on a
 light clay panel (`.brand-panel` in `docs/style.css`, `--clay: #ecc0ab`), so it shows up on the red; the panel
-covers only the logo and title, not the whole header.
+covers only the logo and title, not the whole header. On phones the logo is 40 px and the title smaller, so the
+header is just the logo panel, the search box and the tabs.
+
+The word of the day (top of the Wordlist) folds away: tapping its heading line hides it down to one line ("Word of
+the day: wirlidhi · Show"), and the site remembers open or folded on the device (`details.wotd-box`, store key
+`wotd`).
 
 | File | Used for |
 |---|---|
-| `ngulkana-160.png` | header logo (shown at 80 px, 56 px on phones; round, see-through corners) |
+| `ngulkana-160.png` | header logo (shown at 80 px, 40 px on phones; round, see-through corners) |
 | `ngulkana-192.png`, `ngulkana-512.png` | browser tab, installed app (round, see-through corners) |
 | `ngulkana-180.png` | iPhone/iPad home screen (white square; iOS rounds the corners) |
 | `ngulkana-maskable-512.png` | Android home screen (logo inside the middle 80%, which Android crops to its own shape) |

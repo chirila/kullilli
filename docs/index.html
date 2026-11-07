@@ -14,7 +14,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="robots" content="noai, noimageai">
 <meta name="tdm-reservation" content="1">
-<link rel="stylesheet" href="style.css?v=fc36669f">
+<link rel="stylesheet" href="style.css?v=12ae3b4b">
 <!-- game styles: written by build/build_lift.py from docs/games/*.css -->
 <link rel="stylesheet" href="games/games.css?v=28d08a2d">
 <link rel="stylesheet" href="games/circle.css?v=57fc8708">
@@ -42,15 +42,6 @@
         <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.2-4.2"/></svg>
         <input id="q" type="search" placeholder="Search Kullilli or English…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search the dictionary">
         <kbd class="hint" title="Press / to search">/</kbd>
-      </div>
-      <div class="search-opts">
-        <div class="seg" role="group" aria-label="Search in">
-          <button type="button" data-mode="both">Both</button>
-          <button type="button" data-mode="bardi">Kullilli</button>
-          <button type="button" data-mode="english">English</button>
-        </div>
-        <label class="chk"><input type="checkbox" id="withEx"> search in examples</label>
-        <label class="chk"><input type="checkbox" id="withSug"> suggest related English words</label>
       </div>
     </form>
   </div>
@@ -97,6 +88,7 @@
     <h3>Browsing and listening</h3>
     <p>Use the <strong>Wordlist</strong> tab to browse by letter. <em>dh, dy, ng, nh, ny, th</em> and <em>ty</em> are
        letters of their own and come after the single letter they start with (<em>dh</em> and <em>dy</em> after <em>d</em>).
+       <strong>All</strong>, before the letters, shows every word from A to Z in one list.
        The buttons above the list narrow it to nouns, verbs and so on. Tap any card to open the full entry;
        use the ‹ › buttons (or the arrow keys) to step through neighbouring entries.</p>
     <p>The switch at the top of the wordlist changes the order. <strong>Kullilli → English</strong> lists Kullilli
@@ -139,8 +131,8 @@
     <p class="gnote" role="status" data-offline-msg></p>
 
     <h3>Searching</h3>
-    <p>Type in the search box at the top. <strong>Both</strong> searches Kullilli words and English meanings at once;
-       the other two buttons search only one side.</p>
+    <p>Type in the search box at the top. It searches Kullilli words and English meanings at once, and the example
+       sentences too.</p>
     <ul>
       <li><strong>Kullilli search</strong> matches headwords, variant spellings, and the spellings used in the original
         sources (such as <span class="v">ŋuᶁa</span> for <span class="v">ngudya</span>). Exact spellings come first; after them
@@ -148,12 +140,11 @@
         <em>j/dy/tj</em>, long and short vowels, <em>o/u</em>, and small typing mistakes.</li>
       <li><strong>English search</strong> looks at glosses, definitions and notes. It ignores word endings
         (<em>bite, bites, biting</em>), allows small spelling mistakes, and needs every word you type to match.</li>
-      <li>Tick <strong>search in examples</strong> to search inside example sentences as well. Entries always show
-        their examples, ticked or not.</li>
+      <li>Words found only in an example sentence are folded away under each list: tap
+        <strong>… more in example sentences</strong> to see them.</li>
       <li>When an English search finds few words, the site suggests related English words that are in the
         dictionary (<em>infant</em> → <em>child</em>, <em>pebble</em> → <em>rock, stone</em>). The suggestions come
-        from WordNet, an English word list, so they are only a guide. Untick <strong>suggest related English
-        words</strong> to turn them off.</li>
+        from WordNet, an English word list, so they are only a guide.</li>
     </ul>
 
     <h3>Reading an entry</h3>
@@ -187,7 +178,7 @@
 
 <script src="data/dictionary.js?v=3f49694f"></script>
 <script src="search.js?v=7fc450b3"></script>
-<script src="render.js?v=fe2aab89"></script>
+<script src="render.js?v=78dbbc05"></script>
 <!-- game scripts: written by build/build_lift.py from docs/games/*.js -->
 <script src="games/core.js?v=b3482ac1"></script>
 <script src="games/circle.js?v=6df7b98c"></script>
@@ -205,6 +196,6 @@
 <script src="games/unscramble.js?v=769897e6"></script>
 <script src="games/wordsearch.js?v=0dd3cb0b"></script>
 <!-- /game scripts -->
-<script src="app.js?v=eac68dd2"></script>
+<script src="app.js?v=7a974456"></script>
 </body>
 </html>

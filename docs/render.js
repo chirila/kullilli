@@ -168,15 +168,19 @@ window.BardiRender = (() => {
   }
   const cardHTML = (it, note, eng) => itemHTML('card', it, note, eng);
 
-  function wotdHTML(it, dateLabel) {
+  // word of the day: a panel the reader can fold away (folded, it shows just the word on one line)
+  function wotdHTML(it, dateLabel, open) {
     const c = it.c;
     const ex = (c.senses || []).flatMap(s => s.ex || []).find(x => x.v && x.e);
-    return `<div class="wotd-wrap${c.audio ? ' has-audio' : ''}"><a class="wotd" href="#/entry/${enc(it.id)}" data-id="${esc(it.id)}">` +
-      `<span class="wotd-word"><span class="wotd-label">Word of the day · ${esc(dateLabel)}</span>` +
-      `<span class="hw">${esc(hwOf(c))}</span><span class="pos">${esc(shortPos(c))}</span>` +
+    return `<details class="wotd-box"${open ? ' open' : ''}><summary class="wotd-label">` +
+      `<span>Word of the day<span class="wotd-date"> · ${esc(dateLabel)}</span><span class="wotd-peek">: ` +
+      `<span class="v">${esc(hwOf(c))}</span></span></span>` +
+      '<span class="wotd-act" aria-hidden="true"><span class="wotd-hide">Hide</span><span class="wotd-show">Show</span></span></summary>' +
+      `<div class="wotd-wrap${c.audio ? ' has-audio' : ''}"><a class="wotd" href="#/entry/${enc(it.id)}" data-id="${esc(it.id)}">` +
+      `<span class="wotd-word"><span class="hw">${esc(hwOf(c))}</span><span class="pos">${esc(shortPos(c))}</span>` +
       `<span class="gl">${fmt(summary(c), false)}</span></span>` +
       (ex ? `<span class="wotd-ex"><span class="exv v">${fmtEx(ex.v, false)}</span><span class="exe">${fmt(ex.e, false)}</span></span>` : '') +
-      '</a>' + playBtn(c.audio, hwOf(c), true) + '</div>';
+      '</a>' + playBtn(c.audio, hwOf(c), true) + '</div></details>';
   }
   const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
 

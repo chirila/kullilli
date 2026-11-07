@@ -364,7 +364,7 @@ def stamp_assets():
     docs = OUT.parent.parent
     page = docs / "index.html"
     html = page.read_text(encoding="utf-8")
-    for asset in ("style.css", "search.js", "render.js", "app.js", "data/dictionary.js"):
+    for asset in ("style.css", "search.js", "render.js", "games.js", "app.js", "data/dictionary.js"):
         v = hashlib.md5((docs / asset).read_bytes()).hexdigest()[:8]
         html = re.sub(rf'((?:src|href)="{re.escape(asset)})(\?v=\w+)?"', rf'\1?v={v}"', html)
     page.write_text(html, encoding="utf-8")

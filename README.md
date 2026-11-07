@@ -85,6 +85,21 @@ The recordings come to about 40 MB, which is fine for Pages.
 - Grammatical labels are shown as small-caps abbreviations (food-ACC, 1SG.ERG). Hovering or tapping
   shows the full name, and the About page lists them all.
 
+## Learn tab (`docs/games.js`)
+
+Three games, all usable with a mouse, a keyboard or a touch screen:
+
+- **Memory pairs**: 6 pairs face down; turn over two cards at a time to match a word with its meaning.
+- **Match up**: drag each word onto its meaning (or the other way round); on a phone, tap one and then the other.
+- **Word in the middle**: a word in the centre and six meanings in a circle round it (or the reverse); 10 questions.
+
+Words in the games are nouns, verbs, adjectives, adverbs, interjections and similar words with a short, certain
+gloss (no "?", no "unknown"). Affixes, pronoun labels, place names and variant spellings are left out, and each
+round uses different glosses so the pairs are never ambiguous. Players can choose a topic (the FLEx semantic
+domains, a domain including its subdomains, those with at least 6 words), limit the games to words with
+recordings (the recording plays on each correct match), and set the direction. Each round ends with cards for
+the words played, which link to their entries.
+
 ## Glossing review (`build/glosscheck.py`)
 
 Every build rewrites these files in `KullilliDictionary/review/`:
@@ -117,4 +132,5 @@ tab-separated text, not .xlsx.
 | `docs/style.css` | styles, including the phone layout |
 | `docs/search.js` | Kullilli (spelling-tolerant) and English (stemmed, typo-tolerant) search |
 | `docs/render.js` | cards, list rows, interlinear examples and entry HTML; part-of-speech labels |
+| `docs/games.js` | the Learn tab: word picker, memory pairs, match up, word in the middle |
 | `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing |

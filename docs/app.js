@@ -163,6 +163,13 @@
     state.list = [...new Set(shown.flatMap(s => s.list.map(x => x.it.id)))];
   }
 
+  // what the Learn-tab games get from the app (see games.js)
+  const gameCtx = {
+    items, lang: LANG, R, store,
+    playFile: file => playFile(file),
+    setList: ids => { state.list = ids; },
+  };
+
   function viewAbout() {
     main.innerHTML = '';
     main.append($('#about-tpl').content.cloneNode(true));
@@ -183,6 +190,7 @@
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
     if (head === 'affixes' || head === 'about') return { type: head };
+    if (head === 'learn') return { type: 'learn', game: dec(rest) };
     return { type: 'letter', letter: dec(rest) || state.letter };
   }
 
@@ -201,6 +209,7 @@
     if (r.type === 'letter') viewLetter(r.letter);
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
+    else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
     else viewSearch(r.q);
     window.scrollTo(0, 0);
   }
@@ -294,6 +303,11 @@
     player.pause();
     if (playing) playing.classList.remove('playing');
     playing = null;
+  }
+  function playFile(file) {                // used by the games: play a recording without a button
+    stopAudio();
+    player.src = 'audio/' + enc(file);
+    player.play().catch(() => {});
   }
   function playAudio(btn) {
     if (playing === btn) { stopAudio(); return; }

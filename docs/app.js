@@ -165,7 +165,7 @@
 
   // what the Learn-tab games get from the app (see games.js)
   const gameCtx = {
-    items, lang: LANG, R, store,
+    items, lang: LANG, R, store, keyboard: DATA.keyboard,
     playFile: file => playFile(file),
     setList: ids => { state.list = ids; },
   };

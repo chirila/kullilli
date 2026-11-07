@@ -287,21 +287,181 @@ window.DictGames = (() => {
     ask();
   }
 
+  // ---- letter games: the language's own letters (ctx.keyboard); two-letter units like ng or dh count as one
+  function letterKit() {
+    const rows = ctx.keyboard, units = new Set(rows.flat());
+    const multi = [...units].filter(u => u.length > 1).sort((a, b) => b.length - a.length);
+    const tok = w => { const out = []; let i = 0; while (i < w.length) { const u = multi.find(m => w.startsWith(m, i)) || w[i]; out.push(u); i += u.length; } return out; };
+    const plain = it => hw(it).toLowerCase();
+    const fits = it => { const w = plain(it); if (!/^[a-z]+$/.test(w)) return false; const t = tok(w); return t.length >= 4 && t.length <= 6 && t.every(u => units.has(u)); };
+    /** the on-screen keyboard; state = letter -> hit/near/miss; extra = buttons added to the last row */
+    const keysHTML = (state, extra = '', disableUsed = false) => '<div class="hd-keys">' + rows.map((row, ri) => '<div class="hd-krow">' +
+      row.map(u => `<button type="button" class="hk ${state[u] || ''}" data-k="${esc(u)}"${disableUsed && state[u] ? ' disabled' : ''}>${esc(u)}</button>`).join('') +
+      (ri === rows.length - 1 ? extra : '') + '</div>').join('') + '</div>';
+    return { rows, units, tok, plain, fits, keysHTML };
+  }
+  const listenBtn = it => (it.c.audio ? `<button type="button" class="gbtn" data-listen="${esc(it.c.audio)}">Listen</button>` : '');
+
+  // ---- 4. letter by letter (easier): pick letters to fill in a hidden word, no wrong answers ------------
+  function letters(root) {
+    const s = settings();
+    const L = esc(ctx.lang);
+    const { units, tok, plain, fits, keysHTML } = letterKit();
+    root.innerHTML = '<h2 class="gtitle">Letter by letter</h2><p class="gintro">' +
+      `Tap letters to fill in the hidden ${L} word. Letters in the word appear in their boxes; letters that ` +
+      'aren\'t in it are greyed out. Take as many tries as you like. Letters like <span class="v">ng</span> and ' +
+      '<span class="v">dh</span> count as one letter and have their own keys.</p>' + barHTML(s, false) + '<div class="gplay"></div>';
+    wireBar(root, () => letters(root));
+    const play = root.querySelector('.gplay');
+    const answers = pool(s).filter(fits);
+    if (!answers.length) { play.innerHTML = tooFew(0); return; }
+    const it = answers[Math.floor(Math.random() * answers.length)];
+    const target = tok(plain(it)), n = target.length;
+    const tried = {};                                   // letter -> hit / miss
+    let hint = false;
+    const done = () => target.every(u => tried[u]);
+
+    function draw() {
+      const finished = done();
+      const misses = Object.values(tried).filter(v => v === 'miss').length, count = Object.keys(tried).length;
+      const tiles = target.map(u => `<span class="ht ${tried[u] ? 'hit' : ''}"${tried[u] ? '' : ' aria-label="hidden letter"'}>${tried[u] ? esc(u) : ''}</span>`).join('');
+      play.innerHTML = `<p class="gstat" aria-live="polite">${n} letters · ${count} tried${misses ? ` (${misses} not in the word)` : ''}</p>` +
+        `<div class="hd-board"><div class="hd-row"><div class="hd-tiles">${tiles}</div></div></div>` +
+        (finished
+          ? `<div class="gdone"><p class="gdone-msg">You found it with ${count} ${count === 1 ? 'letter' : 'letters'} tried.</p>` +
+            '<button type="button" class="gbtn primary" data-again>New word</button></div>' +
+            `<div class="grid hd-answer">${ctx.R.cardHTML(it)}</div>`
+          : '<div class="hd-tools"><button type="button" class="gbtn" data-hint' + (hint ? ' disabled' : '') + '>' +
+            (hint ? 'Meaning: ' + esc(gloss(it)) : 'Show the meaning') + '</button>' + listenBtn(it) + '</div>' + keysHTML(tried, '', true));
+    }
+    function guess(u) {
+      if (done() || tried[u] || !units.has(u)) return;
+      tried[u] = target.includes(u) ? 'hit' : 'miss';
+      if (done()) { if (it.c.audio) ctx.playFile(it.c.audio); ctx.setList([it.id]); }
+      draw();
+    }
+    play.addEventListener('click', e => {
+      const k = e.target.closest('[data-k]');
+      if (k) { guess(k.dataset.k); return; }
+      const l = e.target.closest('[data-listen]');
+      if (l) { ctx.playFile(l.dataset.listen); return; }
+      if (e.target.closest('[data-hint]')) { hint = true; draw(); return; }
+      if (e.target.closest('[data-again]')) letters(root);
+    });
+    const onKey = e => {                                  // single letters can be typed; two-letter ones are on screen
+      if (!play.isConnected) { document.removeEventListener('keydown', onKey); return; }
+      const ae = document.activeElement;
+      if ((ae && /^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName)) || !document.getElementById('overlay').hidden) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (/^[a-z]$/i.test(e.key)) guess(e.key.toLowerCase());
+    };
+    document.addEventListener('keydown', onKey);
+    draw();
+  }
+
+  // ---- 5. hidden word: guess a word in six tries, letter by letter ---------------------------
+  function hidden(root) {
+    const s = settings();
+    const L = esc(ctx.lang);
+    const { units, tok, plain, fits, keysHTML } = letterKit();
+    root.innerHTML = '<h2 class="gtitle">Hidden word</h2><p class="gintro">' +
+      `Guess the hidden ${L} word in six tries. After each guess, the tiles show which letters are in the right place, ` +
+      'which are in the word but somewhere else, and which are not in it. Letters like <span class="v">ng</span> and ' +
+      '<span class="v">dh</span> count as one letter.</p>' + barHTML(s, false) + '<div class="gplay"></div>';
+    wireBar(root, () => hidden(root));
+    const play = root.querySelector('.gplay');
+    const answers = pool(s).filter(fits);
+    if (!answers.length) { play.innerHTML = tooFew(0); return; }
+    const it = answers[Math.floor(Math.random() * answers.length)];
+    const target = tok(plain(it)), n = target.length, TRIES = 6;
+    const meaning = new Map();                       // guesses that are real words show their meaning
+    ctx.items.forEach(x => { const g = (x.c.senses || []).flatMap(z => z.gl || [])[0]; const w = (x.c.lc || x.c.hw).toLowerCase(); if (g && !meaning.has(w)) meaning.set(w, g); });
+    const RANK = { miss: 1, near: 2, hit: 3 };
+    const SAY = { hit: 'right place', near: 'in the word, somewhere else', miss: 'not in the word' };
+    let guesses = [], cur = [], over = '', hint = false, note = '';
+    const keyState = {};
+
+    function score(g) {
+      const res = Array(n).fill('miss'), left = {};
+      target.forEach((u, i) => { if (g[i] === u) res[i] = 'hit'; else left[u] = (left[u] || 0) + 1; });
+      g.forEach((u, i) => { if (res[i] !== 'hit' && left[u]) { res[i] = 'near'; left[u]--; } });
+      return res;
+    }
+    function draw() {
+      const board = Array.from({ length: TRIES }, (_, r) => {
+        const g = guesses[r], letters = g ? g.units : (r === guesses.length && !over ? cur : []);
+        const real = g && meaning.get(g.units.join(''));
+        return `<div class="hd-row${r === guesses.length && !over ? ' now' : ''}"><div class="hd-tiles">` +
+          Array.from({ length: n }, (_, i) => {
+            const u = letters[i] || '', st = g ? g.res[i] : (u ? 'typed' : '');
+            return `<span class="ht ${st}"${g ? ` aria-label="${esc(u)}: ${SAY[st]}"` : ''}>${esc(u)}</span>`;
+          }).join('') + '</div>' + (real ? `<span class="hd-real">‘${esc(real)}’</span>` : '') + '</div>';
+      }).join('');
+      const keys = keysHTML(keyState, '<button type="button" class="hk wide" data-k="back" aria-label="Delete letter">⌫</button>' +
+        '<button type="button" class="hk wide enter" data-k="enter">Enter</button>');
+      const end = over ? `<div class="gdone"><p class="gdone-msg">${over === 'won'
+        ? `You found it in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}!` : 'Out of tries. The word was:'}</p>` +
+        '<button type="button" class="gbtn primary" data-again>New word</button></div>' +
+        `<div class="grid hd-answer">${ctx.R.cardHTML(it)}</div>` : '';
+      play.innerHTML = `<p class="gstat" aria-live="polite">${note || `${n} letters · guess ${Math.min(guesses.length + 1, TRIES)} of ${TRIES}`}</p>` +
+        `<div class="hd-board">${board}</div>` + (over ? end :
+        `<div class="hd-tools"><button type="button" class="gbtn" data-hint${hint ? ' disabled' : ''}>` +
+        `${hint ? 'Meaning: ' + esc(gloss(it)) : 'Show the meaning'}</button></div>` + keys);
+      note = '';
+    }
+    function add(u) {
+      if (over) return;
+      const next = tok(cur.join('') + u);             // n then g makes ng, d then h makes dh
+      if (next.length <= n && next.every(x => units.has(x))) { cur = next; draw(); }
+    }
+    function back() { if (!over && cur.length) { cur = cur.slice(0, -1); draw(); } }
+    function enter() {
+      if (over) return;
+      if (cur.length < n) { note = `The word has ${n} letters.`; draw(); return; }
+      const res = score(cur);
+      guesses.push({ units: cur, res });
+      cur.forEach((u, i) => { if (!keyState[u] || RANK[res[i]] > RANK[keyState[u]]) keyState[u] = res[i]; });
+      cur = [];
+      if (res.every(x => x === 'hit')) over = 'won';
+      else if (guesses.length === TRIES) over = 'lost';
+      if (over) { if (it.c.audio) ctx.playFile(it.c.audio); ctx.setList([it.id]); }
+      draw();
+    }
+    play.addEventListener('click', e => {
+      const k = e.target.closest('[data-k]');
+      if (k) { const v = k.dataset.k; if (v === 'back') back(); else if (v === 'enter') enter(); else add(v); return; }
+      if (e.target.closest('[data-hint]')) { hint = true; draw(); return; }
+      if (e.target.closest('[data-again]')) hidden(root);
+    });
+    const onKey = e => {                                  // typing on a computer keyboard
+      if (!play.isConnected) { document.removeEventListener('keydown', onKey); return; }
+      const ae = document.activeElement;
+      if ((ae && /^(INPUT|SELECT|TEXTAREA)$/.test(ae.tagName)) || !document.getElementById('overlay').hidden) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'Enter') { e.preventDefault(); enter(); } else if (e.key === 'Backspace') { e.preventDefault(); back(); } else if (/^[a-z]$/i.test(e.key)) add(e.key.toLowerCase());
+    };
+    document.addEventListener('keydown', onKey);
+    draw();
+  }
+
   // ---- the Learn page --------------------------------------------------------------------
   const GAMES = [
     ['memory', 'Memory pairs', 'Turn over cards to find each word and its meaning.', memory],
     ['match', 'Match up', 'Drag words onto their meanings, or tap one and then the other.', match],
     ['circle', 'Word in the middle', 'Pick the right meaning from the circle round the word.', circle],
+    ['letters', 'Letter by letter', 'An easier word puzzle: pick letters to fill in a hidden word, with no wrong answers.', letters],
+    ['hidden', 'Hidden word', 'Guess a word in six tries, letter by letter.', hidden],
   ];
 
   function view(main, game, context) {
     ctx = context;
-    const g = GAMES.find(x => x[0] === game);
+    const games = GAMES.filter(x => !['hidden', 'letters'].includes(x[0]) || (ctx.keyboard && ctx.keyboard.length));
+    const g = games.find(x => x[0] === game);
     if (!g) {
       ctx.setList([]);
       main.innerHTML = `<h2 class="gtitle">Learn ${esc(ctx.lang)}</h2><p class="gintro">Games with words from the dictionary. ` +
         'Choose a topic in each game, and listen to the words as you match them.</p><div class="learn-grid">' +
-        GAMES.map(([k, t, d]) => `<a class="learn-tile" href="#/learn/${k}"><span class="lt-title">${t}</span><span class="lt-desc">${d}</span></a>`).join('') + '</div>';
+        games.map(([k, t, d]) =>`<a class="learn-tile" href="#/learn/${k}"><span class="lt-title">${t}</span><span class="lt-desc">${d}</span></a>`).join('') + '</div>';
       return;
     }
     main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a><div class="game"></div>';

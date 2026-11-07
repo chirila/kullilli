@@ -57,6 +57,13 @@ SPELLING = [
     ["(.)\\1+", "$1"],                              # doubled letters
 ]
 
+# The alphabet from the sketch grammar, as the on-screen keyboard of the Hidden word game.
+# Two-letter units (dh, ng, rr ...) count as one letter there.
+KEYBOARD = [["a", "i", "u", "w", "y", "b", "p", "m"],
+            ["dh", "th", "nh", "lh", "d", "t", "n", "l"],
+            ["dy", "ty", "ny", "ly", "rd", "rt", "rn", "rl"],
+            ["r", "rr", "g", "k", "ng"]]
+
 POS_CLASS = {"noun": "noun", "n": "noun", "verb": "verb", "v": "verb", "intransitive verb": "verb",
              "transitive verb": "verb", "adjective": "adjective", "adverb": "adverb",
              "pronoun": "pronoun", "pro": "pronoun", "demonstrative": "pronoun",
@@ -447,7 +454,7 @@ def main():
             "abbr": glosscheck.abbreviations(sentences, by_id, REVIEW),
             "letters": sorted(present, key=sort_key),
             "source": LIFT.name, "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
-            "spelling": SPELLING}
+            "spelling": SPELLING, "keyboard": KEYBOARD}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("window.DICT_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",
                    encoding="utf-8")

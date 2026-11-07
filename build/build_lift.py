@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.dont_write_bytecode = True        # no __pycache__ in the repository
 import glosscheck                     # noqa: E402
+import suggest                        # noqa: E402
 from sentences import parse as parse_sentences   # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -42,6 +43,11 @@ VERN = "gll-Latn"                 # vernacular writing system
 AUDIO_WS = "gll-Zxxx-x-audio"     # audio writing system (file names)
 ENG = "en"
 SHOW_UNTYPED_NOTES = True        # Claire, 2026-11-06: show them all
+# Entries left out of the site: "aaa" is a "how to use the dictionary" note, now on the About page (Claire, 2026-11-07).
+SKIP_ENTRIES = {"aaa"}
+# English suggestions in the search (infant -> child) come from the WordNet 3.1 database files in this folder;
+# without it, the last docs/data/suggest.js is kept.
+WORDNET = REPO.parent / "Wordnet_dict"
 # Feedback (problems, ideas, comments on words) goes to GitHub issues, using the forms in .github/ISSUE_TEMPLATE/.
 # FEEDBACK_REPO = "owner/repository"; empty = the site works it out from its github.io address.
 # FEEDBACK_EMAIL (optional) is offered to people without a GitHub account.
@@ -391,6 +397,31 @@ def stamp_assets():
     for asset in ("style.css", "search.js", "render.js", "app.js", "data/dictionary.js"):
         html = re.sub(rf'((?:src|href)="{re.escape(asset)})(\?v=\w+)?"', rf'\1?v={fp(asset)}"', html)
     page.write_text(html, encoding="utf-8")
+    write_service_worker(docs, html)
+
+
+def write_service_worker(docs, html):
+    """Offline use: list everything index.html loads (with its ?v= fingerprint) in docs/sw.js, so the site is
+    saved for offline use and a new version replaces the old one.  Recordings are saved separately as they play.
+    Also the site's "last updated" date (About page): today if anything on the site changed since the last
+    build, else the date already there, so rebuilding without changes leaves every file as it was."""
+    import hashlib, datetime
+    meta = re.compile(r'<meta name="site-updated" content="[^"]*">\n')
+    html = meta.sub("", html)
+    refs = re.findall(r'(?:src|href)="(?!#|https?:|mailto:)([^"]+)"', html)
+    extra = ["icons/icon-192.png", "icons/icon-512.png"]
+    if (docs / "data" / "suggest.js").exists():       # loaded later by the search, so not in index.html
+        extra.append("data/suggest.js?v=" + hashlib.md5((docs / "data" / "suggest.js").read_bytes()).hexdigest()[:8])
+    assets = ["./"] + list(dict.fromkeys(refs + extra))
+    version = hashlib.md5(("\n".join(assets) + html).encode("utf-8")).hexdigest()[:10]
+    sw = docs / "sw.js"
+    old = sw.read_text(encoding="utf-8")
+    was = re.search(r"const VERSION = '(\w+)';\nconst UPDATED = '([\d-]+)';", old)
+    updated = was.group(2) if was and was.group(1) == version else datetime.date.today().isoformat()
+    block = f"const VERSION = '{version}';\nconst UPDATED = '{updated}';\nconst ASSETS = {json.dumps(assets, indent=1)};\n"
+    sw.write_text(re.sub(r"(// <assets>\n).*?(// </assets>)", lambda m: m.group(1) + block + m.group(2), old, flags=re.S), encoding="utf-8")
+    html = html.replace("<meta charset=\"utf-8\">\n", f'<meta charset="utf-8">\n<meta name="site-updated" content="{updated}">\n', 1)
+    (docs / "index.html").write_text(html, encoding="utf-8")
 
 
 def main():
@@ -463,7 +494,7 @@ def main():
         for v in c["va"]:
             v[2] = check(v[2])
 
-    entries = sorted((c for _, c in pairs), key=lambda c: (c["sk"], c["hm"]))
+    entries = sorted((c for _, c in pairs if c["hw"] not in SKIP_ENTRIES), key=lambda c: (c["sk"], c["hm"]))
     present = {c["L"] for c in entries}
     data = {"entries": [clean(c) for c in entries],
             "sentences": sentences,
@@ -471,10 +502,17 @@ def main():
             "letters": sorted(present, key=sort_key),
             "source": LIFT.name, "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
             "spelling": SPELLING, "keyboard": KEYBOARD,
-            "langCode": VERN.split("-")[0], "feedback": {"repo": FEEDBACK_REPO, "email": FEEDBACK_EMAIL}}
+            "langCode": VERN.split("-")[0], "feedback": {"repo": FEEDBACK_REPO, "email": FEEDBACK_EMAIL},
+            "edited": max((c.get("dt") or "" for c in entries), default="")}     # newest FLEx edit (About page)
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    sug = OUT.parent / "suggest.js"
+    n_sug = suggest.write(data["entries"], sug, WORDNET)
+    if sug.exists():                                   # loaded by the search only when it's needed
+        import hashlib
+        data["suggest"] = f"data/suggest.js?v={hashlib.md5(sug.read_bytes()).hexdigest()[:8]}"
     OUT.write_text("window.DICT_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",
                    encoding="utf-8")
+    print(f"English suggestions: {n_sug} words" if n_sug is not None else f"English suggestions: no WordNet in {WORDNET}; kept the old file")
 
     stamp_assets()
     cls = Counter(c["cls"] for c in entries)

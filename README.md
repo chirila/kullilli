@@ -112,6 +112,27 @@ English word and entry; an entry with no reversal uses its glosses (split at ";"
 words), "grammar" (77), "pronouns" (42) and "animals" (13) each list every entry tagged with them; edit or
 remove them in FLEx to change that. Built in `app.js` (`engIndex`).
 
+## English suggestions (`build/suggest.py`)
+
+When an English (or Both) search finds fewer than three English matches, the results page offers related English
+words that are in the dictionary: "Try a related word: child" for *infant*, "pup · dog" for *puppies*, "car" for
+*automobile*. Tapping one searches for it. Readers can turn this off with the **suggest related English words**
+tick box under the search box (on by default, remembered on the device); the About page explains it.
+
+The build makes `docs/data/suggest.js` (about 150 KB, ~7,900 English words) from the WordNet 3.1 database files in
+`Documents/Claude/Wordnet_dict` (`WORDNET` in `build/build_lift.py`). For each searched word not already in the
+dictionary's English, it takes WordNet's commonest senses (nouns first) and keeps synonyms, then broader and similar
+words, that the search can find. Left out: narrower words, broader words for verbs, very general words, and names
+of places and people. The site loads the file only when a search needs it, and it is saved for offline use. If
+WordNet isn't on the computer that runs the build, the existing file is kept.
+
+## Look
+
+Colours come from the logo (`KullilliDictionary/kullillidictionary.png`): a red header with the logo and a row of
+dots along the top (like the dotted line in the logo), and red-brown headings and Kullilli words. They are set at the
+top of `docs/style.css` (`--sea`, `--sea2`, `--link`, `--head1`, `--head2`, `--logo-red`); the header logo is
+`docs/icons/logo-144.png`, and the home-screen icons are in `docs/icons/` too.
+
 ## Example sentences (`build/sentences.py`)
 
 - Each sentence's lines are read in order: words, morphemes, FLEx entry line (later texts),
@@ -325,8 +346,10 @@ the format is in `lessons/README.md`. After editing them:
 This writes `docs/lessons/lessons-data.js` and refreshes the `?v=` fingerprints in `docs/lessons/index.html`.
 It stops if an example's Kullilli and English lines have different numbers of words, or if a lesson id is
 missing or used twice. The page is `/lessons/` on the site (`#/` contents, `#/saved`, `#/<lesson id>`). It
-uses the dictionary's `style.css` plus its own `lessons.css`, and links back to the dictionary; the dictionary
-doesn't link to it yet. **Save for later** keeps lesson ids in the browser under `Kullilli.lessons`, so the
+uses the dictionary's `style.css` plus its own `lessons.css`, and links back to the dictionary. The
+dictionary's **Lessons** tab is marked "coming soon" while the lessons are being checked: it opens a placeholder
+page (`#/lessons`, `viewLessons()` in `app.js`) that doesn't link to the drafts. When they're ready, point the tab
+at `lessons/` in `index.html`, remove the badge (`<span class="soon">`) and `viewLessons()`. **Save for later** keeps lesson ids in the browser under `Kullilli.lessons`, so the
 backup on My lists includes them. The lesson files aren't in the offline list in `sw.js` yet, so the lessons
 need a connection. Notes on what was changed from the grammar, and questions about it:
 `KullilliDictionary/review/lessons_review.md`.

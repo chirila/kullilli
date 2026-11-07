@@ -1,5 +1,5 @@
 /* Dictionary: wordlist, affixes, search, entry panel, audio and URL routing.
-   URLs: #/letter/b  #/english/b  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>)
+   URLs: #/letter/b  #/english/b  #/topic  #/topic/1.6.1.2  #/affixes  #/about  #/search/<query>  #/entry/<id>  (sub-entry: <id>/<n>)
          #/feedback  #/feedback/word/<id> */
 'use strict';
 (() => {
@@ -7,7 +7,7 @@
   const LANG = DATA.language, TITLE = DATA.title;
   const { esc, enc, hwOf } = R;
   const $ = (sel, el = document) => el.querySelector(sel);
-  const main = $('#main'), qInput = $('#q'), withEx = $('#withEx');
+  const main = $('#main'), qInput = $('#q'), withEx = $('#withEx'), withSug = $('#withSug');
   const overlay = $('#overlay'), entryEl = $('#entry');
 
   // ---- every entry and sub-entry is an item; sorted alphabetically ----------
@@ -128,11 +128,11 @@
   window.addEventListener('storage', e => { if (e.key === LANG + '.study') studyCache = null; });   // changed in another tab
 
   const state = {
-    mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1',
+    mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1', withSug: store.get('sug', '1') === '1',
     filter: store.get('filter', 'all'), view: store.get('view', 'cards'),
     letter: LETTERS[0], eLetter: 'a', baseKey: '', list: [], openId: null,
   };
-  if (store.get('wl', 'k') === 'e') $('[data-tab="letter"]').href = '#/english/a';   // the Wordlist tab opens the order last used
+  if (store.get('wl', 'k') !== 'k') $('[data-tab="letter"]').href = store.get('wl') === 'e' ? '#/english/a' : '#/topic';   // the Wordlist tab opens the order last used
   if (!FILTERS.some(([k]) => k === state.filter)) state.filter = 'all';
   // linguist notes and questions on example sentences: hidden unless switched on (remembered)
   state.ling = store.get('ling', '0') === '1';
@@ -170,9 +170,16 @@
 
   // ---- views ---------------------------------------------------------------
   // Kullilli first (#/letter/…) or English first (#/english/…): same letters bar, filters, cards and entries
-  const orderHTML = eng => '<nav class="wl-order" aria-label="Wordlist order">' +
-    `<a href="#/letter/${enc(state.letter)}"${eng ? '' : ' class="on" aria-current="page"'}>${esc(LANG)} → English</a>` +
-    `<a href="#/english/${enc(state.eLetter)}"${eng ? ' class="on" aria-current="page"' : ''}>English → ${esc(LANG)}</a></nav>`;
+  const orderHTML = mode => '<nav class="wl-order" aria-label="Wordlist order">' + [
+    ['k', `#/letter/${enc(state.letter)}`, `${esc(LANG)} → English`],
+    ['e', `#/english/${enc(state.eLetter)}`, `English → ${esc(LANG)}`],
+    ['t', '#/topic', 'By topic']].map(([m, href, label]) =>
+    `<a href="${href}"${m === mode ? ' class="on" aria-current="page"' : ''}>${label}</a>`).join('') + '</nav>';
+  /** word-type filter buttons; gc = count per type, total = all */
+  const chipsHTML = (gc, total) => '<div class="chips" role="group" aria-label="Word type">' + FILTERS.map(([k, lab]) => {
+    const n = k === 'all' ? total : (gc[k] || 0);
+    return `<button type="button" class="chip${state.filter === k ? ' on' : ''}${n ? '' : ' zero'}" data-filter="${k}" aria-pressed="${state.filter === k}">${lab} <span>${n}</span></button>`;
+  }).join('') + '</div>';
 
   function viewLetter(letter, eng) {
     const E = eng ? engIndex() : null;
@@ -190,18 +197,83 @@
     const letterLink = l => (count[l]
       ? `<a href="${base}${enc(l)}"${l === letter ? ' class="on" aria-current="page"' : ''} title="${count[l]} entries">${esc(l.toUpperCase())}</a>`
       : `<span class="off" title="No entries">${esc(l.toUpperCase())}</span>`);
-    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label) : '') + orderHTML(eng) +
+    main.innerHTML = (wotd ? R.wotdHTML(wotd.it, wotd.label) : '') + orderHTML(eng ? 'e' : 'k') +
       `<div class="browse-bar"><nav class="letters" aria-label="${eng ? 'English letters' : 'Letters'}">` +
       order.map(letterLink).join('') +
-      '</nav><div class="tools"><div class="chips" role="group" aria-label="Word type">' +
-      FILTERS.map(([k, lab]) => {
-        const n = k === 'all' ? inL.length : (gc[k] || 0);
-        return `<button type="button" class="chip${state.filter === k ? ' on' : ''}${n ? '' : ' zero'}" data-filter="${k}" aria-pressed="${state.filter === k}">${lab} <span>${n}</span></button>`;
-      }).join('') + `</div>${toggleHTML()}</div></div>` +
+      `</nav><div class="tools">${chipsHTML(gc, inL.length)}${toggleHTML()}</div></div>` +
       `<h2 class="list-title">${esc(letter.toUpperCase())} <small>${shown.length} ${shown.length === 1 ? 'entry' : 'entries'}${state.filter !== 'all' ? ' · ' + esc(fLabel.toLowerCase()) : ''}</small></h2>` +
       (shown.length ? '<div id="list"></div>' : `<p class="empty">No ${esc(fLabel.toLowerCase())} under ${esc(letter.toUpperCase())}.</p>`);
     if (shown.length) mountList($('#list'), shown.map(x => ({ it: x.it, eng: x.key })));
     state.list = [...new Set(shown.map(x => x.it.id))];
+  }
+
+  // ---- topics: FLEx semantic domains (DDP4), e.g. "1.6.1.2 Bird".  A topic includes its smaller topics;
+  //      a topic's parent is the nearest shorter code in the data (top-level names below if FLEx has none).
+  const DDP_TOP = { 1: 'Universe, creation', 2: 'Person', 3: 'Language and thought', 4: 'Social behaviour', 5: 'Daily life',
+    6: 'Work and occupation', 7: 'Physical actions', 8: 'States', 9: 'Grammar' };
+  let TOPICS = null;
+  function topicIndex() {
+    if (TOPICS) return TOPICS;
+    const names = new Map();
+    items.forEach(it => (it.c.sd || []).forEach(d => { const m = /^([\d.]+)\s+(.*)$/.exec(d); if (m) names.set(m[1], m[2]); }));
+    [...names.keys()].forEach(code => { const top = code.split('.')[0]; if (!names.has(top)) names.set(top, DDP_TOP[top] || top); });
+    const num = code => code.split('.').map(Number);
+    const cmp = (a, b) => { const x = num(a), y = num(b); for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (x[i] ?? -1) - (y[i] ?? -1); if (d) return d; } return 0; };
+    const by = new Map();
+    const list = [...names.keys()].sort(cmp).map(code => {
+      const t = { code, name: names.get(code), children: [],
+        items: items.filter(it => (it.c.sd || []).some(d => d.startsWith(code + ' ') || d.startsWith(code + '.'))) };
+      const p = code.split('.');
+      for (let i = p.length - 1; i > 0 && !t.parent; i--) t.parent = by.get(p.slice(0, i).join('.'));
+      t.depth = t.parent ? t.parent.depth + 1 : 0;
+      if (t.parent) t.parent.children.push(t);
+      by.set(code, t);
+      return t;
+    });
+    const none = items.filter(it => !(it.c.sd || []).length && !it.c.see);
+    TOPICS = { list, by, none };
+    return TOPICS;
+  }
+  const entries = n => `${n} ${n === 1 ? 'entry' : 'entries'}`;
+  function viewTopicIndex() {
+    const T = topicIndex();
+    const below = t => t.children.flatMap(c => [c].concat(below(c)));
+    store.set('wl', 't');
+    $('[data-tab="letter"]').href = '#/topic';
+    main.innerHTML = orderHTML('t') +
+      `<h2 class="list-title">Topics <small>${T.list.length} topics</small></h2>` +
+      '<p class="section-intro">Words grouped by subject, using the semantic domains in the dictionary. A topic includes ' +
+      'its smaller topics: <em>Animal</em> has all the birds, snakes and fish too.</p>' +
+      T.list.filter(t => !t.parent).map(top => `<section class="tp-group"><h3 class="section-title">` +
+        `<a href="#/topic/${enc(top.code)}">${esc(top.name)}</a> <small>${entries(top.items.length)}</small></h3>` +
+        (top.children.length ? '<ul class="tp-list">' + below(top).map(t => `<li style="--d:${t.depth - 1}">` +
+          `<a href="#/topic/${enc(t.code)}">${esc(t.name)}</a> <span>${t.items.length}</span></li>`).join('') + '</ul>' : '') +
+        '</section>').join('') +
+      (T.none.length ? `<p class="section-intro"><a href="#/topic/none">Words without a topic</a> (${T.none.length})</p>` : '');
+    state.list = [];
+  }
+  function viewTopic(code) {
+    const T = topicIndex();
+    const t = code === 'none' ? { code, name: 'Words without a topic', items: T.none, children: [] } : T.by.get(code);
+    if (!t) { viewTopicIndex(); return; }
+    store.set('wl', 't');
+    $('[data-tab="letter"]').href = '#/topic/' + enc(code);
+    const up = [];
+    for (let p = t.parent; p; p = p.parent) up.unshift(p);
+    const gc = {};
+    t.items.forEach(it => { const g = group(it.c.cls); gc[g] = (gc[g] || 0) + 1; });
+    const shown = state.filter === 'all' ? t.items : t.items.filter(it => group(it.c.cls) === state.filter);
+    const fLabel = (FILTERS.find(f => f[0] === state.filter) || ['', ''])[1];
+    main.innerHTML = orderHTML('t') +
+      '<nav class="tp-crumbs" aria-label="Topic"><a href="#/topic">All topics</a>' +
+      up.map(p => ` › <a href="#/topic/${enc(p.code)}">${esc(p.name)}</a>`).join('') + '</nav>' +
+      `<h2 class="list-title">${esc(t.name)} <small>${entries(shown.length)}${state.filter !== 'all' ? ' · ' + esc(fLabel.toLowerCase()) : ''}</small></h2>` +
+      (t.children.length ? '<nav class="tp-subs" aria-label="Smaller topics">' + t.children.map(c =>
+        `<a href="#/topic/${enc(c.code)}">${esc(c.name)} <span>${c.items.length}</span></a>`).join('') + '</nav>' : '') +
+      `<div class="browse-bar"><div class="tools">${chipsHTML(gc, t.items.length)}${toggleHTML()}</div></div>` +
+      (shown.length ? '<div id="list"></div>' : `<p class="empty">No ${esc(fLabel.toLowerCase())} in this topic.</p>`);
+    if (shown.length) mountList($('#list'), shown.map(it => ({ it })));
+    state.list = shown.map(it => it.id);
   }
 
   function viewAffixes() {
@@ -210,6 +282,28 @@
       groups.map(g => `<h3 class="section-title">${g.title} <small>${g.list.length}</small></h3><p class="section-intro">${g.intro}</p><div data-list="${g.k}"></div>`).join('');
     groups.forEach(g => mountList($(`[data-list="${g.k}"]`), g.list.map(it => ({ it }))));
     state.list = groups.flatMap(g => g.list.map(it => it.id));
+  }
+
+  // ---- English suggestions: a related English word that is in the dictionary (infant -> child), from
+  //      WordNet via build/suggest.py.  data/suggest.js loads the first time a search needs it.
+  let suggestLoad = null;
+  const loadSuggest = () => suggestLoad || (suggestLoad = new Promise(done => {
+    if (window.DICT_SUGGEST || !DATA.suggest) { done(window.DICT_SUGGEST || null); return; }
+    const s = Object.assign(document.createElement('script'), { src: DATA.suggest });
+    s.onload = () => done(window.DICT_SUGGEST || null);
+    s.onerror = () => { suggestLoad = null; done(null); };
+    document.head.appendChild(s);
+  }));
+  function suggestionsFor(q, SG) {
+    const w = q.toLowerCase().replace(/[^a-z' -]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const forms = x => [x, x.replace(/ies$/, 'y'), x.replace(/es$/, ''), x.replace(/s$/, ''), x.replace(/ing$/, ''),
+      x.replace(/ing$/, 'e'), x.replace(/ed$/, ''), x.replace(/ed$/, 'e')];
+    const out = [];
+    for (const x of [w].concat(w.includes(' ') ? w.split(' ') : [])) {
+      const hit = forms(x).find(f => SG.map[f]);
+      if (hit) SG.map[hit].forEach(i => { const s = SG.words[i]; if (s !== w && !out.includes(s)) out.push(s); });
+    }
+    return out.slice(0, 6);
   }
 
   function viewSearch(q) {
@@ -224,12 +318,21 @@
     const shown = secs.filter(s => s.list.length);
     const tips = ['try fewer letters'];
     if (state.mode !== 'both') tips.push('search Both');
-    if (!state.withEx) tips.push('tick “include example sentences”');
+    if (!state.withEx) tips.push('tick “search in examples”');
+    const wantSuggest = state.withSug && state.mode !== 'bardi' && e.length < 3;
     main.innerHTML = `<div class="results-head"><h2>Results for “${esc(q)}”</h2>${toggleHTML()}</div>` +
+      (wantSuggest ? '<p class="suggest" data-suggest hidden></p>' : '') +
       (shown.length
         ? shown.map(s => `<h3 class="section-title">${s.title} <small>${s.list.length}${s.list.length === MAX ? '+' : ''}</small></h3><div data-list="${s.k}"></div>`).join('')
         : `<p class="empty">No matches for “${esc(q)}”. You could ${tips.join(', or ')}.</p>`);
     shown.forEach(s => mountList($(`[data-list="${s.k}"]`), s.list));
+    if (wantSuggest) loadSuggest().then(SG => {
+      const box = main.querySelector('[data-suggest]'), list = SG ? suggestionsFor(q, SG) : [];
+      if (!box || !list.length) return;
+      box.innerHTML = `<strong>Try a related word:</strong> ${list.map(w => `<a href="#/search/${enc(w)}">${esc(w)}</a>`).join(' · ')}` +
+        ' <span class="suggest-note">Suggestions from WordNet, an English word list.</span>';
+      box.hidden = false;
+    });
     state.list = [...new Set(shown.flatMap(s => s.list.map(x => x.it.id)))];
   }
 
@@ -291,6 +394,19 @@
     if (kind) setTimeout(() => main.querySelector('#fb-' + kind)?.scrollIntoView({ block: 'start' }), 0);
   }
 
+  // Lessons tab: a placeholder while the lessons (docs/lessons/, from build/build_lessons.py) are being checked.
+  // When they are ready, point the tab at lessons/ in index.html and remove this page and the "coming soon" badge.
+  function viewLessons() {
+    main.innerHTML = `<article class="prose">
+      <h2>Lessons <span class="soon">coming soon</span></h2>
+      <p>Short lessons on how Kullilli works are on their way: the sounds and spelling, greetings and introductions,
+        numbers, verbs and their endings, noun endings, pronouns, asking questions, and more. Each lesson has a short
+        explanation, examples, and questions to check yourself, and you can save lessons to come back to later.</p>
+      <p>The lessons are made from the <em>Kullilli Sketch Grammar</em> and are being checked before they go up here.</p>
+    </article>`;
+    document.title = `Lessons – ${TITLE}`;
+  }
+
   function viewAbout() {
     main.innerHTML = '';
     main.append($('#about-tpl').content.cloneNode(true));
@@ -299,7 +415,71 @@
     stat('subs', items.length - DATA.entries.length);
     const key = main.querySelector('[data-abbr-list]');
     if (key) key.innerHTML = R.abbrListHTML();
+    // dates: the site's last update (written by the build into index.html) and the newest edit in the FLEx data
+    const day = s => { const m = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s || ''); return m
+      ? new Date(+m[1], m[2] - 1, +m[3]).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }) : ''; };
+    const site = day((document.querySelector('meta[name="site-updated"]') || {}).content), edited = day(DATA.edited);
+    const dates = main.querySelector('[data-updated]');
+    if (dates && site && edited) {
+      dates.querySelector('[data-date="site"]').textContent = site;
+      dates.querySelector('[data-date="edited"]').textContent = edited;
+    } else if (dates) dates.remove();
+    wireOffline();
     state.list = [];
+  }
+
+  // ---- offline: sw.js saves the site; recordings go in the "recordings" store as they play, or all at once here
+  const AUDIO_STORE = 'recordings';
+  const audioFiles = () => {                       // every recording the data refers to
+    const out = new Set();
+    const walk = v => { if (typeof v === 'string') { if (/\.(wav|mp3|m4a|ogg)$/i.test(v)) out.add(v); } else if (v && typeof v === 'object') Object.values(v).forEach(walk); };
+    walk(DATA.entries);
+    return [...out];
+  };
+  const audioURL = f => new URL('audio/' + enc(f), location.href).href;
+  function wireOffline() {
+    const msg = main.querySelector('[data-offline-msg]'), tools = main.querySelector('[data-offline-tools]');
+    if (!msg) return;
+    if (!('caches' in window) || !('serviceWorker' in navigator)) {
+      tools.hidden = true;
+      msg.textContent = 'This browser can’t save the dictionary for offline use.';
+      return;
+    }
+    const files = audioFiles();
+    const status = async () => {
+      const saved = (await (await caches.open(AUDIO_STORE)).keys()).length;
+      msg.textContent = `${Math.min(saved, files.length).toLocaleString()} of ${files.length.toLocaleString()} recordings are saved on this device.`;
+      return saved;
+    };
+    status();
+    const save = main.querySelector('[data-save-audio]'), clear = main.querySelector('[data-clear-audio]');
+    save.addEventListener('click', async () => {
+      save.disabled = clear.disabled = true;
+      if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});   // ask the browser to keep them
+      const cache = await caches.open(AUDIO_STORE);
+      let done = 0, failed = 0;
+      const queue = files.slice();
+      const worker = async () => {
+        for (let f = queue.shift(); f; f = queue.shift()) {
+          const url = audioURL(f);
+          try { if (!(await cache.match(url))) { const r = await fetch(url); if (r.ok) await cache.put(url, r); else failed++; } }
+          catch (e) { failed++; }
+          if (++done % 25 === 0 || done === files.length) msg.textContent = `Saving recordings: ${done} of ${files.length}…`;
+        }
+      };
+      await Promise.all([1, 2, 3, 4, 5, 6].map(worker));
+      await status();
+      if (failed) msg.textContent += ` ${failed} couldn’t be saved; try again when you have a better connection.`;
+      save.disabled = clear.disabled = false;
+    });
+    clear.addEventListener('click', async () => {
+      if (!confirm('Remove the saved recordings from this device? They will be saved again as you play them.')) return;
+      await caches.delete(AUDIO_STORE);
+      status();
+    });
+  }
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
   }
 
   // ---- routing -------------------------------------------------------------
@@ -310,13 +490,15 @@
     const head = k < 0 ? h : h.slice(0, k), rest = k < 0 ? '' : h.slice(k + 1);
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
-    if (head === 'affixes' || head === 'about') return { type: head };
+    if (head === 'affixes' || head === 'about' || head === 'lessons') return { type: head };
     if (head === 'feedback') {                    // #/feedback/<kind>[/<entry id>]: kind = problem, idea or word
       const k = rest.indexOf('/');
       return { type: 'feedback', kind: dec(k < 0 ? rest : rest.slice(0, k)), id: k < 0 ? '' : dec(rest.slice(k + 1)) };
     }
     if (head === 'english') return { type: 'english', letter: dec(rest) || state.eLetter };
+    if (head === 'topic') return { type: 'topic', code: dec(rest) };
     if (!h && store.get('wl', 'k') === 'e') return { type: 'english', letter: state.eLetter };
+    if (!h && store.get('wl', 'k') === 't') return { type: 'topic', code: '' };
     if (head === 'mylist') return { type: 'mylist', spec: '', section: dec(rest) };     // #/mylist/tricky: start at that list
     if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
     if (head === 'learn') {
@@ -329,22 +511,25 @@
   }
 
   function showBase(r, hash) {
-    const key = JSON.stringify(r) + [state.filter, state.view, state.mode, state.withEx].join('|');
+    const key = JSON.stringify(r) + [state.filter, state.view, state.mode, state.withEx, state.withSug].join('|');
     state.baseHash = hash;
     if (r.type !== 'search') state.lastBrowse = hash;
     if (key === state.baseKey) return;          // same view: keep scroll position
     state.baseKey = key;
     observers.forEach(o => o.disconnect());
     observers = [];
-    const tab = r.type === 'english' ? 'letter' : r.type;
+    const tab = r.type === 'english' || r.type === 'topic' ? 'letter' : r.type;
     document.querySelectorAll('.tabs [data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
     $('.tab-search').hidden = r.type !== 'search';
     if (r.type === 'search') { if (document.activeElement !== qInput) qInput.value = r.q; }
     else if (document.activeElement !== qInput) qInput.value = '';
+    document.title = TITLE;                     // pages with their own title set it below
     if (r.type === 'letter') viewLetter(r.letter);
     else if (r.type === 'english') viewLetter(r.letter, true);
+    else if (r.type === 'topic') { if (r.code) viewTopic(r.code); else viewTopicIndex(); }
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
+    else if (r.type === 'lessons') viewLessons();
     else if (r.type === 'feedback') viewFeedback(r.kind, r.id);
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
     else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx, r.section);
@@ -411,6 +596,7 @@
     document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
     qInput.placeholder = { both: `Search ${LANG} or English…`, bardi: `Search ${LANG} words…`, english: 'Search English meanings…' }[state.mode];
     withEx.checked = state.withEx;
+    withSug.checked = state.withSug;
   }
   const rerender = () => { const r = parse(); if (r.type !== 'entry') showBase(r, location.hash || state.baseHash); };
 
@@ -433,6 +619,7 @@
     }
   });
   withEx.addEventListener('change', () => { state.withEx = withEx.checked; store.set('ex', state.withEx ? '1' : '0'); rerender(); });
+  withSug.addEventListener('change', () => { state.withSug = withSug.checked; store.set('sug', state.withSug ? '1' : '0'); rerender(); });
 
   // ---- audio: one player; tapping the same button again stops it -------------
   const player = new Audio();

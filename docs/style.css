@@ -5,9 +5,13 @@
   --muted: #5d6973;
   --faint: #5f6870;
   --line: #e4dbcc;
-  --sea: #17405a;
-  --sea2: #20587a;
-  --link: #1f5e85;
+  /* colours from the logo (kullillidictionary.png): its red, a deep red-brown for headings and Kullilli words */
+  --sea: #6a2314;
+  --sea2: #8e3a1e;
+  --link: #9a3412;
+  --logo-red: #b03517;
+  --head1: #8f2c15;
+  --head2: #6e2010;
   --ochre: #b0502a;
   --ochre-soft: #f5e2d4;
   --sand: #ece2d1;
@@ -41,8 +45,14 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 
 /* ---------- header ---------- */
 .site-header {
-  background: linear-gradient(135deg, var(--sea) 0%, var(--sea2) 100%);
+  position: relative;
+  background: linear-gradient(135deg, var(--head1) 0%, var(--head2) 100%);
   color: #fff;
+}
+/* a row of dots along the top, like the dotted line in the logo */
+.site-header::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 6px; height: 8px; pointer-events: none;
+  background: radial-gradient(circle, rgba(244, 178, 112, .55) 2px, transparent 2.6px) 0 0 / 16px 8px repeat-x;
 }
 .head-row {
   display: grid;
@@ -52,7 +62,9 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
   padding-top: 22px;
   padding-bottom: 14px;
 }
-.brand { color: #fff; text-decoration: none; display: flex; flex-direction: column; }
+.brand { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 14px; }
+.brand-logo { width: 72px; height: 72px; flex: none; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .25)); }
+.brand-text { display: flex; flex-direction: column; }
 .brand-title { font: 700 1.7rem/1.1 var(--v-font); letter-spacing: .01em; }
 .brand-sub { font-size: .85rem; opacity: .8; letter-spacing: .06em; text-transform: uppercase; margin-top: 4px; }
 
@@ -156,6 +168,10 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
   background: var(--paper); border: 1px solid var(--line); border-radius: 999px; }
 .tp-subs a:hover { border-color: var(--ochre); color: var(--ochre); }
 .tp-subs span { color: var(--faint); font-weight: 500; }
+.suggest { margin: 4px 0 14px; padding: 10px 14px; background: var(--paper); border: 1px solid var(--line);
+  border-left: 4px solid var(--ochre); border-radius: 10px; }
+.suggest a { color: var(--link); font-weight: 600; }
+.suggest-note { display: block; margin-top: 2px; color: var(--muted); font-size: .85rem; }
 .entry-topics { margin-top: 6px; font-size: .88rem; color: var(--muted); }
 .entry-topics a { color: var(--link); }
 .tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 10px; }
@@ -472,6 +488,9 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
 /* ---------- small screens ---------- */
 @media (max-width: 760px) {
   .head-row { grid-template-columns: minmax(0, 1fr); padding-top: 16px; gap: 12px; }
+  .brand-logo { width: 52px; height: 52px; }
+  .brand { gap: 11px; }
+  .site-header::before { top: 4px; }
   .brand-title { font-size: 1.45rem; }
   .search { justify-self: stretch; max-width: none; }
   .search-box .hint { display: none; }

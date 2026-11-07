@@ -7,7 +7,7 @@
   const LANG = DATA.language, TITLE = DATA.title;
   const { esc, enc, hwOf } = R;
   const $ = (sel, el = document) => el.querySelector(sel);
-  const main = $('#main'), qInput = $('#q'), withEx = $('#withEx');
+  const main = $('#main'), qInput = $('#q'), withEx = $('#withEx'), withSug = $('#withSug');
   const overlay = $('#overlay'), entryEl = $('#entry');
 
   // ---- every entry and sub-entry is an item; sorted alphabetically ----------
@@ -128,7 +128,7 @@
   window.addEventListener('storage', e => { if (e.key === LANG + '.study') studyCache = null; });   // changed in another tab
 
   const state = {
-    mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1',
+    mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1', withSug: store.get('sug', '1') === '1',
     filter: store.get('filter', 'all'), view: store.get('view', 'cards'),
     letter: LETTERS[0], eLetter: 'a', baseKey: '', list: [], openId: null,
   };
@@ -284,6 +284,28 @@
     state.list = groups.flatMap(g => g.list.map(it => it.id));
   }
 
+  // ---- English suggestions: a related English word that is in the dictionary (infant -> child), from
+  //      WordNet via build/suggest.py.  data/suggest.js loads the first time a search needs it.
+  let suggestLoad = null;
+  const loadSuggest = () => suggestLoad || (suggestLoad = new Promise(done => {
+    if (window.DICT_SUGGEST || !DATA.suggest) { done(window.DICT_SUGGEST || null); return; }
+    const s = Object.assign(document.createElement('script'), { src: DATA.suggest });
+    s.onload = () => done(window.DICT_SUGGEST || null);
+    s.onerror = () => { suggestLoad = null; done(null); };
+    document.head.appendChild(s);
+  }));
+  function suggestionsFor(q, SG) {
+    const w = q.toLowerCase().replace(/[^a-z' -]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const forms = x => [x, x.replace(/ies$/, 'y'), x.replace(/es$/, ''), x.replace(/s$/, ''), x.replace(/ing$/, ''),
+      x.replace(/ing$/, 'e'), x.replace(/ed$/, ''), x.replace(/ed$/, 'e')];
+    const out = [];
+    for (const x of [w].concat(w.includes(' ') ? w.split(' ') : [])) {
+      const hit = forms(x).find(f => SG.map[f]);
+      if (hit) SG.map[hit].forEach(i => { const s = SG.words[i]; if (s !== w && !out.includes(s)) out.push(s); });
+    }
+    return out.slice(0, 6);
+  }
+
   function viewSearch(q) {
     const MAX = 600;
     const conv = r => r.slice(0, MAX).map(x => ({ it: items[x.i], note: x.note, score: x.score }));
@@ -296,12 +318,21 @@
     const shown = secs.filter(s => s.list.length);
     const tips = ['try fewer letters'];
     if (state.mode !== 'both') tips.push('search Both');
-    if (!state.withEx) tips.push('tick “include example sentences”');
+    if (!state.withEx) tips.push('tick “search in examples”');
+    const wantSuggest = state.withSug && state.mode !== 'bardi' && e.length < 3;
     main.innerHTML = `<div class="results-head"><h2>Results for “${esc(q)}”</h2>${toggleHTML()}</div>` +
+      (wantSuggest ? '<p class="suggest" data-suggest hidden></p>' : '') +
       (shown.length
         ? shown.map(s => `<h3 class="section-title">${s.title} <small>${s.list.length}${s.list.length === MAX ? '+' : ''}</small></h3><div data-list="${s.k}"></div>`).join('')
         : `<p class="empty">No matches for “${esc(q)}”. You could ${tips.join(', or ')}.</p>`);
     shown.forEach(s => mountList($(`[data-list="${s.k}"]`), s.list));
+    if (wantSuggest) loadSuggest().then(SG => {
+      const box = main.querySelector('[data-suggest]'), list = SG ? suggestionsFor(q, SG) : [];
+      if (!box || !list.length) return;
+      box.innerHTML = `<strong>Try a related word:</strong> ${list.map(w => `<a href="#/search/${enc(w)}">${esc(w)}</a>`).join(' · ')}` +
+        ' <span class="suggest-note">Suggestions from WordNet, an English word list.</span>';
+      box.hidden = false;
+    });
     state.list = [...new Set(shown.flatMap(s => s.list.map(x => x.it.id)))];
   }
 
@@ -480,7 +511,7 @@
   }
 
   function showBase(r, hash) {
-    const key = JSON.stringify(r) + [state.filter, state.view, state.mode, state.withEx].join('|');
+    const key = JSON.stringify(r) + [state.filter, state.view, state.mode, state.withEx, state.withSug].join('|');
     state.baseHash = hash;
     if (r.type !== 'search') state.lastBrowse = hash;
     if (key === state.baseKey) return;          // same view: keep scroll position
@@ -565,6 +596,7 @@
     document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)));
     qInput.placeholder = { both: `Search ${LANG} or English…`, bardi: `Search ${LANG} words…`, english: 'Search English meanings…' }[state.mode];
     withEx.checked = state.withEx;
+    withSug.checked = state.withSug;
   }
   const rerender = () => { const r = parse(); if (r.type !== 'entry') showBase(r, location.hash || state.baseHash); };
 
@@ -587,6 +619,7 @@
     }
   });
   withEx.addEventListener('change', () => { state.withEx = withEx.checked; store.set('ex', state.withEx ? '1' : '0'); rerender(); });
+  withSug.addEventListener('change', () => { state.withSug = withSug.checked; store.set('sug', state.withSug ? '1' : '0'); rerender(); });
 
   // ---- audio: one player; tapping the same button again stops it -------------
   const player = new Audio();

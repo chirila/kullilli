@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.dont_write_bytecode = True        # no __pycache__ in the repository
 import glosscheck                     # noqa: E402
+import suggest                        # noqa: E402
 from sentences import parse as parse_sentences   # noqa: E402
 
 HERE = Path(__file__).resolve().parent
@@ -44,6 +45,9 @@ ENG = "en"
 SHOW_UNTYPED_NOTES = True        # Claire, 2026-11-06: show them all
 # Entries left out of the site: "aaa" is a "how to use the dictionary" note, now on the About page (Claire, 2026-11-07).
 SKIP_ENTRIES = {"aaa"}
+# English suggestions in the search (infant -> child) come from the WordNet 3.1 database files in this folder;
+# without it, the last docs/data/suggest.js is kept.
+WORDNET = REPO.parent / "Wordnet_dict"
 # Feedback (problems, ideas, comments on words) goes to GitHub issues, using the forms in .github/ISSUE_TEMPLATE/.
 # FEEDBACK_REPO = "owner/repository"; empty = the site works it out from its github.io address.
 # FEEDBACK_EMAIL (optional) is offered to people without a GitHub account.
@@ -405,7 +409,10 @@ def write_service_worker(docs, html):
     meta = re.compile(r'<meta name="site-updated" content="[^"]*">\n')
     html = meta.sub("", html)
     refs = re.findall(r'(?:src|href)="(?!#|https?:|mailto:)([^"]+)"', html)
-    assets = ["./"] + list(dict.fromkeys(refs + ["icons/icon-192.png", "icons/icon-512.png"]))
+    extra = ["icons/icon-192.png", "icons/icon-512.png"]
+    if (docs / "data" / "suggest.js").exists():       # loaded later by the search, so not in index.html
+        extra.append("data/suggest.js?v=" + hashlib.md5((docs / "data" / "suggest.js").read_bytes()).hexdigest()[:8])
+    assets = ["./"] + list(dict.fromkeys(refs + extra))
     version = hashlib.md5(("\n".join(assets) + html).encode("utf-8")).hexdigest()[:10]
     sw = docs / "sw.js"
     old = sw.read_text(encoding="utf-8")
@@ -498,8 +505,14 @@ def main():
             "langCode": VERN.split("-")[0], "feedback": {"repo": FEEDBACK_REPO, "email": FEEDBACK_EMAIL},
             "edited": max((c.get("dt") or "" for c in entries), default="")}     # newest FLEx edit (About page)
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    sug = OUT.parent / "suggest.js"
+    n_sug = suggest.write(data["entries"], sug, WORDNET)
+    if sug.exists():                                   # loaded by the search only when it's needed
+        import hashlib
+        data["suggest"] = f"data/suggest.js?v={hashlib.md5(sug.read_bytes()).hexdigest()[:8]}"
     OUT.write_text("window.DICT_DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n",
                    encoding="utf-8")
+    print(f"English suggestions: {n_sug} words" if n_sug is not None else f"English suggestions: no WordNet in {WORDNET}; kept the old file")
 
     stamp_assets()
     cls = Counter(c["cls"] for c in entries)

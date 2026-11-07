@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="site-updated" content="2026-11-07">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#17405a">
+<meta name="theme-color" content="#7e2612">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <title>Kullilli Dictionary</title>
 <meta name="description" content="Kullilli–English dictionary with recordings: browse by letter, search Kullilli or English, and read full entries with examples.">
-<link rel="stylesheet" href="style.css?v=4b26b4a6">
+<link rel="stylesheet" href="style.css?v=d9b7d877">
 <!-- game styles: written by build/build_lift.py from docs/games/*.css -->
 <link rel="stylesheet" href="games/games.css?v=28d08a2d">
 <link rel="stylesheet" href="games/circle.css?v=57fc8708">
@@ -30,8 +30,11 @@
 <header class="site-header">
   <div class="wrap head-row">
     <a class="brand" href="#/letter/a">
-      <span class="brand-title">Kullilli Dictionary</span>
-      <span class="brand-sub">Kullilli – English</span>
+      <img class="brand-logo" src="icons/logo-144.png" width="72" height="72" alt="">
+      <span class="brand-text">
+        <span class="brand-title">Kullilli Dictionary</span>
+        <span class="brand-sub">Kullilli – English</span>
+      </span>
     </a>
     <form class="search" role="search" onsubmit="return false">
       <div class="search-box">
@@ -45,7 +48,8 @@
           <button type="button" data-mode="bardi">Kullilli</button>
           <button type="button" data-mode="english">English</button>
         </div>
-        <label class="chk"><input type="checkbox" id="withEx"> include example sentences</label>
+        <label class="chk"><input type="checkbox" id="withEx"> search in examples</label>
+        <label class="chk"><input type="checkbox" id="withSug"> suggest related English words</label>
       </div>
     </form>
   </div>
@@ -141,7 +145,12 @@
         <em>j/dy/tj</em>, long and short vowels, <em>o/u</em>, and small typing mistakes.</li>
       <li><strong>English search</strong> looks at glosses, definitions and notes. It ignores word endings
         (<em>bite, bites, biting</em>), allows small spelling mistakes, and needs every word you type to match.</li>
-      <li>Tick <strong>include example sentences</strong> to search inside example sentences as well.</li>
+      <li>Tick <strong>search in examples</strong> to search inside example sentences as well. Entries always show
+        their examples, ticked or not.</li>
+      <li>When an English search finds few words, the site suggests related English words that are in the
+        dictionary (<em>infant</em> → <em>child</em>, <em>pebble</em> → <em>rock, stone</em>). The suggestions come
+        from WordNet, an English word list, so they are only a guide. Untick <strong>suggest related English
+        words</strong> to turn them off.</li>
     </ul>
 
     <h3>Reading an entry</h3>
@@ -170,7 +179,7 @@
   </article>
 </template>
 
-<script src="data/dictionary.js?v=cd068d68"></script>
+<script src="data/dictionary.js?v=3f49694f"></script>
 <script src="search.js?v=7fc450b3"></script>
 <script src="render.js?v=fe2aab89"></script>
 <!-- game scripts: written by build/build_lift.py from docs/games/*.js -->
@@ -190,6 +199,6 @@
 <script src="games/unscramble.js?v=769897e6"></script>
 <script src="games/wordsearch.js?v=0dd3cb0b"></script>
 <!-- /game scripts -->
-<script src="app.js?v=fc820877"></script>
+<script src="app.js?v=eac68dd2"></script>
 </body>
 </html>

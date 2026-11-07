@@ -4,14 +4,14 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = 'a2ba7fd543';
+const VERSION = 'b95b6c72c4';
 const UPDATED = '2026-11-07';
 const ASSETS = [
  "./",
  "manifest.webmanifest",
  "icons/apple-touch-icon.png",
  "icons/icon-192.png",
- "style.css?v=4b26b4a6",
+ "style.css?v=d9b7d877",
  "games/games.css?v=28d08a2d",
  "games/circle.css?v=57fc8708",
  "games/daily.css?v=10ea7dfc",
@@ -24,7 +24,8 @@ const ASSETS = [
  "games/sort.css?v=082132d3",
  "games/unscramble.css?v=dfb878ef",
  "games/wordsearch.css?v=94767a94",
- "data/dictionary.js?v=cd068d68",
+ "icons/logo-144.png",
+ "data/dictionary.js?v=3f49694f",
  "search.js?v=7fc450b3",
  "render.js?v=fe2aab89",
  "games/core.js?v=b3482ac1",
@@ -42,8 +43,9 @@ const ASSETS = [
  "games/spell.js?v=75562ba2",
  "games/unscramble.js?v=769897e6",
  "games/wordsearch.js?v=0dd3cb0b",
- "app.js?v=fc820877",
- "icons/icon-512.png"
+ "app.js?v=eac68dd2",
+ "icons/icon-512.png",
+ "data/suggest.js?v=bbc755e2"
 ];
 // </assets>
 const SITE = 'site-' + VERSION, AUDIO = 'recordings';

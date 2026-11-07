@@ -112,6 +112,27 @@ English word and entry; an entry with no reversal uses its glosses (split at ";"
 words), "grammar" (77), "pronouns" (42) and "animals" (13) each list every entry tagged with them; edit or
 remove them in FLEx to change that. Built in `app.js` (`engIndex`).
 
+## English suggestions (`build/suggest.py`)
+
+When an English (or Both) search finds fewer than three English matches, the results page offers related English
+words that are in the dictionary: "Try a related word: child" for *infant*, "pup · dog" for *puppies*, "car" for
+*automobile*. Tapping one searches for it. Readers can turn this off with the **suggest related English words**
+tick box under the search box (on by default, remembered on the device); the About page explains it.
+
+The build makes `docs/data/suggest.js` (about 150 KB, ~7,900 English words) from the WordNet 3.1 database files in
+`Documents/Claude/Wordnet_dict` (`WORDNET` in `build/build_lift.py`). For each searched word not already in the
+dictionary's English, it takes WordNet's commonest senses (nouns first) and keeps synonyms, then broader and similar
+words, that the search can find. Left out: narrower words, broader words for verbs, very general words, and names
+of places and people. The site loads the file only when a search needs it, and it is saved for offline use. If
+WordNet isn't on the computer that runs the build, the existing file is kept.
+
+## Look
+
+Colours come from the logo (`KullilliDictionary/kullillidictionary.png`): a red header with the logo and a row of
+dots along the top (like the dotted line in the logo), and red-brown headings and Kullilli words. They are set at the
+top of `docs/style.css` (`--sea`, `--sea2`, `--link`, `--head1`, `--head2`, `--logo-red`); the header logo is
+`docs/icons/logo-144.png`, and the home-screen icons are in `docs/icons/` too.
+
 ## Example sentences (`build/sentences.py`)
 
 - Each sentence's lines are read in order: words, morphemes, FLEx entry line (later texts),

@@ -161,8 +161,33 @@ whether to use only words with recordings. Rounds end with cards for the words p
 Unscramble, Spell it, Sort into groups, Word search or Daily five goes on the player's tricky list; two right
 answers in a row take it off. "★ My tricky words" is then a topic in every game, and the Learn page links to the
 list (with a Clear button). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
-a wrong turn there is about memory, categories or hearing rather than knowing the word. The list, settings and
-the daily streak are kept in the browser on that device only (localStorage); nothing is sent anywhere.
+a wrong turn there is about memory, categories or hearing rather than knowing the word.
+
+**My study list.** Every word card, list row and entry has a bookmark button (`data-study`; aria-pressed) that
+adds the word to the reader's study list or takes it off. "My study list" is a topic in every game. The list has
+its own main tab, **My list** (`#/mylist`; tabs: Wordlist, Learn, My list, Affixes, and About on the far right),
+and the Learn page links to it: the words, newest first, each with how often it has been practised. Words
+the games can't use (variants, affixes, no short meaning) can be bookmarked too; the page says how many of these
+there are. The list is kept in `app.js` (`study`) and handed to the games as `ctx.study`; the page itself is drawn
+by `DictGames.myList()` in `core.js`, since it uses the games' word picker and practice counts.
+
+**Sharing a list.** "Share this list" on the study list page makes a link with the words and an optional name,
+e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My list
+tab). Older `#/learn/study` and `#/learn/list/…` addresses still work. On a phone it opens the
+system share sheet; elsewhere it copies the link (and shows it for copying by hand). Whoever opens the link sees
+the words as cards and can add them all to their own study list, or replace their list with them; ids no longer
+in the dictionary are skipped and counted. The link is the whole list: nothing is stored on a server. Entry ids
+come from the headword and homograph number, so a link made now may lose or change a word if a headword is
+respelled or homographs are renumbered in FLEx.
+
+**Practised words.** Every word shown at the end of a round the player finishes counts as practised once, with
+the date (`practise()` in `core.js`; Letter by letter and Hidden word, which end on a single word, count that
+word). "Not practised yet" is a topic in every game, and the study list page shows "You have practised N of the M
+words used in the games", with a button to forget the history. Words from rounds left half-way don't count.
+
+The study list, practice history, tricky list, settings and the daily streak are kept in the browser on that
+device only (localStorage); nothing is sent anywhere, so the site owner can't see what people study, and a
+reader's lists don't follow them to another phone or browser.
 
 ## Glossing review (`build/glosscheck.py`)
 

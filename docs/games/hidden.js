@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and hidden.css if there is one) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, say, sr, auto } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML, letterKit, listenBtn, record, practise, say, sr, auto } = window.DictGames.kit;
   let ctx;
 
   // ---- hidden word: guess a word in six tries, letter by letter ---------------------------
@@ -72,7 +72,7 @@
       cur = [];
       if (res.every(x => x === 'hit')) over = 'won';
       else if (guesses.length === TRIES) over = 'lost';
-      if (over) { record(it, over === 'won'); auto(it.c.audio); ctx.setList([it.id]); }
+      if (over) { record(it, over === 'won'); practise([it]); auto(it.c.audio); ctx.setList([it.id]); }
       draw();
       const g = guesses[guesses.length - 1];
       say(`Guess ${guesses.length}: ` + g.units.map((u, i) => `${u}, ${SAY[g.res[i]]}`).join('; ') + '.' +

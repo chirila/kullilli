@@ -69,6 +69,23 @@
     get: (k, d) => { try { return localStorage.getItem(LANG + '.' + k) ?? d; } catch (e) { return d; } },
     set: (k, v) => { try { localStorage.setItem(LANG + '.' + k, v); } catch (e) { /* private mode */ } },
   };
+  // ---- my study list: words the reader marks with the bookmark button; kept on this device only
+  let studyCache = null;
+  const study = {
+    map: () => { if (!studyCache) { try { studyCache = JSON.parse(store.get('study', '{}')) || {}; } catch (e) { studyCache = {}; } } return studyCache; },
+    has: id => Object.prototype.hasOwnProperty.call(study.map(), id),
+    save() {
+      store.set('study', JSON.stringify(study.map()));
+      document.querySelectorAll('[data-study]').forEach(b => b.setAttribute('aria-pressed', String(study.has(b.dataset.study))));
+    },
+    toggle(id) { const m = study.map(); if (m[id]) delete m[id]; else m[id] = Date.now(); study.save(); },
+    add(ids) { const m = study.map(), now = Date.now(); ids.forEach((id, k) => { if (!m[id]) m[id] = now - k; }); study.save(); },  // keeps their order
+    replace(ids) { studyCache = {}; study.add(ids); },
+    clear() { studyCache = {}; study.save(); },
+  };
+  R.setStudy(study.has);
+  window.addEventListener('storage', e => { if (e.key === LANG + '.study') studyCache = null; });   // changed in another tab
+
   const state = {
     mode: store.get('mode', 'both'), withEx: store.get('ex', '0') === '1',
     filter: store.get('filter', 'all'), view: store.get('view', 'cards'),
@@ -165,7 +182,7 @@
 
   // what the Learn-tab games get from the app (see games.js)
   const gameCtx = {
-    items, lang: LANG, title: TITLE, R, store, keyboard: DATA.keyboard,
+    items, lang: LANG, title: TITLE, R, store, study, keyboard: DATA.keyboard,
     playFile: file => playFile(file),
     setList: ids => { state.list = ids; },
   };
@@ -190,7 +207,14 @@
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
     if (head === 'affixes' || head === 'about') return { type: head };
-    if (head === 'learn') return { type: 'learn', game: dec(rest) };
+    if (head === 'mylist') return { type: 'mylist', spec: '' };
+    if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
+    if (head === 'learn') {
+      const g = dec(rest);
+      if (g === 'study') return { type: 'mylist', spec: '' };                 // earlier addresses of the same pages
+      if (g.startsWith('list/')) return { type: 'mylist', spec: g.slice(5) };
+      return { type: 'learn', game: g };
+    }
     return { type: 'letter', letter: dec(rest) || state.letter };
   }
 
@@ -210,6 +234,7 @@
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
+    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx);
     else viewSearch(r.q);
     window.scrollTo(0, 0);
   }
@@ -321,6 +346,8 @@
   player.addEventListener('error', stopAudio);
 
   document.addEventListener('click', e => {
+    const st = e.target.closest('[data-study]');
+    if (st) { e.preventDefault(); study.toggle(st.dataset.study); return; }
     const a = e.target.closest('[data-audio]');
     if (a) { e.preventDefault(); playAudio(a); return; }
     const t = e.target.closest('[data-filter],[data-view],[data-mode],[data-go],.close-btn');

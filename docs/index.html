@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="site-updated" content="2026-11-07">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#17405a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 <title>Kullilli Dictionary</title>
 <meta name="description" content="Kullilli–English dictionary with recordings: browse by letter, search Kullilli or English, and read full entries with examples.">
-<link rel="stylesheet" href="style.css?v=e8ae9cdb">
+<link rel="stylesheet" href="style.css?v=101df5e5">
 <!-- game styles: written by build/build_lift.py from docs/games/*.css -->
 <link rel="stylesheet" href="games/games.css?v=28d08a2d">
 <link rel="stylesheet" href="games/circle.css?v=57fc8708">
 <link rel="stylesheet" href="games/daily.css?v=10ea7dfc">
-<link rel="stylesheet" href="games/flashcards.css?v=8718e12f">
+<link rel="stylesheet" href="games/flashcards.css?v=02fd027e">
 <link rel="stylesheet" href="games/listen.css?v=2eac986f">
 <link rel="stylesheet" href="games/match.css?v=079ea437">
 <link rel="stylesheet" href="games/memory.css?v=3614d08d">
@@ -74,20 +78,57 @@
     <h2>About this dictionary</h2>
     <p>This site presents the Kullilli dictionary as a searchable wordlist with recordings.
        It currently holds <strong data-stat="entries"></strong> entries.</p>
+    <p class="about-updated" data-updated>Last updated <strong data-date="site"></strong>.
+       The words were last edited on <span data-date="edited"></span>.</p>
+    <p>Remember that the dictionary is a work in progress, and we are adding information all the time. It has words
+       and word endings. A lot of the word endings start with <span class="v">-a</span>, so they come first in the
+       alphabetical list. You can search for words in Kullilli or English. If we have an example of a word in a
+       sentence, we've included it. There is also information about how each word was originally written in the
+       sources, which helps us work out how it might be pronounced.</p>
 
     <h3>Browsing and listening</h3>
     <p>Use the <strong>Wordlist</strong> tab to browse by letter. <em>dh, dy, ng, nh, ny, th</em> and <em>ty</em> are
        letters of their own and come after the single letter they start with (<em>dh</em> and <em>dy</em> after <em>d</em>).
        The buttons above the list narrow it to nouns, verbs and so on. Tap any card to open the full entry;
        use the ‹ › buttons (or the arrow keys) to step through neighbouring entries.</p>
+    <p>The switch at the top of the wordlist changes the order. <strong>Kullilli → English</strong> lists Kullilli
+       words; <strong>English → Kullilli</strong> lists English words A–Z, each with its Kullilli word, for people
+       coming to Kullilli from English; <strong>By topic</strong> groups words by subject, such as birds, the body
+       or food. All three open the same full entries.</p>
     <p>Words with a recording have a speaker button
        <span class="play inline" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="spk" d="M3 9.5v5h4l5 4v-13l-5 4H3z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
        on their card and next to the word in the entry. Tap it to listen; tap again to stop.</p>
-    <p>The <strong>Learn</strong> tab has games for practising words: memory pairs, matching words to their
-       meanings, and picking the meaning of a word from a circle. Each game can use words from one topic,
-       and plays the recordings as you go.</p>
     <p>Suffixes are in the wordlist under their first letter and also have their own <strong>Affixes</strong> tab.
        The hyphen shows where a suffix attaches (<span class="v">-ya</span>).</p>
+
+    <h3>Learning</h3>
+    <p>The <strong>Learn</strong> tab has games for practising words: <em>Daily five</em> and <em>Flashcards</em> for
+       every day, games for matching words and meanings, listening games, and spelling games. Each game lets you choose
+       a topic, and whether to use any words, words that are <em>new to you</em>, or words you have
+       <em>studied before</em>. Recordings play as you go; switch off <em>Play sounds automatically</em> if you would
+       rather press play yourself. The games work with a mouse, a touch screen, a keyboard or a screen reader.</p>
+
+    <h3>Your lists</h3>
+    <p>Tap the bookmark button
+       <span class="study inline" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h11v17l-5.5-4.2-5.5 4.2z"/></svg></span>
+       on any word to add it to your <strong>study list</strong>. The <strong>My lists</strong> tab shows your study list,
+       your <strong>tricky words</strong> (words you got wrong in the games, or marked “Still learning” on a flashcard),
+       and how many words you have practised. Choose either list as the topic in any game to practise those words.
+       You can save a list as a spreadsheet, or share your study list as a link, for example with a class.</p>
+    <p>Your lists, progress and settings are kept in your browser on this device only: nothing is sent to anyone.
+       To keep them safe, or to move them to another phone or computer, use <strong>Back up your data</strong>
+       on the My lists tab.</p>
+
+    <h3>Using the dictionary offline</h3>
+    <p>Once you have opened the dictionary, it works without an internet connection: the words, entries, games and
+       your lists are saved on your device. Recordings are saved as you play them, or you can save them all here
+       (about <span data-audio-size>40 MB</span>).</p>
+    <p>On a phone or iPad, add the dictionary to your home screen to open it like an app. In Safari: tap Share, then
+       <em>Add to Home Screen</em>. In Chrome: open the ⋮ menu, then <em>Add to Home screen</em> or <em>Install app</em>.
+       On an iPhone or iPad, saved recordings are kept best when the dictionary is on the home screen.</p>
+    <p class="share-row" data-offline-tools><button type="button" class="gbtn" data-save-audio>Save all recordings</button>
+       <button type="button" class="gbtn" data-clear-audio>Remove saved recordings</button></p>
+    <p class="gnote" role="status" data-offline-msg></p>
 
     <h3>Searching</h3>
     <p>Type in the search box at the top. <strong>Both</strong> searches Kullilli words and English meanings at once;
@@ -128,14 +169,14 @@
   </article>
 </template>
 
-<script src="data/dictionary.js?v=f632e47b"></script>
+<script src="data/dictionary.js?v=cd068d68"></script>
 <script src="search.js?v=7fc450b3"></script>
-<script src="render.js?v=7128515a"></script>
+<script src="render.js?v=fe2aab89"></script>
 <!-- game scripts: written by build/build_lift.py from docs/games/*.js -->
 <script src="games/core.js?v=b3482ac1"></script>
 <script src="games/circle.js?v=6df7b98c"></script>
 <script src="games/daily.js?v=6bc87705"></script>
-<script src="games/flashcards.js?v=42b7a2e7"></script>
+<script src="games/flashcards.js?v=a8e2e2ef"></script>
 <script src="games/hidden.js?v=e83f87bf"></script>
 <script src="games/letters.js?v=93d3b2aa"></script>
 <script src="games/listen.js?v=92cfb9e1"></script>
@@ -148,6 +189,6 @@
 <script src="games/unscramble.js?v=769897e6"></script>
 <script src="games/wordsearch.js?v=0dd3cb0b"></script>
 <!-- /game scripts -->
-<script src="app.js?v=835403e8"></script>
+<script src="app.js?v=5a344865"></script>
 </body>
 </html>

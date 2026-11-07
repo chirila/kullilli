@@ -148,19 +148,24 @@ window.BardiRender = (() => {
   const shortPos = c => (c.cls === 'place' ? 'place name' : posLabel(c.ps));
 
   // ---- cards and rows ----------------------------------------------------
-  function itemHTML(kind, it, note) {
+  // eng = an English word to lead with (the English-first wordlist): English word, then the entry as usual,
+  // with its full gloss only when that says more than the English word
+  function itemHTML(kind, it, note, eng) {
     const c = it.c, gl = summary(c);
-    const cls = kind + (it.parent ? ' sub' : '') + (c.status === 'NK' ? ' nk' : '');
+    const cls = kind + (eng ? ' eng' : '') + (it.parent ? ' sub' : '') + (c.status === 'NK' ? ' nk' : '');
     const title = c.status === 'NK' ? ' title="Not known to speakers today"' : '';
+    const glHTML = gl ? (c.cls === 'pronoun' && ABBR[gl] ? abbrHTML(gl, false) : fmt(gl, false)) : '<span class="muted">no gloss</span>';
+    const pos = `<span class="pos">${esc(shortPos(c))}</span>`;
     return `<div class="cell${c.audio ? ' has-audio' : ''}"><a class="${cls}" href="#/entry/${enc(it.id)}" data-id="${esc(it.id)}"${title}>` +
+      (eng ? `<span class="ehw">${esc(eng)}</span>` : '') +
       `<span class="hw">${esc(hwOf(c))}${c.hm ? `<sup>${esc(c.hm)}</sup>` : ''}</span>` +
-      `<span class="pos">${esc(shortPos(c))}</span>` +
-      `<span class="gl">${gl ? (c.cls === 'pronoun' && ABBR[gl] ? abbrHTML(gl, false) : fmt(gl, false)) : '<span class="muted">no gloss</span>'}</span>` +
+      (eng ? `<span class="gl">${pos}${gl.toLowerCase() === eng.toLowerCase() ? '' : ' ' + glHTML}</span>`
+        : `${pos}<span class="gl">${glHTML}</span>`) +
       (it.parent ? `<span class="under">under ${esc(hwOf(it.parent.c))}</span>` : '') +
       (note ? `<span class="note">${esc(note)}</span>` : '') + '</a>' +
       playBtn(c.audio, hwOf(c)) + studyBtn(it) + '</div>';
   }
-  const cardHTML = (it, note) => itemHTML('card', it, note);
+  const cardHTML = (it, note, eng) => itemHTML('card', it, note, eng);
 
   function wotdHTML(it, dateLabel) {
     const c = it.c;
@@ -172,7 +177,7 @@ window.BardiRender = (() => {
       (ex ? `<span class="wotd-ex"><span class="exv v">${fmtEx(ex.v, false)}</span><span class="exe">${fmt(ex.e, false)}</span></span>` : '') +
       '</a>' + playBtn(c.audio, hwOf(c), true) + '</div>';
   }
-  const rowHTML = (it, note) => itemHTML('row', it, note);
+  const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
 
   // ---- full entry --------------------------------------------------------
   const block = (title, inner) => `<section class="blk">${title ? `<h3>${title}</h3>` : ''}${inner}</section>`;

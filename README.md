@@ -65,10 +65,24 @@ The recordings come to about 40 MB, which is fine for Pages.
   each with its own recording. `<variant>` forms are listed too.
 - Complex forms ("Made from" / "Used in"), Compare ("See also") and minimal pairs link entry to entry.
 - "Original Orthography" is shown as *Original spelling* and is searchable.
-- Semantic domains and reversal entries are kept in the data. Reversals feed the English search;
-  domains are kept for a future topic browser.
+- Semantic domains and reversal entries are kept in the data. Reversals feed the English search and the
+  English-first wordlist; domains are the topics in the games.
 - Letters: `DIGRAPHS` (dh dy ng nh ny th ty) get their own tabs. `SPELLING` lists the
   "similar spelling" rules for search.
+
+**English-first wordlist.** The Wordlist tab has a switch, "Kullilli → English" / "English → Kullilli"
+(`#/letter/b` / `#/english/b`); the site remembers which one was used last. The English list has the
+English alphabet A–Z along the top (letters with no words are greyed out) and # for pronoun labels such as
+*1sg.nom*. Each card leads with the English word, then the Kullilli word, its word type, its recording and
+bookmark, and its full gloss when that says more than the English word. Opening a card opens the full
+Kullilli entry, with examples, as in the Kullilli list, and Previous/Next follow the English order. The same
+word-type filters and Cards/List switch apply.
+
+The English words are FLEx's English reversal index (in FLEx: the Reversal Indexes view), one card per
+English word and entry; an entry with no reversal uses its glosses (split at ";"). Reversals with "?" or
+"unknown" are left out. Reversals that FLEx uses as categories come through as they are, so "birds" (50
+words), "grammar" (77), "pronouns" (42) and "animals" (13) each list every entry tagged with them; edit or
+remove them in FLEx to change that. Built in `app.js` (`engIndex`).
 
 ## Example sentences (`build/sentences.py`)
 

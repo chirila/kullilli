@@ -409,7 +409,7 @@ def write_service_worker(docs, html):
     meta = re.compile(r'<meta name="site-updated" content="[^"]*">\n')
     html = meta.sub("", html)
     refs = re.findall(r'(?:src|href)="(?!#|https?:|mailto:)([^"]+)"', html)
-    extra = ["icons/icon-192.png", "icons/icon-512.png"]
+    extra = ["icons/ngulkana-192.png", "icons/ngulkana-512.png"]
     if (docs / "data" / "suggest.js").exists():       # loaded later by the search, so not in index.html
         extra.append("data/suggest.js?v=" + hashlib.md5((docs / "data" / "suggest.js").read_bytes()).hexdigest()[:8])
     assets = ["./"] + list(dict.fromkeys(refs + extra))

@@ -128,10 +128,24 @@ WordNet isn't on the computer that runs the build, the existing file is kept.
 
 ## Look
 
-Colours come from the logo (`KullilliDictionary/kullillidictionary.png`): a red header with the logo and a row of
-dots along the top (like the dotted line in the logo), and red-brown headings and Kullilli words. They are set at the
-top of `docs/style.css` (`--sea`, `--sea2`, `--link`, `--head1`, `--head2`, `--logo-red`); the header logo is
-`docs/icons/logo-144.png`, and the home-screen icons are in `docs/icons/` too.
+Colours come from the red dictionary logo (`KullilliDictionary/kullillidictionary.png`): a red header with a row of
+dots along the top (like the dotted line in that logo), and red-brown headings and Kullilli words. They are set at the
+top of `docs/style.css` (`--sea`, `--sea2`, `--link`, `--head1`, `--head2`, `--logo-red`).
+
+The logo itself is now the black-and-white "kullilli ngulkana / learning kullilli" logo (`docs/icons/ngulkana-*.png`,
+cut from `kullilli ngulkana app store logo.png`). In the header it sits with the title "Kullilli Dictionary" on a
+light clay panel (`.brand-panel` in `docs/style.css`, `--clay: #ecc0ab`), so it shows up on the red; the panel
+covers only the logo and title, not the whole header.
+
+| File | Used for |
+|---|---|
+| `ngulkana-160.png` | header logo (shown at 80 px, 56 px on phones; round, see-through corners) |
+| `ngulkana-192.png`, `ngulkana-512.png` | browser tab, installed app (round, see-through corners) |
+| `ngulkana-180.png` | iPhone/iPad home screen (white square; iOS rounds the corners) |
+| `ngulkana-maskable-512.png` | Android home screen (logo inside the middle 80%, which Android crops to its own shape) |
+
+They are named in `docs/index.html`, `docs/manifest.webmanifest` and `extra` in `build/build_lift.py` (offline
+list). The earlier red icons (`icon-*.png`, `apple-touch-icon.png`, `logo-144.png`) are no longer used.
 
 ## Example sentences (`build/sentences.py`)
 

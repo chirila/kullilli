@@ -549,3 +549,4 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
 .hd-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .hk:disabled { cursor: default; }
 .hk.hit:disabled, .hk.miss:disabled { opacity: 1; }
+.hk:not(.wide) { max-width: 62px; }

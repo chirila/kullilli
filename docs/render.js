@@ -180,13 +180,23 @@ window.BardiRender = (() => {
   }
   const rowHTML = (it, note, eng) => itemHTML('row', it, note, eng);
 
-  // one example for a word (flashcards): a sense example with a translation, else a text sentence that uses it
-  function exampleHTML(c) {
+  // one example for a word (flashcards, saved lists): a sense example with a translation, else a text
+  // sentence that uses it.  exampleOf gives [Kullilli, English] as stored, or null.
+  function exampleOf(c) {
     const x = (c.senses || []).flatMap(s => s.ex || []).find(e => e.v && e.e);
-    if (x) return `<span class="exv v">${fmtEx(x.v, false)}</span><span class="exe">${fmt(x.e, false)}</span>`;
+    if (x) return [x.v, x.e, true];
     const s = (c.xs || []).map(si => SENTS[si]).find(t => t && t.v && t.ft && t.ft[0]);
-    return s ? `<span class="exv v">${esc(s.v)}</span><span class="exe">${esc(s.ft[0])}</span>` : '';
+    return s ? [s.v, s.ft[0], false] : null;
   }
+  function exampleHTML(c) {
+    const x = exampleOf(c);
+    if (!x) return '';
+    return x[2] ? `<span class="exv v">${fmtEx(x[0], false)}</span><span class="exe">${fmt(x[1], false)}</span>`
+      : `<span class="exv v">${esc(x[0])}</span><span class="exe">${esc(x[1])}</span>`;
+  }
+  // plain text, for files: markup like |fv{…} and *highlight* removed
+  const plain = s => String(s ?? '').replace(/\|[a-z]+\{([^}]*)\}/g, '$1').replace(/\*([^*]+)\*/g, '$1');
+  const exampleText = c => { const x = exampleOf(c); return x ? [plain(x[0]), plain(x[1])] : ['', '']; };
 
   // ---- full entry --------------------------------------------------------
   const block = (title, inner) => `<section class="blk">${title ? `<h3>${title}</h3>` : ''}${inner}</section>`;
@@ -317,5 +327,5 @@ window.BardiRender = (() => {
       .map(([a, full]) => `<dt><abbr class="gab">${esc(a)}</abbr></dt><dd>${esc(full)}</dd>`).join('');
   };
 
-  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, meaning: summary };
+  return { init, esc, enc, fmt, hwOf, posLabel, cardHTML, rowHTML, entryHTML, wotdHTML, abbrListHTML, setStudy, bookmarkSVG, studyBtn, exampleHTML, exampleText, plain, meaning: summary };
 })();

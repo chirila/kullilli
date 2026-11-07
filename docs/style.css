@@ -98,7 +98,7 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 @media (max-width: 520px) {
   .tabs { gap: 2px; overflow-x: auto; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
-  .tabs a, .tabs span { padding: 9px 9px 10px; font-size: .9rem; white-space: nowrap; }
+  .tabs a, .tabs span { padding: 9px 8px 10px; font-size: .9rem; white-space: nowrap; }
 }
 
 /* ---------- browse bar ---------- */

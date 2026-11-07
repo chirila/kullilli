@@ -185,21 +185,26 @@ whether to use only words with recordings. Rounds end with cards for the words p
 
 **Tricky words.** A word answered wrongly in Match up, Word in the middle, Listen and choose, Hidden word,
 Unscramble, Spell it, Sort into groups, Word search or Daily five goes on the player's tricky list; two right
-answers in a row take it off. "★ My tricky words" is then a topic in every game, and the Learn page links to the
-list (with a Clear button). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
+answers in a row take it off. "★ My tricky words" is then a topic in every game, and the list is on the My lists
+tab (`#/mylist/tricky`; the Learn page links to it). Memory pairs, Letter by letter, Odd one out and Same or different? don't add words:
 a wrong turn there is about memory, categories or hearing rather than knowing the word.
 
 **My study list.** Every word card, list row and entry has a bookmark button (`data-study`; aria-pressed) that
-adds the word to the reader's study list or takes it off. "My study list" is a topic in every game. The list has
-its own main tab, **My list** (`#/mylist`; tabs: Wordlist, Learn, My list, Affixes, and About on the far right),
-and the Learn page links to it: the words, newest first, each with how often it has been practised. Words
+adds the word to the reader's study list or takes it off. "My study list" is a topic in every game.
+
+**My lists tab** (`#/mylist`; tabs: Wordlist, Learn, My lists, Affixes, and About on the far right). One page with
+jump links at the top to its four sections, each with its own address: *My study list* (`#/mylist/study`: the
+words, newest first, each with how often it has been practised; save, clear, share), *★ My tricky words*
+(`#/mylist/tricky`: most-missed first; save, clear), *Practice so far* (`#/mylist/practice`) and *Back up your
+data* (`#/mylist/backup`). The Learn page links to the two lists; the older `#/learn/study` and `#/learn/tricky`
+addresses open the same page. Words
 the games can't use (variants, affixes, no short meaning) can be bookmarked too; the page says how many of these
 there are. The list is kept in `app.js` (`study`) and handed to the games as `ctx.study`; the page itself is drawn
-by `DictGames.myList()` in `core.js`, since it uses the games' word picker and practice counts.
+by `DictGames.myList()` (`listsPage`) in `core.js`, since it uses the games' word picker and practice counts.
 
 **Sharing a list.** "Share this list" on the study list page makes a link with the words and an optional name,
-e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My list
-tab). Older `#/learn/study` and `#/learn/list/…` addresses still work. On a phone it opens the
+e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My lists
+tab). Older `#/learn/list/…` addresses still work. On a phone it opens the
 system share sheet; elsewhere it copies the link (and shows it for copying by hand). Whoever opens the link sees
 the words as cards and can add them all to their own study list, or replace their list with them; ids no longer
 in the dictionary are skipped and counted. The link is the whole list: nothing is stored on a server. Entry ids
@@ -220,6 +225,19 @@ practised yet" topic; a saved choice of that topic becomes *New to me*.
 The study list, practice history, flashcard counts, tricky list, settings and the daily streak are kept in the browser on that
 device only (localStorage); nothing is sent anywhere, so the site owner can't see what people study, and a
 reader's lists don't follow them to another phone or browser.
+
+**Saving lists.** "Save as a spreadsheet" under each list on My lists downloads a CSV file
+(`kullilli-study-list-<date>.csv`, `kullilli-tricky-words-<date>.csv`): the word (with homograph number), word type,
+English meaning, one example with its translation, times practised (study list) or times missed (tricky words),
+and a link to the entry. It starts with a byte-order mark so Excel shows accented letters correctly; Numbers,
+Google Sheets and flashcard apps such as Anki can open or import it.
+
+**Backup and restore.** "Back up your data" on the My lists page saves everything the site keeps in the browser
+(every `Kullilli.*` localStorage key: lists, practice history, flashcard counts, daily streak, settings) to
+`kullilli-dictionary-backup-<date>.json`. "Restore from a backup…" reads such a file, checks that it is a backup
+from this dictionary (`backup: "dictionary-site-data"`, same language, plain text values only), says what it holds
+and asks before replacing everything in the browser, then reloads the page. This is also how a reader moves their
+data to another device. Code: `store.dump()` / `store.load()` in `app.js`, the page parts in `core.js`.
 
 ## Glossing review (`build/glosscheck.py`)
 

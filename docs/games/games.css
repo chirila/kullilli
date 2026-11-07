@@ -84,6 +84,10 @@
 .study-ico { display: inline-flex; vertical-align: -3px; color: var(--ochre); }
 .study-ico svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
 .gnote { color: var(--muted); font-size: .9rem; }
+.ml-nav { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 2px 0 8px; }
+.ml-nav a { font: 600 .86rem var(--ui-font); color: var(--sea); text-decoration: none; padding: 5px 12px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 999px; }
+.ml-nav a:hover { border-color: var(--ochre); color: var(--ochre); }
 .share-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 6px 0 12px; }
 .share-row input, .share-out input { font: inherit; color: var(--ink); padding: 7px 10px; border: 1px solid var(--ctl-line);
   border-radius: 8px; background: #fff; }

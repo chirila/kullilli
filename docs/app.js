@@ -94,6 +94,20 @@
   const store = {
     get: (k, d) => { try { return localStorage.getItem(LANG + '.' + k) ?? d; } catch (e) { return d; } },
     set: (k, v) => { try { localStorage.setItem(LANG + '.' + k, v); } catch (e) { /* private mode */ } },
+    // everything this site keeps in the browser (for a backup file); load() replaces all of it
+    dump() {
+      const out = {}, P = LANG + '.';
+      try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k.startsWith(P)) out[k.slice(P.length)] = localStorage.getItem(k); } }
+      catch (e) { /* private mode */ }
+      return out;
+    },
+    load(data) {
+      try {
+        Object.keys(store.dump()).forEach(k => localStorage.removeItem(LANG + '.' + k));
+        Object.entries(data).forEach(([k, v]) => localStorage.setItem(LANG + '.' + k, v));
+        return true;
+      } catch (e) { return false; }
+    },
   };
   // ---- my study list: words the reader marks with the bookmark button; kept on this device only
   let studyCache = null;
@@ -247,11 +261,11 @@
     if (head === 'affixes' || head === 'about') return { type: head };
     if (head === 'english') return { type: 'english', letter: dec(rest) || state.eLetter };
     if (!h && store.get('wl', 'k') === 'e') return { type: 'english', letter: state.eLetter };
-    if (head === 'mylist') return { type: 'mylist', spec: '' };
+    if (head === 'mylist') return { type: 'mylist', spec: '', section: dec(rest) };     // #/mylist/tricky: start at that list
     if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
     if (head === 'learn') {
       const g = dec(rest);
-      if (g === 'study') return { type: 'mylist', spec: '' };                 // earlier addresses of the same pages
+      if (g === 'study' || g === 'tricky') return { type: 'mylist', spec: '', section: g };   // earlier addresses of the same pages
       if (g.startsWith('list/')) return { type: 'mylist', spec: g.slice(5) };
       return { type: 'learn', game: g };
     }
@@ -276,7 +290,7 @@
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
-    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx);
+    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx, r.section);
     else viewSearch(r.q);
     window.scrollTo(0, 0);
   }

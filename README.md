@@ -109,7 +109,12 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   the games is timed: Memory pairs keeps a wrong pair face up until the next card is turned, and Word in the middle
   waits for Next.
 - **Language.** Kullilli words are marked `lang="gll"` (the code comes from the FLEx writing system and is in the
-  data as `langCode`), so screen readers don't read them with English pronunciation rules.
+  data as `langCode`), as WCAG asks for text in another language. No screen reader has a Kullilli voice, so they
+  fall back to the reader's default voice (usually English) and say the words much as they would without the tag;
+  the recordings are the way to hear them properly. The tag mainly tells software that these words aren't English.
+  They are also marked `translate="no"`, so browser page translation (e.g. English → Spanish) leaves them as they
+  are. Hidden screen-reader text inside them ("blank", "in the word") stays marked as English and translatable.
+  This marking is done in `app.js` (`markLang`) for every page, not only the games.
 - **Looks.** Text and control colours meet the WCAG contrast levels (4.5:1 for text, 3:1 for controls); right and wrong
   answers also get ✓ / ✗ and a solid or dashed border; animations are switched off for people whose system is set to
   reduce motion. The page title names the game being played.

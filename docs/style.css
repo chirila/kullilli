@@ -3,7 +3,7 @@
   --paper: #fffdf9;
   --ink: #1d2730;
   --muted: #5d6973;
-  --faint: #8b949c;
+  --faint: #5f6870;
   --line: #e4dbcc;
   --sea: #17405a;
   --sea2: #20587a;
@@ -409,4 +409,13 @@ details.more .forms { margin-top: 8px; font-size: .92rem; }
   .entry-hw { font-size: 1.9rem; }
   .forms { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .forms dd { margin-bottom: 8px; }
+}
+
+/* text for screen readers only */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* people who ask their device to reduce motion get no shaking, sliding or pulsing */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

@@ -363,6 +363,19 @@
     if (kind) setTimeout(() => main.querySelector('#fb-' + kind)?.scrollIntoView({ block: 'start' }), 0);
   }
 
+  // Lessons tab: a placeholder while the lessons (docs/lessons/, from build/build_lessons.py) are being checked.
+  // When they are ready, point the tab at lessons/ in index.html and remove this page and the "coming soon" badge.
+  function viewLessons() {
+    main.innerHTML = `<article class="prose">
+      <h2>Lessons <span class="soon">coming soon</span></h2>
+      <p>Short lessons on how Kullilli works are on their way: the sounds and spelling, greetings and introductions,
+        numbers, verbs and their endings, noun endings, pronouns, asking questions, and more. Each lesson has a short
+        explanation, examples, and questions to check yourself, and you can save lessons to come back to later.</p>
+      <p>The lessons are made from the <em>Kullilli Sketch Grammar</em> and are being checked before they go up here.</p>
+    </article>`;
+    document.title = `Lessons – ${TITLE}`;
+  }
+
   function viewAbout() {
     main.innerHTML = '';
     main.append($('#about-tpl').content.cloneNode(true));
@@ -446,7 +459,7 @@
     const head = k < 0 ? h : h.slice(0, k), rest = k < 0 ? '' : h.slice(k + 1);
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
-    if (head === 'affixes' || head === 'about') return { type: head };
+    if (head === 'affixes' || head === 'about' || head === 'lessons') return { type: head };
     if (head === 'feedback') {                    // #/feedback/<kind>[/<entry id>]: kind = problem, idea or word
       const k = rest.indexOf('/');
       return { type: 'feedback', kind: dec(k < 0 ? rest : rest.slice(0, k)), id: k < 0 ? '' : dec(rest.slice(k + 1)) };
@@ -479,11 +492,13 @@
     $('.tab-search').hidden = r.type !== 'search';
     if (r.type === 'search') { if (document.activeElement !== qInput) qInput.value = r.q; }
     else if (document.activeElement !== qInput) qInput.value = '';
+    document.title = TITLE;                     // pages with their own title set it below
     if (r.type === 'letter') viewLetter(r.letter);
     else if (r.type === 'english') viewLetter(r.letter, true);
     else if (r.type === 'topic') { if (r.code) viewTopic(r.code); else viewTopicIndex(); }
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
+    else if (r.type === 'lessons') viewLessons();
     else if (r.type === 'feedback') viewFeedback(r.kind, r.id);
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
     else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx, r.section);

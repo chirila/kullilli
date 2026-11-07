@@ -325,8 +325,10 @@ the format is in `lessons/README.md`. After editing them:
 This writes `docs/lessons/lessons-data.js` and refreshes the `?v=` fingerprints in `docs/lessons/index.html`.
 It stops if an example's Kullilli and English lines have different numbers of words, or if a lesson id is
 missing or used twice. The page is `/lessons/` on the site (`#/` contents, `#/saved`, `#/<lesson id>`). It
-uses the dictionary's `style.css` plus its own `lessons.css`, and links back to the dictionary; the dictionary
-doesn't link to it yet. **Save for later** keeps lesson ids in the browser under `Kullilli.lessons`, so the
+uses the dictionary's `style.css` plus its own `lessons.css`, and links back to the dictionary. The
+dictionary's **Lessons** tab is marked "coming soon" while the lessons are being checked: it opens a placeholder
+page (`#/lessons`, `viewLessons()` in `app.js`) that doesn't link to the drafts. When they're ready, point the tab
+at `lessons/` in `index.html`, remove the badge (`<span class="soon">`) and `viewLessons()`. **Save for later** keeps lesson ids in the browser under `Kullilli.lessons`, so the
 backup on My lists includes them. The lesson files aren't in the offline list in `sw.js` yet, so the lessons
 need a connection. Notes on what was changed from the grammar, and questions about it:
 `KullilliDictionary/review/lessons_review.md`.

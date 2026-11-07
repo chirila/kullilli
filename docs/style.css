@@ -95,10 +95,23 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .tabs a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
 .tabs .on { background: var(--bg); color: var(--sea); }
 .tabs [data-tab="about"] { margin-left: auto; }                /* About sits on the far side */
+/* "coming soon" badge (Lessons tab and its placeholder page) */
+.soon, .tabs a .soon {
+  display: inline-block; margin-left: 4px; padding: 0 7px; border-radius: 999px; vertical-align: 2px;
+  font: 600 .66rem/1.6 var(--ui-font); letter-spacing: .04em; text-transform: uppercase;
+  background: var(--ochre); color: #fff;
+}
 @media (max-width: 520px) {
   .tabs { gap: 2px; overflow-x: auto; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
   .tabs a, .tabs span { padding: 9px 8px 10px; font-size: .9rem; white-space: nowrap; }
+}
+@media (max-width: 440px) {                                    /* six tabs on a phone: a little tighter so all fit */
+  .tabs.wrap { padding: 0 8px; }
+  .tabs a, .tabs span { padding: 9px 5px 10px; font-size: .85rem; }
+  .tabs a[data-tab="lessons"] { position: relative; }
+  .tabs a .soon { position: absolute; top: 1px; right: 1px; margin: 0; padding: 0 3px; font-size: .5rem; line-height: 1.5; }  /* badge in the corner: no extra width */
+  .tabs a .soon-w { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); }  /* "coming" still read aloud */
 }
 
 /* ---------- browse bar ---------- */

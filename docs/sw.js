@@ -4,14 +4,14 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = '0dfde547ef';
+const VERSION = 'a2ba7fd543';
 const UPDATED = '2026-11-07';
 const ASSETS = [
  "./",
  "manifest.webmanifest",
  "icons/apple-touch-icon.png",
  "icons/icon-192.png",
- "style.css?v=101df5e5",
+ "style.css?v=4b26b4a6",
  "games/games.css?v=28d08a2d",
  "games/circle.css?v=57fc8708",
  "games/daily.css?v=10ea7dfc",
@@ -42,7 +42,7 @@ const ASSETS = [
  "games/spell.js?v=75562ba2",
  "games/unscramble.js?v=769897e6",
  "games/wordsearch.js?v=0dd3cb0b",
- "app.js?v=5a344865",
+ "app.js?v=fc820877",
  "icons/icon-512.png"
 ];
 // </assets>

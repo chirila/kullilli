@@ -4,14 +4,14 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = '1a4272184d';
+const VERSION = '56f27738ec';
 const UPDATED = '2026-11-07';
 const ASSETS = [
  "./",
  "manifest.webmanifest",
  "icons/ngulkana-180.png",
  "icons/ngulkana-192.png",
- "style.css?v=fc36669f",
+ "style.css?v=12ae3b4b",
  "games/games.css?v=28d08a2d",
  "games/circle.css?v=57fc8708",
  "games/daily.css?v=10ea7dfc",
@@ -27,7 +27,7 @@ const ASSETS = [
  "icons/ngulkana-160.png",
  "data/dictionary.js?v=3f49694f",
  "search.js?v=7fc450b3",
- "render.js?v=fe2aab89",
+ "render.js?v=78dbbc05",
  "games/core.js?v=b3482ac1",
  "games/circle.js?v=6df7b98c",
  "games/daily.js?v=6bc87705",
@@ -43,7 +43,7 @@ const ASSETS = [
  "games/spell.js?v=75562ba2",
  "games/unscramble.js?v=769897e6",
  "games/wordsearch.js?v=0dd3cb0b",
- "app.js?v=eac68dd2",
+ "app.js?v=7a974456",
  "icons/ngulkana-512.png",
  "data/suggest.js?v=bbc755e2"
 ];

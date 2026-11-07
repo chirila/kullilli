@@ -207,7 +207,14 @@
     if (head === 'entry') return { type: 'entry', id: dec(rest) };
     if (head === 'search' && rest) return { type: 'search', q: dec(rest) };
     if (head === 'affixes' || head === 'about') return { type: head };
-    if (head === 'learn') return { type: 'learn', game: dec(rest) };
+    if (head === 'mylist') return { type: 'mylist', spec: '' };
+    if (head === 'shared') return { type: 'mylist', spec: dec(rest) };        // a study list shared as a link
+    if (head === 'learn') {
+      const g = dec(rest);
+      if (g === 'study') return { type: 'mylist', spec: '' };                 // earlier addresses of the same pages
+      if (g.startsWith('list/')) return { type: 'mylist', spec: g.slice(5) };
+      return { type: 'learn', game: g };
+    }
     return { type: 'letter', letter: dec(rest) || state.letter };
   }
 
@@ -227,6 +234,7 @@
     else if (r.type === 'affixes') viewAffixes();
     else if (r.type === 'about') viewAbout();
     else if (r.type === 'learn') window.DictGames.view(main, r.game, gameCtx);
+    else if (r.type === 'mylist') window.DictGames.myList(main, r.spec, gameCtx);
     else viewSearch(r.q);
     window.scrollTo(0, 0);
   }

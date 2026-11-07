@@ -164,13 +164,16 @@ list (with a Clear button). Memory pairs, Letter by letter, Odd one out and Same
 a wrong turn there is about memory, categories or hearing rather than knowing the word.
 
 **My study list.** Every word card, list row and entry has a bookmark button (`data-study`; aria-pressed) that
-adds the word to the reader's study list or takes it off. "My study list" is a topic in every game, and the Learn
-page links to the list (`#/learn/study`): the words, newest first, each with how often it has been practised. Words
+adds the word to the reader's study list or takes it off. "My study list" is a topic in every game. The list has
+its own main tab, **My list** (`#/mylist`; tabs: Wordlist, Learn, My list, Affixes, and About on the far right),
+and the Learn page links to it: the words, newest first, each with how often it has been practised. Words
 the games can't use (variants, affixes, no short meaning) can be bookmarked too; the page says how many of these
-there are. The list is kept in `app.js` (`study`) and handed to the games as `ctx.study`.
+there are. The list is kept in `app.js` (`study`) and handed to the games as `ctx.study`; the page itself is drawn
+by `DictGames.myList()` in `core.js`, since it uses the games' word picker and practice counts.
 
 **Sharing a list.** "Share this list" on the study list page makes a link with the words and an optional name,
-e.g. `…/#/learn/list/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids). On a phone it opens the
+e.g. `…/#/shared/Week%203%3A%20animals/babadya,baka.1,bagarri` (name, then entry ids; it opens under the My list
+tab). Older `#/learn/study` and `#/learn/list/…` addresses still work. On a phone it opens the
 system share sheet; elsewhere it copies the link (and shows it for copying by hand). Whoever opens the link sees
 the words as cards and can add them all to their own study list, or replace their list with them; ids no longer
 in the dictionary are skipped and counted. The link is the whole list: nothing is stored on a server. Entry ids

@@ -94,6 +94,12 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 }
 .tabs a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
 .tabs .on { background: var(--bg); color: var(--sea); }
+.tabs [data-tab="about"] { margin-left: auto; }                /* About sits on the far side */
+@media (max-width: 520px) {
+  .tabs { gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tabs a, .tabs span { padding: 9px 9px 10px; font-size: .9rem; white-space: nowrap; }
+}
 
 /* ---------- browse bar ---------- */
 .browse-bar {

@@ -1,7 +1,8 @@
 /* Learn tab, shared parts: which words can be played, topics, settings bar, end-of-round panel,
    letters and keyboard helpers, tricky words, and the game registry.  Each game is its own file in
    docs/games/ and calls DictGames.register(); the build lists those files in index.html.
-   view(main, game, ctx) draws the Learn page or a game; ctx comes from app.js. */
+   view(main, game, ctx) draws the Learn page or a game; myList(main, spec, ctx) draws the My list tab
+   (the reader's study list, or a list shared as a link); ctx comes from app.js. */
 'use strict';
 window.DictGames = (() => {
   let ctx;
@@ -117,7 +118,7 @@ window.DictGames = (() => {
     const t = ctx.store.get('g.topic', ''), w = `${n} ${n === 1 ? 'word' : 'words'}`;
     if (t === 'tricky') return `<p class="empty">You have ${n} tricky ${n === 1 ? 'word' : 'words'} that fit this game, not enough for a round. Words you get wrong in any game are added; choose another topic for now.</p>`;
     if (t === 'study') return `<p class="empty">Your study list has ${w} that fit this game, not enough for a round. Add words with the bookmark button ` +
-      `on any word card or entry (<a href="#/learn/study">see your list</a>), untick "Only words with recordings", or choose another topic.</p>`;
+      `on any word card or entry (<a href="#/mylist">see your list</a>), untick "Only words with recordings", or choose another topic.</p>`;
     if (t === 'new') return `<p class="empty">Only ${w} you haven't practised yet fit this game. Choose another topic, or untick "Only words with recordings".</p>`;
     return `<p class="empty">There aren't enough words for this game in this topic (${n}). Choose another topic, or untick "Only words with recordings".</p>`;
   };
@@ -267,7 +268,7 @@ window.DictGames = (() => {
     const all = pool({ topic: '', audio: false }, true), done = all.filter(it => has(p, it.id)).length;
     const icon = `<span class="study-ico">${ctx.R.bookmarkSVG}</span>`;
     ctx.setList(its.map(it => it.id));
-    main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a><h2 class="gtitle">My study list</h2>' +
+    main.innerHTML = '<h2 class="gtitle">My study list</h2>' +
       `<p class="gintro">Words you have marked with the bookmark button ${icon} on a word card or at the top of an entry, ` +
       'newest first. Choose <strong>My study list</strong> as the topic in any game to practise them. ' +
       'The list is kept on this device only.</p>' +
@@ -295,7 +296,7 @@ window.DictGames = (() => {
     main.querySelector('[data-share]')?.addEventListener('click', async () => {
       const name = main.querySelector('[data-share-name]').value.trim(), m = ctx.study.map();
       const ids = Object.keys(m).sort((a, b) => m[b] - m[a]);
-      const url = location.href.split('#')[0] + '#/learn/list/' + (name ? encodeURIComponent(name) + '/' : '') + ids.map(encodeURIComponent).join(',');
+      const url = location.href.split('#')[0] + '#/shared/' + (name ? encodeURIComponent(name) + '/' : '') + ids.map(encodeURIComponent).join(',');
       const out = main.querySelector('[data-share-url]'), msg = main.querySelector('[data-share-msg]');
       out.value = url;
       out.parentNode.hidden = false;
@@ -308,7 +309,7 @@ window.DictGames = (() => {
     main.querySelector('[data-share-url]')?.addEventListener('focus', e => e.target.select());
   }
 
-  // a study list someone shared as a link: #/learn/list/[name/]id,id,…
+  // a study list someone shared as a link: #/shared/[name/]id,id,…
   function listPage(main, spec) {
     const k = spec.lastIndexOf('/');
     const name = (k >= 0 ? spec.slice(0, k) : '').trim().slice(0, 80);
@@ -322,12 +323,12 @@ window.DictGames = (() => {
     function draw(done) {
       const m = ctx.study.map(), fresh = its.filter(it => !has(m, it.id)).length;
       const others = Object.keys(m).some(id => !shared.has(id));
-      main.innerHTML = '<a class="gback" href="#/learn">‹ All games</a>' +
+      main.innerHTML = '<a class="gback" href="#/mylist">‹ My study list</a>' +
         `<h2 class="gtitle">${name ? esc(name) : 'A shared study list'}</h2>` +
         `<p class="gintro">${name ? 'A study list' : 'Someone'} shared with you: ${words(its.length)}. Add them to your own study list to practise ` +
         'them in the games (choose <strong>My study list</strong> as the topic), or use the bookmark on a card to add one word.</p>' +
         (missing ? `<p class="gnote">${words(missing)} in this link ${missing === 1 ? 'is' : 'are'} not in this version of the dictionary.</p>` : '') +
-        (done ? `<p class="gnote share-done" tabindex="-1">${done} <a href="#/learn/study">See your study list</a>.</p>` : '') +
+        (done ? `<p class="gnote share-done" tabindex="-1">${done} <a href="#/mylist">See your study list</a>.</p>` : '') +
         (!its.length ? '<p class="empty">This link has no words from the dictionary in it.</p>'
           : '<div class="share-row">' +
             (fresh ? `<button type="button" class="gbtn primary" data-add-all>Add ${fresh === its.length ? `all ${its.length}` : `the ${fresh} new ${fresh === 1 ? 'one' : 'ones'}`} to my study list</button>`
@@ -353,8 +354,6 @@ window.DictGames = (() => {
     ctx = context;
     sayEl = null;
     if (game === 'tricky') { document.title = `My tricky words – ${ctx.title}`; trickyPage(main); focusHeading(main); return; }
-    if (game === 'study') { document.title = `My study list – ${ctx.title}`; studyPage(main); focusHeading(main); return; }
-    if (game.startsWith('list/')) { listPage(main, game.slice(5)); focusHeading(main); return; }
     const games = available();
     const g = games.find(x => x.id === game);
     if (!g) {
@@ -364,7 +363,7 @@ window.DictGames = (() => {
       const n = Object.keys(trickyMap()).length, nStudy = Object.keys(ctx.study.map()).length;
       main.innerHTML = `<h2 class="gtitle">Learn ${esc(ctx.lang)}</h2><p class="gintro">Games with words from the dictionary. ` +
         'Choose a topic in each game, and listen to the words as you match them.</p>' +
-        `<a class="tricky-band study-band" href="#/learn/study"><strong>My study list · ${nStudy} ${nStudy === 1 ? 'word' : 'words'}</strong>` +
+        `<a class="tricky-band study-band" href="#/mylist"><strong>My study list · ${nStudy} ${nStudy === 1 ? 'word' : 'words'}</strong>` +
         `<span>${nStudy ? 'See your list and how much you have practised, or choose “My study list” as the topic in any game.'
           : 'Mark words with the bookmark button on any word card or entry, then practise them here. See how much you have practised.'}</span></a>` +
         (n ? `<a class="tricky-band" href="#/learn/tricky"><strong>★ ${n} tricky ${n === 1 ? 'word' : 'words'}</strong>` +
@@ -387,6 +386,14 @@ window.DictGames = (() => {
     g.run(root, ctx);
     focusHeading(root);
   }
+  // the My list tab: the reader's study list, or (spec = [name/]id,id,…) a list someone shared as a link
+  function myList(main, spec, context) {
+    ctx = context;
+    sayEl = null;
+    if (spec) listPage(main, spec);
+    else { document.title = `My study list – ${ctx.title}`; studyPage(main); }
+    focusHeading(main);
+  }
   // after opening a page with the keyboard, start screen readers at its heading
   function focusHeading(root) {
     const h = root.querySelector('.gtitle');
@@ -406,5 +413,5 @@ window.DictGames = (() => {
   const kit = { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML,
     letterKit, listenBtn, record, practise, speakerHTML, inTopic, domainGroups, tops, CLASSES, say, sr, auto, autoplayHTML, focusIfKey,
     get ctx() { return ctx; } };
-  return { register, view, kit };
+  return { register, view, myList, kit };
 })();

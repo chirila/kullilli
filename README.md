@@ -87,11 +87,19 @@ The recordings come to about 40 MB, which is fine for Pages.
 
 ## Learn tab (`docs/games.js`)
 
-Five games, all usable with a mouse, a keyboard or a touch screen:
+Six games, all usable with a mouse, a keyboard or a touch screen:
 
 - **Memory pairs**: 6 pairs face down; turn over two cards at a time to match a word with its meaning.
 - **Match up**: drag each word onto its meaning (or the other way round); on a phone, tap one and then the other.
 - **Word in the middle**: a word in the centre and six meanings in a circle round it (or the reverse); 10 questions.
+- **Listen and choose**: a recording plays (tap the big speaker to hear it again); pick the word from four,
+  either by its spelling or by its English meaning. *Easy*: the other three are at least 3 letters different
+  and start with a different letter. *Harder*: the other three are the closest-sounding words, usually 1–2
+  letters away (minimal and near-minimal pairs, e.g. *thaya* 'mouth' / *dhaya* 'stars'), counting Kullilli
+  letters (ng, dh … are one letter). The word heard comes from the chosen topic and always has a recording;
+  the other choices come from anywhere in the dictionary, but never a variant spelling of the answer or a word
+  with the same meaning. After each answer every choice shows its meaning (or spelling) and can be played,
+  so the sound-alikes can be compared. 10 questions.
 - **Letter by letter** (the easier word puzzle): boxes for a hidden 4–6 letter word and the alphabet; each letter
   picked either fills its boxes or is greyed out, with no limit and no penalty. "Show the meaning" and "Listen"
   (the recording) are hints. Single letters can also be typed; two-letter ones (ng, dh …) are on-screen keys.
@@ -141,5 +149,5 @@ tab-separated text, not .xlsx.
 | `docs/style.css` | styles, including the phone layout |
 | `docs/search.js` | Kullilli (spelling-tolerant) and English (stemmed, typo-tolerant) search |
 | `docs/render.js` | cards, list rows, interlinear examples and entry HTML; part-of-speech labels |
-| `docs/games.js` | the Learn tab: word picker, memory pairs, match up, word in the middle, letter by letter, hidden word |
+| `docs/games.js` | the Learn tab: word picker, memory pairs, match up, word in the middle, listen and choose, letter by letter, hidden word |
 | `docs/app.js` | wordlist, affixes, search page, entry panel, audio player, URL routing |

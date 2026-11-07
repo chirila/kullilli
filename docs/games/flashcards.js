@@ -3,7 +3,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and flashcards.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, hw, pool, pick, settings, segHTML, barHTML, wireBar, finishHTML, practise, practised, speakerHTML, say, auto } = window.DictGames.kit;
+  const { esc, hw, pool, pick, settings, segHTML, barHTML, wireBar, finishHTML, practise, practised, record, speakerHTML, say, auto } = window.DictGames.kit;
   let ctx;
 
   // ---- words studied with flashcards: a count per day (store "flash"), kept on this device only.
@@ -42,6 +42,7 @@
     root.innerHTML = '<h2 class="gtitle">Flashcards</h2><p class="gintro">' +
       'See a word, think of its meaning, then turn the card over: click or tap it, or press Enter. ' +
       `The back has the other language and an example, and the ${L} word can be played. ` +
+      'Then say whether you knew it: words you are still learning go on your tricky words list (on the My lists tab). ' +
       'With a keyboard, the left and right arrow keys go to the previous or next card.</p>' +
       barHTML(s, true, { extra:
         `<label class="gsel">Cards <select data-g="fcards">${[5, 10, 20, 30, 50].map(k =>
@@ -69,6 +70,7 @@
     const k2e = s.dir === 'k2e';
     let q = 0, back = false;
     const turned = new Set();
+    const rated = new Map();                                 // card number -> 'got' / 'learning' (once per round)
 
     function draw() {
       const it = cards[q], last = q === cards.length - 1;
@@ -86,12 +88,25 @@
         `<div class="fc-tools">${sound}<button type="button" class="gbtn" data-flip data-autofocus>Turn over</button>` +
         (back ? `<a class="gbtn" href="#/entry/${encodeURIComponent(it.id)}">Open the entry</a>` : '') +
         ctx.R.studyBtn(it, false, 'This word in my study list') + '</div></div>' +     // no word in the label: it would give the answer away
+        (back ? rateHTML(rated.get(q)) : '') +
         `<div class="fc-nav"><button type="button" class="gbtn" data-prev${q ? '' : ' disabled'}>‹ Previous</button>` +
         `<button type="button" class="gbtn primary" data-next>${last ? 'Finish' : 'Next ›'}</button></div>` + totalsHTML();
       // read the card out after the "Card n of m" line (which core.js announces)
       const parts = [...play.querySelectorAll('.fc-side, .fc-main, .fc-also .fc-word, .fc-pos, .fc-ex .exv, .fc-ex .exe')]
         .map(e => e.textContent.trim()).filter(Boolean).map(t => (/[.!?:]$/.test(t) ? t : t + '.'));
       setTimeout(() => say(parts.join(' '), 'card'), 0);     // a newer card replaces one not yet read
+    }
+    // after turning a card over: did you know it?  Still learning = a wrong answer (onto the tricky list);
+    // got it = a right one (two in a row take a word off the tricky list).  Then on to the next card.
+    const rateHTML = r => '<div class="fc-rate" role="group" aria-labelledby="fc-rate-q"><span id="fc-rate-q">Did you know it?</span>' +
+      `<button type="button" class="gbtn" data-rate="got" aria-pressed="${r === 'got'}"${r ? ' disabled' : ''}>✓ Got it</button>` +
+      `<button type="button" class="gbtn" data-rate="learning" aria-pressed="${r === 'learning'}"${r ? ' disabled' : ''}>Still learning</button></div>`;
+    function rate(kind) {
+      if (rated.has(q)) return;
+      rated.set(q, kind);
+      record(cards[q], kind === 'got');
+      say(kind === 'got' ? 'Got it.' : 'Still learning: added to your tricky words.', 'rate');
+      go(1);
     }
     function flip() {
       back = !back;
@@ -109,7 +124,9 @@
       if (k2e) auto(cards[q].c.audio);
     }
     function finish() {
-      const msg = `You turned over ${turned.size} of ${cards.length} ${cards.length === 1 ? 'card' : 'cards'}.`;
+      const got = [...rated.values()].filter(v => v === 'got').length, learning = rated.size - got;
+      const msg = `You turned over ${turned.size} of ${cards.length} ${cards.length === 1 ? 'card' : 'cards'}.` +
+        (rated.size ? ` You knew ${got}${learning ? `; ${learning} ${learning === 1 ? 'word went' : 'words went'} on your tricky words list` : ''}.` : '');
       play.innerHTML = finishHTML(msg, cards, true) + totalsHTML();
       say(msg);
     }
@@ -119,6 +136,8 @@
       if (e.target.closest('[data-next]')) { go(1); return; }
       if (e.target.closest('[data-prev]')) { go(-1); return; }
       if (e.target.closest('[data-flip]')) { flip(); return; }
+      const rb = e.target.closest('[data-rate]');
+      if (rb) { rate(rb.dataset.rate); return; }
       if (e.target.closest('[data-card]') && !e.target.closest('button, a')) flip();     // anywhere on the card
     });
     const onKey = e => {

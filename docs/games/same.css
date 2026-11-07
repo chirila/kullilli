@@ -5,7 +5,7 @@
   border: 2px solid var(--line); background: var(--paper); font: 700 1.3rem var(--ui-font); color: var(--muted); transition: all .15s; }
 .sd-n.on { background: var(--sea); border-color: var(--sea); color: #fff; transform: scale(1.08); }
 .sd-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
-.sd-ans { -webkit-tap-highlight-color: transparent; min-height: 58px; border-radius: 12px; border: 1px solid var(--line);
+.sd-ans { -webkit-tap-highlight-color: transparent; min-height: 58px; border-radius: 12px; border: 1px solid var(--ctl-line);
   background: var(--paper); box-shadow: var(--shadow); font: 700 1.1rem var(--ui-font); color: var(--sea); cursor: pointer; }
 .sd-ans:hover:not(:disabled) { border-color: var(--ochre); }
 .sd-ans.right { background: #e7f5ea; border-color: #3d8a4f; color: #245c31; }

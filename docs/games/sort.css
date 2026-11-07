@@ -6,14 +6,13 @@
   display: flex; flex-direction: column; gap: 8px; cursor: pointer; transition: border-color .12s, background .12s; }
 .basket.over { border-color: var(--sea2); background: #eef5fa; }
 .basket.bad { animation: shake .35s; border-color: #c0392b; }
-.basket-name { font: 700 .95rem var(--ui-font); color: var(--sea); text-align: center; }
 .basket-in { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .sort-pool { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 10px; }
 .wchip.v, .wchip .v { font-family: var(--v-font); }
 .sort-pool .wchip, .basket .wchip {
   -webkit-tap-highlight-color: transparent; touch-action: none; user-select: none; -webkit-user-select: none;
   display: inline-flex; flex-direction: column; align-items: center; padding: 8px 14px; border-radius: 999px;
-  border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); cursor: grab;
+  border: 1px solid var(--ctl-line); background: var(--paper); box-shadow: var(--shadow); cursor: grab;
   font-size: 1.05rem; font-weight: 700; color: var(--sea);
 }
 .sort-pool .wchip.sel { border-color: var(--ochre); box-shadow: 0 0 0 3px var(--ochre-soft); }
@@ -29,3 +28,6 @@
   .basket { min-height: 110px; padding: 8px; }
   .sort-pool .wchip { padding: 7px 12px; font-size: .98rem; }
 }
+.basket-name { font: 700 .95rem var(--ui-font); color: var(--sea); text-align: center; background: none; border: 0; padding: 4px 6px;
+  border-radius: 8px; cursor: pointer; width: 100%; }
+.basket-name:hover { background: #eef5fa; }

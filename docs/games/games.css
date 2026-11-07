@@ -1,3 +1,4 @@
+:root { --ctl-line: #958a78; }          /* borders of game controls: 3:1 against the page */
 /* Learn tab: shared styles (titles, settings bar, buttons, end-of-round panel, letter tiles and keyboard). */
 .gtitle { font: 700 1.6rem var(--v-font); color: var(--sea); margin: 18px 0 4px; }
 .gintro { color: var(--muted); margin: 0 0 12px; }
@@ -41,21 +42,22 @@
 .hd-real { font-size: .85rem; color: var(--muted); font-style: italic; max-width: 140px; }
 .ht {
   width: 54px; height: 54px; display: inline-flex; align-items: center; justify-content: center;
-  border: 2px solid var(--line); border-radius: 10px; background: var(--paper);
+  border: 2px solid var(--ctl-line); border-radius: 10px; background: var(--paper);
   font: 700 1.35rem var(--v-font); color: var(--ink); text-transform: lowercase;
 }
-.hd-row.now .ht { border-color: #cdbfa9; }
+.hd-row.now .ht { border-color: #7d725f; }
+.hd-row[aria-hidden="true"] .ht { border-color: var(--line); }     /* rows not reached yet stay light */
 .ht.typed { border-color: var(--sea2); }
 .ht.hit { background: var(--sea); border-color: var(--sea); color: #fff; }
 .ht.near { background: var(--ochre-soft); border: 2px dashed var(--ochre); color: #8a3a1a; }
-.ht.miss { background: #e2dbcf; border-color: #e2dbcf; color: #8b8378; }
+.ht.miss { background: #e2dbcf; border-color: #e2dbcf; color: #5c554c; }
 .hd-tools { text-align: center; margin-bottom: 10px; }
 .hd-tools .gbtn:disabled { color: var(--ink); border-color: var(--line); cursor: default; }
 .hd-keys { display: flex; flex-direction: column; gap: 6px; max-width: 520px; margin: 0 auto 10px; }
 .hd-krow { display: flex; gap: 5px; justify-content: center; }
 .hk {
   -webkit-tap-highlight-color: transparent; flex: 1 1 0; min-width: 0; height: 48px; padding: 0 2px;
-  border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer;
+  border: 1px solid var(--ctl-line); border-radius: 8px; background: #fff; cursor: pointer;
   font: 700 1.05rem var(--v-font); color: var(--sea); text-transform: lowercase;
 }
 .hk:active { transform: translateY(1px); }
@@ -63,7 +65,7 @@
 .hk.enter { background: var(--sea); border-color: var(--sea); color: #fff; }
 .hk.hit { background: var(--sea); border-color: var(--sea); color: #fff; }
 .hk.near { background: var(--ochre-soft); border: 1px dashed var(--ochre); color: #8a3a1a; }
-.hk.miss { background: #e2dbcf; border-color: #e2dbcf; color: #9b9387; }
+.hk.miss { background: #e2dbcf; border-color: #b9ad99; color: #5c554c; text-decoration: line-through; }
 .hd-answer { margin-top: 12px; max-width: 360px; }
 
 .hd-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
@@ -100,7 +102,7 @@
 .lcell { display: flex; flex-direction: column; gap: 4px; }
 .lopt {
   -webkit-tap-highlight-color: transparent; min-height: 56px; padding: 8px 12px; border-radius: 12px;
-  border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); cursor: pointer;
+  border: 1px solid var(--ctl-line); background: var(--paper); box-shadow: var(--shadow); cursor: pointer;
   font: 500 1.05rem var(--ui-font); color: var(--ink); overflow-wrap: anywhere;
 }
 .lopt.v { font: 700 1.25rem var(--v-font); color: var(--sea); }
@@ -124,3 +126,9 @@
   .lt-title { font-size: 1.05rem; }
   .lt-desc { font-size: .8rem; }
 }
+
+/* right / wrong are shown by a mark as well as by colour */
+.opt.right::after, .lopt.right::after, .sd-ans.right::after { content: " ✓"; font-weight: 700; }
+.opt.wrong::after, .lopt.wrong::after, .sd-ans.wrong::after { content: " ✗"; font-weight: 700; }
+.opt.right, .lopt.right, .sd-ans.right { border-width: 2px; }
+.opt.wrong, .lopt.wrong, .sd-ans.wrong { border-width: 2px; border-style: dashed; }

@@ -7,7 +7,7 @@
 .cw-word.v { font-family: var(--v-font); color: var(--sea); font-size: 1.8rem; }
 .opt {
   -webkit-tap-highlight-color: transparent; position: absolute; transform: translate(-50%, -50%); width: 30%; min-height: 48px;
-  padding: 6px 8px; border-radius: 12px; border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow);
+  padding: 6px 8px; border-radius: 12px; border: 1px solid var(--ctl-line); background: var(--paper); box-shadow: var(--shadow);
   font: 500 .98rem/1.2 var(--ui-font); color: var(--ink); cursor: pointer; overflow-wrap: anywhere;
 }
 .opt.v { font: 700 1.05rem var(--v-font); color: var(--sea); }

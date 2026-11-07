@@ -27,16 +27,24 @@ window.DictGames = (() => {
     return g;
   }
   // a topic is a FLEx semantic domain code (with its subdomains), or one of the player's own lists:
-  // 'study' (words they bookmarked), 'tricky' (words they got wrong), 'new' (words not yet practised)
+  // 'study' (words they bookmarked), 'tricky' (words they got wrong)
   const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
-  const LISTS = { study: () => ctx.study.map(), tricky: () => trickyMap(), new: () => practisedMap() };
-  const inList = (it, code, m) => (code === 'new' ? !has(m, it.id) : has(m, it.id));
+  const LISTS = { study: () => ctx.study.map(), tricky: () => trickyMap() };
+  const inList = (it, code, m) => has(m, it.id);
+  // "Which words", on top of the topic, one setting for all games: all, 'new' (never practised anywhere on
+  // the site) or 'old' (practised before, in any game or flashcards: words to go over again)
+  const whichTest = s => {
+    if (s.which !== 'new' && s.which !== 'old') return null;
+    const p = practisedMap();
+    return s.which === 'new' ? it => !has(p, it.id) : it => has(p, it.id);
+  };
   const inTopic = (it, code) => !code || (LISTS[code] ? inList(it, code, LISTS[code]())
     : (it.c.sd || []).some(d => d.startsWith(code + ' ') || d.startsWith(code + '.')));
+  // the words a game can use: anyTopic = ignore the topic and "Which words" (e.g. wrong answers from all words)
   function pool(s, anyTopic) {
-    const code = anyTopic ? '' : s.topic, m = LISTS[code] && LISTS[code]();
+    const code = anyTopic ? '' : s.topic, m = LISTS[code] && LISTS[code](), w = anyTopic ? null : whichTest(s);
     return ctx.items.filter(it => !it.parent && !it.c.see && CLASSES.has(it.c.cls) && gloss(it)
-      && (!s.audio || it.c.audio) && (m ? inList(it, code, m) : inTopic(it, code)));
+      && (!s.audio || it.c.audio) && (m ? inList(it, code, m) : inTopic(it, code)) && (!w || w(it)));
   }
 
   /** n words with different glosses and headwords */
@@ -53,26 +61,34 @@ window.DictGames = (() => {
 
   // FLEx semantic domains as topics (a domain includes its subdomains); only those with enough words
   function topics(s) {
-    const base = pool(s, true), names = new Map();
+    const base = pool(s, true), names = new Map(), w = whichTest(s);
     base.forEach(it => (it.c.sd || []).forEach(d => { const m = /^([\d.]+)\s+(.*)$/.exec(d); if (m) names.set(m[1], m[2]); }));
     const num = code => code.split('.').map(Number);
-    return [...names].map(([code, name]) => ({ code, name, n: base.filter(it => inTopic(it, code)).length }))
-      .filter(t => t.n >= 6)
+    return [...names].map(([code, name]) => { const all = base.filter(it => inTopic(it, code));
+      return { code, name, total: all.length, n: w ? all.filter(w).length : all.length }; })      // n follows Which words
+      .filter(t => t.total >= 6)
       .sort((a, b) => { const x = num(a.code), y = num(b.code); for (let i = 0; i < Math.max(x.length, y.length); i++) { if ((x[i] ?? -1) !== (y[i] ?? -1)) return (x[i] ?? -1) - (y[i] ?? -1); } return 0; });
   }
 
   // ---- settings (remembered) ------------------------------------------------------------
-  const settings = () => ({
+  const settings = () => {
+    if (ctx.store.get('g.topic', '') === 'new') { ctx.store.set('g.topic', ''); ctx.store.set('g.which', 'new'); }   // was a topic
+    return {
     topic: ctx.store.get('g.topic', ''),
+    which: ctx.store.get('g.which', 'all'),          // all / new / old, shared by all games (see whichTest)
     audio: ctx.store.get('g.audio', '1') === '1',
     dir: ctx.store.get('g.dir', 'k2e'),
     level: ctx.store.get('g.level', 'easy'),          // listen and choose: easy / hard
     answer: ctx.store.get('g.answer', 'word'),        // listen and choose: answer with the word or its meaning
-  });
+    };
+  };
 
   /** a row of choice buttons; picking one stores it as g.<key> */
   const segHTML = (key, label, cur, choices) => `<div class="seg2" role="group" aria-label="${esc(label)}">` +
     choices.map(([v, t]) => `<button type="button" data-g="${key}" data-v="${v}" aria-pressed="${cur === v}">${t}</button>`).join('') + '</div>';
+
+  /** "Which words": one setting for all games (see whichTest) */
+  const whichHTML = s => segHTML('which', 'Which words', s.which, [['all', 'Any words'], ['new', 'New to me'], ['old', 'Studied before']]);
 
   /** settings bar: topic, recordings-only (unless audio: false), direction (withDir), and any extra choices */
   function barHTML(s, withDir, { audio = true, extra = '' } = {}) {
@@ -81,14 +97,16 @@ window.DictGames = (() => {
     if (s.topic && !LISTS[s.topic] && !tops.some(t => t.code === s.topic)) s.topic = '';
     const nTricky = n('tricky');
     const own = [['study', `My study list (${n('study')})`]]
-      .concat(nTricky || s.topic === 'tricky' ? [['tricky', `★ My tricky words (${nTricky})`]] : [], [['new', `Not practised yet (${n('new')})`]]);
-    const opts = [`<option value="">All words (${pool(s, true).length})</option>`].concat(
+      .concat(nTricky || s.topic === 'tricky' ? [['tricky', `★ My tricky words (${nTricky})`]] : []);
+    const w = whichTest(s), all = pool(s, true);
+    const opts = [`<option value="">All words (${w ? all.filter(w).length : all.length})</option>`].concat(
       own.map(([v, t]) => `<option value="${v}"${s.topic === v ? ' selected' : ''}>${esc(t)}</option>`),
       tops.map(t =>
       `<option value="${t.code}"${t.code === s.topic ? ' selected' : ''}>${' '.repeat(t.code.split('.').length - 1)}${esc(t.name)} (${t.n})</option>`));
     const L = esc(ctx.lang);
     return '<div class="game-bar">' +
       `<label class="gsel">Topic <select data-g="topic">${opts.join('')}</select></label>` +
+      whichHTML(s) +
       (audio ? `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` : '') +
       autoplayHTML() +
       (withDir ? segHTML('dir', 'Direction', s.dir, [['k2e', `${L} → English`], ['e2k', `English → ${L}`]]) : '') +
@@ -114,8 +132,17 @@ window.DictGames = (() => {
     });
   }
 
+  /** sorting games: not enough topic groups; says why when "Which words" is narrowing them down */
+  const fewTopics = () => (ctx.store.get('g.which', 'all') === 'all'
+    ? '<p class="empty">Not enough topics with words for this game.</p>'
+    : `<p class="empty">Not enough topics have words ${ctx.store.get('g.which') === 'new' ? 'that are new to you' : 'that you have studied before'} ` +
+      'for this game. Choose “Any words”.</p>');
   const tooFew = n => {
-    const t = ctx.store.get('g.topic', ''), w = `${n} ${n === 1 ? 'word' : 'words'}`;
+    const t = ctx.store.get('g.topic', ''), w = `${n} ${n === 1 ? 'word' : 'words'}`, which = ctx.store.get('g.which', 'all');
+    if (which === 'new' || which === 'old') return `<p class="empty">${n ? `Only ${w}` : 'No words'} ` +
+      `${which === 'new' ? 'that are new to you' : 'that you have studied before'} fit this game${t ? ' in this topic' : ''}` +
+      `${n ? ', not enough for a round' : ''}. ${which === 'old' ? 'A word counts as studied when you finish a round with it or turn its flashcard. ' : ''}` +
+      'Choose “Any words”, or another topic.</p>';
     if (t === 'tricky') return `<p class="empty">You have ${n} tricky ${n === 1 ? 'word' : 'words'} that fit this game, not enough for a round. Words you get wrong in any game are added; choose another topic for now.</p>`;
     if (t === 'study') return `<p class="empty">Your study list has ${w} that fit this game, not enough for a round. Add words with the bookmark button ` +
       `on any word card or entry (<a href="#/mylist">see your list</a>), untick "Only words with recordings", or choose another topic.</p>`;
@@ -293,7 +320,8 @@ window.DictGames = (() => {
         : `<p class="empty">No words yet. Tap the bookmark ${icon} on any word card, or at the top of an entry, to add it.</p>`) +
       '<h3 class="section-title">Practice so far</h3>' +
       `<p class="gintro">You have practised ${done} of the ${all.length} words used in the games. A word counts as practised ` +
-      'when it is in a round you finish. Choose <strong>Not practised yet</strong> as the topic in any game to meet new words.</p>' +
+      'when it is in a round you finish, or when you turn its flashcard. In any game, choose <strong>New to me</strong> to meet new ' +
+      'words, or <strong>Studied before</strong> to go over words you have already practised.</p>' +
       (done ? '<p><button type="button" class="gbtn" data-clear-practised>Forget my practice history</button></p>' : '');
     main.querySelector('[data-clear-study]')?.addEventListener('click', () => {
       if (confirm('Clear your study list?')) { ctx.study.clear(); studyPage(main); }
@@ -413,12 +441,13 @@ window.DictGames = (() => {
   function domainGroups(s, min) {
     const base = pool(Object.assign({}, s, { topic: '' }), true), names = new Map();
     base.forEach(it => (it.c.sd || []).forEach(d => { const m = /^([\d.]+)\s+(.*)$/.exec(d); if (m && m[1].includes('.')) names.set(m[1], m[2]); }));
-    return [...names].map(([code, name]) => ({ code, name, top: code.split('.')[0], items: base.filter(it => inTopic(it, code)) }))
+    const w = whichTest(s);
+    return [...names].map(([code, name]) => ({ code, name, top: code.split('.')[0], items: base.filter(it => inTopic(it, code) && (!w || w(it))) }))
       .filter(g => g.items.length >= min);
   }
   const tops = it => new Set((it.c.sd || []).map(d => d.split(/[.\s]/)[0]));
 
-  const kit = { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, tooFew, finishHTML,
+  const kit = { esc, shuffle, hw, gloss, pool, pick, settings, segHTML, barHTML, wireBar, whichHTML, tooFew, fewTopics, finishHTML,
     letterKit, listenBtn, record, practise, practised: () => practisedMap(), speakerHTML, inTopic, domainGroups, tops, CLASSES, say, sr, auto, autoplayHTML, focusIfKey,
     get ctx() { return ctx; } };
   return { register, view, myList, kit };

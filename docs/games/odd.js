@@ -2,7 +2,7 @@
    One game of the Learn tab (see core.js). To remove it, delete this file (and odd.css) and rebuild. */
 'use strict';
 (() => {
-  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, speakerHTML, wireBar, say, autoplayHTML, focusIfKey } = window.DictGames.kit;
+  const { esc, shuffle, hw, gloss, pick, settings, segHTML, finishHTML, domainGroups, tops, speakerHTML, wireBar, say, autoplayHTML, focusIfKey , fewTopics, whichHTML } = window.DictGames.kit;
   let ctx;
 
   function odd(root) {
@@ -12,14 +12,14 @@
     root.innerHTML = '<h2 class="gtitle">Odd one out</h2><p class="gintro">' +
       `Three of these ${L} words belong to the same topic. Tap the one that doesn't. ` +
       'After each answer you\'ll see what all four mean.</p>' +
-      '<div class="game-bar">' +
+      '<div class="game-bar">' + whichHTML(s) +
       `<label class="chk2"><input type="checkbox" data-g="audio"${s.audio ? ' checked' : ''}> Only words with recordings</label>` +
       segHTML('oddshow', 'Show', show, [['k', `${L} words`], ['ke', 'Words and meanings']]) + autoplayHTML() +
       '<button type="button" class="gbtn" data-g="new">New round</button></div><div class="gplay"></div>';
     wireBar(root, () => odd(root));
     const play = root.querySelector('.gplay');
     const groups = domainGroups(s, 4);
-    if (groups.length < 2) { play.innerHTML = '<p class="empty">Not enough topics with words for this game.</p>'; return; }
+    if (groups.length < 2) { play.innerHTML = fewTopics(); return; }
 
     // 10 questions: three words from one topic, one from a topic with a different top-level number
     const qs = [];
@@ -31,7 +31,7 @@
       const [oddWord] = pick(outside.filter(it => !three.some(t => gloss(t).toLowerCase() === gloss(it).toLowerCase())), 1);
       if (oddWord) qs.push({ g, odd: oddWord, words: shuffle(three.concat([oddWord])) });
     }
-    if (qs.length < 3) { play.innerHTML = '<p class="empty">Not enough topics with words for this game.</p>'; return; }
+    if (qs.length < 3) { play.innerHTML = fewTopics(); return; }
     let q = 0, score = 0;
     const seen = [];
 

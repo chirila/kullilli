@@ -37,25 +37,23 @@
   function flashcards(root) {
     const s = settings();
     const L = esc(ctx.lang);
-    const n = +ctx.store.get('g.cards', '10') || 10;
-    const which = ctx.store.get('g.which', 'all');          // all words / new to me / studied before
+    const n = +ctx.store.get('g.fcards', '10') || 10;       // own name: Memory pairs uses g.cards for its card type
+    const which = s.which;                                    // any words / new to me / studied before (in the bar)
     root.innerHTML = '<h2 class="gtitle">Flashcards</h2><p class="gintro">' +
       'See a word, think of its meaning, then turn the card over: click or tap it, or press Enter. ' +
       `The back has the other language and an example, and the ${L} word can be played. ` +
       'With a keyboard, the left and right arrow keys go to the previous or next card.</p>' +
       barHTML(s, true, { extra:
-        `<label class="gsel">Cards <select data-g="cards">${[5, 10, 20, 30, 50].map(k =>
-          `<option value="${k}"${k === n ? ' selected' : ''}>${k}</option>`).join('')}</select></label>` +
-        segHTML('which', 'Which words', which, [['all', 'Any words'], ['new', 'New to me'], ['old', 'Studied before']]) }) +
+        `<label class="gsel">Cards <select data-g="fcards">${[5, 10, 20, 30, 50].map(k =>
+          `<option value="${k}"${k === n ? ' selected' : ''}>${k}</option>`).join('')}</select></label>` }) +
       '<div class="gplay"></div>';
     wireBar(root, () => flashcards(root));
     const play = root.querySelector('.gplay');
 
-    // new = never practised (in flashcards or any game); studied before = practised, the longest ago first
+    // pool() already keeps only new or studied words; studied before: the ones practised longest ago first
     const p = practised();
     let list = pool(s);
-    if (which === 'new') list = list.filter(it => !p[it.id]);
-    if (which === 'old') list = list.filter(it => p[it.id]).sort((a, b) => p[a.id].t - p[b.id].t).slice(0, n * 2);
+    if (which === 'old') list = list.sort((a, b) => p[a.id].t - p[b.id].t).slice(0, n * 2);
     const cards = pick(list, n);
     if (!cards.length) {
       play.innerHTML = '<p class="empty">' + (which === 'new'

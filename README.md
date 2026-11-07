@@ -143,8 +143,8 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   Enter, to turn it over. The back has the other language, the word type, an example sentence with its translation
   (a sense example, or else a text sentence that uses the word) and a link to the entry. Both sides have
   the study-list bookmark (its spoken label doesn't name the word, so it can't give the answer away). With English first, the
-  recording is on the back. Arrow keys go to the previous or next card. "Which words": any, *new to me* (never
-  practised in flashcards or any game) or *studied before* (practised, the longest ago first). A card counts as
+  recording is on the back. Arrow keys go to the previous or next card. With "Which words: Studied before" (see
+  Practised words), the cards are the words practised longest ago. Cards per round is `g.fcards`. A card counts as
   studied the first time it is turned over in a round: that adds to the flashcard count for the day (store
   `flash`, one number per date) and marks the word as practised. The game shows the words studied with
   flashcards today, this week (from Monday), this month and this year.
@@ -208,8 +208,14 @@ respelled or homographs are renumbered in FLEx.
 
 **Practised words.** Every word shown at the end of a round the player finishes counts as practised once, with
 the date (`practise()` in `core.js`; Letter by letter and Hidden word, which end on a single word, count that
-word). "Not practised yet" is a topic in every game, and the study list page shows "You have practised N of the M
+word; Flashcards count a word when its card is turned). The study list page shows "You have practised N of the M
 words used in the games", with a button to forget the history. Words from rounds left half-way don't count.
+
+**Which words.** Every game's settings bar (all but Daily five and Same or different?) has *Any words* /
+*New to me* / *Studied before*, on top of the topic. New = never practised anywhere on the site; studied before
+= practised in any game or in flashcards, so it means "words I know", not "words seen in this game". It is one
+setting (`g.which`) shared by all games, and the topic counts follow it. This replaced the earlier "Not
+practised yet" topic; a saved choice of that topic becomes *New to me*.
 
 The study list, practice history, flashcard counts, tricky list, settings and the daily streak are kept in the browser on that
 device only (localStorage); nothing is sent anywhere, so the site owner can't see what people study, and a

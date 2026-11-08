@@ -55,26 +55,17 @@ WORDNET = REPO.parent / "Wordnet_dict"
 FEEDBACK_REPO = ""
 FEEDBACK_EMAIL = "chirila.apps@gmail.com"   # Claire, 2026-11-07
 
-# Two-letter letters: own tab in the wordlist, sorted after their first letter (d, dh, dy, ...).
-DIGRAPHS = ["dh", "dy", "ng", "nh", "ny", "th", "ty"]
-# Spelling key for "similar spelling" search, applied in order (JavaScript regex syntax).
-# Exact spellings always rank first; these only widen the net.
-SPELLING = [
-    ["ŋ", "ng"], ["ɲ", "ny"], ["[ðᶁ]", "dh"], ["[ɹɾ]", "r"], ["ɣ", "g"], ["β", "b"],
-    ["tj|dj|ch|ty|j", "dy"], ["th", "dh"],
-    ["k", "g"], ["p", "b"], ["t", "d"],            # voicing
-    ["rr", "r"], ["r(?=[dln])", ""],                # trill/tap, retroflex
-    ["([dnl])h", "$1"],                             # dental vs alveolar
-    ["aa", "a"], ["ii|ee|e", "i"], ["uu|oo|o", "u"],  # vowel length, o/u, e/i
-    ["(.)\\1+", "$1"],                              # doubled letters
-]
-
-# The alphabet from the sketch grammar, as the on-screen keyboard of the Hidden word game.
-# Two-letter units (dh, ng, rr ...) count as one letter there.
-KEYBOARD = [["a", "i", "u", "w", "y", "b", "p", "m"],
-            ["dh", "th", "nh", "lh", "d", "t", "n", "l"],
-            ["dy", "ty", "ny", "ly", "rd", "rt", "rn", "rl"],
-            ["r", "rr", "g", "k", "ng"]]
+# Language settings shared with the dictionary editor, in the source folder (data/lexicon/settings.json):
+# the digraphs (own tab in the wordlist, sorted after their first letter), the spelling key for
+# "similar spelling" search, and the alphabet (the Hidden word game's keyboard).
+SETTINGS_FILE = SOURCE / "data" / "lexicon" / "settings.json"
+if not SETTINGS_FILE.exists():
+    sys.exit(f"Can't find {SETTINGS_FILE}\nGive the folder that holds the Kullilli source material, e.g.\n"
+             f"    python3 build/build_lift.py /path/to/KullilliDictionary")
+SETTINGS = json.loads(SETTINGS_FILE.read_text(encoding="utf-8"))
+DIGRAPHS = SETTINGS["digraphs"]
+SPELLING = [rule[:2] for rule in SETTINGS["spelling"]]      # [pattern, replacement]; the third item is a comment
+KEYBOARD = SETTINGS["alphabet"]
 
 POS_CLASS = {"noun": "noun", "n": "noun", "verb": "verb", "v": "verb", "intransitive verb": "verb",
              "transitive verb": "verb", "adjective": "adjective", "adverb": "adverb",
@@ -521,7 +512,7 @@ def main():
             "sentences": sentences,
             "abbr": glosscheck.abbreviations(sentences, by_id, REVIEW),
             "letters": sorted(present, key=sort_key),
-            "source": LIFT.name, "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
+            "language": LANGUAGE, "title": f"{LANGUAGE} Dictionary",
             "spelling": SPELLING, "keyboard": KEYBOARD,
             "langCode": VERN.split("-")[0], "feedback": {"repo": FEEDBACK_REPO, "email": FEEDBACK_EMAIL},
             "edited": max((c.get("dt") or "" for c in entries), default="")}     # newest FLEx edit (About page)

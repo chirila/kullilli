@@ -4,7 +4,7 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = '41aef7119c';
+const VERSION = '83ade0ab3b';
 const UPDATED = '2026-11-08';
 const ASSETS = [
  "./",
@@ -25,6 +25,10 @@ const ASSETS = [
  "games/unscramble.css?v=dfb878ef",
  "games/wordsearch.css?v=94767a94",
  "icons/ngulkana-160.png",
+ "explore/",
+ "explore/#/numbers",
+ "explore/#/pairs",
+ "explore/#/web",
  "data/dictionary.js?v=bbe08d02",
  "search.js?v=7fc450b3",
  "render.js?v=78dbbc05",

@@ -383,6 +383,66 @@ backup on My lists includes them. The lesson files aren't in the offline list in
 need a connection. Notes on what was changed from the grammar, and questions about it:
 `KullilliDictionary/review/lessons_review.md`.
 
+## Explore pages (`build/build_explore.py` → `docs/explore/`)
+
+Pages for curiosity rather than learning, at `/explore/` on the site, linked from the About page
+("Exploring the dictionary", one link per tab). Three tabs:
+
+- **In numbers** (`#/numbers`): the dictionary counted. It shows entries, recordings, entries with examples,
+  example sentences and topics, then:
+  - kinds of word;
+  - topics, each opening into its smaller topics, with links to the dictionary's topic pages;
+  - word length in sounds;
+  - how common each sound is, overall and at the start of a word.
+- **Sound pairs** (`#/pairs`, `#/pairs/<word>`): minimal pairs, meaning two headwords that differ in one sound.
+  Digraphs like `dh`, `ng` and `rr` count as one sound (the alphabet in `settings.json`). Affixes, phrases and
+  variants of each other are left out. The page has two views:
+  - first, a network of all the pairs, with drag, pinch and ±/Whole network buttons. Choosing a word lists
+    its pairs;
+  - then a grid of which sounds make the difference: choose a square to list its pairs, with recordings
+    (they are picked out in the network too).
+  
+  The pairs come from the spellings, so g/k, b/p, d/t or r/rr pairs may be spelling differences.
+- **Word web** (`#/web/<entry id>`, `#/web/topic/<code>`): choose a word (Kullilli or English) and see the
+  related words around it. Choosing a word or topic in the web moves to it, and the list beside the web gives
+  every link. The links come in four kinds, each of which can be switched off:
+  - **In the dictionary** (blue): the entries' own See also / Used in / Made from / Minimal pair links and
+    variants.
+  - **Same or opposite meaning** (orange, opposite dashed): the same English gloss, or glosses in one WordNet
+    sense; WordNet antonyms.
+  - **Kinds and parts** (green): broader/narrower meanings, with the arrow pointing to the broader one. This
+    uses the nearest broader WordNet sense that another entry is glossed with, up to 3 steps up (emu → bird).
+    Part/whole links are dotted (hand → finger).
+  - **Topics** (grey): the entry's topics. A topic's web shows its words, its smaller topics and the topic
+    above it.
+
+  WordNet links are made only for nouns, verbs, adjectives and adverbs. They use each gloss's commonest
+  senses in the word's own part of speech: two for nouns, adjectives and adverbs, one for verbs (their second
+  senses mostly added "a kind of move"). WordNet joins English meanings, so a link can be wrong where an
+  English word has several meanings. The page says so.
+
+  The web is sized to the screen: it shows up to 24 words around the centre, fewer on a phone (the list has
+  them all).
+
+The figures, pairs and links are worked out by the build, not in the browser. After rebuilding the
+dictionary, run:
+
+    python3 build/build_explore.py
+
+What the build does:
+- It reads `docs/data/dictionary.js` and WordNet (`../Wordnet_dict`), and writes
+  `docs/explore/explore-data.js`.
+- It stamps the `?v=` fingerprints in `docs/explore/index.html`.
+- It needs `networkx` (and `scipy`) for the network layout. These are the only extra packages the builds use.
+
+How the page works:
+- It loads the dictionary's own `data/dictionary.js` and `style.css` (same fingerprints, so they come from
+  the browser's saved copy).
+- Its own files are `explore.js` and `explore.css`.
+- It isn't in the offline list in `sw.js`, so it needs a connection.
+- The web's three link colours (`--rel-*` in `explore.css`) were checked for colour-blind readers on the
+  paper colour, and the line styles and the list carry the same information.
+
 ## Files
 
 | File | What it does |
@@ -402,3 +462,5 @@ need a connection. Notes on what was changed from the grammar, and questions abo
 | `lessons/*.md` | the lesson texts, one file per unit (format in `lessons/README.md`) |
 | `build/build_lessons.py` | lesson texts → `docs/lessons/lessons-data.js` |
 | `docs/lessons/` | the lessons page: `index.html`, `lessons.js` (contents, lessons, save for later), `lessons.css` |
+| `build/build_explore.py` | figures, minimal pairs (with network layout) and word links → `docs/explore/explore-data.js` |
+| `docs/explore/` | the explore pages: `index.html`, `explore.js` (In numbers, Sound pairs, Word web), `explore.css` |

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7e2612">
+<link rel="icon" type="image/png" sizes="192x192" href="../icons/ngulkana-192.png">
+<title>Explore Kullilli</title>
+<meta name="description" content="Explore the Kullilli Dictionary: what is in it, minimal pairs, and a web of related words.">
+<!-- keep out of search engines and AI crawlers (see the notice in the footer) -->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<!-- the dictionary's stylesheet (colours, header, fonts, play buttons), then the explore styles -->
+<link rel="stylesheet" href="../style.css?v=12ae3b4b">
+<link rel="stylesheet" href="explore.css?v=8edfd320">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap head-row">
+    <a class="brand brand-panel" href="../">
+      <img class="brand-logo" src="../icons/ngulkana-160.png" width="80" height="80" alt="">
+      <span class="brand-title">Kullilli Dictionary</span>
+    </a>
+  </div>
+  <nav class="tabs wrap" aria-label="Explore">
+    <a data-tab="numbers" href="#/numbers">In numbers</a>
+    <a data-tab="pairs" href="#/pairs">Sound pairs</a>
+    <a data-tab="web" href="#/web">Word web</a>
+    <a class="tab-back" href="../"><span aria-hidden="true">← </span>Dictionary</a>
+  </nav>
+</header>
+
+<main id="main" class="wrap" tabindex="-1"></main>
+
+<footer class="site-footer wrap">
+  <span id="built"></span>
+  <p class="site-notice">This material may not be copied, scraped or harvested, or used to train or supply AI systems
+     or to build datasets or search indexes. Text and data mining rights are reserved (EU Directive 2019/790, Art. 4(3)). We are happy to assist others who want to make language learning materials, particularly First Nations groups in Australia. Please get in touch, we're happy to share our code and expertise.</p>
+</footer>
+
+<!-- the dictionary itself, then the explore data (written by build/build_explore.py) -->
+<script src="../data/dictionary.js?v=bbe08d02"></script>
+<script src="explore-data.js?v=eac8cb89"></script>
+<script src="explore.js?v=b88b0981"></script>
+</body>
+</html>

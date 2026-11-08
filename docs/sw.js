@@ -4,8 +4,8 @@
    The list below is written by build/build_lift.py: don't edit it by hand. */
 'use strict';
 // <assets>
-const VERSION = '56f27738ec';
-const UPDATED = '2026-11-07';
+const VERSION = '41aef7119c';
+const UPDATED = '2026-11-08';
 const ASSETS = [
  "./",
  "manifest.webmanifest",
@@ -25,7 +25,7 @@ const ASSETS = [
  "games/unscramble.css?v=dfb878ef",
  "games/wordsearch.css?v=94767a94",
  "icons/ngulkana-160.png",
- "data/dictionary.js?v=3f49694f",
+ "data/dictionary.js?v=bbe08d02",
  "search.js?v=7fc450b3",
  "render.js?v=78dbbc05",
  "games/core.js?v=b3482ac1",
@@ -43,7 +43,7 @@ const ASSETS = [
  "games/spell.js?v=75562ba2",
  "games/unscramble.js?v=769897e6",
  "games/wordsearch.js?v=0dd3cb0b",
- "app.js?v=7a974456",
+ "app.js?v=983d5b96",
  "icons/ngulkana-512.png",
  "data/suggest.js?v=bbc755e2"
 ];

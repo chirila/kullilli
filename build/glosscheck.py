@@ -1,7 +1,7 @@
 """Glossing consistency for the Kullilli site (roadmap step 2).
 
 On every build, review() writes three files to review/ from the sentences as they
-are in the docx and the dictionary as it is in the LIFT:
+are in the editor's text files and the dictionary as it is in the LIFT:
 
   gloss_labels.tsv     every grammatical label (case, tense, pronoun labels ...) as
                        written, where it is used, and a proposed standard label
@@ -16,7 +16,7 @@ on the site as abbreviations (ACC, 1SG.ERG); "your abbreviation" overrides the p
   decision = text   use this text instead
   decision = n or empty   leave as it is
   link to = a headword (add a homograph number like garri2 if needed): link these morphemes to that entry
-Nothing in the docx or the LIFT is changed.
+Nothing in the sentence files or the LIFT is changed.
 """
 import csv
 import re

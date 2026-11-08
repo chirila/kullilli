@@ -13,16 +13,18 @@ kullilli/                     this repository
   README.md
 
 KullilliDictionary/           source material, kept outside the repository (next to it)
-  data/Kullilli.lift          FLEx LIFT export (+ Kullilli.lift-ranges)
+  data/lexicon/               master copy of the dictionary, kept by the dictionary editor
+    texts/                    interlinear sentences (read by the build)
+  data/Kullilli.lift          LIFT export of the master copy, written by the editor (+ .lift-ranges)
   data/audio/                 recordings referenced in the LIFT
-  data/Kullilli sentences.docx  interlinear sentences (FLEx export, edited in Word)
   review/                     glossing review files written by the build
 ```
 
-## Rebuild after a new FLEx export or sentence edits
+## Rebuild after editing the dictionary
 
-Export LIFT from FLEx into `KullilliDictionary/data/` (replacing `Kullilli.lift` and `audio/`),
-edit `Kullilli sentences.docx` as needed, then from this folder run:
+The dictionary is no longer edited in FLEx (since 2026-11-07): the master copy is in
+`KullilliDictionary/data/lexicon/`. Write the LIFT file from it (in `KullilliDictionary/`:
+`python3 editor/json2lift.py`), then from this folder run:
 
 ```
 python3 build/build_lift.py
@@ -87,8 +89,9 @@ The recordings come to about 40 MB, which is fine for Pages.
   English-first wordlist; domains are the topics (By topic in the Wordlist, topic links on entries, the games).
 - `SKIP_ENTRIES` leaves entries out of the site: `aaa`, FLEx's "how to use the dictionary" record, whose text is
   now on the About page.
-- Letters: `DIGRAPHS` (dh dy ng nh ny th ty) get their own tabs. `SPELLING` lists the
-  "similar spelling" rules for search.
+- Letters: the digraphs (dh dy ng nh ny th ty) get their own tabs, and the spelling key lists the
+  "similar spelling" rules for search. Both are in `KullilliDictionary/data/lexicon/settings.json`
+  (shared with the dictionary editor), with the alphabet.
 
 **By topic.** The third choice on the Wordlist switch (`#/topic`) lists the FLEx semantic domains (DDP4) used in
 the data, under their top-level domain (Universe, creation; Person; …), indented by level, with word counts. A
@@ -112,7 +115,7 @@ The English words are FLEx's English reversal index (in FLEx: the Reversal Index
 English word and entry; an entry with no reversal uses its glosses (split at ";"). Reversals with "?" or
 "unknown" are left out. Reversals that FLEx uses as categories come through as they are, so "birds" (50
 words), "grammar" (77), "pronouns" (42) and "animals" (13) each list every entry tagged with them; edit or
-remove them in FLEx to change that. Built in `app.js` (`engIndex`).
+remove them in the dictionary to change that. Built in `app.js` (`engIndex`).
 
 ## English suggestions (`build/suggest.py`)
 
@@ -159,11 +162,11 @@ the day: wirlidhi · Show"), and the site remembers open or folded on the device
 They are named in `docs/index.html`, `docs/manifest.webmanifest` and `extra` in `build/build_lift.py` (offline
 list). The earlier red icons (`icon-*.png`, `apple-touch-icon.png`, `logo-144.png`) are no longer used.
 
-## Example sentences (`build/sentences.py`)
+## Example sentences (`KullilliDictionary/data/lexicon/texts/`)
 
-- Each sentence's lines are read in order: words, morphemes, FLEx entry line (later texts),
-  morpheme glosses, categories, then word glosses and word categories. `Free` lines are the
-  translation. `Note` lines and Word comments become linguist notes, which are hidden on the site
+- The sentences come from the dictionary editor's text files (until 2026-11-07, from the Word file
+  `Kullilli sentences.docx`): words, morphemes with their glosses, categories and FLEx entry line,
+  and the translation. Notes and Word comments become linguist notes, which are hidden on the site
   until someone ticks "Show linguist notes and questions" in an entry.
 - Each morpheme is linked to its dictionary entry. The sentence gloss decides between entries with
   the same spelling, and FLEx homograph numbers only break ties. A spelling with rr/r or
@@ -249,7 +252,7 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   d/dh, n/nh…; d/dy, n/ny… Afterwards both words are shown, with the letters that differ, and can be replayed.
   This assumes the recordings make these contrasts consistently.
 
-**Spelling** (these use the alphabet set by `KEYBOARD` in `build/build_lift.py`; ng, dh, rr … are one letter)
+**Spelling** (these use the alphabet in `KullilliDictionary/data/lexicon/settings.json`; ng, dh, rr … are one letter)
 - **Unscramble** (`unscramble`): tap shuffled letter tiles into order; clue is the meaning or the recording.
 - **Spell it** (`spell`): hear a word and type it; Check marks each letter; "Show me" after a wrong try.
 - **Letter by letter** (`letters`): pick letters to fill in a hidden word, with no penalty; meaning and recording as hints.
@@ -348,7 +351,7 @@ Every build rewrites these files in `KullilliDictionary/review/`:
 |---|---|
 | `gloss_labels.tsv` | every grammatical label as written, how often, on which forms, a proposed standard label and its abbreviation |
 | `gloss_by_morpheme.tsv` | morphemes glossed in different ways, spelled differently from the dictionary, not matching the dictionary, not in the dictionary, or unglossed |
-| `sentences_without_glosses.tsv` | sentences that have no gloss lines in the docx |
+| `sentences_without_glosses.tsv` | sentences that have no glosses |
 | `unlinked_morphemes.tsv` | sentence morphemes not matched to a dictionary entry |
 
 The **decision**, **link to**, **your abbreviation** and **your note** columns are kept when the files are
@@ -358,7 +361,7 @@ rewritten, and the build applies what's in them:
 - any other text: use that instead (in **link to**: a headword, with its homograph number if needed, e.g. `garri2`)
 - empty or `n`: leave as it is
 
-Decisions change the website only; the docx and the LIFT are not touched. Save the files as
+Decisions change the website only; the sentence files and the LIFT are not touched. Save the files as
 tab-separated text, not .xlsx.
 
 ## Lessons (`lessons/` → `docs/lessons/`)
@@ -385,7 +388,7 @@ need a connection. Notes on what was changed from the grammar, and questions abo
 | File | What it does |
 |---|---|
 | `build/build_lift.py` | source material → `docs/data/dictionary.js` + `docs/audio/` |
-| `build/sentences.py` | reads the interlinear sentences from the docx |
+| `build/sentences.py` | not used since 2026-11-07 (it read the sentences from the Word file) |
 | `build/glosscheck.py` | glossing review files, abbreviations, applying review decisions |
 | `docs/index.html` | page shell; the About text is in the `<template id="about-tpl">` near the end |
 | `docs/style.css` | styles, including the phone layout |

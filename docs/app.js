@@ -685,8 +685,8 @@
 
   const nSubs = items.length - DATA.entries.length, nAudio = items.filter(it => it.c.audio).length;
   $('#stats').textContent = [`${DATA.entries.length.toLocaleString()} entries`,
-    nSubs ? `${nSubs.toLocaleString()} sub-entries` : '', nAudio ? `${nAudio.toLocaleString()} recordings` : '',
-    `built from ${DATA.source}`].filter(Boolean).join(' · ');
+    nSubs ? `${nSubs.toLocaleString()} sub-entries` : '', nAudio ? `${nAudio.toLocaleString()} recordings` : ''
+  ].filter(Boolean).join(' · ');
   // Kullilli text carries its language code (from the FLEx writing system) and translate="no", so it is
   // known not to be English and page translators leave it alone. Marked as it appears: wordlist, entries,
   // examples and games. Hidden English for screen readers inside it (.sr-only) is marked back as the page's language.

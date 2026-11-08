@@ -5,8 +5,10 @@ source material, which is kept outside the repository.
     python3 build/build_lift.py                      # source in ../KullilliDictionary
     python3 build/build_lift.py /path/to/KullilliDictionary
 
-Reads data/Kullilli.lift, data/audio/ and data/Kullilli sentences.docx from
-the source folder; writes docs/data/dictionary.js and copies the sound files
+Reads data/Kullilli.lift, data/audio/ and the interlinear sentences in
+data/lexicon/texts/ from the source folder (the LIFT file and the sentence files
+both come from the dictionary editor, which keeps the master copy in
+data/lexicon/); writes docs/data/dictionary.js and copies the sound files
 the dictionary uses into docs/audio/.  Untyped FLEx notes are shown (as
 "Note") while SHOW_UNTYPED_NOTES is True.
 
@@ -26,14 +28,13 @@ from pathlib import Path
 sys.dont_write_bytecode = True        # no __pycache__ in the repository
 import glosscheck                     # noqa: E402
 import suggest                        # noqa: E402
-from sentences import parse as parse_sentences   # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 SOURCE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else REPO.parent / "KullilliDictionary"
 LIFT = SOURCE / "data" / "Kullilli.lift"
 AUDIO_IN = SOURCE / "data" / "audio"
-SENTENCES = SOURCE / "data" / "Kullilli sentences.docx"
+TEXTS = SOURCE / "data" / "lexicon" / "texts"
 REVIEW = SOURCE / "review"
 OUT = REPO / "docs" / "data" / "dictionary.js"
 AUDIO_OUT = REPO / "docs" / "audio"
@@ -236,6 +237,26 @@ def clean(c):
 
 
 # ---- interlinear sentences ------------------------------------------------------
+def load_sentences(folder):
+    """The interlinear sentences from the editor's text files (texts/*.json), texts in their order.
+    The file of examples from other sources is left out: those examples come in through the LIFT."""
+    texts = [json.loads(p.read_text(encoding="utf-8")) for p in folder.glob("*.json")]
+    sents = []
+    for t in sorted((t for t in texts if t.get("kind") == "text"), key=lambda t: t["order"]):
+        for s in t["sentences"]:
+            morphs, groups = [], []
+            for w in s["words"]:
+                groups.append(list(range(len(morphs), len(morphs) + len(w["morphs"]))))
+                morphs += [{"f": m["form"], "g": m["gloss"], "ps": m["pos"], "e": m.get("flex_entry", "")}
+                           for m in w["morphs"]]
+            sents.append({"text": t["title"], "ref": s["ref"], "line": s["line"],
+                          "words": [w["form"] for w in s["words"]], "groups": groups, "morphs": morphs,
+                          "aligned": s.get("glosses_aligned", True),
+                          "ft": [] if s.get("translation") is None else [s["translation"]],
+                          "notes": s.get("notes", []), "comments": [c["text"] for c in s.get("comments", [])]})
+    return sents
+
+
 def text_key(title):
     """'193-256 Kullilli sentences' -> '193-256' (matches the LIFT example references)."""
     m = re.match(r"^(\d{3}-\d{3})\b", title)
@@ -245,7 +266,7 @@ def text_key(title):
 def attach_sentences(pairs, by_id):
     """Link each morpheme to its dictionary entry; give each entry the sentences that use it.
     Returns the sentence list for the data file and a count of unmatched morphemes."""
-    sents = parse_sentences(SENTENCES)
+    sents = load_sentences(TEXTS)
     main_of = lambda c: by_id[c["see"][0][1]] if c["see"] and not c["senses"] else c
     shown = lambda c: c["lc"] or c["hw"]
     glosses = lambda c: [g.lower() for s in main_of(c)["senses"] for g in s["gl"]]
@@ -425,7 +446,7 @@ def write_service_worker(docs, html):
 
 
 def main():
-    for p in (LIFT, AUDIO_IN, SENTENCES):
+    for p in (LIFT, AUDIO_IN, TEXTS):
         if not p.exists():
             sys.exit(f"Can't find {p}\nGive the folder that holds the Kullilli source material, e.g.\n"
                      f"    python3 build/build_lift.py /path/to/KullilliDictionary")

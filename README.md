@@ -89,8 +89,9 @@ The recordings come to about 40 MB, which is fine for Pages.
   English-first wordlist; domains are the topics (By topic in the Wordlist, topic links on entries, the games).
 - `SKIP_ENTRIES` leaves entries out of the site: `aaa`, FLEx's "how to use the dictionary" record, whose text is
   now on the About page.
-- Letters: `DIGRAPHS` (dh dy ng nh ny th ty) get their own tabs. `SPELLING` lists the
-  "similar spelling" rules for search.
+- Letters: the digraphs (dh dy ng nh ny th ty) get their own tabs, and the spelling key lists the
+  "similar spelling" rules for search. Both are in `KullilliDictionary/data/lexicon/settings.json`
+  (shared with the dictionary editor), with the alphabet.
 
 **By topic.** The third choice on the Wordlist switch (`#/topic`) lists the FLEx semantic domains (DDP4) used in
 the data, under their top-level domain (Universe, creation; Person; …), indented by level, with word counts. A
@@ -251,7 +252,7 @@ All games work with a mouse, a keyboard, a touch screen or a screen reader:
   d/dh, n/nh…; d/dy, n/ny… Afterwards both words are shown, with the letters that differ, and can be replayed.
   This assumes the recordings make these contrasts consistently.
 
-**Spelling** (these use the alphabet set by `KEYBOARD` in `build/build_lift.py`; ng, dh, rr … are one letter)
+**Spelling** (these use the alphabet in `KullilliDictionary/data/lexicon/settings.json`; ng, dh, rr … are one letter)
 - **Unscramble** (`unscramble`): tap shuffled letter tiles into order; clue is the meaning or the recording.
 - **Spell it** (`spell`): hear a word and type it; Check marks each letter; "Show me" after a wrong try.
 - **Letter by letter** (`letters`): pick letters to fill in a hidden word, with no penalty; meaning and recording as hints.

@@ -238,8 +238,8 @@ def load_sentences(folder):
             morphs, groups = [], []
             for w in s["words"]:
                 groups.append(list(range(len(morphs), len(morphs) + len(w["morphs"]))))
-                morphs += [{"f": m["form"], "g": m["gloss"], "ps": m["pos"], "e": m.get("flex_entry", "")}
-                           for m in w["morphs"]]
+                morphs += [{"f": m["form"], "g": m["gloss"], "ps": m["pos"], "e": m.get("flex_entry", ""),
+                            "link": m.get("entry", "")} for m in w["morphs"]]
             sents.append({"text": t["title"], "ref": s["ref"], "line": s["line"],
                           "words": [w["form"] for w in s["words"]], "groups": groups, "morphs": morphs,
                           "aligned": s.get("glosses_aligned", True),
@@ -255,9 +255,13 @@ def text_key(title):
 
 
 def attach_sentences(pairs, by_id):
-    """Link each morpheme to its dictionary entry; give each entry the sentences that use it.
-    Returns the sentence list for the data file and a count of unmatched morphemes."""
+    """Give each entry the sentences that use it, through the morphemes' links to entries.
+    The links are stored in the sentence files (made in the dictionary editor; until 2026-11-08 this
+    build worked them out with find() below, and those results were stored then). find() is still
+    used to list the entries a morpheme without a link might belong to, in review/unlinked_morphemes.tsv.
+    Returns the sentence list for the data file."""
     sents = load_sentences(TEXTS)
+    by_guid = {e.get("guid"): c for e, c in pairs}
     main_of = lambda c: by_id[c["see"][0][1]] if c["see"] and not c["senses"] else c
     shown = lambda c: c["lc"] or c["hw"]
     glosses = lambda c: [g.lower() for s in main_of(c)["senses"] for g in s["gl"]]
@@ -337,7 +341,12 @@ def attach_sentences(pairs, by_id):
         by_text.setdefault(norm(s["line"]), si)
         ms = []
         for m in s["morphs"]:
-            c, seen = find(m) if m["f"] != "***" else (None, [])
+            if m["f"] == "***":
+                c, seen = None, []
+            elif m["link"]:
+                c, seen = by_guid.get(m["link"]), []       # None if that entry has been retired
+            else:
+                c, seen = None, find(m)[1]
             if not c and m["f"] != "***":
                 key = (m["f"], m["g"], m["e"])
                 unlinked[key] += 1

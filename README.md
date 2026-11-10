@@ -168,9 +168,13 @@ list). The earlier red icons (`icon-*.png`, `apple-touch-icon.png`, `logo-144.pn
   `Kullilli sentences.docx`): words, morphemes with their glosses, categories and FLEx entry line,
   and the translation. Notes and Word comments become linguist notes, which are hidden on the site
   until someone ticks "Show linguist notes and questions" in an entry.
-- Each morpheme is linked to its dictionary entry. The sentence gloss decides between entries with
-  the same spelling, and FLEx homograph numbers only break ties. A spelling with rr/r or
-  long-vowel differences is tried if the exact one has no matching gloss.
+- Each morpheme's link to its dictionary entry is stored in the sentence files, where the dictionary
+  editor can check and change it. Until 2026-11-08 the build worked the links out itself: the
+  sentence gloss decides between entries with the same spelling, FLEx homograph numbers only break
+  ties, and a spelling with rr/r or long-vowel differences is tried if the exact one has no matching
+  gloss. Those results were stored then, marked as not yet checked. The build still uses these rules
+  for one job: listing the entries a morpheme without a link might belong to, in
+  `review/unlinked_morphemes.tsv`.
 - Each entry shows the sentences that use it. LIFT examples that are one of these sentences appear in
   interlinear form under their meaning. The rest appear under "More examples": 3 shown, the rest behind
   "Show more", shortest first.
